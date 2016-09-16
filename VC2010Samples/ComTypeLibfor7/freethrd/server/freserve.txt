@@ -1,0 +1,554 @@
+FRESERVE - Free-threaded COM objects in an in-process server
+
+
+SUMMARY
+=======
+
+The FRESERVE sample shows how to construct a COM object in a free-threaded
+in-process server. This sample departs from the sport utility vehicle
+metaphor and associated interfaces used in other samples of this series.
+FRESERVE introduces a new custom interface, IBall, and a new COM object,
+COBall. COBall implements the IBall interface. Both COBall and its
+in-process server are coded to support COM free threading in anticipation
+of their use by the free-threaded client, FRECLIEN, in the next lesson.
+
+The CThreaded facility in APPUTIL is used to achieve thread safety as it
+was in the previous APTSERVE sample. COBall objects are derived from the
+CThreaded class and so inherit its OwnThis and UnOwnThis methods. These
+methods enforce mutually exclusive access to the FRESERVE server and to
+COBall objects managed by the server.
+
+FRESERVE works with the FRECLIEN code sample to illustrate FRESERVE's COM
+server facilities in a free-threaded server and the subsequent manipulation
+of its components by a free-threaded client.
+
+For functional descriptions and a tutorial code tour of FRESERVE, see the
+Code Tour section below. See also FRECLIEN.TXT in the sibling FRECLIEN
+directory for more details on the FRECLIEN client application and how it
+works with FRESERVE.DLL. You must build FRESERVE.DLL before building or
+running FRECLIEN.
+
+FRESERVE's makefile automatically registers FRESERVE's DllBall component
+in the registry. This component must be registered before FRESERVE is
+available to outside COM clients as a server for that component. This
+self-registration is done using the REGISTER.EXE utility built in the
+previous REGISTER lesson. To build or run FRESERVE, you should build the
+REGISTER code sample first.
+
+For details on setting up your system to build and test the code samples
+in this OLE Tutorial series, see TUTORIAL.TXT. The supplied MAKEFILE is
+Microsoft NMAKE-compatible. To create a debug build, issue the NMAKE
+command in the Command Prompt window.
+
+Usage
+-----
+
+FRESERVE is a DLL that is intended primarily as a free-threaded COM
+server. Although it can be implicitly loaded by linking to its associated
+.LIB file, it is normally used after an explicit LoadLibrary call, usually
+from within COM's CoGetClassObject function. FRESERVE is a
+self-registering in-process server. The makefile that builds this sample
+automatically registers this server in the registry. You can manually
+initiate its self registration by issuing the following command at the
+command prompt:
+
+  nmake register
+
+This registration process requires a prior build of the REGISTER sample
+in this series.
+
+To use FRESERVE, a client program does not need to include FRESERVE.H or
+link to FRESERVE.LIB. A COM client of FRESERVE obtains access solely
+through its component's CLSID and OLE services. For FRESERVE, that CLSID
+is CLSID_DllBall (defined in file BALLGUID.H in the INC sibling
+directory). The FRECLIEN code sample shows how the client obtains this
+access.
+
+
+CODE TOUR
+=========
+
+Files         Description
+
+FRESERVE.TXT  This file.
+MAKEFILE      The generic makefile for building the FRESERVE.DLL
+              code sample of this lesson.
+FRESERVE.H    The include file for declaring as imported or defining as
+              exported the service functions in FRESERVE.DLL.
+FRESERVE.CPP  The main implementation file for FRESERVE.DLL. Has DllMain
+              and the COM server functions (for example, DllGetClassObject).
+FRESERVE.RC   The DLL resource definition file for the executable.
+FRESERVE.ICO  The icon resource for the executable.
+SERVER.H      The include file for the server control C++ object.
+SERVER.CPP    The implementation file for the server control object.
+FACTORY.H     The include file for the server's class factory COM objects.
+FACTORY.CPP   The implementation file for the server's class factories.
+BALL.H        The include file for the COBall COM object class.
+BALL.CPP      The implementation file for the COBall COM object class.
+
+
+FRESERVE uses many of the utility classes and services provided by
+APPUTIL. For more details on APPUTIL, study the APPUTIL library's source
+code and APPUTIL.TXT, located in the sibling \APPUTIL directory.
+
+This sample is part of a graduated series of tutorial samples. This tour
+assumes that you have some exposure to those previous samples. It does not
+revisit earlier topics of basic interface implementation techniques, COM
+object construction, in-process server construction, and class factory
+construction. For information on these topics, study the earlier tutorial
+samples.
+
+The major topics covered in this code tour are an overview of how FRESERVE
+works; thread-safe mechanisms in FRESERVE; an overview of COM free
+threading; self-registration of COM objects in a free-threaded server; the
+IBall interface; the construction of the COBall COM object; and issues in
+class factory construction in a free-threaded server.
+
+The COBall COM object is the single object type managed by this FRESERVE
+in-process server. COBall is constructed as an aggregatable COM object
+with a native implementation of the IBall interface. COBall exposes the
+IBall interface to allow clients to perform a small set of operations on
+an instance of COBall. The COBall object encapsulates data that defines a
+moving ball. Data such as position, size, and color are encapsulated. No
+graphical images are managed in this object. When a COBall object is
+initialized with a call to its Reset method, it is given a rectangle (a
+standard Win32 RECT structure) that defines the boundaries within which
+the ball may move. The COBall object contains coded logic to move the ball
+within those boundaries, to bounce the ball off any boundary when
+appropriate, and to provide clients with current data on the ball's
+location, size, and color. The object maintains a current color property
+indicating the particular executing thread that most recently moved the
+ball by calling the ball's Move method.
+
+A client can then use the IBall interface to move the ball and to obtain
+the data necessary to paint an image of the moving ball. The COBall object
+is coded to support the free-threaded COM model, in which any number of
+threads may freely make asynchronous calls directly to the object's
+interface methods. In the following FRECLIEN code sample, several threads
+running concurrently attempt to move a single COBall object. An
+independent client thread runs concurrently to continuously obtain ball
+position and color data and to paint snapshot images that graphically
+reflect the COBall's changing data. Many different threads may
+concurrently attempt to change and read the ball's data. The ball is kept
+"alive" by one set of client threads, while another client thread
+passively paints images of the moving ball. Because the ball updates its
+own data to reflect the executing threads, the ball image painted by the
+client changes color as it moves to continuously reflect which thread is
+currently executing.
+
+Aside from the COBall logic needed to maintain the bouncing ball as a
+mathematical entity, FRESERVE also requires some special code to support
+free threading. We will start with this code, because it borrows from
+techniques previously shown in the APTSERVE sample. Like APTSERVE, the
+FRESERVE server housing is constructed to guard shared data in the server
+from conflicting access by multiple concurrent threads of execution. The
+technique used to enforce serialized access to this server data is based
+on the use of Win32 mutexes. APPUTIL's CThreaded utility base class
+encapsulates the mutex protection mechanism. This utility is presented in
+detail in the APTSERVE lesson.
+
+In the FRESERVE server housing, the CServer C++ class is derived from the
+CThreaded base class to inherit the OwnThis and UnOwnThis methods. These
+methods are used in bracketed pairs to protect access to CServer's data,
+such as the server's object and lock counts. One new addition to this
+in-process server housing is the CServer::CanUnloadNow method. It uses the
+CThreaded facility. Here it is from SERVER.CPP.
+
+  HRESULT CServer::CanUnloadNow(void)
+  {
+    HRESULT hr = S_FALSE;
+    LONG cObjects, cLocks;
+
+    if (OwnThis())
+    {
+      cObjects = m_cObjects;
+      cLocks = m_cLocks;
+
+      hr = (0L==cObjects && 0L==cLocks) ? S_OK : S_FALSE;
+
+      UnOwnThis();
+  }
+
+    return hr;
+  }
+
+The OwnThis, UnOwnThis pair is used to protect access to the server's
+m_CObjects and m_cLocks variables. Within the range of this protection,
+copies of the variable values are made on the local stack, and the copies
+are then used for most logic. The logic implemented here is to support the
+in-process server's familiar DllCanUnloadNow exported function. This
+arrangement is convenient because DllCanUnloadNow is not a method of a
+class that is derived from CThreaded, such that it can benefit from the
+OwnThis protection mechanism. Yet such protection is needed, because the
+server data is vulnerable to concurrent access by multithreaded clients.
+In fact, the server data is potentially vulnerable to concurrent access by
+multiple threads that could be spawned within the server or its
+components. The CanUnloadNow method benefits from CThreaded not only for
+the protection it offers, but also for the simple programming
+encapsulation it provides. Such encapsulation will pay off later if the
+free-threaded server evolves to one that spawns multiple threads within it.
+
+The default model for multithreaded programming with COM is the apartment
+model. This model was presented in the previous APTSERVE and APTCLIEN
+samples, where multiple apartment threads were provided within a server.
+COM's support of the apartment model ensures that calls to interface
+methods on objects created within an apartment will always be on the same
+thread as that of the class factory that created the object. The first
+point of recognition by COM in this regard is the occasion of the object's
+first marshaled interface when the object is created. This is usually the
+IClassFactory interface pointer requested in the CoGetClassObject call. At
+this point of recognition COM associates the object with its apartment
+thread.
+
+The apartment model supported by COM is convenient and largely transparent
+to the client. It enforces a serialized access among contending threads to
+a COM object. The object is always called on the thread that "owns" it,
+even if the caller is on a different thread. This model entails some
+overhead as COM performs thread switching during such cross-thread calls.
+
+Performance can be significantly improved by using the free-threaded
+model. In this model, COM does not make thread switches on behalf of
+cross-thread calls to interface methods. Instead, COM freely ushers the
+call through on the same thread originating the call. This means that the
+thread-safe serialized access to the object that was enforced by the
+apartment model is not enforced by the free threading model. COM objects
+must therefore provide their own serialization for access by multiple
+threads. Earlier in this lesson we saw the CThreaded mechanism that
+provides such access safety in this sample.
+
+The way that COM is informed that this in-process server and its managed
+components support the free-threaded model is by an additional entry in
+the component's registration in the registry. As with all the previous
+in-process servers of this series, the FRESERVE server self-registers the
+components it houses. Here is the DllRegisterServer function from
+FRESERVE.CPP.
+
+  STDAPI DllRegisterServer(void)
+  {
+    HRESULT  hr = NOERROR;
+    TCHAR    szID[GUID_SIZE+1];
+    TCHAR    szCLSID[GUID_SIZE+1];
+    TCHAR    szModulePath[MAX_PATH];
+
+    // Obtain the path to this module's executable file for later use.
+    GetModuleFileName(
+      g_pServer->m_hDllInst,
+      szModulePath,
+      sizeof(szModulePath)/sizeof(TCHAR));
+
+    /*--------------------------------------------------------------------
+      Create registry entries for the DllBall Component.
+    --------------------------------------------------------------------*/
+    // Create some base key strings.
+    StringFromGUID2(CLSID_DllBall, szID, GUID_SIZE);
+    lstrcpy(szCLSID, TEXT("CLSID\\"));
+    lstrcat(szCLSID, szID);
+
+    // Create ProgID keys.
+    SetRegKeyValue(
+      TEXT("DllBall1.0"),
+      NULL,
+      TEXT("DllBall Component - FRESERVE Code Sample"));
+    SetRegKeyValue(
+      TEXT("DllBall1.0"),
+      TEXT("CLSID"),
+      szID);
+
+    // Create VersionIndependentProgID keys.
+    SetRegKeyValue(
+      TEXT("DllBall"),
+      NULL,
+      TEXT("DllBall Component - FRESERVE Code Sample"));
+    SetRegKeyValue(
+      TEXT("DllBall"),
+      TEXT("CurVer"),
+      TEXT("DllBall1.0"));
+    SetRegKeyValue(
+      TEXT("DllBall"),
+      TEXT("CLSID"),
+      szID);
+
+    // Create entries under CLSID.
+    SetRegKeyValue(
+      szCLSID,
+      NULL,
+      TEXT("DllBall Component - FRESERVE Code Sample"));
+    SetRegKeyValue(
+      szCLSID,
+      TEXT("ProgID"),
+      TEXT("DllBall1.0"));
+    SetRegKeyValue(
+      szCLSID,
+      TEXT("VersionIndependentProgID"),
+      TEXT("DllBall"));
+    SetRegKeyValue(
+      szCLSID,
+      TEXT("NotInsertable"),
+      NULL);
+    SetRegKeyValue(
+      szCLSID,
+      TEXT("InprocServer32"),
+      szModulePath);
+    AddRegNamedValue(
+      szCLSID,
+      TEXT("InprocServer32"),
+      TEXT("ThreadingModel"),
+      TEXT("Free"));
+
+    return hr;
+  }
+
+The important new code here is the call to AddRegNamedValue. A new named
+value must be added to the InprocServer32 key. This value is not a subkey
+of InprocServer32. Registry keys can have a series of named values
+associated with them. The definition of the AddRegNamedValue is
+straightforward and is defined in FRESERVE.CPP. The named value added for
+the DllBall component is "ThreadingModel=Free". Since our component and
+server are fully thread-safe and are coded to support the free-threaded
+model, we specify "Free". This means that clients of this server must be
+initialized with COM as free-threaded client processes. We will see how
+this is done the next lesson, FRECLIEN.
+
+Other string values for ThreadingModel are "Both" and "Apartment".
+"Apartment" means that the client process must be initialized with COM as
+apartment-threaded before COM will employ the server on the client's
+behalf. "Both" means that client processes can be initialized with COM as
+either free-threaded or apartment-threaded. COM will employ the server on
+their behalf in either case. If the ThreadingModel value is missing from
+the InprocServer32 key, the apartment model is the default.
+
+The COBall COM objects manufactured by this server implement the IBall
+custom interface. Here is the IBall interface declaration from IBALL.H,
+located in the INC sibling directory.
+
+  DECLARE_INTERFACE_(IBall, IUnknown)
+  {
+    // IUnknown methods.
+    STDMETHOD(QueryInterface) (THIS_ REFIID, PPVOID) PURE;
+    STDMETHOD_(ULONG,AddRef)  (THIS) PURE;
+    STDMETHOD_(ULONG,Release) (THIS) PURE;
+
+    // IBall methods.
+    STDMETHOD(Reset)      (THIS_ RECT*, SHORT) PURE;
+    STDMETHOD(GetBall)    (THIS_ POINT*, POINT*, COLORREF*) PURE;
+    STDMETHOD_(BOOL,Move) (THIS_ BOOL) PURE;
+  };
+
+Here are the matching implementation declarations within the COBall object
+class. See the CImpIBall nested class declaration in BALL.H.
+
+     ...
+     ...
+     STDMETHODIMP   Reset(RECT* pNewRect, short nBallSize);
+     STDMETHODIMP   GetBall(POINT* pOrg, POINT* pExt, COLORREF* pcrColor);
+     STDMETHODIMP_(BOOL) Move(BOOL bAlive);
+     ...
+     ...
+
+The Reset method accepts a RECT structure, which specifies the initial
+boundaries of the rectangle within which the ball entity is permitted to
+move. This rectangle typically matches the client area of a client
+application's window. Reset also accepts an initial ball diameter,
+specified in pixels.
+
+The GetBall method is the way the client obtains current properties of the
+COBall object: its diameter, its color, and the location of its origin.
+
+The Move method simply directs the COBall to move itself. The semantics of
+this method are left up to the COBall object. In the current sample,
+internal calculation logic is employed to give some continuity to the
+ball's motion. The ball moves in the current direction until it hits a
+boundary, at which point it bounces. This bounce is a reflection of its
+angle of incidence with the boundary. However, the angle of reflection
+does not always equal the angle of incidence. A small random skew factor
+is used both for the reflection angle and for the speed of the motion.
+This skew factor makes the ball's movement appear more natural.
+
+When the bAlive parameter is set to FALSE, the Move method destroys the
+ball. In this sample, multiple threads give life to the ball. Because one
+thread could issue this termination command before another could know
+about it, Move also returns a Boolean value to notify any other threads
+that call Move if the ball is dead or alive. A return value of FALSE
+indicates that the ball is dead. A dead ball no longer moves. Any thread
+can move the ball, and any thread can kill the ball.
+
+The construction of the COBall COM object is based on techniques seen in
+earlier samples of this series. The familiar technique of nested class
+declarations are used for the multiple interface implementations. Here is
+the COBall class declaration in BALL.H.
+
+  class COBall : public IUnknown, public CThreaded
+  {
+    public:
+      // Main Object Constructor & Destructor.
+      COBall(IUnknown* pUnkOuter, CServer* pServer);
+      ~COBall(void);
+
+      // IUnknown methods. Main object, non-delegating.
+      STDMETHODIMP         QueryInterface(REFIID, PPVOID);
+      STDMETHODIMP_(ULONG) AddRef(void);
+      STDMETHODIMP_(ULONG) Release(void);
+
+    private:
+      // We declare nested class interface implementations here.
+
+      class CImpIBall : public IBall, public CThreaded
+      {
+        public:
+          // Interface Implementation Constructor & Destructor.
+          CImpIBall(COBall* pBackObj, IUnknown* pUnkOuter);
+          ~CImpIBall(void);
+
+          // IUnknown methods.
+          STDMETHODIMP         QueryInterface(REFIID, PPVOID);
+          STDMETHODIMP_(ULONG) AddRef(void);
+          STDMETHODIMP_(ULONG) Release(void);
+
+          // IBall methods.
+          STDMETHODIMP   Reset(RECT* pNewRect, short nBallSize);
+          STDMETHODIMP   GetBall(POINT* pOrg, POINT* pExt, COLORREF* pcrColor);
+          STDMETHODIMP_(BOOL) Move(BOOL bAlive);
+
+        private:
+          // Data private to this COBall interface implementation of IBall.
+          COBall*      m_pBackObj;     // Parent Object back pointer.
+          IUnknown*    m_pUnkOuter;    // Outer unknown for Delegation.
+
+          // The following private data and methods constitute the working
+          // heart of COBall as an actual application object.
+          BOOL         m_bAlive;
+          RECT         m_WinRect;
+          int          m_nWidth;
+          int          m_nHeight;
+          int          m_xDirection;
+          int          m_yDirection;
+          BOOL         m_bNewPosition;
+          int          m_xPosition;
+          int          m_yPosition;
+          short        m_xSkew;
+          short        m_ySkew;
+          COLORREF     m_crColor;
+          CXForm       m_XForm;
+          CBallThread  m_BallThreads[MAX_BALLTHREADS];
+
+          // Private methods for internal use.
+          void GetDimensions(POINT*);
+          void SetDimensions(int,int);
+          void GetDirection(POINT*);
+          void SetDirection(int,int);
+          void GetPosition(POINT*);
+          void SetPosition(int,int);
+          void CheckBounce(void);
+          void FindThread(void);
+      };
+
+      // Make the otherwise private and nested IBall interface
+      // implementation a friend to COM object instantiations of this
+      // COBall COM object class.
+      friend CImpIBall;
+
+      // Private data of COBall COM objects.
+
+      // Nested IBall implementation instantiation.  This IBall interface
+      // is instantiated inside this COBall object as a native interface.
+      CImpIBall        m_ImpIBall;
+
+      // Main Object reference count.
+      ULONG            m_cRefs;
+
+      // Outer unknown (aggregation & delegation).
+      IUnknown*        m_pUnkOuter;
+
+      // Pointer to this component server's control object.
+      CServer*         m_pServer;
+  };
+
+The heart of the COBall object is coded inside the CImpIBall nested
+interface implementation. The advantage of this design is that it doesn't
+burden the main COBall object class with the details of the ball's motion.
+It encapsulates the coding logic of the IBall interface entirely within
+the interface implementation. Another advantage of this is that, if you
+were evolving something like a CBall C++ class from legacy code into a COM
+COBall implementation, the transition from CBall to CImpIBall is somewhat
+less complicated than it would be from CBall to the outer COBall class,
+where the nested interface implementations tend to dominate attention. In
+this sample the issue is not as pronounced as a case where the outer
+COBall class might have many nested interface class declarations.
+
+Notice that the outer COBall class and the nested CImpIBall class are both
+derived from CThreaded to inherit the OwnThis thread safety mechanism. The
+methods of both these classes need this mechanism to protect data
+encapsulated in their C++ objects.
+
+The CImpIBall class implements many internal private methods, such as
+SetPostion and FindThread. Of all these CImpIBall methods, only the
+IUnknown and IBall interface methods are exposed as public in the C++
+sense. The IBall interface exposes only the public Reset, GetBall, and
+Move methods. Other of the private methods, such as SetPosition, could be
+promoted to the status of public members of some new IBall2 evolution of
+the IBall interface. Should such an evolution occur, the COM contract
+requires that the new interface adopt a name and a new interface
+identifier (IID). However, it must be derived from IBall to inherit and
+retain its prior semantics.
+
+The data that defines the ball is declared in the private area of
+CImpIBall. The m_BallThreads array is maintained by the object to map
+color attributes to the threads that call the object's Move method. In
+conjunction with the FindThread method, program logic assigns colors to
+passing threads and reuses those colors when previous threads revisit the
+object. As new threads are added to the array, each is assigned a new
+color. In the current sample, a random selection of 64 such thread colors
+is accommodated using the compile-time macro MAX_BALL_THREADS.
+
+The CXForm class is also declared in BALL.H. It is part of the inner
+algorithms that govern ball behavior and is not relevant to the threading
+model presented in this lesson.
+
+The class factory for the DllBall component, CFBall, is declared in
+FACTORY.H and implemented in FACTORY.CPP. This code is borrowed from many
+previous samples in this series. Like COBall, CFBall is derived from
+IUnknown and CThreaded using multiple inheritance. CThreaded gives the
+class factory its thread safety using the OwnThis mechanism seen earlier.
+There is one special issue worth mentioning.
+
+The CFBall::Release has an odd arrangement of the OwnThis, UnOwnThis pair.
+Here is the code from FACTORY.CPP.
+
+  STDMETHODIMP_(ULONG) CFBall::Release(void)
+  {
+    ULONG cRefs;
+
+    if (OwnThis())
+    {
+      cRefs = --m_cRefs;
+
+      if (0 == cRefs)
+      {
+        // We've reached a zero reference count for this COM object.
+        // So we tell the server housing to decrement its global object
+        // count so that the server will be unloaded if appropriate.
+        if (NULL != m_pServer)
+          m_pServer->ObjectsDown();
+
+        // We artificially bump the main reference count to prevent
+        // reentrancy via the main object destructor.  Not really needed
+        // in this CFBall but a good practice because we are aggregatable
+        // and may at some point in the future add something entertaining
+        // like some Releases to the CFBall destructor.
+        m_cRefs++;
+        UnOwnThis();
+        delete this;
+      }
+      else
+        UnOwnThis();
+    }
+
+    return cRefs;
+  }
+
+The extra call to UnOwnThis is needed because of the "delete this"
+statement. The UnOwnThis call must precede the delete statement so that
+the currently owning thread will relinquish ownership of this object
+before an attempt is made to destroy the entire object. The object must
+remain in existence as long as OwnThis is using the governing mutex, but
+no longer.

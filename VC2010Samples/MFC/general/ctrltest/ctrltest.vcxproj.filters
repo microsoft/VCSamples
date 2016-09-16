@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d022eba5-82f6-4823-9c9e-7ebc6e336b28}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{2cc56c95-7e14-4ace-acfa-8802e82e092b}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ada3fa10-0cc8-4333-93c9-1557bafc4a5b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bbutton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ctrltest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="custlist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="custmenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dertest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="paredit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="paredit2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="spintest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wclstest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ctrltest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="paredit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\canceld.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cancelf.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cancelu.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ctrltest.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ctrltest.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\image1d.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\image1f.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\image1u.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\image2d.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\image2f.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\image2u.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\nextd.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\nextf.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\nextu.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\nextx.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\okd.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\okf.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\oku.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\prevd.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\prevf.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\prevu.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\prevx.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ctrltest.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppLookDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="buttondi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chicdial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cntritem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="datedial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ddxm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="docopt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="doctype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filenewd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="formatba.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="formatpa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="formatta.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ipframe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="key.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="multconv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optionsh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pageset.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ruler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="splash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="srvritem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="unitspag.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wordpad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wordpdoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wordpvw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppLookDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buttondi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chicdial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cntritem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="datedial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ddxm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="docopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="doctype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filenewd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formatba.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formatpa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="formatta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="helpids.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ipframe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="key.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="listdlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mswd6_32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optionsh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pageset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ruler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="splash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="srvritem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unitspag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wordpad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wordpdoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wordpvw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\border_type.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\font.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\formatba.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\full_scr.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\iconnote.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\main1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mainfram_hc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rtfdoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerbl.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerblm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerdo.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerdom.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerta.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulertam.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerup.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\rulerupm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\srvr.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tasks.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\taskspanetoolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\tasks_hc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\textdoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_images.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar_images_hc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\wordp48.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\wordpad.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\wordpad.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\write.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="wordpad.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

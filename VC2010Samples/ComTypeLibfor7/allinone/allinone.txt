@@ -1,0 +1,35 @@
+ALLINONE:  Implements a server using ATL, exposing STL collections, controlled by
+compiler COM support in an MFC App
+
+This sample shows the ability of ATL/STL/VCCOM/MFC to coexist.  Building on the collect
+MFC example, nine collections are implemented in STL -- using map, multimap, list, vector, deque 
+and set -- which are exposed as custom interfaces using ATL with multiple types of aggregation.  
+The MFC controller uses compiler COM support.
+
+Compare this sample with COLLECT in samples\mfc\advanced.
+
+Running the sample:
+
+The Server:
+    1.  Build stlcoll.dll/stlcoll.exe using the stlcoll project in samples\com\allinone\server.
+    2.  Self-registration should take place in the custom build step -- otherwise run:
+        regsvr32 stlcoll.dll
+    or
+        stlcoll /RegServer
+
+The Proxy/Stub DLL:
+    1.  Build stlcollps.dll using the stlcoll project in samples\com\allinone\server.
+        This is only needed when stlcoll.exe is out-of-proc.
+    2.  Self-registration should take place in the custom build step -- otherwise run:
+        regsvr32 stlcoll.dll
+
+The Controller:
+    1.  Build collect.exe using the collect project in samples\com\allinone\collect.
+
+
+This sample demonstrates the following key words:
+
+    custom interface, ATL, STL, map, vector, set, multimap, list, deque, _com_ptr_t, _bstr_t,
+    _com_error, aggregation, tearoff interface
+
+See all Compiler COM Support and MFC collect sample and ?? stl and atl docs ??

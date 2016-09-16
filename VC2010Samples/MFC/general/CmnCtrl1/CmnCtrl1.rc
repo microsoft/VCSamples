@@ -1,0 +1,407 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\CmnCtrl1.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CmnCtrl1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 228, 68
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CmnCtrl1"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "CmnCtrl1 Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Author: Frank Crockett",IDC_STATIC,40,24,78,8
+    DEFPUSHBUTTON   "OK",IDOK,189,7,32,14,WS_GROUP
+    LTEXT           "© 1992 - 2008 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,40,38,124,23
+END
+
+IDD_TREECTRL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_POPUP | WS_DISABLED | WS_CAPTION
+CAPTION "CTreeCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Treeview1",IDC_TREEVIEW1,"SysTreeView32",WS_TABSTOP,17,
+                    15,158,138
+    CONTROL         "TVS_EDITLABELS",IDC_TVEDITLABELS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,17,74,10
+    CONTROL         "TVS_HASBUTTONS",IDC_TVHASBUTTONS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,28,80,10
+    CONTROL         "TVS_HASLINES",IDC_TVHASLINES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,186,39,77,10
+    CONTROL         "TVS_LINESATROOT",IDC_TVLINESATROOT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,50,81,10
+    CONTROL         "TVS_DISABLEDRAGDROP",IDC_TVDISABLEDDRAGDROP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,61,103,10
+    CONTROL         "TVS_SHOWSELALWAYS",IDC_TVSHOWSELALWAYS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,72,101,10
+    EDITTEXT        IDC_TREESTATUS,180,100,105,52,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    CONTROL         "TVS_SINGLEEXPAND",IDC_TVSSINGELEXPAND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,186,83,101,10
+END
+
+IDD_ANIMCTRL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CAnimateCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Animation File:",IDC_STATIC,185,7,76,8
+    EDITTEXT        IDC_EDIT1,185,19,102,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,185,37,50,14
+    GROUPBOX        "St&yles",1032,185,59,103,58,WS_GROUP
+    CONTROL         "ACS_CENTER",IDC_CENTER,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,197,73,63,10
+    CONTROL         "ACS_TRANSPARENT",IDC_TRANSPARENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,197,88,85,10
+    CONTROL         "ACS_AUTOPLAY",IDC_AUTOPLAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,103,72,10
+    PUSHBUTTON      "&Play",IDC_PLAY,31,126,50,14
+    PUSHBUTTON      "&Stop",IDC_STOP,97,126,50,14
+    LTEXT           "",IDC_ANIMFRAME,21,19,142,100
+    LTEXT           "",IDC_ANIMSTATUS,25,150,259,11
+    GROUPBOX        "",IDC_STATIC,13,142,275,23
+END
+
+IDD_TOOLBARCTRL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION
+CAPTION "CToolBarCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "TBSTYLE_ALTDRAG",IDC_ALTDRAG,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,26,87,109,8
+    GROUPBOX        "Standard Toolbar",IDC_STATIC,5,29,139,98
+    LTEXT           "Toolbar Styles : ",ID_TOOLBARSTYLE,10,40,50,8
+    LTEXT           "Button Styles : ",ID_BUTTONSTYLE,14,101,44,8
+    LTEXT           "TBSTYLE_BUTTON",ID_TBSTYLEBUTTON,26,112,84,8
+    GROUPBOX        "PaletteToolbar",IDC_STATIC,153,29,140,98
+    LTEXT           "Toolbar Styles : ",ID_TOOLBARSTYLE2,163,43,50,8
+    LTEXT           "Button Styles : ",ID_BUTTONSTYLE2,160,102,44,8
+    LTEXT           "TBSTYLE_CHECKGROUP",ID_TBSTYLECHECKGROUP,181,112,104,8
+    LTEXT           "CCS_BOTTOM",ID_CCSBOTTOM,181,59,98,8
+    LTEXT           "CCS_TOP",ID_CCSTOP,26,51,109,8
+    LTEXT           "CCS_ADJUSTABLE",ID_CCSADJUSTABLE,26,63,109,8
+    LTEXT           "TBSTYLE_TOOLTIPS",ID_TBSTYLETOOLTIPS,26,75,109,8
+    LTEXT           "TBSTYLE_WRAPABLE",ID_TBSTYLEWRAPABLE,181,70,90,8
+    LTEXT           "TBSTYLE_TOOLTIPS",ID_TBSTYLETOOLTIPS2,181,81,94,8
+END
+
+IDD_DATETIME DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CDateTimeCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Date Time Control",IDC_STATIC,43,16,162,26
+    GROUPBOX        "Styles",IDC_STATIC,43,44,114,54
+    GROUPBOX        "Format",IDC_STATIC,43,100,114,54
+    CONTROL         "DTS_UPDOWN",IDC_CKUPDOWN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,49,56,68,10
+    CONTROL         "DTS_SHOWNONE",IDC_CKSHOWNONE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,49,70,78,10
+    CONTROL         "DTS_APPCANPARSE",IDC_CKAPPCANPARSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,49,84,87,10
+    CONTROL         "DTS_TIMEFORMAT",IDC_CKTIMEFORMAT,"Button",
+                    BS_AUTORADIOBUTTON,49,110,82,10
+    CONTROL         "DTS_SHORTDATEFORMAT",IDC_CKSHORTDATEFORMAT,"Button",
+                    BS_AUTORADIOBUTTON,49,125,109,10
+    CONTROL         "DTS_LONGDATEFORMAT",IDC_CKLONGDATEFORMAT,"Button",
+                    BS_AUTORADIOBUTTON,49,140,104,10
+    LISTBOX         IDC_LBNOTIFY,174,59,107,99,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Notifications:",IDC_STATIC,174,48,42,8
+    LTEXT           "",IDC_DTFRAME,49,25,153,14
+END
+
+IDD_MONTHCAL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CMonthCalCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "",IDC_MCFRAME,7,7,98,67
+    CONTROL         "MCS_DAYSTATE",IDC_CKDAYSTATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,104,73,10
+    CONTROL         "MCS_MULTISELECT",IDC_CMULTISELECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,35,116,85,10
+    CONTROL         "MCS_NOTODAY",IDC_CKNOTODAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,128,71,10
+    CONTROL         "MCS_NOTODAYCIRCLE",IDC_CKNOTODAYCIRCLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,35,140,96,10
+    CONTROL         "MCS_WEEKNUMBERS",IDC_CKWEEKNUMBERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,35,150,93,10
+    GROUPBOX        "Styles",IDC_STATIC,28,94,116,71
+    LISTBOX         IDC_NOTIFYLIST,155,21,116,63,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Notifications:",IDC_STATIC,155,9,42,8
+    LTEXT           "Max Sel:",IDC_STATIC,155,101,28,8
+    LTEXT           "Selection:",IDC_STATIC,155,121,32,8
+    LTEXT           "Range:",IDC_STATIC,155,141,24,8
+    EDITTEXT        IDC_EDSELRANGE,194,98,40,14,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "",IDC_STRSELECTION,194,121,96,8
+    LTEXT           "",IDC_STRRANGE,194,141,92,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "CmnCtrl1 MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CmnCtrl1"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "CmnCtrl1.EXE"
+            VALUE "ProductName", "CmnCtrl1 Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_TREECTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_ANIMCTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_TOOLBARCTRL, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_DATETIME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_MONTHCAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMTREEBIRD          BITMAP                  "res\\bmtreebi.bmp"
+IDB_BMTREEBIRDSELECTED  BITMAP                  "res\\bmtreedo.bmp"
+IDB_BMTREEDOG           BITMAP                  "res\\bmp00003.bmp"
+IDB_BMTREEDOGSELECTED   BITMAP                  "res\\bmp00002.bmp"
+IDB_BMTREEFISH          BITMAP                  "res\\bmtreefi.bmp"
+IDB_BMTREEFISHSELECTED  BITMAP                  "res\\bmp00001.bmp"
+IDR_PALETTEBAR          BITMAP                  "RES\\cpalette.bmp"
+IDR_STANDARDBAR         BITMAP                  "res\\standard.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CmnCtrl1..."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEW                  "New"
+    ID_OPEN                 "Open"
+    ID_SAVE                 "Save"
+    ID_CUT                  "Cut"
+    ID_COPY                 "Copy"
+    ID_PASTE                "Paste"
+    ID_PRINT                "Print"
+    ID_ABOUT                "About"
+    ID_CONTEXTHELP          "Help"
+    ID_ERASE                "Erase"
+    ID_PENCIL               "Pencil"
+    ID_SELECT               "Select"
+    ID_BRUSH                "Brush"
+    ID_AIRBRUSH             "Airbrush"
+    ID_FILL                 "Fill"
+    ID_LINE                 "Line"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SELECTCOLOR          "Select Color"
+    ID_MAGNIFY              "Magnify"
+    ID_RECTANGLE            "Rectangle"
+    ID_ROUNDRECTANGLE       "Round Rect"
+    ID_ELLIPSE              "Ellipse"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLBARSTYLE         "Toolbar Styles"
+    ID_CCSTOP               "Ccontrol positions itself at the top of the parent window's client area."
+    ID_CCSBOTTOM            "Control positions itself at the bottom of the parent window's client area."
+    ID_CCSADJUSTABLE        "Enables a toolbar's built-in customization features."
+    ID_TBSTYLETOOLTIPS      "Creates a tooltip control that  can display descriptive text for the buttons."
+    ID_TBSTYLEWRAPABLE      "Creates a toolbar that can have multiple lines of buttons."
+    ID_BUTTONSTYLE          "Styles for buttons on a Toolbar."
+    ID_TBSTYLEBUTTON        "Standard Push Button."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TBSTYLECHECKGROUP    "Check button that stays pressed until another button in the group is pressed."
+    ID_BUTTONSTYLE2         "Styles for buttons on a Toolbar."
+    ID_TOOLBARSTYLE2        "Toolbar Styles"
+    ID_TBSTYLETOOLTIPS2     "Creates a tooltip control that  can display descriptive text for the buttons."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\CmnCtrl1.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

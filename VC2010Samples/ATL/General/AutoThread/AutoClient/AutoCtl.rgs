@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove AutoClient.AutoCtl.1 = s 'AutoCtl Class'
+	{
+		CLSID = s '{A6D89F2C-35F4-11D2-9375-00C04FD9757C}'
+	}
+	ForceRemove AutoClient.AutoCtl = s 'AutoCtl Class'
+	{
+		CurVer = s 'AutoClient.AutoCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A6D89F2C-35F4-11D2-9375-00C04FD9757C} = s 'AutoCtl Class'
+		{
+			ProgID = s 'AutoClient.AutoCtl.1'
+			VersionIndependentProgID = s 'AutoClient.AutoCtl'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '{A6D89F1F-35F4-11D2-9375-00C04FD9757C}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

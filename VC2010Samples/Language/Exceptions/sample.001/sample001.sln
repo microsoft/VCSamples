@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sample001", "sample001.vcxproj", "{0389656D-A3F5-4694-AFA6-763BE7680143}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0} = {DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sampledll", "sampledll.vcxproj", "{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Managed to Unmanaged (Debug)|Win32 = Managed to Unmanaged (Debug)|Win32
+		Managed to Unmanaged (Release)|Win32 = Managed to Unmanaged (Release)|Win32
+		Unmanaged to Managed (Debug)|Win32 = Unmanaged to Managed (Debug)|Win32
+		Unmanaged to Managed (Release)|Win32 = Unmanaged to Managed (Release)|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Managed to Unmanaged (Debug)|Win32.ActiveCfg = Managed to Unmanaged (Debug)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Managed to Unmanaged (Debug)|Win32.Build.0 = Managed to Unmanaged (Debug)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Managed to Unmanaged (Release)|Win32.ActiveCfg = Managed to Unmanaged (Release)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Managed to Unmanaged (Release)|Win32.Build.0 = Managed to Unmanaged (Release)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Unmanaged to Managed (Debug)|Win32.ActiveCfg = Unmanaged to Managed (Debug)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Unmanaged to Managed (Debug)|Win32.Build.0 = Unmanaged to Managed (Debug)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Unmanaged to Managed (Release)|Win32.ActiveCfg = Unmanaged to Managed (Release)|Win32
+		{0389656D-A3F5-4694-AFA6-763BE7680143}.Unmanaged to Managed (Release)|Win32.Build.0 = Unmanaged to Managed (Release)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Managed to Unmanaged (Debug)|Win32.ActiveCfg = Managed to Unmanaged (Debug)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Managed to Unmanaged (Debug)|Win32.Build.0 = Managed to Unmanaged (Debug)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Managed to Unmanaged (Release)|Win32.ActiveCfg = Managed to Unmanaged (Release)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Managed to Unmanaged (Release)|Win32.Build.0 = Managed to Unmanaged (Release)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Unmanaged to Managed (Debug)|Win32.ActiveCfg = Unmanaged to Managed (Debug)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Unmanaged to Managed (Debug)|Win32.Build.0 = Unmanaged to Managed (Debug)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Unmanaged to Managed (Release)|Win32.ActiveCfg = Unmanaged to Managed (Release)|Win32
+		{DDCB406F-C9A5-49C8-BE5E-CFCBB6DE8FB0}.Unmanaged to Managed (Release)|Win32.Build.0 = Unmanaged to Managed (Release)|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

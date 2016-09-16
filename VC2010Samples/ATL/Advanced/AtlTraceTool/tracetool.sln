@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TraceTool", "TraceTool.vcxproj", "{EC814658-3ACF-4649-8906-B758029CA3A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TraceToolUI", "TraceToolUI\TraceToolUI.vcxproj", "{E6297F08-80BB-458A-9A1F-9BB707EBFB02}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EC814658-3ACF-4649-8906-B758029CA3A2} = {EC814658-3ACF-4649-8906-B758029CA3A2}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Debug|Win32.Build.0 = Debug|Win32
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Debug|x64.ActiveCfg = Debug|X64
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Debug|x64.Build.0 = Debug|X64
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Release|Win32.ActiveCfg = Release|Win32
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Release|Win32.Build.0 = Release|Win32
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Release|x64.ActiveCfg = Release|X64
+		{EC814658-3ACF-4649-8906-B758029CA3A2}.Release|x64.Build.0 = Release|X64
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Debug|Win32.Build.0 = Debug|Win32
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Debug|x64.ActiveCfg = Debug|X64
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Debug|x64.Build.0 = Debug|X64
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Release|Win32.ActiveCfg = Release|Win32
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Release|Win32.Build.0 = Release|Win32
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Release|x64.ActiveCfg = Release|X64
+		{E6297F08-80BB-458A-9A1F-9BB707EBFB02}.Release|x64.Build.0 = Release|X64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

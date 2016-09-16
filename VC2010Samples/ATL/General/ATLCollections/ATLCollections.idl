@@ -1,0 +1,102 @@
+// This is a part of the Active Template Library. 
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Active Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Active Template Library product.
+
+// ATLCollections.idl : IDL source for ATLCollections.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLCollections.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		pointer_default(unique),
+		helpstring("IItems Interface"),
+		uuid(0D44F682-B373-11D2-9A7F-50F653C10000),
+		dual,
+		nonextensible
+	]
+	interface IItems : IDispatch
+	{
+		[id(DISPID_NEWENUM), propget]
+		HRESULT _NewEnum([out, retval] IUnknown** ppUnk);
+
+		[id(DISPID_VALUE), propget]
+		HRESULT Item(
+						[in] VARIANT Index, 
+						[out, retval] VARIANT* pVal);
+
+		[id(0x00000001), propget]
+		HRESULT Count([out, retval] long * pVal);
+
+
+		[id(0x00000002)]
+		HRESULT Add(
+						[in] VARIANT Key,
+						[in] VARIANT Item
+						);
+
+    
+		[id(0x00000003)]
+		HRESULT Remove([in] VARIANT Index);
+
+		[id(0x00000004)]
+		HRESULT Clear();
+	};
+
+	[
+		object,
+		pointer_default(unique),
+		helpstring("IWords Interface"),
+		uuid(0D44F689-B373-11D2-9A7F-50F653C10000),
+		dual,
+		nonextensible
+	]
+	interface IWords : IDispatch
+	{
+		[id(DISPID_NEWENUM), propget]
+		HRESULT _NewEnum([out, retval] IUnknown** ppUnk);
+
+		[id(DISPID_VALUE), propget]
+		HRESULT Item(
+						[in] long Index, 
+						[out, retval] BSTR* pVal);
+
+		[id(0x00000001), propget]
+		HRESULT Count([out, retval] long * pVal);
+	};
+
+[
+	uuid(50F5DEE1-B372-11D2-9A7F-50F653C10000),
+	version(1.0),
+	helpstring("ATLCollections 1.0 Type Library")
+]
+library ATLCOLLECTIONSLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(0D44F683-B373-11D2-9A7F-50F653C10000),
+		helpstring("Items Class")
+	]
+	coclass Items
+	{
+		[default] interface IItems;
+	};
+	[
+		uuid(0D44F68A-B373-11D2-9A7F-50F653C10000),
+		helpstring("Words Class")
+	]
+	coclass Words
+	{
+		[default] interface IWords;
+	};
+};

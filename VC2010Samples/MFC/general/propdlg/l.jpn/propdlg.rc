@@ -1,0 +1,383 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""res\\propdlg.rc2""  // non-App Studio edited resources\r\n"
+	"\r\n"
+	"#include ""afxres.rc""  \011// Standard components\r\n"
+	"#include ""afxprint.rc""\011// printing/print preview resources\r\n"
+	"\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\PROPDLG.ICO"
+IDR_SHAPESTYPE          ICON    DISCARDABLE     "RES\\SHAPEDOC.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "RES\\TOOLBAR.BMP"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM SEPARATOR
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit",                       ID_APP_EXIT
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About Propdlg...",           ID_APP_ABOUT
+	END
+END
+
+IDR_SHAPESTYPE MENU PRELOAD DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM "&Close",                      ID_FILE_CLOSE
+		MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+		MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+		MENUITEM SEPARATOR
+		MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+		MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit",                       ID_APP_EXIT
+	END
+	POPUP "&Edit"
+	BEGIN
+		MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+		MENUITEM SEPARATOR
+		MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+		MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+		MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+	END
+	POPUP "&Object"
+	BEGIN
+		MENUITEM "&Simple Property Sheet...",   ID_SIMPLE_PROPERTY_SHEET
+		MENUITEM "Property Sheet with Preview...",
+												ID_PROPERTY_SHEET_WITH_PREVIEW
+
+		MENUITEM "&Mini Frame Property Sheet...",
+												ID_MINI_FRAME_PROPERTY_SHEET
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Window"
+	BEGIN
+		MENUITEM "&New Window",                 ID_WINDOW_NEW
+		MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+		MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+		MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About Propdlg...",           ID_APP_ABOUT
+	END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE
+BEGIN
+	"N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+	"O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+	"S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+	"P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+	"Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+	VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+	VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+	VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+	VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+	VK_F6,          ID_NEXT_PANE,           VIRTKEY
+	VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Propdlg"
+FONT 8, "MS Sans Serif"
+BEGIN
+	ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+	LTEXT           "Propdlg Version 1.0",IDC_STATIC,40,10,119,8
+	LTEXT           L"\251 2005 - 2008 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,25,119,8
+	DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+END
+
+IDD_STYLE DIALOG DISCARDABLE  0, 0, 164, 96
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CONTROL         "&Rectangle",IDC_RECTANGLE,"Button",BS_AUTORADIOBUTTON |
+					WS_GROUP,10,10,59,11
+	CONTROL         "R&ound Rectangle",IDC_ROUND_RECTANGLE,"Button",
+					BS_AUTORADIOBUTTON,10,24,68,10
+	CONTROL         "&Ellipse",IDC_ELLIPSE,"Button",BS_AUTORADIOBUTTON,10,39,
+					60,10
+END
+
+IDD_COLOR DIALOG DISCARDABLE  0, 0, 164, 77
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Color"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CONTROL         "&White",IDC_WHITE,"Button",BS_AUTORADIOBUTTON |
+					WS_GROUP,10,10,35,10
+	CONTROL         "&Red",IDC_RED,"Button",BS_AUTORADIOBUTTON,10,24,33,10
+	CONTROL         "&Green",IDC_GREEN,"Button",BS_AUTORADIOBUTTON,10,39,34,
+					10
+	CONTROL         "&Blue",IDC_BLUE,"Button",BS_AUTORADIOBUTTON,10,55,30,10
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "CompanyName", "\0"
+			VALUE "FileDescription", "PROPDLG MFC Application\0"
+			VALUE "FileVersion", "1, 0, 0, 1\0"
+			VALUE "InternalName", "PROPDLG\0"
+			VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+			VALUE "LegalTrademarks", "\0"
+			VALUE "OriginalFilename", "PROPDLG.EXE\0"
+			VALUE "ProductName", "PROPDLG Application\0"
+			VALUE "ProductVersion", "1, 0, 0, 1\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+	IDR_MAINFRAME           "Propdlg"
+	IDR_SHAPESTYPE          "\nshapes\nshapes Document\nshapes Files (*.shp)\n.shp\nPropdlg.shapes.1\nshapes Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+	AFX_IDS_APP_TITLE       "Propdlg"
+	AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_INDICATOR_EXT        "EXT"
+	ID_INDICATOR_CAPS       "CAP"
+	ID_INDICATOR_NUM        "NUM"
+	ID_INDICATOR_SCRL       "SCRL"
+	ID_INDICATOR_OVR        "OVR"
+	ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW             "Create a new document"
+	ID_FILE_OPEN            "Open an existing document"
+	ID_FILE_CLOSE           "Close the active document"
+	ID_FILE_SAVE            "Save the active document"
+	ID_FILE_SAVE_AS         "Save the active document with a new name"
+	ID_FILE_PAGE_SETUP      "Change the printing options"
+	ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+	ID_FILE_PRINT           "Print the active document"
+	ID_FILE_PRINT_PREVIEW   "Display full pages"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_APP_ABOUT            "Display program information, version number and copyright"
+	ID_APP_EXIT             "Quit the application; prompts to save documents"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_MRU_FILE1       "Open this document"
+	ID_FILE_MRU_FILE2       "Open this document"
+	ID_FILE_MRU_FILE3       "Open this document"
+	ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_NEXT_PANE            "Switch to the next window pane"
+	ID_PREV_PANE            "Switch back to the previous window pane"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_WINDOW_NEW           "Open another window for the active document"
+	ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window"
+	ID_WINDOW_CASCADE       "Arrange windows so they overlap"
+	ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles"
+	ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles"
+	ID_WINDOW_SPLIT         "Split the active window into panes"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_EDIT_CLEAR           "Erase the selection"
+	ID_EDIT_CLEAR_ALL       "Erase everything"
+	ID_EDIT_COPY            "Copy the selection and put it on the Clipboard"
+	ID_EDIT_CUT             "Cut the selection and put it on the Clipboard"
+	ID_EDIT_FIND            "Find the specified text"
+	ID_EDIT_PASTE           "Insert Clipboard contents"
+	ID_EDIT_REPEAT          "Repeat the last action"
+	ID_EDIT_REPLACE         "Replace specific text with different text"
+	ID_EDIT_SELECT_ALL      "Select the entire document"
+	ID_EDIT_UNDO            "Undo the last action"
+	ID_EDIT_REDO            "Redo the previously undone action"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+	ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_SCSIZE          "Change the window size"
+	AFX_IDS_SCMOVE          "Change the window position"
+	AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+	AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+	AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+	AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+	AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_SCRESTORE       "Restore the window to normal size"
+	AFX_IDS_SCTASKLIST      "Activate Task List"
+	AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_SIMPLE_PROPERTY_SHEET
+							"Demonstrates default MFC property sheet support"
+	ID_PROPERTY_SHEET_WITH_PREVIEW
+							"Demonstrates property sheet with controls shared by all property pages"
+	ID_MINI_FRAME_PROPERTY_SHEET
+							"Demonstrates modeless mini frame for property sheet"
+	ID_MINI_FRAME_WITH_PIN_BUTTON
+							"Demonstrates pin button to the left of tabs in a mini frame property sheet"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\propdlg.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"    // Standard components
+#include "afxprint.rc"  // printing/print preview resources
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

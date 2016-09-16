@@ -1,0 +1,10 @@
+
+; AutoClient.def : Declares the module parameters.
+
+LIBRARY      "AutoClient.DLL"
+
+EXPORTS
+	DllCanUnloadNow      PRIVATE
+	DllGetClassObject    PRIVATE
+	DllRegisterServer    PRIVATE
+	DllUnregisterServer	 PRIVATE

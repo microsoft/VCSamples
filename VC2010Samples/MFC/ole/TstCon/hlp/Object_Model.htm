@@ -1,0 +1,134 @@
+
+<head>
+<style>
+<!--
+h2
+	{margin:6.0pt 0in; line-height:24.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:22.0pt;
+	font-family:Verdana;
+	color:gray;
+	}
+p.Text
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+span.Bold
+	{font-weight:bold}
+p.BulletedList1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:12.0pt;
+	tab-stops:.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+h3
+	{margin:6.0pt 0in; line-height:24.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:22.0pt;
+	font-family:Verdana;
+	color:silver;
+	}
+span.MsoFootnoteReference
+	{color:blue;
+	vertical-align:super}
+span.Italic
+	{font-style:italic}
+p.DefinedTerm
+	{margin-bottom:.0001pt;
+	line-height:12.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	margin-left:0in; margin-right:0in; margin-top:0in}
+p.Definition
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+p.MsoFootnoteText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	color:blue}
+-->
+</style>
+</head>
+
+<h2>Object Model</h2>
+<p class="Text">Test Container exposes its functionality to script programmers 
+through a single object, called <span class="Bold">TCForm</span>, in the 
+script’s global namespace. <span class="Bold">TCForm</span> implements the 
+following properties and methods:</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PrimarySelection</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>InsertControl</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>FindControl</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Log</p>
+<h3 style="page-break-after: auto">PrimarySelection</h3>
+<p class="Text">This property is the Automation interface of the primary 
+selected control on the form.&nbsp; If exactly one control is selected, it is the 
+primary selection.&nbsp; If two or more controls are selected, or if no controls are 
+selected, the primary selection is Nothing.&nbsp; Setting this property selects the 
+specified control and deselects all others.&nbsp; Setting this property to Nothing 
+deselects all controls.</p>
+<h3 style="page-break-after: auto">InsertControl</h3>
+<p class="Text">This method inserts a new control into the form.&nbsp; The syntax is
+<span class="Bold">TCForm.InsertControl</span> <span class="Italic">ProgID</span><span class="Bold">,</span>
+<span class="Italic">Name</span>.</p>
+<p class="DefinedTerm" style="page-break-after: auto"><span class="Italic">
+ProgID</span></p>
+<p class="Definition">is a string representing the <span class="Italic">ProgID</span> 
+of the control to insert.</p>
+<p class="DefinedTerm" style="page-break-after: auto"><span class="Italic">Name</span></p>
+<p class="Definition">is a string representing the value of the
+<span class="Italic">Name</span> property for the new control.&nbsp; Test Container 
+will expose the control to the script as a global variable with this name.</p>
+<p class="Text">The <span class="Bold">InsertControl</span> method returns the 
+Automation interface of the new control.</p>
+<h3 style="page-break-after: auto">FindControl</h3>
+<p class="Text">The <b>FindControl</b> method gets the Automation interface of 
+the control with the given name.&nbsp; The syntax is <span class="Bold">
+TCForm.FindControl</span> <i>Name</i>.</p>
+<p class="DefinedTerm" style="page-break-after: auto"><span class="Italic">Name</span></p>
+<p class="Definition">is the name of the control for which to retrieve the 
+Automation interface.</p>
+<p class="Text">The <span class="Bold">FindControl</span> method returns the 
+Automation interface of the control with the given name.</p>
+<h3 style="page-break-after: auto">Log</h3>
+<p class="Text">The <b>Log</b> method writes a text message to the Test 
+Container log.&nbsp; By default, all log output goes to the output window, but it can 
+also be redirected to the debugger or to a file using the <b>Logging</b> menu 
+option in the <b>Options</b> menu.&nbsp; The syntax is <span class="Bold">TCForm.Log</span>
+<i>message</i>.</p>
+<p class="DefinedTerm" style="page-break-after: auto"><span class="Italic">
+message</span></p>
+<p class="Definition">is the message to be sent to the log.</p>

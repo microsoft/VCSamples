@@ -1,0 +1,66 @@
+// File: CDInfo.idl
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+#include <olectl.h>
+// CDInfo.idl : IDL source for CDInfo.dll
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (CDInfo.tlb) and marshalling code.
+
+	[
+		object,
+		uuid(A393BE4F-2FBD-11D0-B939-000000000000),
+		dual,
+		helpstring("ICDInfo Interface"),
+		pointer_default(unique)
+	]
+	interface ICDInfo : IDispatch
+	{
+		import "oaidl.idl";
+		import "ocidl.idl";
+
+		[propget, id(0)] HRESULT Tracks([out, retval] short* pTracks);
+		[propput, id(0)] HRESULT Tracks([in] short Tracks);
+		[propget, id(1)] HRESULT Length([in] short Track, [out, retval] short* pLength);
+		[propput, id(1)] HRESULT Length([in] short Track, [in] short nLength);
+		[propget, id(2)] HRESULT TotalLength([out, retval] short* pLength);
+		HRESULT	Read([out, retval] short* pTracks);
+		HRESULT Redraw();
+		HRESULT Play([in] short Track);
+	};
+[
+	uuid(A393BE4C-2FBD-11D0-B939-000000000000),
+	version(1.0),
+	helpstring("CDInfo 1.0 Type Library")
+]
+library CDInfoLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(3F85F440-3283-11d0-96A9-00A0C90DC94B),
+		helpstring("Event interface for CDInfo Control")
+	]
+	dispinterface CDEvents
+	{
+		properties:
+		methods:
+		[id(1)] void Click([in] short nTrack);
+	};
+	
+	[
+		uuid(A393BE4E-2FBD-11D0-B939-000000000000),
+		helpstring("CDInfo Class")
+	]
+	coclass CCDInfo
+	{
+		[default] interface ICDInfo;
+		[default, source] dispinterface CDEvents;
+	};
+};

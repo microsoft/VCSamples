@@ -1,0 +1,115 @@
+// inproc.odl : type library source for inproc.dll
+//
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (inproc.tlb).
+
+[ uuid(67519E10-2266-11B9-C004-5230D8C07D39), version(1.0) ]
+library inproc
+{
+	importlib("stdole32.tlb");
+	
+	//  Primary dispatch interface for CVariantMap
+	[ uuid(747205C0-F9F0-11cd-8C3D-00AA004BB3B7) ]
+	dispinterface IVariantMap
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CVariantMap)
+			[id(1)] BSTR str1;
+			[id(3)] BSTR str2;
+			[id(2)] long i1;
+			[id(4)] long i2;
+			[id(5)] long Count;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CVariantMap)
+			[id(6)] void SetAt(VARIANT from, VARIANT to);
+			[id(7)] void RemoveAll();
+			[id(8)] void RemoveKey(VARIANT key);
+			[id(9)] boolean IsEmpty();
+			[id(10), propget] VARIANT Item(VARIANT from);
+			//}}AFX_ODL_METHOD
+			[id(-4), propget] IUnknown* _NewEnum();
+	};
+
+	//  Class information for CVariantMap
+	[ uuid(7ACE7860-9A1C-11cd-9A90-00DD01113F12) ]
+	coclass CVariantMap
+	{
+		[default] dispinterface IVariantMap;
+	};
+
+	//  Primary dispatch interface for CStringCollect
+	[ uuid(0F098950-F9F0-11cd-8C3D-00AA004BB3B7) ]
+	dispinterface IStringCollect
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CStringCollect)
+			[id(1)] long Count;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CStringCollect)
+			[id(6), propget] BSTR Item(long nIndex);
+			[id(6), propput] void Item(long nIndex, BSTR lpszNewValue);
+			[id(2)] long Add(BSTR newValue);
+			[id(3)] long Find(BSTR findValue);
+			[id(4)] long Remove(VARIANT removeValue);
+			[id(5)] void RemoveAll();
+			//}}AFX_ODL_METHOD
+			[id(-4), propget] IUnknown* _NewEnum();
+	};
+
+	//  Class information for CStringCollect
+	[ uuid(BA0357C0-C377-11cd-9A90-00DD01113F12) ]
+	coclass CStringCollect
+	{
+		[default] dispinterface IStringCollect;
+	};
+
+	//  Primary dispatch interface for CVariantAssoc
+	[ uuid(84E099E0-F9F6-11cd-8C3D-00AA004BB3B7) ]
+	dispinterface IVariantAssoc
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CVariantAssoc)
+			[id(1)] VARIANT Key;
+			[id(2)] VARIANT Value;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CVariantAssoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CVariantAssoc
+	[ uuid(857F2CD0-F9FB-11cd-8C3D-00AA004BB3B7) ]
+	coclass CVariantAssoc
+	{
+		[default] dispinterface IVariantAssoc;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

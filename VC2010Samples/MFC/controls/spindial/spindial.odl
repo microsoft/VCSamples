@@ -1,0 +1,75 @@
+// spindial.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (spindial.tlb) that will become a resource in
+// spindial.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(06889608-B8D0-101A-91F1-00608CEAD5B3), version(1.0),
+  helpstring("Spindial OLE Custom Control module"), control ]
+library SpindialLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CSpindialCtrl
+
+	[ uuid(37446B89-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Spindial Control"), hidden ]
+	dispinterface _DSpindial
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CSpindialCtrl)
+			[id(1)] short NeedlePosition;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CSpindialCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CSpindialCtrl
+
+	[ uuid(37446B8A-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Spindial Control") ]
+	dispinterface _DSpindialEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CSpindialCtrl)
+			[id(1)] void SpinPositive();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CSpindialCtrl
+
+	[ uuid(06889605-B8D0-101A-91F1-00608CEAD5B3),
+	  helpstring("Spindial Control"), control ]
+	coclass Spindial
+	{
+		[default] dispinterface _DSpindial;
+		[default, source] dispinterface _DSpindialEvents;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

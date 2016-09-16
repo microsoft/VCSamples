@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawCli", "drawcli.vcxproj", "{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Debug|Win32.Build.0 = Debug|Win32
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Debug|x64.ActiveCfg = Debug|X64
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Debug|x64.Build.0 = Debug|X64
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Release|Win32.ActiveCfg = Release|Win32
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Release|Win32.Build.0 = Release|Win32
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Release|x64.ActiveCfg = Release|X64
+		{96F97F2D-AD12-4EE3-B9D3-807AB38B34E5}.Release|x64.Build.0 = Release|X64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

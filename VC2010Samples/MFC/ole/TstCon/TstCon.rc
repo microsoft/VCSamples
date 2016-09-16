@@ -1,0 +1,1217 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.H"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "Resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+
+#include "afxres.h"
+#include "atlbuild.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.H\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+
+	"#include ""afxres.h""\r\n"
+    "#include ""atlbuild.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""TstCon.tlb""\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\TstCon.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include ""afxolecl.rc""       // OLE container resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "RES\\TstCon.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_OLE_INSERT_NEW
+    SEPARATOR
+    BUTTON      ID_CONTROL_INVOKEMETHODS
+    BUTTON      ID_EDIT_PROPERTIES
+    SEPARATOR
+    BUTTON      ID_CONTAINER_AMBIENTPROPERTIES
+    BUTTON      ID_OPTIONS_DESIGNMODE
+    BUTTON      ID_OPTIONS_FREEZEEVENTS
+    SEPARATOR
+    BUTTON      ID_TOOLS_MACROS
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Session\tCtrl+N",        ID_FILE_NEW
+        MENUITEM "&Open Session...\tCtrl+O",    ID_FILE_OPEN
+        MENUITEM "&Save Session\tCtrl+S",       ID_FILE_SAVE
+        MENUITEM "Save Session &As...",         ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Register Controls...",       ID_FILE_REGISTERCONTROLS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "C&ut",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM "&Select All",                 ID_EDIT_SELECTALL
+        MENUITEM "&Delete",                     ID_EDIT_CLEAR
+        MENUITEM "D&elete All",                 ID_EDIT_DELETEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert New Control...",      ID_OLE_INSERT_NEW
+        MENUITEM "Insert Control From S&tream...", ID_EDIT_INSERTFROMSTREAM
+        MENUITEM "Insert Control From Stora&ge...", 
+                                                ID_EDIT_INSERTCONTROLFROMSTORAGE
+
+        MENUITEM SEPARATOR
+        MENUITEM "Bring to &Front",             ID_EDIT_BRINGTOFRONT
+        MENUITEM "Send to &Back",               ID_EDIT_SENDTOBACK
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties...",              ID_EDIT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "<<OLE VERBS GO HERE>>",       ID_OLE_VERB_FIRST
+    END
+    POPUP "&Container"
+    BEGIN
+        MENUITEM "&Ambient Properties...",      ID_CONTAINER_AMBIENTPROPERTIES
+
+        MENUITEM "&Options...",                 ID_CONTAINER_OPTIONS
+        MENUITEM "&Info...",                    ID_CONTAINER_INFO
+        MENUITEM "&Tab Order...",               ID_CONTAINER_TABORDER
+    END
+    POPUP "Cont&rol"
+    BEGIN
+        MENUITEM "Invoke &Methods...",          ID_CONTROL_INVOKEMETHODS
+        MENUITEM "Draw Meta&File",              ID_CONTROL_DRAWMETAFILE
+        MENUITEM "Save to S&tream...",          ID_CONTROL_SAVETOSTREAM
+        MENUITEM "Save to &Property Bag",       ID_CONTROL_SAVETOPROPERTYBAG
+        MENUITEM "Save to St&orage",            ID_CONTROL_SAVETOSTORAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Activate",                   ID_CONTROL_ACTIVATE
+        MENUITEM "&Deactivate",                 ID_CONTROL_DEACTIVATE
+        MENUITEM "&UI Activate",                ID_CONTROL_UIACTIVATE
+        MENUITEM "UI D&eactivate",              ID_CONTROL_UIDEACTIVATE
+        MENUITEM SEPARATOR
+        MENUITEM "&Logging...",                 ID_CONTROL_LOGGING
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Macro Bar",                  ID_VIEW_MACROBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Freeze Events",              ID_OPTIONS_FREEZEEVENTS
+        MENUITEM "&Design Mode",                ID_OPTIONS_DESIGNMODE
+        POPUP "T&race Level"
+        BEGIN
+            MENUITEM "&None",                       ID_OPTIONS_TRACELEVEL_NONE
+
+            MENUITEM "No&rmal",                     ID_OPTIONS_TRACELEVEL_NORMAL
+
+            MENUITEM "&Verbose",                    ID_OPTIONS_TRACELEVEL_VERBOSE
+
+        END
+        MENUITEM "&Two-Pass Drawing",           ID_OPTIONS_TWOPASSDRAWING
+        MENUITEM "&Slow Drawing",               ID_OPTIONS_SLOWDRAWING
+        MENUITEM "&Logging...",                 ID_OPTIONS_LOGGING
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Macros...",                  ID_TOOLS_MACROS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About ActiveX Control Test Container", ID_APP_ABOUT
+    END
+END
+
+IDR_TC98TYPE_CNTR_IP MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+END
+
+IDR_CONTROL_CONTEXT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Properties...",              ID_EDIT_PROPERTIES
+        MENUITEM "Invoke &Methods...",          ID_CONTROL_INVOKEMETHODS
+        MENUITEM SEPARATOR
+        MENUITEM "&Activate",                   ID_CONTROL_ACTIVATE
+        MENUITEM "&Deactivate",                 ID_CONTROL_DEACTIVATE
+        MENUITEM "&UIActivate",                 ID_CONTROL_UIACTIVATE
+        MENUITEM "UID&eactivate",               ID_CONTROL_UIDEACTIVATE
+        MENUITEM SEPARATOR
+        MENUITEM "Cut",                         ID_EDIT_CUT
+        MENUITEM "Copy",                        ID_EDIT_COPY
+        MENUITEM "De&lete",                     ID_EDIT_CLEAR
+        MENUITEM "Bring to Front",              ID_EDIT_BRINGTOFRONT
+        MENUITEM "Send to Back",                ID_EDIT_SENDTOBACK
+        MENUITEM SEPARATOR
+        MENUITEM "<<OLE VERBS GO HERE>>",       ID_OLE_VERB_FIRST
+    END
+END
+
+IDR_CONTAINER_CONTEXT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Insert &New Control...",      ID_OLE_INSERT_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Ambient Properties...",      ID_CONTAINER_AMBIENTPROPERTIES
+
+        MENUITEM "Container &Info...",          ID_CONTAINER_INFO
+    END
+END
+
+IDR_OUTPUTLOGEDIT_CONTEXT MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Copy",                       ID_OUTPUTLOGEDIT_COPY
+        MENUITEM "Clea&r",                      ID_OUTPUTLOGEDIT_CLEAR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_RUNMACRO,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_TC98TYPE_CNTR_IP ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+#define ABOUT_CAPTION		"About ActiveX Control Test Container"
+#define ABOUT_DESCRIPTION	"ActiveX Control Test Container"
+#define IDI_ABOUTICON		IDR_MAINFRAME
+
+#include <about_.rc>
+
+IDD_METHOD DIALOGEX 0, 0, 263, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Invoke Methods"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Method Name:",IDC_STATIC,7,7,48,8
+    COMBOBOX        IDC_METHODNAME,7,17,120,73,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP,0,HIDC_METHODNAME
+    LTEXT           "&Parameters:",IDC_STATIC,7,33,38,8
+    CONTROL         "List1",IDC_PARAMS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,43,249,55,0,HIDC_PARAMS
+    LTEXT           "Parameter &Value:",IDC_STATIC_PARAMETERVALUE,7,102,55,8,
+                    NOT WS_GROUP
+    EDITTEXT        IDC_PARAMVALUE,7,112,114,14,ES_AUTOHSCROLL,0,
+                    HIDC_PARAMVALUE
+    PUSHBUTTON      "Choose &Font...",IDC_CHOOSEFONT,7,112,70,14,0,0,
+                    HIDC_CHOOSEFONT
+    PUSHBUTTON      "Ch&oose Color...",IDC_CHOOSECOLOR,7,112,70,14,0,0,
+                    HIDC_CHOOSECOLOR
+    CONTROL         "DateTimePicker1",IDC_DATE,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_APPCANPARSE | WS_TABSTOP,7,112,114,
+                    14,0,HIDC_DATE
+    COMBOBOX        IDC_PARAMVALUECOMBO,7,112,114,45,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_PARAMVALUECOMBO
+    LTEXT           "Parameter &Type:",IDC_STATIC,131,102,53,8
+    COMBOBOX        IDC_PARAMTYPE,131,112,65,50,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_PARAMTYPE
+    PUSHBUTTON      "&Set Value",IDC_SETVALUE,206,112,50,14,0,0,
+                    HIDC_SETVALUE
+    DEFPUSHBUTTON   "&Invoke",IDC_INVOKE,206,7,50,14,0,0,HIDC_INVOKE
+    PUSHBUTTON      "&Close",IDOK,206,25,50,14
+    PUSHBUTTON      "Exception &Help",IDC_EXCEPTIONHELP,131,196,60,14,0,0,
+                    HIDC_EXCEPTIONHELP
+    LTEXT           "Return Value:",IDC_STATIC,7,130,44,8
+    EDITTEXT        IDC_RETURNVALUE,7,140,114,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP,0,HIDC_RETURNVALUE
+    LTEXT           "Exception Description",IDC_STATIC,7,158,70,8
+    EDITTEXT        IDC_EXCEPTIONDESC,7,168,184,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP,0,HIDC_EXCEPTIONDESC
+    LTEXT           "Exception Source:",IDC_STATIC,7,186,59,8
+    EDITTEXT        IDC_EXCEPTIONSOURCE,7,196,114,14,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP,0,HIDC_EXCEPTIONSOURCE
+END
+
+IDD_AMBIENTPROPERTIES DIALOGEX 0, 0, 263, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Ambient Properties"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,206,7,50,14,0,0,HIDOK
+    LTEXT           "&Property Name:",IDC_STATIC,7,7,100,8
+    COMBOBOX        IDC_PROPNAME,7,18,114,48,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP,0,
+                    HIDC_PROPNAME
+    LTEXT           "&DISPID:",IDC_STATIC,131,7,60,8
+    EDITTEXT        IDC_DISPID,131,17,65,14,ES_AUTOHSCROLL,0,HIDC_DISPID
+    CONTROL         "&Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,33,50,8,0,HIDC_ENABLED
+    LTEXT           "Property &Value:",IDC_STATIC_PROPERTYVALUE,7,45,120,8,
+                    NOT WS_GROUP | WS_TABSTOP,0,HIDC_STATIC_PROPERTYVALUE
+    EDITTEXT        IDC_PROPVALUE,7,55,114,14,ES_AUTOHSCROLL,0,
+                    HIDC_PROPVALUE
+    PUSHBUTTON      "C&hoose Color...",IDC_CHOOSECOLOR_AMBIENT,7,55,70,14,0,
+                    0,HIDC_CHOOSECOLOR_AMBIENT
+    PUSHBUTTON      "Choose &Font...",IDC_CHOOSEFONT_AMBIENT,7,55,70,14,0,0,
+                    HIDC_CHOOSEFONT_AMBIENT
+    CONTROL         "DateTimePicker1",IDC_DATE_AMBIENT,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_APPCANPARSE | WS_TABSTOP,7,55,114,
+                    14,0,HIDC_DATE_AMBIENT
+    COMBOBOX        IDC_PROPVALUECOMBO_AMBIENT,7,55,114,52,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_PROPVALUECOMBO_AMBIENT
+    LTEXT           "Property &Type:",IDC_STATIC,131,45,65,8
+    COMBOBOX        IDC_PROPTYPE,131,56,65,57,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_PROPTYPE
+    PUSHBUTTON      "&Set Value",IDC_SETVALUE_AMBIENT,206,55,50,14,0,0,
+                    HIDC_SETVALUE_AMBIENT
+    PUSHBUTTON      "&New Property...",IDC_NEWPROPERTY,7,72,70,14,0,0,
+                    HIDC_NEWPROPERTY
+END
+
+IDD_CONTAINEROPTIONS_FEATURES DIALOGEX 0, 0, 227, 74
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD | WS_DISABLED | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Features"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Allow Windowless Activation",IDC_ALLOWWINDOWLESS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,138,10,0,
+                    HIDC_ALLOWWINDOWLESS
+    CONTROL         "Use Two-Pass Drawing",IDC_TWOPASSDRAWING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,138,10,0,
+                    HIDC_TWOPASSDRAWING
+    CONTROL         "Honor OLEMISC_IGNOREACTIVATEWHENVISIBLE",
+                    IDC_IGNOREACTIVATEWHENVISIBLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,33,213,10,0,HIDC_IGNOREACTIVATEWHENVISIBLE
+    CONTROL         "Use IPointerInactive",IDC_USEIPOINTERINACTIVE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,46,138,10,0,
+                    HIDC_USEIPOINTERINACTIVE
+    CONTROL         "Use Quick Activation",IDC_USEQUICKACTIVATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,58,138,10,0,
+                    HIDC_USEQUICKACTIVATION
+END
+
+IDD_CONTAINEROPTIONS_INTERFACES DIALOGEX 0, 0, 178, 87
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD | WS_DISABLED | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Interfaces"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "IOleInPlaceSiteEx",IDC_IOLEINPLACESITEEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,164,10,0,
+                    HIDC_IOLEINPLACESITEEX
+    CONTROL         "IOleInPlaceSiteWindowless",
+                    IDC_IOLEINPLACESITEWINDOWLESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,20,164,10,0,HIDC_IOLEINPLACESITEWINDOWLESS
+    LTEXT           "Warning: Changing which interfaces the container supports while the container is running violates COM identity rules, and may cause unexpected control behavior.",
+                    IDC_STATIC,7,46,157,31
+    CONTROL         "IAdviseSinkEx",IDC_IADVISESINKEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,33,164,10,0,
+                    HIDC_IADVISESINKEX
+END
+
+IDD_CONTAINERINFO DIALOGEX 0, 0, 262, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Container Info"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_OBJECTS,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,7,7,188,81,0,HIDC_OBJECTS
+    DEFPUSHBUTTON   "&Close",IDOK,205,7,50,14
+END
+
+IDD_PROPERTYBAG DIALOGEX 0, 0, 263, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Property Bag"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_PROPERTIES,"SysListView32",LVS_REPORT | 
+                    LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP,7,7,249,132,0,
+                    HIDC_PROPERTIES
+END
+
+IDD_REGISTERCONTROLS DIALOGEX 0, 0, 254, 181
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Register Controls"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,197,160,50,14
+    LTEXT           "Registered Controls:",IDC_STATIC,7,7,64,8
+    CONTROL         "List1",IDC_REGISTEREDCONTROLS,"SysListView32",
+                    LVS_REPORT | LVS_SORTASCENDING | WS_BORDER | WS_TABSTOP,
+                    7,18,240,139,0,HIDC_REGISTEREDCONTROLS
+    PUSHBUTTON      "&Register...",IDC_REGISTER,7,160,50,14,0,0,
+                    HIDC_REGISTER
+    PUSHBUTTON      "&Unregister",IDC_UNREGISTER,67,160,50,14,0,0,
+                    HIDC_UNREGISTER
+    PUSHBUTTON      "R&eregister",IDC_REREGISTER,127,160,50,14,0,0,
+                    HIDC_REREGISTER
+END
+
+IDD_MACROBAR DIALOG  0, 0, 136, 12
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_MACRO,38,0,98,101,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Run Macro:",IDC_STATIC,0,3,38,8
+END
+
+IDD_LOGGING DIALOGEX 0, 0, 186, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Logging Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    CONTROL         "&No logging",IDC_LOGTONULL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,7,90,10,0,HIDC_LOGTONULL
+    CONTROL         "Log to &output window",IDC_LOGTOOUTPUT,"Button",
+                    BS_AUTORADIOBUTTON,7,20,90,10,0,HIDC_LOGTOOUTPUT
+    CONTROL         "Log to &debugger window",IDC_LOGTODEBUG,"Button",
+                    BS_AUTORADIOBUTTON,7,33,90,10,0,HIDC_LOGTODEBUG
+    CONTROL         "Log to &file",IDC_LOGTOFILE,"Button",BS_AUTORADIOBUTTON,
+                    7,46,90,10,0,HIDC_LOGTOFILE
+    EDITTEXT        IDC_FILENAME,20,59,99,14,ES_AUTOHSCROLL | WS_GROUP,0,
+                    HIDC_FILENAME
+    PUSHBUTTON      "&Browse...",IDC_FILENAME_BROWSE,129,59,50,14,0,0,
+                    HIDC_FILENAME_BROWSE
+END
+
+IDD_OUTPUTWINDOW DIALOGEX 0, 0, 367, 95
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_OUTPUT,7,7,353,81,ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL,0,HIDC_OUTPUT
+END
+
+IDD_TABORDER DIALOGEX 0, 0, 194, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Modify Tab Order"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,24,50,14
+    LISTBOX         IDC_TABORDER,7,7,120,100,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_TABORDER
+END
+
+IDD_CONTROLLOGGING_EVENTS DIALOGEX 0, 0, 180, 125
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD | WS_DISABLED | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Events"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Events to log:",IDC_STATIC,7,7,166,8
+    LISTBOX         IDC_EVENTS,7,18,166,100,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,0,HIDC_EVENTS
+END
+
+IDD_CONTROLLOGGING_PROPERTYCHANGES DIALOGEX 0, 0, 180, 125
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD | WS_DISABLED | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Property Changes"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Property changes to log:",IDC_STATIC,7,7,166,8
+    LISTBOX         IDC_PROPERTIES_CHANGES,7,18,166,100,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP,0,HIDC_PROPERTIES_CHANGES
+END
+
+IDD_CONTROLLOGGING_PROPERTYEDITREQUESTS DIALOGEX 0, 0, 180, 125
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD | WS_DISABLED | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Property Edit Requests"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "EditRequest Properties:",IDC_STATIC,7,7,120,8
+    LISTBOX         IDC_PROPERTIES_EDITREQUESTS,7,18,100,100,
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,0,HIDC_PROPERTIES_EDITREQUESTS
+    CONTROL         "Always",IDC_ALWAYS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,119,29,50,10,0,HIDC_ALWAYS
+    CONTROL         "Never",IDC_NEVER,"Button",BS_AUTORADIOBUTTON,119,41,50,
+                    10,0,HIDC_NEVER
+    CONTROL         "Prompt",IDC_PROMPT,"Button",BS_AUTORADIOBUTTON,119,53,
+                    50,10,0,HIDC_PROMPT
+    PUSHBUTTON      "&Select All",IDC_SELECTALL_EDITREQUESTS,123,104,50,14,
+                    WS_GROUP,0,HIDC_SELECTALL_EDITREQUESTS
+    GROUPBOX        "Allow Edit?",IDC_STATIC,114,17,59,48
+END
+
+IDD_INSERTCONTROL DIALOGEX 0, 0, 260, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Insert Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,203,7,50,14,0,0,HIDOK
+    PUSHBUTTON      "Cancel",IDCANCEL,203,25,50,14,0,0,HIDCANCEL
+    LISTBOX         IDC_CONTROLS,7,7,136,93,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,0,HIDC_CONTROLS
+    PUSHBUTTON      "&Implemented Categories...",IDC_IMPLEMENTEDCATEGORIES,
+                    153,66,100,14,0,0,HIDC_IMPLEMENTEDCATEGORIES
+    PUSHBUTTON      "&Required Categories...",IDC_REQUIREDCATEGORIES,153,84,
+                    100,14,0,0,HIDC_REQUIREDCATEGORIES
+    CONTROL         "Ignore required categories",
+                    IDC_IGNOREREQUIREDCATEGORIES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,153,102,100,10,0,
+                    HIDC_IGNOREREQUIREDCATEGORIES
+    LTEXT           "",IDC_SERVERPATH,7,104,136,8
+END
+
+IDD_NEWAMBIENTPROPERTY DIALOGEX 0, 0, 194, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "New Ambient Property"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,137,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,24,50,14
+    LTEXT           "Property Name:",IDC_STATIC,7,7,120,8
+    EDITTEXT        IDC_PROPNAME_NEW,7,18,120,14,ES_AUTOHSCROLL,0,
+                    HIDC_PROPNAME_NEW
+    LTEXT           "DISPID:",IDC_STATIC,7,35,120,8
+    EDITTEXT        IDC_DISPID_NEW,7,46,120,14,ES_AUTOHSCROLL | ES_NUMBER,0,
+                    HIDC_DISPID_NEW
+END
+
+IDD_OBJECTSAFETY DIALOGEX 0, 0, 226, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Object Safety"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,169,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,169,24,50,14
+    LTEXT           "IPersistStream",IDC_STATIC,7,7,100,8
+    LTEXT           "IPersistStreamInit",IDC_STATIC,7,18,100,8
+    LTEXT           "IPersistStorage",IDC_STATIC,7,29,100,8
+    LTEXT           "IPersistMemory",IDC_STATIC,7,40,100,8
+    LTEXT           "IPersistPropertyBag",IDC_STATIC,7,51,100,8
+    LTEXT           "IPersistFile",IDC_STATIC,7,62,100,8
+END
+
+IDD_COMPONENTCATEGORIES DIALOGEX 0, 0, 204, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Component Categories"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,147,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,147,24,50,14
+    LISTBOX         IDC_CATEGORIES,7,7,130,81,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,0,HIDC_CATEGORIES
+    PUSHBUTTON      "&Select All",IDC_SELECTALL,147,41,50,14,0,0,
+                    HIDC_SELECTALL
+END
+
+IDD_CONTAINEROPTIONS_SERVICES DIALOGEX 0, 0, 178, 87
+STYLE DS_SETFONT | DS_CONTEXTHELP | WS_CHILD | WS_DISABLED | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Services"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "SBindHost",IDC_SBINDHOST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,7,110,10,0,HIDC_SBINDHOST
+END
+
+IDD_MACRO DIALOGEX 0, 0, 182, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Macros"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Run",IDOK,125,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,24,50,14
+    LISTBOX         IDC_MACROS,7,7,108,81,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP,0,HIDC_MACROS
+    PUSHBUTTON      "&Open File...",IDC_OPENFILE,125,41,50,14,0,0,
+                    HIDC_OPENFILE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_METHOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_AMBIENTPROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_CONTAINEROPTIONS_FEATURES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_CONTAINEROPTIONS_INTERFACES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 171
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_CONTAINERINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PROPERTYBAG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 256
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_REGISTERCONTROLS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_MACROBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 129
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 5
+    END
+
+    IDD_LOGGING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_OUTPUTWINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 360
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_TABORDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_CONTROLLOGGING_EVENTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_CONTROLLOGGING_PROPERTYCHANGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_CONTROLLOGGING_PROPERTYEDITREQUESTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 173
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_INSERTCONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_NEWAMBIENTPROPERTY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_OBJECTSAFETY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_COMPONENTCATEGORIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_CONTAINEROPTIONS_SERVICES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 171
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_MACRO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDS_SCRIPT_FILES        "Script Files (*.dsm)|*.dsm||"
+    IDP_FAILED_TO_CREATE    "Failed to create object.  Make sure the object is entered in the system registry."
+    IDS_STREAM_FILES        "Test Container Stream Files (*.TSM)|*.TSM||"
+    IDS_STORAGE_FILES       "Test Container Storage Files (*.TSG)|*.TSG||"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "ActiveX Control Test Container\n\nTCS\nTest Container Sessions (*.tcs)\n.tcs\nTestContainer.Document\nTC Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "ActiveX Control Test Container"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new session\nNew"
+    ID_FILE_OPEN            "Open an existing session\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active session\nSave"
+    ID_FILE_SAVE_AS         "Save the active session with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this session"
+    ID_FILE_MRU_FILE2       "Open this session"
+    ID_FILE_MRU_FILE3       "Open this session"
+    ID_FILE_MRU_FILE4       "Open this session"
+    ID_FILE_MRU_FILE5       "Open this session"
+    ID_FILE_MRU_FILE6       "Open this session"
+    ID_FILE_MRU_FILE7       "Open this session"
+    ID_FILE_MRU_FILE8       "Open this session"
+    ID_FILE_MRU_FILE9       "Open this session"
+    ID_FILE_MRU_FILE10      "Open this session"
+    ID_FILE_MRU_FILE11      "Open this session"
+    ID_FILE_MRU_FILE12      "Open this session"
+    ID_FILE_MRU_FILE13      "Open this session"
+    ID_FILE_MRU_FILE14      "Open this session"
+    ID_FILE_MRU_FILE15      "Open this session"
+    ID_FILE_MRU_FILE16      "Open this session"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Delete the selection\nDelete"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_SELECT_ALL      "Select all controls on the form\nSelect All"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle Tool Bar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONTAINER_OPTIONS    "Modify container options"
+    ID_CONTAINER_AMBIENTPROPERTIES 
+                            "Modify the container's ambient properties\nAmbient Properties"
+    ID_CONTAINER_INFO       "View container status information"
+    ID_EDIT_DELETEALL       "Delete all controls"
+    ID_CONTAINER_TABORDER   "Modify the tab order of the controls"
+    ID_CONTROL_LOGGING      "Set logging options for the control"
+    ID_CONTROL_SAVETOSUBSTORAGE "Save the control's state to a substorage"
+    ID_EDIT_INSERTCONTROLFROMSUBSTORAGE 
+                            "Insert a new control from a previously saved storage"
+    ID_VIEW_OUTPUT_WINDOW   "Show or hide the output window\nToggle Output Window"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OLE_INSERT_NEW       "Insert new control\nNew Control"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OLE_VERB_FIRST       "Invoke this verb"
+    57873                   "Invoke this verb"
+    57874                   "Invoke this verb"
+    57875                   "Invoke this verb"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    IDS_BOUNDPROP_CHANGED   "OnChanged"
+    IDS_BOUNDPROP_REQUESTEDIT "OnRequestEdit"
+    IDS_APROPNAME_USERMODE  "UserMode"
+    IDS_APROPNAME_UIDEAD    "UIDead"
+    IDS_APROPNAME_SHOWHATCHING "ShowHatching"
+    IDS_APROPNAME_SHOWGRABHANDLES "ShowGrabHandles"
+    IDS_APROPNAME_TEXTALIGN "TextAlign"
+    IDS_APROPNAME_BACKCOLOR "BackColor"
+    IDS_APROPNAME_FORECOLOR "ForeColor"
+    IDS_APROPNAME_FONT      "Font"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_DELETE          "Delete the selected object"
+    ID_VIEW_NOTIFICATIONLOG "Display the property change notification log"
+    ID_VIEW_EVENTLOG        "Display the event log"
+    ID_OPTIONS_FREEZEEVENTS "Freeze all control event notifications\nFreeze Events"
+    ID_EDIT_INSERTCONTROL   "Insert an ActiveX control"
+    ID_OPTIONS_DESIGNMODE   "Toggle DesignMode/UserMode\nDesign Mode"
+    ID_EDIT_INVOKEMETHODS   "Invoke the selected control's methods"
+    ID_EDIT_AMBIENTPROPERTIES "Modify the container's ambient properties"
+    ID_EDIT_EMBEDDEDOBJECTFUNCTIONS_ACTIVATE "Activate the selected object"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_APROPNAME_DISPLAYNAME "DisplayName"
+    IDS_APROPNAME_SCALEUNITS "ScaleUnits"
+    IDS_APROPNAME_MESSAGEREFLECT "MessageReflect"
+    IDS_APROPNAME_LOCALEID  "LocaleID"
+    IDS_APROPNAME_SUPPORTSMNEMONICS "SupportsMnemonics"
+    IDS_UNREGISTERSERVERFAILED 
+                            "Failed to unregister control using DllUnregisterServer.  Attempt to obliterate control's registry keys?"
+    IDS_CONTAINERINFOOBJECTHEADER "Object"
+    IDS_CONTAINERINFOSTATEHEADER "State"
+    IDS_ACTIVESTATE         "Active"
+    IDS_UIACTIVESTATE       "UI Active"
+    IDS_LOADEDSTATE         "Loaded"
+    IDS_OPENSTATE           "Open"
+    IDS_EMPTYSTATE          "Empty"
+    IDS_LOGEVENTFORMAT      "%1: Event: %2"
+    IDS_UNKNOWNDISPIDFORMAT "Unknown DISPID=%1"
+    IDS_LOGPROPERTYCHANGEFORMAT "%1: Property Change: %2"
+    IDS_SERVERNOTFOUND      "Server Not Found"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONTROL_SAVETOSTREAM "Save the selected control's state to a stream"
+    ID_EDIT_INSERTFROMSTREAM "Insert a control from a previously saved stream"
+    ID_CONTROL_EVENTLOGGING "Configure event logging for the selected control"
+    ID_CONTROL_SAVETOPROPERTYBAG 
+                            "Save the selected control's state to a property bag"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OPTIONS_TRACELEVEL_NONE "No debug output"
+    ID_OPTIONS_TRACELEVEL_NORMAL "Normal debug output"
+    ID_OPTIONS_TRACELEVEL_VERBOSE "Verbose debug output"
+    ID_FILE_REGISTERCONTROLS "Register/Unregister controls"
+    ID_OPTIONS_SLOWDRAWING  "Use slow drawing"
+    ID_OPTIONS_TWOPASSDRAWING "Use two-pass drawing"
+    ID_OPTIONS_LOGGING      "Change logging options"
+    ID_CONTROL_INVOKEMETHODS 
+                            "Invoke the selected control's methods\nInvoke Methods"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOGPROPERTYREQUESTEDITFORMAT "%1: Property Edit Request: %2"
+    IDS_PARAMETER           "Parameter"
+    IDS_VALUE               "Value"
+    IDS_TYPE                "Type"
+    IDS_UNABLETOREPRESENT   "Unable to represent"
+    IDS_PROPERTYVALUE       "(Property Value)"
+    IDS_PROPERTY            "Property"
+    IDS_PROGID              "ProgID"
+    IDS_PATH                "Path"
+    IDS_CONTROLLOGGINGOPTIONS "Control Logging Options"
+    IDS_CONTAINEROPTIONS    "Container Options"
+    IDS_PROPERTYEDITREQUESTFORMAT 
+                            "Allow edit of property ""%1"" of ""%2"" control?"
+    IDS_PROPERTYEDITALLOWED "\tProperty edit allowed"
+    IDS_PROPERTYEDITDENIED  "\tProperty edit denied"
+    IDS_SAVETOSTREAMFAILED  "IPersistStream(Init)::Save() failed: "
+    IDS_ERRORWRITINGTOFILE  "Error writing to file"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERRORREADINGFROMFILE "Error reading from file"
+    IDS_SAVETOPROPERTYBAGFAILED "Error saving control to property bag: "
+    IDS_IMPLEMENTEDCATEGORIES "Implemented Categories"
+    IDS_REQUIREDCATEGORIES  "Required Categories"
+    IDS_CONTROLHASNOMETHODS "This control has no methods."
+    IDS_NEWPROPERTY         "NewProperty"
+    IDS_CREATEFAILED        "Failed to create control: %1"
+    IDS_CONTAINERINFOWINDOWHEADER "Windowless?"
+    IDS_WINDOWED            "Windowed"
+    IDS_WINDOWLESS          "Windowless"
+    IDS_NOCOMMONPROPERTIES  "The selected controls have no property pages in common."
+    IDS_MULTIPLESELECTION   "Multiple Selection"
+    IDS_DISPATCHEXCEPTION   "Dispatch Exception: %1"
+    IDS_SCRIPTERRORFORMAT   "%1: %2\nContinue running script?"
+    IDS_SAVETOSTORAGEFAILED "IPersistStorage::Save() failed: "
+    IDS_NODFVIEW            "Failed to run the OLE Docfile Viewer (DFView.exe).  Make sure that it is installed."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_METAFILEWINDOWTITLE "MetaFile"
+    IDS_FALSE               "FALSE"
+    IDS_TRUE                "TRUE"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CONTROL_ACTIVATE     "In-place activate the selected control"
+    ID_CONTROL_DEACTIVATE   "Deactivate the selected control"
+    ID_CONTROL_UIACTIVATE   "UI activate the selected control"
+    ID_CONTROL_UIDEACTIVATE "UI deactivate the selected control"
+    ID_EDIT_BRINGTOFRONT    "Bring the selection to the front of the Z order"
+    ID_EDIT_SENDTOBACK      "Send the selection to the back of the Z order"
+    ID_EDIT_MULTISELPROPERTIES "Edit the properties of the selection"
+    ID_TOOLS_RUNSCRIPT      "Run a script"
+    ID_EDIT_SELECTALL       "Select all controls on the form"
+    ID_TOOLS_OLEVIEW        "Run the OLE/COM Object Viewer"
+    ID_TOOLS_REGEDIT        "Run the registry editor"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_PROPERTIES      "Edit the properties of the selection\nProperties"
+    ID_CONTROL_SAVETOSTORAGE "Save the selected control's state to a storage"
+    ID_EDIT_INSERTCONTROLFROMSTORAGE 
+                            "Insert a control from a previously saved storage"
+    ID_TOOLS_MACROS         "Run an Active Scripting Engine macro\nMacros"
+    ID_CONTROL_DRAWMETAFILE "Draw the selected control to a metafile"
+    ID_VIEW_MACROBAR        "Show or hide the macro bar\nToggle Macro Bar"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "TstCon.tlb"
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\TstCon.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include "afxolecl.rc"       // OLE container resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

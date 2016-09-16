@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{EBE26085-4851-4ACC-B4B4-76F87DC994E1}' = s 'EventSource'
+		'EventSource.DLL'
+		{
+			val AppID = s '{EBE26085-4851-4ACC-B4B4-76F87DC994E1}'
+		}
+	}
+}

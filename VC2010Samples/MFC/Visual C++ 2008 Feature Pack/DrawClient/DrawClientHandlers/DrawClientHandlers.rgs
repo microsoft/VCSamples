@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'DrawClientHandlers'
+		'DrawClientHandlers.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5a38cbec-5b3d-4dd2-9bd1-5753189e9c9a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="HTML Help Files">
+      <UniqueIdentifier>{558c9bd4-e65b-4171-815b-808ce8062044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTML Help Topics">
+      <UniqueIdentifier>{6a2c452e-14fd-483b-be28-dc70d326f670}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{9fbf6ce3-83f9-42f2-8d08-170c259b7364}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ed8b4541-6be6-4629-83ca-156d1db9f26f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AProp.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="APropDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BindHost.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComCatDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConInfDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EvLogPg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcepInf.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtCtl.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FeatPg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IFacesPg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InsCtlDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MacroCB.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MacroDB.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MacroDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MethInfo.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MethodDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MFileWnd.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewAPDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OutWndVw.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PBagDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PChngPg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PEdReqPg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PropBag.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegCtlDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrMngr.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServPg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TabOrdDg.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCDoc.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCItem.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCSplit.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCTrace.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TCView.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TstCon.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeAttr.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VarUtils.Cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="TstCon.odl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hlp\popups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hlp\automation.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Changing_Ambient_Properties.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Choose_Which_Events.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Choosing_a_Location.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Choosing_Design_or_User_Mode.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Event_Handling.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Extended_Properties_and_Methods.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\help.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Inserting_an_ActiveX_Control.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Invoking_an_Objects_Methods.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Macros.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\main_index.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Object_Model.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Samples.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Saving_and_Restoring.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Setting_the_level.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Testing_Persistence.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\tstcon.hhk">
+      <Filter>HTML Help Files</Filter>
+    </None>
+    <None Include="hlp\tstcon32.hhc">
+      <Filter>HTML Help Files</Filter>
+    </None>
+    <None Include="hlp\Using_Command-Line.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\Verbs.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="ReadMe.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TstCon.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AProp.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="APropDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="BindHost.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ComCatDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ConInfDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="EvLogPg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ExcepInf.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ExtCtl.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FeatPg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="hlp\tstcon32.hhp" />
+    <CustomBuild Include="IFacesPg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="InsCtlDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Log.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="LogDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MacroCB.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MacroDB.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MacroDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MainFrm.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MethInfo.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MethodDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MFileWnd.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="NewAPDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OutputDialogBar.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OutputLogEdit.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="OutWndVw.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PBagDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PChngPg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PEdReqPg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PropBag.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="RegCtlDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="resource.hm">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\macro.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\macrobar.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\TstCon.ICO">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\TstCon.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Script.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ScrMngr.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ServPg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TabOrdDg.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TCDoc.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TCItem.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TCSplit.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TCTrace.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TCView.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TestCon.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TstCon.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="TstCon.Reg" />
+    <CustomBuild Include="TypeAttr.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="VarUtils.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

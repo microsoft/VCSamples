@@ -1,0 +1,327 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3FL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "traceman Application"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "traceman"
+            VALUE "LegalCopyright", "Copyright (C) 2007"
+            VALUE "OriginalFilename", "traceman.exe"
+            VALUE "ProductName", "traceman Application"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MICROSOFT_LOGO      "Microsoft (R) traceman Version 9.8.1.23#CR#Copyright (C) Microsoft Corporation.  All rights reserved.#CR#"
+    IDS_DLL_FILE_EXISTS     "Dll file $3 exists."
+    IDS_XML_ASSEMBLY_PARSED "Assembly manifest was parsed."
+    IDS_XML_CONFIG_PARSED   "Config manifest file was parsed."
+    IDS_LOADED_MANIFEST_FOR_ASSEMBLY "Assembly manifest $3$4."
+    IDS_PARSING_XML_ASSEMBLY_FILE "Parsing manifest file."
+    IDS_NO_POLICY_FILE_FOUND "No policy manifest was found."
+    IDS_PARSING_XML_CONFIG_FILE "Config manifest file parsing."
+    IDS_RESOLVING_POLICY_DISABLED_IN_CONFIG 
+                            "Resolving policy is disabled by setting publisherPolicy attribute applay=no."
+    IDS_VALID_POLICY_FOUND  "Policy $3 can redirect assembly, but is ignored because it is not the most recent one."
+    IDS_FINAL_POLICY_RESOLVED "Redirection from policy to $3 taken."
+    IDS_CONFIG_FILE_DOES_NOT_EXIST "No config file $3 found."
+    IDS_TRY_TO_RESOLVE_POLICY "Trying to resolve policy."
+    IDS_POLICY_RESOLVED     "Policy resolved."
+    IDS_NO_FILE_MATCH_FOR_POLICY 
+                            "Most recent policy does not apply to assembly version $3."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_INVALID_TOKEN       "Invalid token value for $3. There are allowed only hex(0-9A-Za-z) values."
+    IDS_INVALID_TYPE_VALUE_FOR_ASSEMBLY 
+                            "ERROR: Invalid value in type attribute for $3 (win32 value required)."
+    IDS_INVALID_TYPE_VALUE_FOR_POLICY 
+                            "ERROR: Invalid value for $3 in type attribute (win32-policy value required)."
+    IDS_INVALID_NEW_VERSION_FORMAT 
+                            "ERROR: Invalid format for newVersion attribute ($3) should be ddddd.ddddd.ddddd.ddddd."
+    IDS_VERSION_TAG_FORBIDDEN_IN_CONFIG 
+                            "ERROR: Version number in assemblyIdentity forbidden for config for $3 assembly."
+    IDS_NO_ASSEMBLY_FILES   "ERROR: No library files defined."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DLL_FILE_NOT_EXISTS "ERROR: Dll file $3 does not exists."
+    IDS_ASSEMBLY_DIR_NOT_EXISTS 
+                            "ERROR: Assembly directory $4$5 does not exists."
+    IDS_TOO_MANY_ASSEMBLY_DIRS 
+                            "ERROR: There are too many matching directories $3."
+    IDS_TOO_MANY_ASSEMBLY_DEFINITION 
+                            "ERROR: There is too many assemblyIdentity definition."
+    IDS_NO_ASSEMBLY_DEFINITION_IN_XML 
+                            "ERROR: There is no assemblyIdentity definition."
+    IDS_NO_ASSEMBLY_FOUND   "ERROR: Not able to bind the requested version of $3."
+    IDS_TOO_MANY_MATCHING_VERSIONS_POLICY 
+                            "ERROR: There is too many matching version of policies."
+    IDS_TOO_MANY_ASSEMBLIES_MATCH_FOUND 
+                            "ERROR: Too many assemblies match to $3. Probably some assemblies ranges are the same or there is no version defined!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WRONG_EXTENSION     "Wrong file extension. Use *.exe, *.dll or *manifest."
+    IDS_NO_ASSEMBLIES_RESOLVED 
+                            "ERROR: No assemblies in application manifest found."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CR                  " "
+    IDS_INVALID_VERSION_RANGE "ERROR: Invalid oldVersion $4 range for $3."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NO_MANIFEST_FOUND   "ERROR: No manifest found."
+    IDS_DUMP_NO_MANIFESTS_FOUND 
+                            "ERROR: No manifests found in winsxs directory. Check rights to this directory."
+    IDS_CAN_NOT_LOAD_MANIFEST_FROM_FILE "ERROR: Cannot read $3$4 file."
+    IDS_CANNOT_LOAD_EXTERNAL_MAN "Cannot read external manifest $3$4."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONFIG_FILE_FOUND   "Application config file $3 found."
+    IDS_TRY_TO_FIND_ASSEMBLY "Trying to find assembly manifest $3."
+    IDS_TRY_TO_FIND_LOCAL_ASSEMBLIES "Trying to find local assemblies."
+    IDS_TRY_TO_FIND_SIMILAR_ASSEMBLIES "Similar assemblies in $3"
+    IDS_FOUND_SIMILAR_ASSEMBLY_FILE "$3"
+    IDS_CAN_NOT_FIND_SIMILAR_ASSEMBLIES "No similar assemblies found."
+    IDS_TRY_TO_FIND_SIMILAR_ASSEMBLY_POLICY "Similar policies in $3"
+    IDS_FOUND_SIMILAR_ASSEMBLY_POLICY 
+                            "Similar policies to current assembly found."
+    IDS_FOUND_SIMILAR_ASSEMBLY_POLICY_FILE "$3"
+    IDS_NO_LOCAL_DLL_FOUND  "No local $3 dll file found."
+    IDS_LOCAL_DLL_FOUND     "Local dll $3 found."
+    IDS_LOCAL_MANIFEST_FOUND "Local manifest $3 found."
+    IDS_NO_LOCAL_MANIFEST_FOUND "No local $3 manifest found."
+    IDS_TARGET_FILE_EXISTS  "Input file exists $3$4."
+    IDS_TRY_TO_LOAD_MANIFEST_FROM_RES 
+                            "Trying to load the manifest from resources."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UNSUPPORTED_OPERATING_SYSTEM 
+                            "This application cannot be run under this operating system."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NO_XMLLITE_INSTALLED 
+                            "This program requires XmlLite library, which is not installed on this operating system. "
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WRONG_FILTER_EXP    "Wrong filter regular expression (e.g. .*crt.* or .*mfc.*)."
+    IDS_CAN_NOT_SET_WINSXS_DIR "Cannot set the winsxs directories."
+    IDS_CMD_LINE_HELP_MSG   "Trace dependencies between application/library and assemblies installed on the system.#CR# #CR#  traceman -dump [options]#CR# #CR#Or#CR# #CR#  traceman [options] <filename>#CR# #CR#Options:#CR#  -verbose:<level> or -v:<level> - level 0 no output, 1 low, 2 medium, 3 all, default is 2.#CR#  -filter:<filter> or -f:<filter> - find all assembly, which match the filter expression. Filter is compared to string arch_assemblyName_token_version_lang.#CR#  -output:<filename> - save data into output file.#CR#  -h or -? - help information.#CR#  -regex - treat filter as regular expression.#CR# #CR#Where:#CR#  <filename> is name of file.#CR#  <filter> is a filtering expression (e.g. -filter:*crt*)."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TARGET_FILE_DOES_NOT_EXISTS "Input file $3$4 does not exist."
+    IDS_NO_ASSEMBLIES_IN_WINSXS "There is no assemblies in winSxS directory."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MANIFEST_LOADED_FROM_RES "Manifest loaded from resources $3."
+    IDS_TRY_TO_LOAD_EXTERNAL_MANIFEST 
+                            "Trying to load external manifest $3$4.manifest."
+    IDS_LOADED_EXTERNAL_MANIFEST_FILE 
+                            "Loaded external manifest file $3$4.manifest."
+    IDS_WINXP_ORDER_MANIFEST_WARNING 
+                            "WARNING: Windows XP prefer external manifest $3$4.manifest than internal one $3$5."
+    IDS_ASSEMBLY_APP_MAN_INFO 
+                            "Dependent assembly requested by application manifest:#CR#  $3#CR#$4#CR#  ---"
+    IDS_XMLLITE_INSTLLATION_HINT 
+                            "The XmlLite installation package can be found on http://support.microsoft.com/kb/915865 webpage."
+    IDS_NO_MATCHING_POLICY  "Policy cannot redirect $3 ($4), ignored."
+    IDS_DUMP_ASSEMBLY_INFO  "$4:#CR#$3"
+    IDS_ASSEMBLY_CONFIG_MAN_INFO 
+                            "Assembly named by config manifest:#CR#  $3#CR#$4#CR#  ---"
+    IDS_DUMP_WINSXS_DIR     "Dumping winsxs directory."
+    IDS_REDIRECTION_FROM_CONFIG "Redirection from config to $3 taken."
+    IDS_DUMP_WINXP_WINSXS_POLICY "Dumping winsxs policies."
+    IDS_DUMP_WINSXS_DIR_ENDED "Dumping winsxs directory ended."
+    IDS_CAN_NOT_FIND_SIMILAR_ASSEMBLY_POLICY 
+                            "No similar assembly policy found."
+    IDS_NO_MATCH_IN_CONFIG_FILE 
+                            "No assembly redirection found in config file $3."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NO_POLICY_FILE_FOUND_IN_WINSXS 
+                            "No policy files were found in winsxs directory."
+    IDS_DUMP_NO_RESULTS     "No MFC, ATL, CRT or OpenMP assemblies were found."
+    IDS_DUMP_ALL_FILTERED   "All results where filtered. Try to use different filter."
+    IDS_ASSEMBLY_POLICY_MAN_INFO 
+                            "Assembly named by policy manifest:#CR#  $3#CR#$4#CR#  ---"
+    IDS_ASSEMBLY_MANIFEST_DOES_NOT_EXISTS 
+                            "Requested assembly manifest file $3$4 does not exist."
+    IDS_ASSEMBLY_MAN_INFO   "Assembly named by assembly manifest:#CR#  $3#CR#$4#CR#  ---"
+    IDS_CAN_NOT_LOAD_MANIFEST_FROM_RES 
+                            "WARNING: Cannot load manifest from resources $3."
+    IDS_LATEST_POLICY       "Most recent policy:#CR#  $3#CR#$4#CR#  ---"
+    IDS_LATEST_ASSEMBLY     "Latest assembly:#CR#  $3#CR#$4#CR#  ---"
+    IDS_USING_EMBEDED_MAN   "Using embedded manifest $3$5, ignoring external manifest $3$4.manifest."
+    IDS_USING_EXTERNAL_MAN  "Using external manifest $3.manifest, ignoring embedded manifest $3."
+    IDS_SEPARATE            "---"
+    IDS_USING_EMBEDED_MAN_ONLY "Using embedded manifest $3."
+    IDS_MOST_RECENT_POLICY_NOT_MATCH 
+                            "Most recent policy $3 ($5) does not apply to assembly version $4."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ASSEMBLY_IS_NOT_IN_VERISION_RANGE 
+                            "Assembly version $3 does not apply to redirection defined in config manifest $4."
+    IDS_ASSEMBLY_MANIFEST_FILE "Manifest: $3$4."
+    IDS_XML_APP_FOUND_ASSEMBLY "Declared dependent assembly $3."
+    IDS_NO_LOCAL_ASSEMBLIES_FOUND "No local assemblies found."
+    IDS_NO_ASSEMBLY_REDIRECTION 
+                            "No assembly redirection found (no bindingRedirect attribute)."
+    IDS_THERE_IS_ASSEMBLY_WITHOUT_MANIFEST 
+                            "There is assembly directory without manifest file $3."
+    IDS_TWO_MANIFEST_FOUND  "WARNING: Embedded $3$5 and external $3$4.manifest manifests exists."
+    IDS_HASH_ALG_RECOMMENDATION "It is recommended to use SHA1 algorithm."
+    IDS_LOCAL_ASSEMBLY_DONT_MATCH 
+                            "Local assembly does not match ($4, $5, $6)."
+    IDS_CAN_NOT_LOAD_MANIFEST_FROM_RES_HINT 
+                            "Check if application or dll has resource RT_MANIFEST, where the manifest is placed.#CR#For application resource id should be 1 and for dlls resource id should be 2."
+    IDS_OS_INFO             "Os version: $3.$4($5)."
+    IDS_SYSTEM_ARCH_INFO    "Processor architecture: $3."
+    IDS_NO_ASSEMBLY_DEFINITIONS_IN_APP 
+                            "No assembly definition found in application manifest."
+    IDS_APP_THE_SAME_ASSEMBLIES_DEFINED 
+                            "WARNING: Some assemblies have been declared twice."
+    IDS_EMPTY_POLICY_DIR_WINXP 
+                            "There is no policy manifest inside $3$4 policy directory."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TOO_MANY_POLICY_DIRS_WINXP 
+                            "ERROR: There are too many matching policies directories($3)."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REDIRECTED_BY_CONFIG "Assembly is redirected ($3) by config manifest."
+    IDS_CONFIG_FILE         "Checking config redirections."
+    IDS_VALID_MOST_RECENT_POLICY_FOUND "Most recent policy is valid $3."
+    IDS_NO_POLICY_DIR_FOUND_WINXP "No policy dir found $3."
+    IDS_ERROR_SUMMARY       "---#CR#Errors: $3, see above.#CR#---"
+    IDS_INVALID_VERSION_FORMAT 
+                            "WARNING: Invalid version format $3 (ddddd.ddddd.ddddd.ddddd) for $4. Zeros before nubers are incorrect e.g. version 09.034.34.34."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NO_EXTERNAL_INTERNAL_MAN_FOUND 
+                            "No embedded $3$5 and external manifest $3$4.manifest found."
+    IDS_WRONG_SWITCHED_RES_ID 
+                            "Switched resource id. Dll should have id 2 and executable id 1."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

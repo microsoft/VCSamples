@@ -1,0 +1,98 @@
+// CircColl.idl : IDL source for CircColl.dll
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CircColl.tlb) and marshalling code.
+
+[
+	object,
+	uuid(5f6cb335-97a9-11cf-B058-00A0C90348FA),
+	dual,
+	helpstring("IMyCircle Interface"),
+	pointer_default(unique)
+]
+interface IMyCircle : IDispatch
+{
+	import "oaidl.idl";
+	// center coordinates
+	[propget, id(1)] HRESULT XCenter([out, retval] double* pXCenter);
+	[propput, id(1)] HRESULT XCenter([in] double xCenter);
+	[propget, id(2)] HRESULT YCenter([out, retval] double* pYCenter);
+	[propput, id(2)] HRESULT YCenter([in] double YCenter);
+	// radius
+	[propget, id(3)] HRESULT Radius([out, retval] double* pRadius);
+	[propput, id(3)] HRESULT Radius([in] double Radius);
+	// label
+	[propget, id(4)] HRESULT Label([out,retval] BSTR* pbstrLabel);
+	[propput, id(4)] HRESULT Label([in] BSTR bstrLabel); 
+};
+
+///////////////////////////////////////////////////////
+[
+	object,
+	public,
+	uuid(5f6cb325-97a9-11cf-B058-00A0C90348FA),
+	dual,
+	helpstring("IMyCircleCollection Interface"),
+	pointer_default(unique)
+]
+interface IMyCircleCollection : IDispatch
+{
+	import "oaidl.idl";
+	[propget, helpstring("Returns number of items in collection.")]
+		HRESULT Count([out, retval] long* retval);
+
+	[propget, id(DISPID_VALUE), helpstring("Given an index, returns an item in the collection.")]
+		HRESULT Item([in] long Index, [out, retval] VARIANT* retval);
+
+	[propget, restricted, id(DISPID_NEWENUM),
+		helpstring("returns an enumerator for the collection.")]	// Must be propget. 
+		HRESULT _NewEnum([out, retval] IUnknown** retval);	
+};
+
+///////////////////////////////////////////////////////
+[
+	object,
+	uuid(645C715D-A438-11cf-91E1-00A0C903976F),
+	dual,
+	helpstring("IMyCircleCollectionCreator Interface"),
+	pointer_default(unique)
+]
+interface IMyCircleCollectionCreator : IDispatch
+{
+	import "oaidl.idl";
+
+	[id(1), helpstring("Returns a collection of Circles.")]
+	HRESULT GetCircles([in] short n, [out, retval] VARIANT* retval);
+};
+
+
+[
+	uuid(5F6CB310-97A9-11CF-B058-00A0C90348FA),
+	version(1.0),
+	helpstring("CircColl 1.0 Type Library (ATL Sample)")
+]
+library CIRCCOLLLib
+{
+	importlib("stdole32.tlb");
+	///////////////////////////////////////////////////////
+	interface IMyCircle;
+	interface IMyCircleCollection;
+	interface IMyCircleCollectionCreator;
+
+	[
+		uuid(645C715E-A438-11cf-91E1-00A0C903976F),
+		helpstring("MyCircleCollectionCreator Class")
+	]
+	coclass MyCircleCollectionCreator
+	{
+		[default] interface IMyCircleCollectionCreator;
+	};
+};

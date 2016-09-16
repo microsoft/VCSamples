@@ -1,0 +1,57 @@
+// DrawCtl.idl : IDL source for DrawCtl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DrawCtl.tlb) and marshalling code.
+
+    
+
+    [
+        object,
+        uuid(48DDCC1E-1FE0-11D0-B91B-000000000000),
+        dual,
+        helpstring("IDrawCtl Interface"),
+        pointer_default(unique)
+    ]
+    interface IDrawCtl : IDispatch
+    {
+        import "oaidl.idl";
+
+        HRESULT Connect([in] BSTR pMachineName);
+        HRESULT Disconnect();
+        HRESULT Clear();
+    };
+[
+    uuid(48DDCC1B-1FE0-11D0-B91B-000000000000),
+    version(1.0),
+    helpstring("DrawCtl 1.0 Type Library")
+]
+library DRAWCTLLib
+{
+    importlib("stdole32.tlb");
+
+    [
+        uuid(48DDCC1D-1FE0-11D0-B91B-000000000000),
+        helpstring("DrawCtl Class")
+    ]
+    coclass CDrawCtl
+    {
+        [default] interface IDrawCtl;
+    };
+
+    [
+        object,
+        uuid(330E9E75-DF48-11CF-8E2C-00A0C90DC94B),
+        dual,
+        helpstring("IDrawServ Interface"),
+        pointer_default(unique)
+    ]
+    interface IDrawServ : IDispatch
+    {
+        import "oaidl.idl";
+        HRESULT Draw(
+            [in] long x1, [in] long y1,
+            [in] long x2, [in] long y2,
+            [in] unsigned long col);
+    };
+};

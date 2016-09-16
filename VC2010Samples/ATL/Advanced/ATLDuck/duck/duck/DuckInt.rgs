@@ -1,0 +1,20 @@
+HKCR
+{
+	ForceRemove DuckInt.DuckInt.1 = s 'DuckInt Class'
+	{
+		CLSID = s '{120B72AF-65BF-11D0-9DDC-00A0C9034892}'
+	}
+	ForceRemove DuckInt.DuckInt = s 'DuckInt Class'
+	{
+		CurVer = s 'DuckInt.DuckInt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {120B72AF-65BF-11D0-9DDC-00A0C9034892} = s 'DuckInt Class'
+		{
+			ProgID = s 'DuckInt.DuckInt.1'
+			VersionIndependentProgID = s 'DuckInt.DuckInt'
+			LocalServer32 = s '%MODULE%'
+		}
+	}
+}

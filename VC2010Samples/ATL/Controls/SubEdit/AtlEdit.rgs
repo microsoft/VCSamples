@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove AtlEdit.AtlEdit.1 = s 'AtlEdit Class'
+	{
+		CLSID = s '{2D7E0F8F-3215-11D0-BF28-0000E8D0D146}'
+	}
+	ForceRemove AtlEdit.AtlEdit = s 'AtlEdit Class'
+	{
+		CurVer = s 'AtlEdit.AtlEdit.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2D7E0F8F-3215-11D0-BF28-0000E8D0D146} = s 'AtlEdit Class'
+		{
+			ProgID = s 'AtlEdit.AtlEdit.1'
+			VersionIndependentProgID = s 'AtlEdit.AtlEdit'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'Programmable'
+			'ToolboxBitmap32' = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '{2D7E0F8D-3215-11D0-BF28-0000E8D0D146}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

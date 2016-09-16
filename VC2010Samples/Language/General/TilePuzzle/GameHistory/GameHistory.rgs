@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{7D1D5B94-C359-4587-AEEF-458868EE89B1}' = s 'GameHistory'
+		'GameHistory.DLL'
+		{
+			val AppID = s '{7D1D5B94-C359-4587-AEEF-458868EE89B1}'
+		}
+	}
+}

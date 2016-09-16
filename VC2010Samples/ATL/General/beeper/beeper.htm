@@ -1,0 +1,22 @@
+<HTML>
+
+<BODY>
+<object
+   classid="clsid:8FD6E504-78CA-4236-9819-37A7AA09C2D7"
+   id=beeperobj
+>
+</object>
+
+<PRE>       <INPUT TYPE=BUTTON VALUE="Beep! (ATL)" NAME="BtnBeep"> </PRE>
+</BODY>
+Press the button to see Beeper in action!!
+<SCRIPT LANGUAGE=VBS>
+	Sub BtnBeep_OnClick
+		beeperobj.Beep()
+		For i = 1 to beeperobj.Count
+	   		MsgBox beeperobj.Item(i)
+		Next
+	End Sub
+</SCRIPT>
+
+</HTML>

@@ -1,0 +1,65 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MDrive", "mdrive\mdrive.vcxproj", "{013DCD93-BA0C-4B58-B917-C963C4405678}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27} = {ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Drive", "drive\drive.vcxproj", "{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27} = {ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "connect", "connect.vcxproj", "{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Debug|Itanium.Build.0 = Debug|Itanium
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Debug|Win32.ActiveCfg = Debug|Win32
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Debug|Win32.Build.0 = Debug|Win32
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Debug|x64.ActiveCfg = Debug|X64
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Debug|x64.Build.0 = Debug|X64
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Release|Itanium.ActiveCfg = Release|Itanium
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Release|Itanium.Build.0 = Release|Itanium
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Release|Win32.ActiveCfg = Release|Win32
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Release|Win32.Build.0 = Release|Win32
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Release|x64.ActiveCfg = Release|X64
+		{013DCD93-BA0C-4B58-B917-C963C4405678}.Release|x64.Build.0 = Release|X64
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Debug|Itanium.Build.0 = Debug|Itanium
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Debug|Win32.Build.0 = Debug|Win32
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Debug|x64.ActiveCfg = Debug|X64
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Debug|x64.Build.0 = Debug|X64
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Release|Itanium.ActiveCfg = Release|Itanium
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Release|Itanium.Build.0 = Release|Itanium
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Release|Win32.ActiveCfg = Release|Win32
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Release|Win32.Build.0 = Release|Win32
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Release|x64.ActiveCfg = Release|X64
+		{4C020136-2C9C-4EA8-8FDA-FA7F325924AB}.Release|x64.Build.0 = Release|X64
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Debug|Itanium.Build.0 = Debug|Itanium
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Debug|Win32.Build.0 = Debug|Win32
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Debug|x64.ActiveCfg = Debug|X64
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Debug|x64.Build.0 = Debug|X64
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Release|Itanium.ActiveCfg = Release|Itanium
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Release|Itanium.Build.0 = Release|Itanium
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Release|Win32.ActiveCfg = Release|Win32
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Release|Win32.Build.0 = Release|Win32
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Release|x64.ActiveCfg = Release|X64
+		{ECD7CDA5-9C03-403D-A6B3-3622FA40FB27}.Release|x64.Build.0 = Release|X64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

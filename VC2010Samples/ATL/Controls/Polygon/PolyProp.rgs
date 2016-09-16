@@ -1,0 +1,23 @@
+HKCR
+{
+	ForceRemove Polygon.PolyProp.1 = s 'PolyProp Class'
+	{
+		CLSID = s '{2885EE07-A26B-11D1-B49B-00C04F98EFE0}'
+	}
+	ForceRemove Polygon.PolyProp = s 'PolyProp Class'
+	{
+		CurVer = s 'Polygon.PolyProp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2885EE07-A26B-11D1-B49B-00C04F98EFE0} = s 'PolyProp Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

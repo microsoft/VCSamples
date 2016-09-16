@@ -1,0 +1,175 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""res\\autodriv.rc2""  // non-App Studio edited resources\r\n"
+	"\r\n"
+	"#include ""afxres.rc""  // Standard components\r\n"
+	"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\autodriv.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTODRIV_DIALOG DIALOG DISCARDABLE  0, 0, 207, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "AutoClik Test Driver"
+FONT 8, "MS Sans Serif"
+BEGIN
+	LTEXT           "&1. X",IDC_STATIC,8,10,21,8
+	EDITTEXT        IDC_EDITX,6,20,25,13,ES_AUTOHSCROLL
+	LTEXT           "&2. Y",IDC_STATIC,37,10,22,8
+	EDITTEXT        IDC_EDITY,37,20,25,13,ES_AUTOHSCROLL
+	LTEXT           "&3. Text:",IDC_STATIC,74,10,30,8
+	EDITTEXT        IDC_EDITTEXT,74,20,60,13,ES_AUTOHSCROLL
+	PUSHBUTTON      "Set &X",IDC_SETX,6,44,25,14
+	PUSHBUTTON      "Set &Y",IDC_SETY,37,44,25,14
+	PUSHBUTTON      "Set &Text",IDC_SETTEXT,75,43,50,14
+	PUSHBUTTON      "Set P&osition",IDC_SETPOS,6,67,56,14
+	PUSHBUTTON      "Get &Position",IDC_GETPOS,6,86,56,14
+	PUSHBUTTON      "&Set All",IDC_SETALL,75,67,50,14
+	PUSHBUTTON      "&Get All",IDC_GETALL,75,86,50,14
+	PUSHBUTTON      "&Close",IDC_CLOSE,141,19,59,14
+	PUSHBUTTON      "&Refresh Display",IDC_REFRESH,141,43,59,14
+	PUSHBUTTON      "&Animate X && Y",IDC_ANIMATE_XY,141,67,59,14
+	PUSHBUTTON      "A&nimate Position",IDC_ANIMATEPOS,141,86,59,14
+	CONTROL         "Use Dispatch",IDC_USEDISPATCH,"Button",BS_AUTOCHECKBOX |
+					WS_TABSTOP,8,112,79,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904b0"
+		BEGIN
+			VALUE "CompanyName", "\0"
+			VALUE "FileDescription", "AUTODRIV MFC Application\0"
+			VALUE "FileVersion", "1, 0, 0, 1\0"
+			VALUE "InternalName", "AUTODRIV\0"
+			VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+			VALUE "OriginalFilename", "AUTODRIV.EXE\0"
+			VALUE "ProductName", "AUTODRIV Application\0"
+			VALUE "ProductVersion", "1, 0, 0, 1\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_INDICATOR_EXT        "EXT"
+	ID_INDICATOR_CAPS       "CAP"
+	ID_INDICATOR_NUM        "NUM"
+	ID_INDICATOR_SCRL       "SCRL"
+	ID_INDICATOR_OVR        "OVR"
+	ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDP_OLE_INIT_FAILED     "Error: Failed to Initialize Ole"
+	IDP_CANNOT_CREATE_AUTOCLIK
+							"Unable to create the ""AutoClick.Document"" object.  Please build the AutoClick sample, run it, and try again."
+	IDP_CANNOT_CREATE_AUTODUALCLIK
+							"Unable to create the ""AutoDualClick.Document"" object.  Please build the AutoClick sample, run it, and try again."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\autodriv.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

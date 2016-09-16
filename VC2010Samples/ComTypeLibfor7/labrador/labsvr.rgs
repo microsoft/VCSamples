@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{9D25D2CA-54B7-4319-B502-36C23819730B}' = s 'labsvr'
+		'labdriv.EXE'
+		{
+			val AppID = s '{9D25D2CA-54B7-4319-B502-36C23819730B}'
+		}
+	}
+}

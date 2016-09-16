@@ -1,0 +1,25 @@
+[OPTIONS]
+Auto Index=No
+Compatibility=1.1 or later
+Compiled file=TraceTool.chm
+Contents file=TraceTool.hhc
+Index file=TraceTool.hhk
+Default topic=main.htm
+Display compile progress=No
+Full-text search=No
+Language=0x0409 English (United States)
+
+
+[FILES]
+main.htm
+
+[ALIAS]
+HIDD_TRACETOOL_DIALOG = main.htm
+
+[MAP]
+#include HTMLDefines.h
+
+[TEXT POPUPS]
+HTMLDefines.h
+
+[INFOTYPES]

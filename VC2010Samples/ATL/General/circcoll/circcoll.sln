@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "circcoll", "circcoll.vcxproj", "{03E24632-21B6-4A67-AAB5-4F5834C50576}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CircCollClient", "CircCollClient\CircCollClient.vbproj", "{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{03E24632-21B6-4A67-AAB5-4F5834C50576} = {03E24632-21B6-4A67-AAB5-4F5834C50576}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Debug|Itanium.Build.0 = Debug|Itanium
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Debug|Win32.ActiveCfg = Debug|Win32
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Debug|Win32.Build.0 = Debug|Win32
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Debug|x64.ActiveCfg = Debug|X64
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Debug|x64.Build.0 = Debug|X64
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Release|Itanium.ActiveCfg = Release|Itanium
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Release|Itanium.Build.0 = Release|Itanium
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Release|Win32.ActiveCfg = Release|Win32
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Release|Win32.Build.0 = Release|Win32
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Release|x64.ActiveCfg = Release|X64
+		{03E24632-21B6-4A67-AAB5-4F5834C50576}.Release|x64.Build.0 = Release|X64
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Debug|Itanium.ActiveCfg = Debug|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Debug|Itanium.Build.0 = Debug|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Debug|Win32.Build.0 = Debug|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Debug|x64.Build.0 = Debug|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Release|Itanium.ActiveCfg = Release|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Release|Itanium.Build.0 = Release|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Release|Win32.ActiveCfg = Release|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Release|Win32.Build.0 = Release|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Release|x64.ActiveCfg = Release|Any CPU
+		{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

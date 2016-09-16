@@ -1,0 +1,21 @@
+HKCR
+{
+    ForceRemove Stlcoll.StlMaps.1 = s 'StlMaps Class'
+    {
+        CLSID = s '{7CE086CD-3E78-11D0-AE6B-00C04FD7D06E}'
+    }
+    ForceRemove Stlcoll.StlMaps = s 'StlMaps Class'
+    {
+        CurVer = s 'Stlcoll.StlMaps.1'
+    }
+    NoRemove CLSID
+    {
+        {7CE086CD-3E78-11D0-AE6B-00C04FD7D06E} = s 'StlMaps Class'
+        {
+            ProgID = s 'Stlcoll.StlMaps.1'
+            VersionIndependentProgID = s 'Stlcoll.StlMaps'
+            val AppID = s '{7CE086C8-3E78-11D0-AE6B-00C04FD7D06E}'
+            LocalServer32 = s '%Module%'
+        }
+    }
+}

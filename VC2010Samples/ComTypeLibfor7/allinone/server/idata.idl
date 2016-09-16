@@ -1,0 +1,11 @@
+// mydata.idl
+
+import "wtypes.idl";
+
+typedef struct tagIMyStruct
+{
+    int m_int;
+    float m_float;
+    BSTR m_str;
+} IMyStruct;
+

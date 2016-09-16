@@ -1,0 +1,51 @@
+// File: SubEdit.idl
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+#include <olectl.h>
+// SubEdit.idl : IDL source for SubEdit.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SubEdit.tlb) and marshalling code.
+
+	
+
+	[
+		object,
+		uuid(2D7E0F90-3215-11D0-BF28-0000E8D0D146),
+		dual,
+		helpstring("IAtlEdit Interface"),
+		pointer_default(unique)
+	]
+	interface IAtlEdit : IDispatch
+	{
+		import "oaidl.idl";
+		import "ocidl.idl";
+
+	};
+[
+	uuid(2D7E0F8D-3215-11D0-BF28-0000E8D0D146),
+	version(1.0),
+	helpstring("SubEdit 1.0 Type Library")
+]
+library SUBEDITLib
+{
+	importlib("stdole32.tlb");
+
+	
+
+	[
+		uuid(2D7E0F8F-3215-11D0-BF28-0000E8D0D146),
+		helpstring("AtlEdit Class")
+	]
+	coclass CAtlEdit
+	{
+		[default] interface IAtlEdit;
+	};
+};

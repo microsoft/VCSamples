@@ -1,0 +1,471 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""res\\collect.rc2""  // non-App Studio edited resources\r\n"
+	"\r\n"
+	"#include ""afxres.rc""  \011// Standard components\r\n"
+	"#include ""afxprint.rc""\011// printing/print preview resources\r\n"
+	"\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\COLLECT.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "RES\\TOOLBAR.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+		MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+		MENUITEM SEPARATOR
+		MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+		MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit",                       ID_APP_EXIT
+	END
+	POPUP "&Edit"
+	BEGIN
+		MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+		MENUITEM SEPARATOR
+		MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+		MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+		MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+	END
+	POPUP "&Example"
+	BEGIN
+		MENUITEM "CStringList",                 ID_STRINGLIST
+		MENUITEM "CTypedPtrList<CPrtList...>",  ID_TYPEDLIST
+		MENUITEM "CList<int,int>",              ID_INTLIST
+		MENUITEM SEPARATOR
+		MENUITEM "CDWordArray",                 ID_DWORDARRAY
+		MENUITEM "CTypedPtrArray<CObArray...>", ID_TYPEDPTRARRAY
+		MENUITEM "CArray<CPoint,CPoint>",       ID_POINTARRAY
+		MENUITEM SEPARATOR
+		MENUITEM "CMapStringToString",          ID_MAPSTRINGTOSTRING
+		MENUITEM "CTypedPtrMap<CMapStringToOb...>", ID_TYPEDPTRMAP
+		MENUITEM "CMap<...>",                   ID_MAPDWORDTOMYSTRUCT
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About Collect...",           ID_APP_ABOUT
+	END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE
+BEGIN
+	"N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+	"O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+	"S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+	"P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+	"Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+	"X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+	"C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+	"V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+	VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+	VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+	VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+	VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+	VK_F6,          ID_NEXT_PANE,           VIRTKEY
+	VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 217, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Collect"
+FONT 8, "MS Sans Serif"
+BEGIN
+	ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+	LTEXT           "Collect Version 1.0",IDC_STATIC,40,10,119,8
+	LTEXT           L"\251 2005 - 2008 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,25,119,8
+	DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+END
+
+IDD_STRING_LIST DIALOG DISCARDABLE  0, 0, 239, 131
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_ELEMENT,50,18,116,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,14,38,152,83,LBS_NOINTEGRALHEIGHT | WS_VSCROLL |
+					WS_TABSTOP
+	DEFPUSHBUTTON   "&Add",IDC_ADD,178,19,50,14
+	PUSHBUTTON      "Insert Before",IDC_INSERT_BEFORE,178,41,50,14
+	PUSHBUTTON      "&Update",IDC_UPDATE,178,63,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,178,85,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,178,107,50,14
+	LTEXT           "String:",IDC_STATIC,15,23,30,8
+	LTEXT           "Example: CStringList",IDC_STATIC,85,4,68,8
+END
+
+IDD_TYPED_PTR_LIST DIALOG DISCARDABLE  0, 0, 239, 154
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_INT,74,20,30,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_FLOAT,74,36,43,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_STRING,74,55,90,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,10,74,152,69,LBS_NOINTEGRALHEIGHT | WS_VSCROLL |
+					WS_TABSTOP
+	LTEXT           "CMyStruct float:",IDC_STATIC,14,42,57,8
+	LTEXT           "CMyStruct int:",IDC_STATIC,14,26,47,8
+	LTEXT           "CMyStruct str:",IDC_STATIC,14,58,47,8
+	LTEXT           "Example:  CTypePtrList<CPtrList,CMyStruct*>",IDC_STATIC,
+					46,6,148,8
+	DEFPUSHBUTTON   "&Add",IDC_ADD,177,32,50,14
+	PUSHBUTTON      "Insert Before",IDC_INSERT_BEFORE,177,54,50,14
+	PUSHBUTTON      "&Update",IDC_UPDATE,177,76,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,177,98,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,177,120,50,14
+END
+
+IDD_INT_LIST DIALOG DISCARDABLE  0, 0, 239, 124
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_ELEMENT,49,17,21,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,13,37,152,80,LBS_NOINTEGRALHEIGHT | WS_VSCROLL |
+					WS_TABSTOP
+	DEFPUSHBUTTON   "&Add",IDC_ADD,178,10,50,14
+	PUSHBUTTON      "Insert Before",IDC_INSERT_BEFORE,178,32,50,14
+	PUSHBUTTON      "&Update",IDC_UPDATE,178,54,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,178,76,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,178,98,50,14
+	LTEXT           "Integer:",IDC_STATIC,14,22,30,8
+	LTEXT           "Example:  CList<int,int>",IDC_STATIC,79,3,78,8
+END
+
+IDD_DWORD_ARRAY DIALOG DISCARDABLE  0, 0, 239, 112
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_DWORD,49,17,53,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,13,37,152,63,LBS_NOINTEGRALHEIGHT | WS_VSCROLL |
+					WS_TABSTOP
+	DEFPUSHBUTTON   "&Add",IDC_ADD,177,18,50,14
+	PUSHBUTTON      "&Update",IDC_UPDATE,177,40,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,177,62,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,177,84,50,14
+	LTEXT           "DWORD:",IDC_STATIC,14,22,30,8
+	LTEXT           "Example:  CDWordArray",IDC_STATIC,79,3,78,8
+END
+
+IDD_TYPED_PTR_ARRAY DIALOG DISCARDABLE  0, 0, 239, 154
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_INT,74,20,30,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_FLOAT,74,36,43,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_STRING,74,55,90,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,10,74,152,69,LBS_NOINTEGRALHEIGHT | WS_VSCROLL |
+					WS_TABSTOP
+	DEFPUSHBUTTON   "&Add",IDC_ADD,177,23,50,14
+	PUSHBUTTON      "&Update",IDC_UPDATE,177,44,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,177,68,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,177,90,50,14
+	LTEXT           "CMyObject float:",IDC_STATIC,14,42,57,8
+	LTEXT           "CMyObject int:",IDC_STATIC,14,26,49,8
+	LTEXT           "CMyObject str:",IDC_STATIC,14,58,47,8
+	LTEXT           "Example:  CTypePtrArray<CObArray,CMyObject*>",
+					IDC_STATIC,39,6,160,8
+END
+
+IDD_POINT_ARRAY DIALOG DISCARDABLE  0, 0, 239, 154
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_X,51,21,30,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_Y,51,37,30,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,10,57,152,86,LBS_NOINTEGRALHEIGHT | WS_VSCROLL |
+					WS_TABSTOP
+	DEFPUSHBUTTON   "&Add",IDC_ADD,177,23,50,14
+	PUSHBUTTON      "&Update",IDC_UPDATE,177,44,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,177,68,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,177,90,50,14
+	LTEXT           "CPoint y:",-1,14,42,31,8
+	LTEXT           "CPoint x:",-1,14,26,31,8
+	LTEXT           "Example: CArray<CPoint,CPoint>",-1,65,6,107,8
+END
+
+IDD_MAP_STRING_TO_STRING DIALOG DISCARDABLE  0, 0, 239, 154
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_KEY,63,21,92,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_VALUE,63,37,92,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,10,57,152,86,LBS_SORT | LBS_NOINTEGRALHEIGHT |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,177,23,50,14
+	PUSHBUTTON      "&Find",IDC_FIND,177,44,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,177,68,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,177,90,50,14
+	LTEXT           "Value (string):",-1,14,42,47,8
+	LTEXT           "Key (string):",-1,14,26,40,8
+	LTEXT           "Example: CMapStringToString",-1,70,6,98,8
+END
+
+IDD_TYPED_PTR_MAP DIALOG DISCARDABLE  0, 0, 317, 169
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_KEY,55,27,63,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_INT,189,22,30,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_FLOAT,189,38,43,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_STRING,189,57,90,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,11,80,188,82,LBS_SORT | LBS_NOINTEGRALHEIGHT |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,218,79,50,14
+	PUSHBUTTON      "&Find",IDC_FIND,218,101,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,218,125,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,218,146,50,14
+	LTEXT           "CMyObject float:",IDC_STATIC,129,44,57,8
+	LTEXT           "CMyObject int:",IDC_STATIC,129,28,49,8
+	LTEXT           "CMyObject str:",IDC_STATIC,129,60,49,8
+	LTEXT           "Example:  CTypedPtrMap<CMapStringToOb,CString,LPCTSTR,CObject*,CString,CMyObject*>",
+					IDC_STATIC,3,4,311,8
+	LTEXT           "Key (string):",IDC_STATIC,11,29,40,8
+END
+
+IDD_MAP_DWORD_TO_MYSTRUCT DIALOG DISCARDABLE  0, 0, 317, 169
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+	EDITTEXT        IDC_KEY,66,27,52,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_INT,189,22,30,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_FLOAT,189,38,43,13,ES_AUTOHSCROLL
+	EDITTEXT        IDC_STRING,189,57,90,13,ES_AUTOHSCROLL
+	LISTBOX         IDC_LIST,11,80,188,82,LBS_SORT | LBS_NOINTEGRALHEIGHT |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "&Add/Update",IDC_ADD_OR_UPDATE,218,79,50,14
+	PUSHBUTTON      "&Find",IDC_FIND,218,101,50,14
+	PUSHBUTTON      "&Remove",IDC_REMOVE,218,125,50,14
+	PUSHBUTTON      "R&emove All",IDC_REMOVE_ALL,218,146,50,14
+	LTEXT           "CMyStruct float:",IDC_STATIC,129,44,57,8
+	LTEXT           "CMyStruct int:",IDC_STATIC,129,28,49,8
+	LTEXT           "CMyStruct str:",IDC_STATIC,129,60,49,8
+	LTEXT           "Example: CMap<DWORD,DWORD,CMyStruct*,CMyStruct*>",
+					IDC_STATIC,62,4,193,8
+	LTEXT           "Key (DWORD):",IDC_STATIC,11,29,50,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904B0"
+		BEGIN
+			VALUE "CompanyName", "\0"
+			VALUE "FileDescription", "COLLECT MFC Application\0"
+			VALUE "FileVersion", "1, 0, 0, 1\0"
+			VALUE "InternalName", "COLLECT\0"
+			VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+			VALUE "LegalTrademarks", "\0"
+			VALUE "OriginalFilename", "COLLECT.EXE\0"
+			VALUE "ProductName", "COLLECT Application\0"
+			VALUE "ProductVersion", "1, 0, 0, 1\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1200
+	END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+	IDR_MAINFRAME           "Collect\ncoll\nCollections Document\nCollections Files (*.col)\n.col\nCollect.collect.1\nCollections Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+	AFX_IDS_APP_TITLE       "Collect"
+	AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_INDICATOR_EXT        "EXT"
+	ID_INDICATOR_CAPS       "CAP"
+	ID_INDICATOR_NUM        "NUM"
+	ID_INDICATOR_SCRL       "SCRL"
+	ID_INDICATOR_OVR        "OVR"
+	ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW             "Create a new document"
+	ID_FILE_OPEN            "Open an existing document"
+	ID_FILE_CLOSE           "Close the active document"
+	ID_FILE_SAVE            "Save the active document"
+	ID_FILE_SAVE_AS         "Save the active document with a new name"
+	ID_FILE_PAGE_SETUP      "Change the printing options"
+	ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+	ID_FILE_PRINT           "Print the active document"
+	ID_FILE_PRINT_PREVIEW   "Display full pages"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_APP_ABOUT            "Display program information, version number and copyright"
+	ID_APP_EXIT             "Quit the application; prompts to save documents"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_MRU_FILE1       "Open this document"
+	ID_FILE_MRU_FILE2       "Open this document"
+	ID_FILE_MRU_FILE3       "Open this document"
+	ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_NEXT_PANE            "Switch to the next window pane"
+	ID_PREV_PANE            "Switch back to the previous window pane"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_EDIT_CLEAR           "Erase the selection"
+	ID_EDIT_CLEAR_ALL       "Erase everything"
+	ID_EDIT_COPY            "Copy the selection and put it on the Clipboard"
+	ID_EDIT_CUT             "Cut the selection and put it on the Clipboard"
+	ID_EDIT_FIND            "Find the specified text"
+	ID_EDIT_PASTE           "Insert Clipboard contents"
+	ID_EDIT_REPEAT          "Repeat the last action"
+	ID_EDIT_REPLACE         "Replace specific text with different text"
+	ID_EDIT_SELECT_ALL      "Select the entire document"
+	ID_EDIT_UNDO            "Undo the last action"
+	ID_EDIT_REDO            "Redo the previously undone action"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+	ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_SCSIZE          "Change the window size"
+	AFX_IDS_SCMOVE          "Change the window position"
+	AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+	AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+	AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+	AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+	AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_SCRESTORE       "Restore the window to normal size"
+	AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\collect.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"    // Standard components
+#include "afxprint.rc"  // printing/print preview resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

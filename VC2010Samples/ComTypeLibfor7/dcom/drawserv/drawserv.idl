@@ -1,0 +1,42 @@
+// DrawServ.idl : IDL source for DrawServ.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DrawServ.tlb) and marshalling code.
+
+    [
+        object,
+        uuid(330E9E75-DF48-11CF-8E2C-00A0C90DC94B),
+        dual,
+        helpstring("IDrawServ Interface"),
+        pointer_default(unique)
+    ]
+    interface IDrawServ : IDispatch
+    {
+        import "oaidl.idl";
+        HRESULT Draw(
+            [in] long x1, [in] long y1,
+            [in] long x2, [in] long y2,
+            [in] unsigned long col);
+    };
+
+
+[
+    uuid(330E9E73-DF48-11CF-8E2C-00A0C90DC94B),
+    version(1.0),
+    helpstring("DrawServ 1.0 Type Library")
+]
+library DRAWSERVLib
+{
+    importlib("stdole32.tlb");
+
+    [
+        uuid(330E9E79-DF48-11CF-8E2C-00A0C90DC94B),
+        helpstring("DrawServ1 Class")
+    ]
+    coclass CDrawServ
+    {
+        [default] interface IDrawServ;
+    };
+
+};

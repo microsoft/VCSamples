@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{5ccf052d-d90e-4365-af83-0b2871cb757a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ecc3499a-ceb8-4c82-ab1b-9985a301af5f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6514e464-8656-4265-b858-fe7361a53b8e}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;r</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{31643d3c-501d-4a45-b248-258fa81e2193}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="graphics\account.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\account_button.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\browse.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\browse_button.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\cart_button.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\checkout.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\checkout_button.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\cream.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\dkcart.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\dkolive.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\home_button.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\htmlbook.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\logo.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\search.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\search_button.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="graphics\specials.gif">
+      <Filter>graphics</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="account.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="addtocart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="checkout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="login.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="results.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specials.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WebService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="webui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="account.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="addtocart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="checkout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="login.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="results.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="specials.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

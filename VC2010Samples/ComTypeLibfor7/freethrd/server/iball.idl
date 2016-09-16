@@ -1,0 +1,44 @@
+// IBall.idl : IDL source for IBall.dll
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (IBall.tlb) and marshalling code.
+
+import "unknwn.idl";
+
+    [
+        object,
+        uuid(F002da32-0000-0000-c000-000000000046),
+        helpstring("IBall Interface"),
+        pointer_default(unique)
+    ]
+    interface IBall : IUnknown
+    {
+        import "oaidl.idl";
+
+        // IBall property
+        [id(1), propget] HRESULT Ball([out] POINT* pOrg, [out] POINT* pExt, [out, retval] COLORREF* pcrColor);
+
+        // IBall methods
+        [id(2)] HRESULT Reset([in] RECT* pNewRect, [in] short nBallSize);
+        [id(3)] HRESULT Move([in] BOOL bAlive, [out, retval] BOOL* bRet);
+    };
+
+[
+    uuid(F002da31-0000-0000-c000-000000000046),
+    version(1.0),
+    helpstring("IBall 1.0 Type Library")
+]
+library BallLib
+{
+    importlib("stdole32.tlb");
+    [
+        uuid(F002da33-0000-0000-c000-000000000046),
+        helpstring("Ball Class")
+    ]
+    coclass Ball
+    {
+        [default] interface IBall;
+    };
+
+};
+

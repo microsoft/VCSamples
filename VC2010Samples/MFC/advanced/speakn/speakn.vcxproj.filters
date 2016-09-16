@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e8ee0bb2-27bd-41ae-9420-9992806dfe5c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1dc1fdf5-a04f-48d5-b2c3-b1dc6f4896d1}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a20b25d4-6616-4166-9345-24c589d60c8c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Speakn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RES\FACE01.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FACE02.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FACE03.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FACE04.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\INTRO.DIB">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\lessons.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\REPLAYD.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\REPLAYF.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\REPLAYU.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\sounds.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\SPEAKN.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Speakn.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="speakn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

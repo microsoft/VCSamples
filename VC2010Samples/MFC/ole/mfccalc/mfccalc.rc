@@ -1,0 +1,227 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\mfccalc.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\mfccalc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 34, 22, 217, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About mfccalc"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "MFC/OLE Calc Version 1.0",IDC_STATIC,40,10,119,8
+    LTEXT           "© 1994 - 2008 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,40,25,121,21
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+END
+
+IDD_MFCCALC_DIALOG DIALOG  1, 1, 93, 114
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "MFC OLE Calc"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "0",IDB_0,9,90,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "1",IDB_1,9,70,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "2",IDB_2,29,70,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "3",IDB_3,49,70,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "4",IDB_4,9,50,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "5",IDB_5,29,50,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "6",IDB_6,49,50,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "7",IDB_7,9,30,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "8",IDB_8,29,30,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "9",IDB_9,49,30,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "=",IDB_EQUAL,49,90,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "+",IDB_PLUS,69,30,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "-",IDB_MINUS,69,50,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "*",IDB_TIMES,69,70,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "/",IDB_DIVIDE,69,90,15,15,NOT WS_TABSTOP
+    PUSHBUTTON      "C",IDB_CLEAR,29,90,15,15,NOT WS_TABSTOP
+    EDITTEXT        IDE_ACCUM,8,6,76,15,ES_RIGHT | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "",IDC_INVISIBLE_FOCUS,8,106,77,8,WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "MFCCALC MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "MFCCALC"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "MFCCALC.EXE"
+            VALUE "ProductName", "MFCCALC Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDD_MFCCALC_DIALOG ACCELERATORS 
+BEGIN
+    "*",            IDB_TIMES,              ASCII,  NOINVERT
+    "+",            IDB_PLUS,               ASCII,  NOINVERT
+    "-",            IDB_MINUS,              ASCII,  NOINVERT
+    "/",            IDB_DIVIDE,             ASCII,  NOINVERT
+    "0",            IDB_0,                  ASCII,  NOINVERT
+    "1",            IDB_1,                  ASCII,  NOINVERT
+    "2",            IDB_2,                  ASCII,  NOINVERT
+    "3",            IDB_3,                  ASCII,  NOINVERT
+    "4",            IDB_4,                  ASCII,  NOINVERT
+    "5",            IDB_5,                  ASCII,  NOINVERT
+    "6",            IDB_6,                  ASCII,  NOINVERT
+    "7",            IDB_7,                  ASCII,  NOINVERT
+    "8",            IDB_8,                  ASCII,  NOINVERT
+    "9",            IDB_9,                  ASCII,  NOINVERT
+    "=",            IDB_EQUAL,              ASCII,  NOINVERT
+    "C",            IDB_CLEAR,              ASCII,  NOINVERT
+    VK_LEFT,        ID_NOTHING,             VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_NOTHING,             VIRTKEY, NOINVERT
+    VK_UP,          ID_NOTHING,             VIRTKEY, NOINVERT
+    VK_DOWN,        ID_NOTHING,             VIRTKEY, NOINVERT
+    VK_RETURN,      IDB_EQUAL,              VIRTKEY, NOINVERT
+    "c",            IDB_CLEAR,              ASCII,  NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "Failed to initialized the OLE libraries!"
+    IDS_ABOUTBOX            "&About MFC/OLE Calc..."
+    IDS_ERROR               "ERROR!"
+    IDP_UNABLE_TO_SHOW_CALC "Unable to create and show the calculator window!"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "MFC/OLE Calc"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\mfccalc.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

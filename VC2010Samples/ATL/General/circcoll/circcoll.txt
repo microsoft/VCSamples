@@ -1,0 +1,13 @@
+
+CIRCCOLL
+
+This sample shows how to implement a collection/enumeration of objects using ATL and STL. Three object
+classes are implemented: the collection creator, the collection, and the object inside the collection.
+Only the collection creator has a CoClass associated with it (see CIRCCOLL.IDL for details). The collection
+creator has a method to return a collection of "circle" objects. The collection object implements the
+"Item()", "Count()" and "_NewItem()" methods, so that the object can be manipulated from VB using both the
+For ... Next and For Each ... syntax.
+
+HOW TO RUN IT:
+
+Build the solution and run CircCollClient. Press the button to activate it.

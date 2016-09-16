@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove CDInfo.CDInfo.1 = s 'CDInfo Class'
+	{
+		CLSID = s '{A393BE4E-2FBD-11D0-B939-000000000000}'
+	}
+	ForceRemove CDInfo.CDInfo = s 'CDInfo Class'
+	{
+		CurVer = s 'CDInfo.CDInfo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A393BE4E-2FBD-11D0-B939-000000000000} = s 'CDInfo Class'
+		{
+			ProgID = s 'CDInfo.CDInfo.1'
+			VersionIndependentProgID = s 'CDInfo.CDInfo'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '{A393BE4C-2FBD-11D0-B939-000000000000}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

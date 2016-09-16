@@ -1,0 +1,32 @@
+; testdll2.def : Declares exports for TESTDLL2.DLL
+;
+; This is a part of the Microsoft Foundation Classes C++ library.
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+; This source code is only intended as a supplement to the
+; Microsoft Foundation Classes Reference and related
+; electronic documentation provided with the library.
+; See these sources for detailed information regarding the
+; Microsoft Foundation Classes product.
+
+EXPORTS
+	?AddString@CListOutputFrame@@QAAXPBD@Z
+	??_7CListOutputFrame@@6B@
+	??_GCListOutputFrame@@UAAPAXI@Z
+	?OnEditCut@CListOutputFrame@@IAAXXZ
+	?_messageEntries@CListOutputFrame@@0QBUAFX_MSGMAP_ENTRY@@B
+	??0CListOutputFrame@@QAA@XZ
+	??1CListOutputFrame@@UAA@XZ
+	?Clear@CListOutputFrame@@QAAXXZ
+	?OnEditClear@CListOutputFrame@@IAAXXZ
+	?OnEditCopy@CListOutputFrame@@IAAXXZ
+	InitTestDLL2
+	?GetTextData@CListOutputFrame@@IAAPAXXZ
+	?_GetBaseClass@CListOutputFrame@@KAPAUCRuntimeClass@@XZ
+	?_GetBaseMessageMap@CListOutputFrame@@KAPBUAFX_MSGMAP@@XZ
+	?messageMap@CListOutputFrame@@1UAFX_MSGMAP@@B
+	?Create@CListOutputFrame@@QAAHPBDKABUtagRECT@@PAVCMDIFrameWnd@@@Z
+	?classCListOutputFrame@CListOutputFrame@@2UCRuntimeClass@@A
+	?GetMessageMap@CListOutputFrame@@MBAPBUAFX_MSGMAP@@XZ
+	?GetRuntimeClass@CListOutputFrame@@UBAPAUCRuntimeClass@@XZ
+	?OnCreate@CListOutputFrame@@IAAHPAUtagCREATESTRUCTA@@@Z

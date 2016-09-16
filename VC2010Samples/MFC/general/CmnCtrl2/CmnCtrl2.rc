@@ -1,0 +1,340 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\CmnCtrl2.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CmnCtrl2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 226, 66
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CmnCtrl2"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "CmnCtrl2 Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "© 1992 - 2008 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,40,36,126,22
+    DEFPUSHBUTTON   "OK",IDOK,187,7,32,14,WS_GROUP
+    LTEXT           "Author: Frank Crockett",IDC_STATIC,40,23,111,8
+END
+
+IDD_SLIDERCTRL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CSliderCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Orientation",IDC_STATIC,7,7,35,8
+    COMBOBOX        IDC_SLIDER_ORIENTATION,7,19,112,36,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Tick Mark Position",IDC_STATIC,7,35,60,8
+    COMBOBOX        IDC_SLIDER_POINT,7,47,112,49,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "No Tick Marks (TBS_NOTICKS)",IDC_SLIDER_NOTICKS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,66,118,10
+    CONTROL         "Autoticks (TBS_AUTOTICKS)",IDC_SLIDER_AUTOTICKS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,77,110,10
+    LTEXT           "Tick Frequency",IDC_STATIC,7,90,50,8
+    EDITTEXT        IDC_SLIDER_TICKFREQ,7,101,40,14,ES_AUTOHSCROLL
+    LTEXT           "Range",IDC_STATIC,175,6,22,8
+    EDITTEXT        IDC_SLIDER_RANGEFROM,175,16,40,14,ES_AUTOHSCROLL
+    LTEXT           "To",IDC_STATIC,221,19,10,8
+    EDITTEXT        IDC_SLIDER_RANGETO,237,16,40,14,ES_AUTOHSCROLL
+    CONTROL         "TBS_ENABLESELRANGE",IDC_SLIDER_ENABLESEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,32,114,10
+    EDITTEXT        IDC_SLIDER_SELRANGEFROM,175,44,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "To",IDC_STATIC,221,47,10,8
+    EDITTEXT        IDC_SLIDER_SELRANGETO,237,44,40,14,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "TBS_FIXEDLENGTH",IDC_SLIDER_FIXED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,63,102,10
+    CONTROL         "No Slider (TBS_NOTHUMB)",IDC_SLIDER_NOTHUMB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,74,116,10
+    LTEXT           "Page Step Size",IDC_STATIC,237,89,56,8
+    EDITTEXT        IDC_SLIDER_PAGE,237,100,40,14,ES_AUTOHSCROLL
+    LTEXT           "Line Step Size",IDC_STATIC,175,89,46,8
+    EDITTEXT        IDC_SLIDER_LINE,175,100,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SLIDER_VERTPOS,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,129,19,34,132
+    CONTROL         "",IDC_SLIDER_HORZPOS,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,83,122,171,29
+    CTEXT           "",IDC_NOTIFICATIONS,81,156,204,8
+END
+
+IDD_SPINCTRL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CSpinButtonCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Orientation",IDC_STATIC,11,9,35,8
+    COMBOBOX        IDC_SPIN_ORIENTATION,11,22,113,45,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Alignment",IDC_STATIC,11,38,32,8
+    COMBOBOX        IDC_SPIN_ALIGNMENT,11,50,114,44,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Range",IDC_STATIC,11,67,22,8
+    EDITTEXT        IDC_SPIN_FROM,11,79,40,14,ES_AUTOHSCROLL
+    LTEXT           "To",IDC_STATIC,61,81,18,8
+    EDITTEXT        IDC_SPIN_TO,85,79,40,14,ES_AUTOHSCROLL
+    CONTROL         "UDS_NOTHOUSANDS",IDC_SPIN_NOTHOUSANDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,22,103,10
+    CONTROL         "UDS_WRAP",IDC_SPIN_WRAP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,35,81,10
+    CONTROL         "UDS_ARROWKEYS",IDC_SPIN_ARROWKEYS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,48,89,10
+    CONTROL         "UDS_AUTOBUDDY",IDC_SPIN_AUTOBUDDY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,74,85,10
+    CONTROL         "UDS_SETBUDDYINT",IDC_SPIN_SETBUDDYINT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,61,119,10
+    GROUPBOX        "Spin Control",IDC_STATIC,77,110,105,34
+    CONTROL         "",IDC_SPIN_POS,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
+                    159,121,12,13
+    EDITTEXT        IDC_SPIN_EDIT,112,121,40,13,ES_AUTOHSCROLL
+    GROUPBOX        "Styles",IDC_STATIC,146,12,134,81
+END
+
+IDD_PROGCTRL DIALOG  0, 0, 300, 172
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "CProgressCtrl"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Range",-1,17,7,122,47
+    LTEXT           "Set Range",-1,24,17,35,8
+    EDITTEXT        IDC_PROGRESS_FROM,24,29,40,14,ES_AUTOHSCROLL
+    LTEXT           "To",-1,68,32,10,8
+    EDITTEXT        IDC_PROGRESS_TO,82,29,40,14,ES_AUTOHSCROLL
+    GROUPBOX        "Current Position",-1,174,7,110,77
+    LTEXT           "Position",-1,179,17,26,8
+    EDITTEXT        IDC_PROGRESS_POS,179,29,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Position",IDC_SETPOS,230,29,42,14
+    LTEXT           "Offset",-1,179,44,20,8
+    EDITTEXT        IDC_PROGRESS_DELTA,179,55,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Delta",IDC_PROGRESS_SETDELTA,230,55,42,14
+    GROUPBOX        "Step",-1,17,60,122,41
+    LTEXT           "Set Step",-1,23,70,28,8
+    EDITTEXT        IDC_PROGRESS_STEP,23,82,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Step",IDC_PROGRESS_STEPIT,83,80,40,14
+    CONTROL         "",IDC_PROG_VERTPOS,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,147,19,16,132
+    CONTROL         "",IDC_PROG_HORZPOS,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,59,127,192,16
+    CONTROL         "Vertical (PBS_VERTICAL)",IDC_VERTICAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,91,98,10
+    CONTROL         "Smooth (PBS_SMOOTH)",IDC_SMOOTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,175,108,95,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "CmnCtrl2 MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "CmnCtrl2"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "CmnCtrl2.EXE"
+            VALUE "ProductName", "CmnCtrl2 Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_SPINCTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 293
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 163
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SLIDERCTRL DLGINIT
+BEGIN
+    IDC_SLIDER_ORIENTATION, 0x403, 22, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x2820, 0x4254, 0x5f53, 0x4f48, 
+0x5a52, 0x0029, 
+    IDC_SLIDER_ORIENTATION, 0x403, 20, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x2820, 0x4254, 0x5f53, 0x4556, 0x5452, 
+0x0029, 
+    IDC_SLIDER_POINT, 0x403, 16, 0
+0x6f42, 0x6874, 0x2820, 0x4254, 0x5f53, 0x4f42, 0x4854, 0x0029, 
+    IDC_SLIDER_POINT, 0x403, 31, 0
+0x6f54, 0x2f70, 0x654c, 0x7466, 0x2820, 0x4254, 0x5f53, 0x4f54, 0x2050, 
+0x726f, 0x5420, 0x5342, 0x4c5f, 0x4645, 0x2954, "\000" 
+    IDC_SLIDER_POINT, 0x403, 39, 0
+0x6f42, 0x7474, 0x6d6f, 0x522f, 0x6769, 0x7468, 0x2820, 0x4254, 0x5f53, 
+0x4f42, 0x5454, 0x4d4f, 0x6f20, 0x2072, 0x4254, 0x5f53, 0x4952, 0x4847, 
+0x2954, "\000" 
+    0
+END
+
+IDD_SPINCTRL DLGINIT
+BEGIN
+    IDC_SPIN_ORIENTATION, 0x403, 9, 0
+0x6556, 0x7472, 0x6369, 0x6c61, "\000" 
+    IDC_SPIN_ORIENTATION, 0x403, 22, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x2820, 0x4455, 0x5f53, 0x4f48, 
+0x5a52, 0x0029, 
+    IDC_SPIN_ALIGNMENT, 0x403, 11, 0
+0x6e55, 0x7461, 0x6174, 0x6863, 0x6465, "\000" 
+    IDC_SPIN_ALIGNMENT, 0x403, 21, 0
+0x654c, 0x7466, 0x2820, 0x4455, 0x5f53, 0x4c41, 0x4749, 0x4c4e, 0x4645, 
+0x2954, "\000" 
+    IDC_SPIN_ALIGNMENT, 0x403, 23, 0
+0x6952, 0x6867, 0x2074, 0x5528, 0x5344, 0x415f, 0x494c, 0x4e47, 0x4952, 
+0x4847, 0x2954, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CmnCtrl2..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\CmnCtrl2.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

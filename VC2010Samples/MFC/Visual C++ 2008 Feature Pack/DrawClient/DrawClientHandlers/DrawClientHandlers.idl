@@ -1,0 +1,54 @@
+// DrawClientHandlers.idl : IDL source for DrawClientHandlers
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DrawClientHandlers.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(7B4AF31B-0224-4785-9E23-5791AA8C0945),
+	helpstring("IDrawCliLiveIconsHandler Interface"),
+	pointer_default(unique)
+]
+interface IDrawCliLiveIconsHandler : IUnknown{
+};
+[
+	object,
+	uuid(C9246001-38E2-4F29-8C24-6A691F11886C),
+	helpstring("IDrawCliSearchHandler Interface"),
+	pointer_default(unique)
+]
+interface IDrawCliSearchHandler : IUnknown{
+};
+[
+	uuid(D69D49B1-7CA7-42A7-B85D-617CAE52F42B),
+	version(1.0),
+	helpstring("DrawClientHandlers 1.0 Type Library")
+]
+library DrawClientHandlersLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(094F19D5-C63E-404B-939F-24913DCCF64E),
+		helpstring("DrawCliLiveIconsHandler Class")
+	]
+	coclass DrawCliLiveIconsHandler
+	{
+		[default] interface IThumbnailProvider;
+	};
+	[
+		uuid(883FE140-50F4-497E-A7B6-6C7FF0885D6F),
+		helpstring("DrawCliSearchHandler Class")
+	]
+	coclass DrawCliSearchHandler
+	{
+		[default] interface IFilter;
+		interface IPersistFile;
+		interface IPersistStream;
+	};
+};
+import "thumbcache.idl";
+import "filter.idl";

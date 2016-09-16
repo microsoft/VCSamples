@@ -1,0 +1,25 @@
+HKCR
+{
+	Aggreg.Agg.1 = s 'Agg Class'
+	{
+		CLSID = s '{4F9A6811-DD9D-11CF-9462-00AA00BBAD7F}'
+	}
+	Aggreg.Agg = s 'Agg Class'
+	{
+		CurVer = s 'Aggreg.Agg.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4F9A6811-DD9D-11CF-9462-00AA00BBAD7F} = s 'Agg Class'
+		{
+			val AppID = s '{4F9A68EC-DD9D-11CF-9462-00AA00BBAD7F}'
+			ProgID = s 'Aggreg.Agg.1'
+			VersionIndependentProgID = s 'Aggreg.Agg'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
+

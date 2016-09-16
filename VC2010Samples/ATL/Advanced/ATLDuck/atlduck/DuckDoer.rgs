@@ -1,0 +1,20 @@
+HKCR
+{
+	ForceRemove DuckDoer.DuckDoer.1 = s 'DuckDoer Class'
+	{
+		CLSID = s '{120B72A0-65BF-11D0-9DDC-00A0C9034892}'
+	}
+	ForceRemove DuckDoer.DuckDoer = s 'DuckDoer Class'
+	{
+		CurVer = s 'DuckDoer.DuckDoer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {120B72A0-65BF-11D0-9DDC-00A0C9034892} = s 'DuckDoer Class'
+		{
+			ProgID = s 'DuckDoer.DuckDoer.1'
+			VersionIndependentProgID = s 'DuckDoer.DuckDoer'
+			LocalServer32 = s '%MODULE%'
+		}
+	}
+}

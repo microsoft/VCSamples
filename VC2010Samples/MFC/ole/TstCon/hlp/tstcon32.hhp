@@ -1,0 +1,40 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=tstcon32.chm
+Contents file=tstcon32.hhc
+Default topic=main_index.htm
+Display compile progress=No
+Full-text search=Yes
+Index file=tstcon32.hhk
+Language=0x409 English (United States)
+
+[FILES]
+automation.htm
+Changing_Ambient_Properties.htm
+Choose_Which_Events.htm
+Choosing_a_Location.htm
+Choosing_Design_or_User_Mode.htm
+Event_Handling.htm
+Extended_Properties_and_Methods.htm
+help.htm
+Inserting_an_ActiveX_Control.htm
+Invoking_an_Objects_Methods.htm
+Macros.htm
+main_index.htm
+Object_Model.htm
+Samples.htm
+Saving_and_Restoring.htm
+Setting_the_level.htm
+Testing_Persistence.htm
+Using_Command-Line.htm
+Verbs.htm
+
+[MAP]
+#include HTMLDefines.h
+#include popups.h
+
+[TEXT POPUPS]
+HTMLDefines.h
+popups.h
+popups.txt

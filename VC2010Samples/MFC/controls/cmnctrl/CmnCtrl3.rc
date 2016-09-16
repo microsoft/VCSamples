@@ -1,0 +1,307 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\CmnCtrl3.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CmnCtrl3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SPLIT_BUTTON DIALOGEX 0, 0, 316, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CSplitButton"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Set Dropdown Menu",IDC_STATIC,18,46,124,57
+    PUSHBUTTON      "MENU 1",IDC_SET_MENU1,48,60,53,14
+    PUSHBUTTON      "MENU 2",IDC_SET_MENU2,48,79,53,14
+    GROUPBOX        "Dropdown State",IDC_STATIC,173,46,125,58
+    GROUPBOX        "Split Size",IDC_STATIC,172,113,126,56
+    LTEXT           "X: ",IDC_STATIC,179,131,10,8
+    LTEXT           "Y: ",IDC_STATIC,179,148,10,8
+    EDITTEXT        IDC_Y_SIZE,189,146,50,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_X_SIZE,189,128,50,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set",IDC_SET_SIZE,246,146,45,14
+    GROUPBOX        "Split Style",IDC_STATIC,18,113,125,56
+    CONTROL         "MENU 1",IDC_SPLIT_BUTTON,"Button",BS_SPLITBUTTON | WS_TABSTOP,118,19,75,20
+    LISTBOX         IDC_LIST_STYLE,32,125,96,38,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "BST_DROPDOWNPUSHED",IDC_CHECK_STATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,190,70,102,16
+END
+
+IDD_PAGER_CONTROL DIALOGEX 0, 0, 316, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CPagerCtrl"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Border size",IDC_STATIC,20,74,276,45
+    COMBOBOX        IDC_BACK_COLOR,46,144,78,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Button Size",IDC_STATIC,165,125,131,45
+    PUSHBUTTON      "Set",IDC_SET_BUTTON_SIZE,242,143,49,14
+    EDITTEXT        IDC_BUTTON_SIZE,175,143,57,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SLIDER_BORDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,75,97,169,20
+    LTEXT           "Static",IDC_STATIC_BORDERSIZE,153,88,19,8
+    GROUPBOX        "Color",IDC_STATIC,20,125,131,45
+END
+
+IDD_NETWORK_ADDRESS_CONTROL DIALOGEX 0, 0, 316, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CNetworkAddressCtrl"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_NETADDRESS,"msctls_netaddress",ES_AUTOHSCROLL | WS_TABSTOP,21,22,273,14,WS_EX_CLIENTEDGE
+    GROUPBOX        "Address Type",IDC_STATIC,19,42,216,123
+    PUSHBUTTON      "Validate",IDC_BUTTON_VALIDATE,245,47,50,15
+    LISTBOX         IDC_LIST_NETSTRINGS,34,59,186,94,LBS_MULTIPLESEL | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_COMMAND_LINK_CONTROL DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CButton (Command Link)"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Note",IDC_STATIC,7,95,306,40
+    EDITTEXT        IDC_BUTTON_NOTE,25,111,209,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Set",IDC_SET_BUTTON_NOTE,247,111,50,14
+    GROUPBOX        "Elevation Icon",IDC_STATIC,7,139,306,38
+    CONTROL         "Show",IDC_CHECK_ELEV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,156,33,10
+    CONTROL         "Command button here",IDC_COMMAND,"Button",BS_COMMANDLINK | WS_TABSTOP,84,28,147,55
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "CmnCtrl3.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "CmnCtrl3.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SPLIT_BUTTON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_PAGER_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_NETWORK_ADDRESS_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_COMMAND_LINK_CONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SPLIT_DROPDOWN_MENU MENU 
+BEGIN
+    POPUP "MENU 1"
+    BEGIN
+        MENUITEM "MENU 1.1",                    ID_ROOT_MENU1
+        MENUITEM "MENU 1.2",                    ID_ROOT_MENU2
+    END
+    POPUP "MENU 2"
+    BEGIN
+        MENUITEM "MENU 2.1",                    ID_MENU2_MENU2
+        MENUITEM "MENU 2.2",                    ID_MENU2_MENU3
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR  64, 64
+BEGIN
+    BUTTON      ID_BUTTON32777
+    BUTTON      ID_BUTTON32778
+    BUTTON      ID_BUTTON32779
+    BUTTON      ID_BUTTON32780
+    BUTTON      ID_BUTTON32781
+    BUTTON      ID_BUTTON32782
+    BUTTON      ID_BUTTON32783
+    BUTTON      ID_BUTTON32784
+    BUTTON      ID_BUTTON32785
+    BUTTON      ID_BUTTON32787
+    BUTTON      ID_BUTTON32788
+    BUTTON      ID_BUTTON32789
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About CmnCtrl2..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\CmnCtrl3.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

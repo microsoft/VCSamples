@@ -1,0 +1,57 @@
+// mfcserver.idl : type library source for mfcserver.exe
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (mfcserver.tlb).
+
+import "ocidl.idl";
+import "oaidl.idl";
+[
+	object,
+	uuid(5D0CE851-D909-11CF-91FC-00A0C903976F),
+	dual,
+	helpstring("IObjectTwo Interface")
+]
+interface IObjectTwo : IDispatch{
+
+	[propget, id(1)] HRESULT SayHello([out,retval] BSTR* bstr);
+};
+[ uuid(5D0CE84A-D909-11CF-91FC-00A0C903976F), version(1.0) ]
+library MfcAtl
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Primary dispatch interface for CObjectOne
+	
+	[ uuid(5D0CE84F-D909-11CF-91FC-00A0C903976F) ]
+	dispinterface IObjectOne
+	{
+		properties:
+			
+		methods:
+			[id(1)] BSTR SayHello();
+
+	};
+
+	//  Class information for CObjectOne
+
+	[ uuid(5D0CE850-D909-11CF-91FC-00A0C903976F) ]
+	coclass ObjectOne
+	{
+		[default] dispinterface IObjectOne;
+	};
+	//  Class information for CObjectTwo
+
+	[ uuid(F933FD54-6E04-42D4-B82A-10B1820EEE3E) ]
+	coclass ObjectTwo
+	{
+		[default] interface IObjectTwo;
+	};
+};

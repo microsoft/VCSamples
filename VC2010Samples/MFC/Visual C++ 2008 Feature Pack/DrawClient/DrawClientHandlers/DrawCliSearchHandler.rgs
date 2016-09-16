@@ -1,0 +1,36 @@
+HKCR
+{
+	DrawClientHandlers.DrawCliSearchHandl.1 = s 'DrawCliSearchHandler Class'
+	{
+		CLSID = s '{883FE140-50F4-497E-A7B6-6C7FF0885D6F}'
+	}
+	DrawClientHandlers.DrawCliSearchHandler = s 'DrawCliSearchHandler Class'
+	{
+		CLSID = s '{883FE140-50F4-497E-A7B6-6C7FF0885D6F}'
+		CurVer = s 'DrawClientHandlers.DrawCliSearchHandl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {883FE140-50F4-497E-A7B6-6C7FF0885D6F} = s 'DrawCliSearchHandler Class'
+		{
+			ProgID = s 'DrawClientHandlers.DrawCliSearchHandl.1'
+			VersionIndependentProgID = s 'DrawClientHandlers.DrawCliSearchHandler'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D69D49B1-7CA7-42A7-B85D-617CAE52F42B}'
+		}
+		ForceRemove {F38050BA-49A6-4C86-8583-577A2DEB5442} = s 'DrawCliSearchHandler Class'
+		{
+			ForceRemove PersistentAddinsRegistered = s 'DrawCliSearchHandler Class'
+			{
+				{89BCB740-6119-101A-BCB7-00DD010655AF} = s '{883FE140-50F4-497E-A7B6-6C7FF0885D6F}'
+			}
+		}
+	}
+	NoRemove .drw
+	{
+		NoRemove PersistentHandler = s '{F38050BA-49A6-4C86-8583-577A2DEB5442}'
+	}
+}

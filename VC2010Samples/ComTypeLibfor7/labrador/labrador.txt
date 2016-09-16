@@ -1,0 +1,20 @@
+
+LABRADOR
+
+This sample shows how to use ATL to implement an EXE server without any user interface. The server
+allows creation of an object that supports two custom interfaces, as defined in LABRADOR.IDL.
+
+HOW TO RUN IT:
+
+You need to build and properly set up 3 components, but building and running the sample from the IDE does
+all of this for you in one step. Just build the sample solution labrador.sln and from Debug menu select
+"Run Without Debugging" or just click on the ">" button.
+
+The 3 steps for building from command line are as follows:
+* Server:
+  Build LABRADOR.EXE. Run the server once with the /RegServer command line option to set up the registry
+* Marshalling DLL:
+  Build the proxy/stub marshalling DLL to get LABPS.DLL. Register it by running "regsvr32 labps.dll"
+* Driver:
+  Go to the LABDRIV subdirectory, build LABDRIV.EXE. Run the driver from the debugger or from the command
+  line. The driver will create an object, make a few calls into it, and then release it.

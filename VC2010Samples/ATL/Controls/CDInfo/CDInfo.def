@@ -1,0 +1,9 @@
+; CDInfo.def : Declares the module parameters.
+
+LIBRARY      CDINFO.DLL
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE

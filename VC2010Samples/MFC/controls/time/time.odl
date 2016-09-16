@@ -1,0 +1,76 @@
+// time.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (time.tlb) that will become a resource in
+// time.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(DCF07690-BA7A-101A-B57A-0000C0C3ED5F), version(1.0),
+  helpstring("Time OLE Custom Control module"), control ]
+library TimeLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CTimeCtrl
+
+	[ uuid(37446B91-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Time Control"), hidden ]
+	dispinterface _DTime
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CTimeCtrl)
+			[id(1)] short Interval;
+			[id(DISPID_ENABLED), bindable, requestedit] boolean Enabled;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CTimeCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CTimeCtrl
+
+	[ uuid(37446B92-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Time Control") ]
+	dispinterface _DTimeEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CTimeCtrl)
+			[id(1)] void Timer();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CTimeCtrl
+
+	[ uuid(AD44EB81-9E76-4a90-A10D-738EA3D21360),
+	  helpstring("Time Control"), control ]
+	coclass Time
+	{
+		[default] dispinterface _DTime;
+		[default, source] dispinterface _DTimeEvents;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

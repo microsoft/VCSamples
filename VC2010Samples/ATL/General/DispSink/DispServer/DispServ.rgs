@@ -1,0 +1,26 @@
+HKCR
+{
+	ForceRemove DispServer.DispServ.1 = s 'DispServ Class'
+	{
+		CLSID = s '{A6D89F48-35F4-11D2-9375-00C04FD9757C}'
+	}
+	ForceRemove DispServer.DispServ = s 'DispServ Class'
+	{
+		CurVer = s 'DispServer.DispServ.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A6D89F48-35F4-11D2-9375-00C04FD9757C} = s 'DispServ Class'
+		{
+			ProgID = s 'DispServer.DispServ.1'
+			VersionIndependentProgID = s 'DispServer.DispServ'
+			'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{A6D89F30-35F4-11D2-9375-00C04FD9757C}'
+			'TypeLib' = s '{A6D89F2F-35F4-11D2-9375-00C04FD9757C}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

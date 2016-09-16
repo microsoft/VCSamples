@@ -1,0 +1,257 @@
+APPUTIL - Application Utility Library
+
+
+SUMMARY
+=======
+
+The APPUTIL library provides utility classes and functions that are
+useful for making simple C++ Win32 Windows applications. APPUTIL is
+provided as part of the Win32 OLE Tutorial code samples.
+
+For functional descriptions and a tutorial code tour of APPUTIL, see
+the Code Tour section below.
+
+For details on setting up your system to build and test the code samples
+in this OLE Tutorial series, see TUTORIAL.TXT. The supplied MAKEFILE is
+Microsoft NMAKE-compatible. To create a debug build, issue the NMAKE
+command in the Command Prompt window.
+
+Usage
+-----
+
+APPUTIL.LIB is meant to be statically linked to modules (.EXEs or .DLLs)
+that use it. You include APPUTIL.H in the module that uses features of
+APPUTIL.LIB. You must also include APPUTIL.LIB in the LINK command of
+your application's makefile. For an example of the use of APPUTIL.LIB,
+see the EXESKEL code sample.
+
+Classes
+-------
+
+The classes provided are: CVirWindow, CVirDialog, CAboutBox, CMsgBox,
+CMsgLog, CSendLog, and CThreaded.
+
+Functions
+---------
+
+The functions provided are: WindowProc, DialogProc, UcToAnsi,
+CreateColorScalePalette, PaintWindow, FileExist, MakeFamilyPath, CmdExec,
+ReadMe, ReadMeFile, ReadSource, and OutputDebugFmt.
+
+There are also a series of A_ ANSII versions of OLE service helper
+functions. The A_ functions are used in conjunction with a matching
+series of macros in APPUTIL.H to permit compilation of the code samples
+under both ANSII (default) and UNICODE. These macros and matching
+A_ functions are for OLE service calls that only accept Unicode string
+parameters. For example, the standard OLE StgIsStorageFile function
+only accepts a Unicode string. When compiling a sample for ANSII
+(ie, UNICODE is not defined), a macro substitutes any StgIsStorageFile
+calls into A_StgIsStorageFile calls. A_StgIsStorageFile is implemented
+here in APPUTIL. A_StgIsStorageFile takes the input ANSII string
+that is passed and converts it into a Unicode string prior to making a
+call to the actual OLE StgIsStorageFile function.
+
+
+CODE TOUR
+=========
+
+File          Description
+
+APPUTIL.TXT   This file.
+MAKEFILE      The generic Win32 makefile for this APPUTIL library.
+APPUTIL.H     The include file for the APPUTIL library. Contains the
+              class declarations and function prototypes.
+APPUTIL.CPP   The main implementation file for APPUTIL.
+
+An abstract base class, CVirWindow, is declared in APPUTIL.H as an aid in
+treating a window as a C++ object. Using the CVirWindow class, a window
+procedure can directly access class members by dereferencing a pointer to
+an object instance of this class. Through GWL_USERDATA in GetWindowLong
+and SetWindowLong, the WindowProc member function has access to the "this"
+pointer. The global WindowProc function is still used, but this scheme
+allows the global function to forward most message handling to the
+WindowProc member function of a specific object instance of CVirWindow.
+The global WindowProc receives the "this" pointer as the lpCreateParams
+member passed as part of the WM_NCCREATE message. It save the "this"
+pointer in the GWL_USERDATA field of the window structure.
+
+An abstract base class, CVirDialog, which is similar to CVirWindow, is
+also declared as an aid in treating a dialog box as a C++ object. Using
+the CVirDialog class, a dialog box procedure can directly access class
+members by dereferencing a pointer to an object instance of this class.
+Through GWL_USERDATA in GetWindowLong and SetWindowLong, the DialogProc
+member function has access to the "this" pointer. The global DialogProc
+function is still used, but this scheme allows the global function to
+defer most message handling to the DialogProc member function of a
+specific object instance of CVirDialog.  The functionality is very
+similar to CVirWindow described above.
+
+The CAboutBox class is declared to allow creation of a common About dialog
+box in applications. The class is derived from the CVirDialog abstract
+class and illustrates its use.
+
+The CMsgBox class is declared to provide simple message boxes to display
+error and notice messages. The message strings in the message box can be
+specified as string literals, string variables, or resource string
+identifiers. The Error and Note methods take string literals or string
+variables. The ErrorID and NoteID methods take resource string identifiers.
+In addition, the Notice message box methods have variants that support
+message string formatting in the style of the C standard library function
+printf. These member functions support a variable argument list, NoteFmt,
+and NoteFmtID.
+
+The CMsgLog class is declared to provide a facility for logging debug trace
+messages to a Listbox control. This class is for code samples that use
+debug messages to announce internal activity in the code being studied.
+This message log listbox can be directed to occupy the entire client area
+of the parent window. An argument to the Create method determines whether
+the log occupies a detached child window or the entire client area as an
+integral child window. Message output member functions can use either
+string resource identifier arguments to retrieve the message strings from
+the application's resources, or string variables to retrieve the message
+strings directly. The CMsgLog::MsgFmt method is provided to allow message
+formatting in the style of the C standard library function wsprintf. This
+member function supports a variable argument list. The CMsgLog::Copy method
+is provided to copy the entire contents of the message log to the Windows
+Clipboard.
+
+The CMsgLog logging facility is for examining the tutorial code samples.
+It works in parallel with the standard OutputDebugString capability. If
+you are compiling with NODEBUG=1, the debug output is not compiled. In this
+case, logging support is still available, because it is an integral part
+of the code sample itself. When compiling for debugging, both outputs are
+provided for flexibility. Most C++ debuggers have an output window that
+will display the debug output strings, but the logging facility works
+whether or not you are running the application under a debugger.
+
+The CSendLog trace logging facility is also provided. It operates much like
+the CMsgLog facility, except that it is intended for an application that
+logs its activity in an application running in another process. This
+facility is useful in an out-of-process local server that logs its
+internal behavior to a display in a client .EXE. CSendLog uses the Win32
+SendMessage function with the WM_COPYDATA message to send a block of text
+data from one process to another. CSendLog duplicates some of the
+capability of CMsgLog by allowing a local server to have its own log
+display. The destination of the logging can therefore be switched between
+the client's logging display and the local server's logging display by
+calling the LogToServer method.
+
+The CThreaded class is provided as a utility base class for providing
+functionality in derived classes that offer mutually exclusive access
+among multiple threads to data in objects of the derived class. Derive
+your class from CThreaded to inherit these features. A typical example of
+a method in the derived class that exploits these features follows.
+
+  void CServer::Unlock(void)
+  {
+    if (OwnThis())
+    {
+      m_cLocks -= 1;
+      if (m_cLocks < 0)
+        m_cLocks = 0;
+
+      if (0L == m_cObjects && 0L == m_cLocks && IsWindow(m_hWndServer))
+        PostMessage(m_hWndServer, WM_CLOSE, 0, 0L);
+
+      UnOwnThis();
+    }
+
+    return;
+  }
+
+This Unlock method implements numerous thread-safe accesses and changes to
+the guarded m_cLocks member variable. CServer was derived public from
+CThreaded. Two CThreaded methods are of value here: OwnThis and UnOwnThis
+are virtual functions in CThreaded that have default defintions that
+enforce mutually exclusive access to data in objects of the derived class
+(like CServer here). You use bracketed pairs of these OwnThis and
+UnOwnThis methods, as above, to code the protection. OwnThis blocks the
+currently executing thread until any currently "owning" threads execute
+the UnOwnThis method. OwnThis returns true if ownership is granted. See
+the CThreaded method definitions in APPUTIL.CPP for more details.
+
+Some general utility functions and macros provided by APPUTIL are
+briefly described below.
+
+OLE often deals with parameters that are pointers to pointers (void**).
+To capture this as a type, a PPVOID typedef is provided.
+
+The DELETE_POINTER macro deletes the object pointed to by a pointer and sets
+the pointer to NULL.
+
+The RELEASE_INTERFACE macro releases a pointer to an interface and sets the
+pointer to NULL.
+
+lRandom is a simple DWORD pseudo-random number generator.
+
+Two utility functions are provided for creating color scale palettes and
+for painting windows with such colors: CreateColorScalePalette and
+PaintWindow. Lifted from the GDIDEMO sample in the Win32 samples of the
+Win32 SDK. They are used in these tutorial samples to add color background
+to the standard Aboutbox dialog.
+
+The FileExist utility function indicates whether a specified file exists.
+
+The MakeFamilyPath utility function uses GetModuleFileName to dynamically
+determine the path to the module currently executing and construct a
+"family" variant of that path with the proper file name extension for a
+particular purpose. Various such extensions (for example, .HLP, .TXT, and
+.LIC) are defined in APPUTIL.H for use with this MakeFamilyPath function.
+
+The ReadMe utility function is provided to start a reader on the
+<sample>.TXT file that accompanies the current executable. The Windows
+Notepad (NOTEPAD.EXE) is the default reader. You can specify a different
+reader by modifying EDITOR_FILE_STR in APPUTIL.H.
+
+Like ReadMe, the ReadMeFile utility function is provided to start a reader
+on a specified <sample>.TXT file.
+
+The ReadSource utility function is provided to display the Open common
+dialog box so the user can select any of the source files for the current
+code sample and start a reader on that file. The Windows Notepad
+(NOTEPAD.EXE) is the default reader. You can specify a different reader by
+modifying EDITOR_FILE_STR in APPUTIL.H
+
+Then OutputDebugFmt utility function is provided to support formatted
+(printf-style) variable argument output to the debugger. This function
+wraps the standard OutputDebugString function.
+
+A set of debug output macros is provided to obtain source file and line
+number information for the debug output. These macros use the function
+OutputDebugFmt to support variable argument lists in the format
+of the debug output display string. The debug output macros are:
+
+Macro Description
+
+ODS   Output debug string literal.
+      Example:  ODS("String Literal").
+ODFn  Output formatted debug string using printf-style format string
+      and a variable argument list to correspond to the format.
+      Examples: ODF1("Integer=%i", iInteger);
+                ODF2("Integer=%i String=%s \r\n", iInteger, szString);
+
+A set of debug trace logging macros is provided to obtain source file and
+line number information for the debug output while also logging these
+messages to a built-in CMsgLog message logging facility in the
+application. These macros also output the same messages to the debugger
+using the standard OutputDebugString call. These are convenience macros to
+perform both the message logging that the application requires and to
+output the same messages to the debugger, if the application was compiled
+for debugging and you are running it under a debugger aware of such
+output. Like the ODFn macros, these macros form a series. For the string
+literal arguments, do not use the TEXT macro--it is provided inside
+the macro.
+
+Macro     Description
+
+LOG       Log a string literal message.
+          Example: LOG("String Literal");
+LOGFn     Log a formatted message using printf-style format string
+          and a variable argument list to correspond to the format.
+          Examples: LOGF1("Integer=%i", iInteger);
+                    LOGF2("Integer=%i String=%s \r\n", iInteger, szString);
+LOGID     Log a message string retrieved from the module's resources.
+          Example:  LOGID(ID_OF_MY_STRING_IN_THE_RESOURCES);
+LOGERROR  Check an error code and if it is an error then fetch the matching
+          error string message from the system tables and log the error.
+          Example: LOGERROR("SysApiThatWasCalled:", ErrorCodeReturned);

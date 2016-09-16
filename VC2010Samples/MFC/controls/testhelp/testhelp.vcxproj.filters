@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{668d8c74-80df-4a4c-ab46-e3ebf73e9271}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="HTML Help Files">
+      <UniqueIdentifier>{2143f77a-c2ee-4b63-bf1a-3e1ed7db7212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTML Help Topics">
+      <UniqueIdentifier>{42b5dfa0-e386-4486-95b0-003e9b43e32c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{967646a7-bc28-44ba-aebf-47fc1db9efd5}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{63fde142-1bce-454a-873e-2767c195455f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testhelp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThelpCtl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThelpPpg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="testhelp.odl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hlp\HTMLDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hlp\popups.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testhelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThelpCtl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThelpPpg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="testhelp.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="hlp\AFX_HIDP_default.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HIDC_HELPTYPE.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HIDC_NAME1.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HIDC_NAME2.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HIDC_NAME3.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HIDC_USEMINE.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HIDC_USETOOLTIPS.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\HID_HT_NOWHERE.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\IDH_HOWDOIUSE.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\IDH_PROPERTIES.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\IDH_WHATISTHISTHING.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\main_index.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\popups.txt">
+      <Filter>HTML Help Topics</Filter>
+    </None>
+    <None Include="hlp\testhelp.hhc">
+      <Filter>HTML Help Files</Filter>
+    </None>
+    <None Include="hlp\testhelp.hhk">
+      <Filter>HTML Help Files</Filter>
+    </None>
+    <None Include="hlp\testhelp.hhp">
+      <Filter>HTML Help Files</Filter>
+    </None>
+    <None Include="testhelp.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="testhelp.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ThelpCtl.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

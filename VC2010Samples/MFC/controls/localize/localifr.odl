@@ -1,0 +1,78 @@
+// localifr.odl : French type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the French type library for the Localize sample control
+// (localifr.tlb).
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(879D6FE3-5470-101B-B57B-00608CC96AFA), version(1.0),
+  helpstring("Localize OLE Custom Control module"), control,
+  lcid(0x040c) ]
+library LocalizeLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CLocalizeCtrl
+
+	[ uuid(035E3E52-6745-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Localize Control"), hidden ]
+	dispinterface _DLocalize
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CLocalizeCtrl)
+			[id(1)] boolean InvertInFrench;
+			[id(DISPID_CAPTION), bindable, requestedit] BSTR CaptionInFrench;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CLocalizeCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBoxInFrench();
+	};
+
+	//  Event dispatch interface for CLocalizeCtrl
+
+	[ uuid(035E3E53-6745-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Localize Control") ]
+	dispinterface _DLocalizeEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CLocalizeCtrl)
+			[id(DISPID_CLICK)] void ClickInFrench();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CLocalizeCtrl
+
+	[ uuid(879D6FE0-5470-101B-B57B-00608CC96AFA),
+	  helpstring("Localize Control (in French)"), control ]
+	coclass Localize
+	{
+		[default] dispinterface _DLocalize;
+		[default, source] dispinterface _DLocalizeEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

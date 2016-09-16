@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 2.0">
+<title>ATL Agent Test</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1><font face="Comic Sans MS">ATL Agent Test</font><br>
+<object id="agent" name="agent"
+classid="CLSID:9DFE0778-9727-45FD-8C2A-D1BC4299F177"
+align="baseline" border="0" width="20" height="20"></object> </h1>
+
+<form method="POST">
+    <table border="0">
+        <tr>
+            <td><input type="button" name="Play" value="Play"
+            language="VBScript"
+            onclick="agent.Speed = txtCaffeine.Value
+agent.Play">
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td valign="top"><font size="2"></font>&nbsp;</td>
+            <td><font size="2" face="Comic Sans MS">Caffeine
+            Intake:</font></td>
+            <td><!--webbot bot="Validation" s-data-type="Number"
+            s-number-separators=",." i-maximum-length="100"
+            s-validation-constraint="Greater than or equal to"
+            s-validation-value="0"
+            s-validation-constraint="Less than or equal to"
+            s-validation-value="100" --><input type="text"
+            size="6" maxlength="100" name="txtCaffeine"
+            value="10"> % </td>
+            <td><img src="COFECUP.jpg" width="78" height="73"></td>
+        </tr>
+    </table>
+    <p><input type="text" size="27" name="String"> <input
+    type="button" name="Speak" value="Speak" language="VBScript"
+    onclick="agent.Speed = txtCaffeine.Value
+		agent.SpeakText(String.Value)">
+    </p>
+	<p><input type="text" size="27" name="Animation"> <input
+		type="button" name="Animate" value="Animate" language="VBScript"
+		onclick="agent.Speed = txtCaffeine.Value
+		agent.Animate(Animation.Value)">
+		<input type="button" name="Stop" value="Stop" language="VBScript"
+			onclick="agent.Stop">
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+HKCR
+{
+	DrawClientHandlers.DrawCliLiveIconsHa.1 = s 'DrawCliLiveIconsHandler Class'
+	{
+		CLSID = s '{094F19D5-C63E-404B-939F-24913DCCF64E}'
+	}
+	DrawClientHandlers.DrawCliLiveIconsHand = s 'DrawCliLiveIconsHandler Class'
+	{
+		CLSID = s '{094F19D5-C63E-404B-939F-24913DCCF64E}'
+		CurVer = s 'DrawClientHandlers.DrawCliLiveIconsHa.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {094F19D5-C63E-404B-939F-24913DCCF64E} = s 'DrawCliLiveIconsHandler Class'
+		{
+			ProgID = s 'DrawClientHandlers.DrawCliLiveIconsHa.1'
+			VersionIndependentProgID = s 'DrawClientHandlers.DrawCliLiveIconsHand'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{D69D49B1-7CA7-42A7-B85D-617CAE52F42B}'
+			
+		}
+	}
+	NoRemove .drw
+	{
+		NoRemove ShellEx
+		{
+			ForceRemove {E357FCCD-A995-4576-B01F-234630154E96} = s '{094F19D5-C63E-404B-939F-24913DCCF64E}'
+		}
+	}
+}

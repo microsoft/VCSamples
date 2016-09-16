@@ -1,0 +1,13 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		ForceRemove %APPID% = s 'atlduck'
+		{
+		}
+		ForceRemove 'atlduck.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

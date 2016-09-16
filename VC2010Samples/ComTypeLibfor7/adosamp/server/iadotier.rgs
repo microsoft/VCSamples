@@ -1,0 +1,23 @@
+HKCR
+{
+    ForceRemove ADOSamp.ADOTier.1 = s 'ADOTier Class'
+    {
+        CLSID = s '{7A319997-48C0-11D0-AE70-00C04FD7D06E}'
+    }
+    ForceRemove ADOSamp.ADOTier = s 'ADOTier Class'
+    {
+        CurVer = s 'ADOSamp.ADOTier.1'
+    }
+    NoRemove CLSID
+    {
+        {7A319997-48C0-11D0-AE70-00C04FD7D06E} = s 'ADOTier Class'
+        {
+            ProgID = s 'ADOSamp.ADOTier.1'
+            VersionIndependentProgID = s 'ADOSamp.ADOTier'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
+    }
+}

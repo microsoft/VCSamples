@@ -1,0 +1,25 @@
+HKCR
+{
+	Aggreg.AutoAggB.1 = s 'AutoAggB Class'
+	{
+		CLSID = s '{4F9A6910-DD9D-11CF-9462-00AA00BBAD7F}'
+	}
+	Aggreg.AutoAggB = s 'AutoAggB Class'
+	{
+		CurVer = s 'Aggreg.AutoAggB.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4F9A6910-DD9D-11CF-9462-00AA00BBAD7F} = s 'AutoAggB Class'
+		{
+			val AppID = s '{4F9A68EC-DD9D-11CF-9462-00AA00BBAD7F}'
+			ProgID = s 'Aggreg.AutoAggB.1'
+			VersionIndependentProgID = s 'Aggreg.AutoAggB'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
+

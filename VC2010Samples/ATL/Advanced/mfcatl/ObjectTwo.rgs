@@ -1,0 +1,26 @@
+HKCR
+{
+	ForceRemove MfcAtl.ObjectTwo.1 = s 'Object Two'
+	{
+		CLSID = s '{F933FD54-6E04-42D4-B82A-10B1820EEE3E}'
+	}
+	ForceRemove MfcAtl.ObjectTwo = s 'Object Two'
+	{
+		CurVer = s 'MfcAtl.ObjectTwo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F933FD54-6E04-42D4-B82A-10B1820EEE3E} = s 'Object Two'
+		{
+			ProgID = s 'MfcAtl.ObjectTwo.1'
+			VersionIndependentProgID = s 'MfcAtl.ObjectTwo'
+			Control
+			Programmable
+			LocalServer32 = s '%MODULE%'
+			'TypeLib' = s '{5D0CE84A-D909-11CF-91FC-00A0C903976F}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-102'
+		}
+	}
+}

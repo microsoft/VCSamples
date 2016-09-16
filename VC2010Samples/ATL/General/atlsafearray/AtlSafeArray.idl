@@ -1,0 +1,52 @@
+// AtlSafeArray.idl : IDL source for AtlSafeArray
+
+// This is a part of the Active Template Library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Active Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Active Template Library product.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlSafeArray.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(029D6142-B334-4C05-80EF-ECDE5DF6BE82),
+	dual,
+	nonextensible,
+	helpstring("IArrayManager Interface"),
+	pointer_default(unique)
+]
+interface IArrayManager : IDispatch{
+
+	[id(1), helpstring("method GetArray")] HRESULT GetArray([out,retval] VARIANT* pvar);
+
+	[id(2), helpstring("method Add")] HRESULT Add([in] BSTR bstr);
+
+	[id(3), helpstring("method Remove")] HRESULT Remove([in] ULONG nIndex);
+
+	[id(4), helpstring("method Change")] HRESULT Change([in] ULONG nIndex, [in] BSTR bstr);
+};
+[
+	uuid(2456507D-F8AF-40C1-BDA7-5B0F925621F5),
+	version(1.0),
+	helpstring("AtlSafeArray 1.0 Type Library")
+]
+library AtlSafeArrayLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(3875AE6F-6B3B-497E-871F-B5FAEE689D30),
+		helpstring("ArrayManager Class")
+	]
+	coclass ArrayManager
+	{
+		[default] interface IArrayManager;
+	};
+};

@@ -1,0 +1,444 @@
+<HTML>
+<!-- Sitemap 1.0 -->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Activate">
+		<param name="See Also" value="Activate">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation extended properties">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="ActiveX control">
+		<param name="See Also" value="ActiveX control">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="inserting">
+			<param name="Local" value="Inserting_an_Activex_Control.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="ambient properties">
+		<param name="See Also" value="ambient properties">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="changing">
+			<param name="Local" value="Changing_Ambient_Properties.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Automation extended properties">
+		<param name="See Also" value="Automation extended properties">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Activate">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Deactivate">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Name">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="UIActivate">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="UIDectivate">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Automation macros">
+		<param name="Name" value="Macros">
+		<param name="Local" value="Macros.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Automation properties">
+		<param name="See Also" value="Automation properties">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="FindControl">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="InsertControl">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Log">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="PrimarySelection">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="automation samples">
+		<param name="Name" value="Samples">
+		<param name="Local" value="Samples.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Automation">
+		<param name="See Also" value="Automation">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="event handling">
+			<param name="Local" value="Event_Handling.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="changing ambient properties">
+		<param name="Name" value="Changing Ambient Properties">
+		<param name="Local" value="Changing_Ambient_Properties.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="command-line options">
+		<param name="Name" value="Using Command-Line Options to Customize Startup Mode">
+		<param name="Local" value="Using_Command-Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="contents">
+		<param name="Name" value="Contents for Test Container Help">
+		<param name="Local" value="main_index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="customizing startup">
+		<param name="Name" value="Using Command-Line Options to Customize Startup Mode">
+		<param name="Local" value="Using_Command-Line.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Deactivate">
+		<param name="See Also" value="Deactivate">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation extended properties">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="debugging level">
+		<param name="See Also" value="debugging level">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="setting">
+			<param name="Local" value="Setting_the_level.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="design mode">
+		<param name="See Also" value="design mode">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="choosing">
+			<param name="Local" value="Choosing_Design_or_User_Mode.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="event handling in Automation">
+		<param name="Name" value="Event Handling">
+		<param name="Local" value="Event_Handling.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="events">
+		<param name="See Also" value="events">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="logging">
+			<param name="Local" value="Choose_Which_Events.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="notifications">
+			<param name="Local" value="Choose_Which_Events.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="FindControl">
+		<param name="See Also" value="FindControl">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation property">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="form">
+		<param name="See Also" value="form">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="saving and loading">
+			<param name="Local" value="Saving_and_Restoring.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="help">
+		<param name="Name" value="Getting Help in the Test Container">
+		<param name="Local" value="help.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="InsertControl">
+		<param name="See Also" value="InsertControl">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation property">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="inserting a control">
+		<param name="Name" value="Inserting an ActiveX Control">
+		<param name="Local" value="Inserting_an_Activex_Control.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="invoking object's methods">
+		<param name="Name" value="Invoking an Object's Methods">
+		<param name="Local" value="Invoking_an_Objects_Methods.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="loading a form">
+		<param name="Name" value="Saving and Loading a Form">
+		<param name="Local" value="Saving_and_Restoring.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="location for logging output">
+		<param name="Name" value="Choosing a Location for Logging Output">
+		<param name="Local" value="Choosing_a_Location.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Log">
+		<param name="See Also" value="Log">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation property">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="logging events">
+		<param name="Name" value="Choosing Which Events and Database Notifications to Log">
+		<param name="Local" value="Choose_Which_Events.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="logging output">
+		<param name="See Also" value="logging output">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="location">
+			<param name="Local" value="Choosing_a_Location.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="macros">
+		<param name="See Also" value="macros">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation">
+			<param name="Local" value="Macros.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="methods">
+		<param name="See Also" value="methods">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="invoking">
+			<param name="Local" value="Invoking_an_Objects_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Name">
+		<param name="See Also" value="Name">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation extended properties">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="object verbs">
+		<param name="Name" value="Invoking Properties and Object Verbs">
+		<param name="Local" value="verbs.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="output">
+		<param name="See Also" value="output">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="logging">
+			<param name="Local" value="Choosing_a_Location.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="persistence">
+		<param name="See Also" value="persistence">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="testing">
+			<param name="Local" value="Testing_Persistence.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="PrimarySelection">
+		<param name="See Also" value="PrimarySelection">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation property">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="properties">
+		<param name="See Also" value="properties">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="ambient">
+			<param name="Local" value="Changing_Ambient_Properties.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="property bag">
+		<param name="See Also" value="property bag">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="using">
+			<param name="Local" value="Testing_Persistence.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="property sheet of the control">
+		<param name="Name" value="Invoking Properties and Object Verbs">
+		<param name="Local" value="verbs.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="samples">
+		<param name="Name" value="Samples">
+		<param name="Local" value="Samples.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="saving a form">
+		<param name="Name" value="Saving and Loading a Form">
+		<param name="Local" value="Saving_and_Restoring.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="setting debugging level">
+		<param name="Name" value="Setting the Level of Debugging">
+		<param name="Local" value="Setting_the_level.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="startup mode">
+		<param name="See Also" value="startup mode">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="customizing">
+			<param name="Local" value="Using_Command-Line.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="stream">
+		<param name="See Also" value="stream">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="using">
+			<param name="Name" value="Testing Persistence">
+			<param name="Local" value="Testing_Persistence.htm">
+			<param name="Name" value="Saving and Loading a Form">
+			<param name="Local" value="Saving_and_Restoring.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="substorage">
+		<param name="See Also" value="substorage">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="using">
+			<param name="Name" value="Testing Persistence">
+			<param name="Local" value="Testing_Persistence.htm">
+			<param name="Name" value="Saving and Loading a Form">
+			<param name="Local" value="Saving_and_Restoring.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="test container help contents">
+		<param name="Name" value="Contents for Test Container Help">
+		<param name="Local" value="main_index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="UIActivate">
+		<param name="See Also" value="UIActivate">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation extended properties">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="UIDectivate">
+		<param name="See Also" value="UIDectivate">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="Automation extended properties">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="user mode">
+		<param name="See Also" value="user mode">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="choosing">
+			<param name="Local" value="Choosing_Design_or_User_Mode.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="VBScript">
+		<param name="Name" value="Using Automation and the Test Container">
+		<param name="Local" value="automation.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="verbs">
+		<param name="See Also" value="verbs">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Keyword" value="object">
+			<param name="Local" value="verbs.htm">
+			</OBJECT>
+	</UL>
+</UL></HTML>

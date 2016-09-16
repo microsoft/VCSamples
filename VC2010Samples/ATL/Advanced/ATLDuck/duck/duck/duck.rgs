@@ -1,0 +1,13 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		ForceRemove %APPID% = s 'duck'
+		{
+		}
+		ForceRemove 'duck.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

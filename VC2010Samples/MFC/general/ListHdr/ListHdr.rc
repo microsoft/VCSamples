@@ -1,0 +1,275 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\ListHdr.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ListHdr.ico"
+IDI_ICONLIST4           ICON                    "res\\icon4.ico"
+IDI_ICONLIST3           ICON                    "res\\icon3.ico"
+IDI_ICONLIST2           ICON                    "res\\icon2.ico"
+IDI_ICONLIST1           ICON                    "res\\icon1.ico"
+IDI_HDRICON2            ICON                    "res\\hdricon2.ico"
+IDI_HDRICON1            ICON                    "res\\hdricon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 223, 68
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ListHdr"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "ListHdr Version 1.1",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Author: Frank Crockett",IDC_STATIC,40,25,82,8
+    DEFPUSHBUTTON   "OK",IDOK,184,7,32,14,WS_GROUP
+    LTEXT           "© 1992 - 2008 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,40,39,122,21
+END
+
+IDD_LISTHDR_DIALOG DIALOGEX 0, 0, 300, 202
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "List and Header Control Sample"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,243,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,23,50,14
+    COMBOBOX        IDC_VIEWMODE,228,81,65,67,CBS_DROPDOWNLIST | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ALIGN,228,97,65,53,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SORT,228,113,65,53,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_TABSTOP
+    RTEXT           "View Mode",IDC_STATIC,183,83,37,10
+    RTEXT           "Alignment",IDC_STATIC,184,99,36,11
+    RTEXT           "Sort",IDC_STATIC,197,115,23,9
+    CONTROL         "Listview1",IDC_LISTVIEW1,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,15,9,164,117
+    CONTROL         "LVS_AUTOARRANGE",IDC_AUTOARRANGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,132,87,10
+    CONTROL         "LVS_SINGLESEL",IDC_SINGLESEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,142,91,10
+    CONTROL         "LVS_NOLABELWRAP",IDC_NOLABELWRAP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,162,96,10
+    CONTROL         "LVS_EDITLABELS",IDC_EDITLABELS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,152,93,10
+    CONTROL         "LVS_NOCOLUMNHEADER",IDC_NOCOLUMNHEADER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,172,104,10
+    CONTROL         "LVS_NOSORTHEADER",IDC_NOSORTHEADER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,182,102,10
+    CONTROL         "Hover Select",IDC_HOVER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,209,132,57,10
+    GROUPBOX        "Hot Cursor Types",IDC_STATIC,209,143,84,38
+    CONTROL         "Standard",IDC_STDHOTCUR,"Button",BS_AUTORADIOBUTTON,214,
+                    154,45,10
+    CONTROL         "Custom (spy glass)",IDC_MYHOTCUR,"Button",
+                    BS_AUTORADIOBUTTON,214,170,74,10
+    CONTROL         "Working Areas",IDC_WORKAREAS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,132,63,10
+    PUSHBUTTON      "About",IDABOUT,243,43,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "ListHdr MFC Application"
+            VALUE "FileVersion", "1.0.001"
+            VALUE "InternalName", "ListHdr"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "ListHdr.EXE"
+            VALUE "ProductName", "ListHdr Application"
+            VALUE "ProductVersion", "1.0.001"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_LISTHDR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_SPYGLASS            CURSOR                  "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LISTHDR_DIALOG DLGINIT
+BEGIN
+    IDC_VIEWMODE, 0x403, 11, 0
+0x4d53, 0x4c41, 0x204c, 0x4349, 0x4e4f, "\000" 
+    IDC_VIEWMODE, 0x403, 5, 0
+0x4349, 0x4e4f, "\000" 
+    IDC_VIEWMODE, 0x403, 5, 0
+0x494c, 0x5453, "\000" 
+    IDC_VIEWMODE, 0x403, 7, 0
+0x4552, 0x4f50, 0x5452, "\000" 
+    IDC_ALIGN, 0x403, 9, 0
+0x4c41, 0x4749, 0x544e, 0x504f, "\000" 
+    IDC_ALIGN, 0x403, 10, 0
+0x4c41, 0x4749, 0x4c4e, 0x4645, 0x0054, 
+    IDC_SORT, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_SORT, 0x403, 10, 0
+0x5341, 0x4543, 0x444e, 0x4e49, 0x0047, 
+    IDC_SORT, 0x403, 11, 0
+0x4544, 0x4353, 0x4e45, 0x4944, 0x474e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About ListHdr..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\ListHdr.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

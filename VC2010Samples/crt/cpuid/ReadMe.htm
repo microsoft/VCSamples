@@ -1,0 +1,22 @@
+﻿<!--TO READ THIS HELP FILE, RIGHT-CLICK ON THE FILE NAME IN THE
+    SOLUTION EXPLORER PANE AND SELECT "VIEW IN BROWSER"-->
+
+<html><head><title>CPUID Sample: Determines CPU Capabilities</title></head><body><h1>CPUID Sample: Determines CPU Capabilities</h1><div id="mainSection"><div id="mainBody"><div id="allHistory" class="saveHistory" onsave="saveAll()" onload="loadAll()"></div><p /><p>The CPUID sample provides a routine that uses the CPUID instruction to determine the capabilities of the CPU being run. </p><p>The sample provides the function <code>int _cpuid(_p_info *pinfo)</code>, which returns data about the CPU. The <code>int</code> return value is a bitmask of flags for major processor features. The bits that might be set are:  </p><ul><li><p><code>#define _CPU_FEATURE_MMX   0x0001</code></p></li><li><p><code>#define _CPU_FEATURE_SSE   0x0002</code></p></li><li><p><code>#define _CPU_FEATURE_SSE2   0x0004</code></p></li><li><p><code>#define _CPU_FEATURE_3DNOW   0x0008</code></p></li></ul><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left">Security Note </th></tr><tr><td><p>This sample code is provided to illustrate a concept and should not be used in applications or Web sites, as it may not illustrate the safest coding practices.</p></td></tr></table></div><h1 class="heading">Building and Running the Sample</h1><div id="sectionSection0" class="seeAlsoNoToggleSection"><div class="alert"><table width="100%" cellspacing="0" cellpadding="0"><tr><th align="left">Note </th></tr><tr><td><p>If you are running Visual C++ Express Edition, you might need to install the Platform SDK before running this sample. For information on how to do this, see <MSHelp:link keywords="971463b4-7178-42cc-87b4-566295b7ae50" tabindex="0" >How to: Use Visual C++ Express Edition with the Microsoft Platform SDK</MSHelp:link>.</p></td></tr></table></div><h4 class="subHeading">To build and run this sample</h4><div class="subSection"><ol><li><p>Open the solution cpuid.sln.</p></li><li><p>From the <b>Build</b> menu, click <b>Build</b>.</p></li><li><p>From the <b>Debug</b> menu, select <b>Start Without Debugging</b>.</p></li></ol></div></div><h1 class="heading">Example Program Output</h1><div id="sectionSection1" class="seeAlsoNoToggleSection"><p>The sample includes a test.cpp file that trivially calls <code>_cpuid</code> and outputs the values in the resulting <code>_p_info</code> struct. For example, on a Pentium III computer that supports MMX and SSE, the program output would look something like this:</p><div class="code"><span codeLanguage="other"><table width="100%" cellspacing="0" cellpadding="0"><tr><td colspan="2"><pre>C:\work\cpuid&gt;test
+v_name:         GenuineIntel
+model:          INTEL Pentium-III
+family:         6
+model:          8
+stepping:       3
+feature:        00000003
+        yes     _CPU_FEATURE_MMX
+        yes     _CPU_FEATURE_SSE
+        no      _CPU_FEATURE_SSE2
+        no      _CPU_FEATURE_3DNOW
+os_support:     00000003
+        yes     _CPU_FEATURE_MMX
+        yes     _CPU_FEATURE_SSE
+        no      _CPU_FEATURE_SSE2
+        no      _CPU_FEATURE_3DNOW
+checks:         0000000f</pre></td></tr></table></span></div></div></div><div id="footer"><div class="footerLine"></div>
+          © Microsoft Corporation. All rights reserved.  Send <a href="mailto:DevDocs@microsoft.com?subject=Documentation Feedback :CPUID Sample: Determines CPU Capabilities">comments</a> about this topic to Microsoft.
+      </div></div></body></html>

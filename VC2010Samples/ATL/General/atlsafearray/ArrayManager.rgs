@@ -1,0 +1,28 @@
+HKCR
+{
+	ForceRemove AtlSafeArray.ArrayManager.1 = s 'ArrayManager Class'
+	{
+		CLSID = s '{3875AE6F-6B3B-497E-871F-B5FAEE689D30}'
+	}
+	ForceRemove AtlSafeArray.ArrayManager = s 'ArrayManager Class'
+	{
+		CurVer = s 'AtlSafeArray.ArrayManager.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3875AE6F-6B3B-497E-871F-B5FAEE689D30} = s 'ArrayManager Class'
+		{
+			ProgID = s 'AtlSafeArray.ArrayManager.1'
+			VersionIndependentProgID = s 'AtlSafeArray.ArrayManager'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{2456507D-F8AF-40C1-BDA7-5B0F925621F5}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

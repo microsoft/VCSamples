@@ -1,0 +1,136 @@
+CArchive
+CArray
+CCmdUI
+CCreateContext
+CDataExchange
+CDumpContext
+CFieldExchange
+CFileStatus
+CList
+CMap
+CMemoryState
+COleDataObject
+COleDispatchDriver
+CPoint
+CPrintInfo
+CRect
+CRectTracker
+CSize
+CString
+CTime
+CTimeSpan
+CTypedPtrArray
+CTypedPtrList
+CTypedPtrMap
+CVBPict
+CObject
+	CException
+		CMemoryException
+		CNotSupportedException
+		CArchiveException
+		CFileException
+		CResourceException
+		CUserException
+		COleException
+		COleDispatchException
+		CDBException
+	CFile
+		CStdioFile
+		CMemFile
+			CSharedFile
+		COleStreamFile
+	CByteArray
+	CWordArray
+	CDWordArray
+	CUIntArray
+	CPtrArray
+	CObArray
+	CStringArray
+	CPtrList
+	CObList
+	CStringList
+	CMapWordToPtr
+	CMapPtrToWord
+	CMapPtrToPtr
+	CMapWordToOb
+	CMapStringToPtr
+	CMapStringToOb
+	CMapStringToString
+	CGdiObject
+		CPen
+		CBrush
+		CFont
+		CBitmap
+		CPalette
+		CRgn
+	CDC
+		CPaintDC
+		CClientDC
+		CWindowDC
+		CMetaFileDC
+		CPreviewDC
+	CMenu
+	CCmdTarget
+		CWnd
+			CDialog
+				CFileDialog
+				CFontDialog
+				CColorDialog
+				CPrintDialog
+				CFindReplaceDialog
+				COleDialog
+					COleInsertDialog
+					COleConvertDialog
+					COleChangeIconDialog
+					COlePasteSpecialDialog
+					COleLinksDialog
+						COleUpdateDialog
+					COleBusyDialog
+			CStatic
+			CButton
+				CBitmapButton
+			CListBox
+			CComboBox
+			CEdit
+				CHEdit
+					CBEdit
+			CScrollBar
+			CFrameWnd
+				CMDIFrameWnd
+				CMDIChildWnd
+				COleIPFrameWnd
+			CView
+				CScrollView
+					CFormView
+						CRecordView
+					CPreviewView
+				CEditView
+			CControlBar
+				CStatusBar
+				CToolBar
+				CDialogBar
+				COleResizeBar
+			CSplitterWnd
+			CPropertySheet
+			CVBControl
+		CWinThread
+			CWinApp
+		CDocTemplate
+			CSingleDocTemplate
+			CMultiDocTemplate
+		CDocument
+			COleDocument
+				COleLinkingDoc
+					COleServerDoc
+		COleObjectFactory
+			COleTemplateServer
+		COleDataSource
+		CDocItem
+			COleClientItem
+			COleServerItem
+		COleDropSource
+		COleDropTarget
+		COleMessageFilter
+	CLongBinary
+	CDatabase
+	CRecordset

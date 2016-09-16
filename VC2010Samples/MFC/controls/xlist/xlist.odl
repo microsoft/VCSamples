@@ -1,0 +1,90 @@
+// xlist.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (xlist.tlb) that will become a resource in
+// xlist.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(37446B9C-5870-101B-B57B-00608CC96AFA), version(1.0),
+  helpstring("Xlist OLE Custom Control module"), control ]
+library XlistLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CXlistCtrl
+
+	[ uuid(37446B9A-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Xlist Control"), hidden ]
+	dispinterface _DXlist
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CXlistCtrl)
+			[id(1)] boolean InvertFlag;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CXlistCtrl)
+			[id(7), propget] OLE_COLOR ItemBackColor(short nIndex);
+			[id(7), propput] void ItemBackColor(short nIndex, OLE_COLOR newValue);
+			[id(8), propget] OLE_COLOR ItemForeColor(short nIndex);
+			[id(8), propput] void ItemForeColor(short nIndex, OLE_COLOR newValue);
+			[id(9), propget] BSTR ItemText(short nIndex);
+			[id(9), propput] void ItemText(short nIndex, BSTR lpszNewValue);
+			[id(10), propget] IFontDisp* ItemFont(short nIndex);
+			[id(10), propput] void ItemFont(short nIndex, IFontDisp* newValue);
+			[id(11), propget] IPictureDisp* ItemPicture(short nIndex);
+			[id(11), propput] void ItemPicture(short nIndex, IPictureDisp* newValue);
+			[id(2)] void RemoveItem(short nIndex);
+			[id(3)] void Clear();
+			[id(4)] void AddTextFontItem(short nIndex, BSTR lpstrText, IFontDisp* font);
+			[id(5)] void AddTextItem(short nIndex, BSTR lpstrText);
+			[id(6)] void AddPicItem(short nIndex, IPictureDisp* pic);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+
+	};
+
+	//  Event dispatch interface for CXlistCtrl
+
+	[ uuid(37446B9B-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Xlist Control") ]
+	dispinterface _DXlistEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CXlistCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CXlistCtrl
+
+	[ uuid(37446B99-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Xlist Control"), control ]
+	coclass Xlist
+	{
+		[default] dispinterface _DXlist;
+		[default, source] dispinterface _DXlistEvents;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

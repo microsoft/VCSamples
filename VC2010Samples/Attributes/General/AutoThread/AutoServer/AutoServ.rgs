@@ -1,0 +1,27 @@
+HKCR
+{
+	AutoServer.AutoServ.1 = s 'AutoServ Class'
+	{
+		CLSID = s '{3CD5B892-A27C-445D-AF50-8841D67F371E}'
+	}
+	AutoServer.AutoServ = s 'AutoServ Class'
+	{
+		CurVer = s 'AutoServer.AutoServ.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3CD5B892-A27C-445D-AF50-8841D67F371E} = s 'AutoServ Class'
+		{
+			ProgID = s 'AutoServer.AutoServ.1'
+			VersionIndependentProgID = s 'AutoServer.AutoServ'
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{3CD5B892-A27C-445D-AF50-8841D67F371E}'
+			'TypeLib' = s '{3CD5B892-A27C-445D-AF50-8841D67F371E}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

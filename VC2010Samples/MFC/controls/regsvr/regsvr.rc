@@ -1,0 +1,83 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""regsvr.rc2""\r\n"
+	"\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDS_USAGE               "\n\nUsage: regsvr32 [/u] [/s] dllname\n/u - Unregister server\n/s - Silent; display no message boxes\n/c - Console output"
+	IDS_UNRECOGNIZEDFLAG    "Unrecognized flag: %1"
+	IDS_EXTRAARGUMENT       "Extra argument on command line: %1"
+	IDS_NOPROJECT           "This command is only valid when an OLE Custom Control project is open."
+	IDS_NODLLNAME           "No DLL name specified."
+	IDS_OLEINITFAILED       "OleInitialize failed."
+	IDS_LOADLIBFAILED       "LoadLibrary(""%1"") failed.\nGetLastError returns %2."
+	IDS_NOTDLLOROCX         "%1 was loaded, but the %2 entry point was not found.\n\n%1 does not appear to be a .DLL or .OCX file."
+	IDS_NOENTRYPOINT        "%1 was loaded, but the %2 entry point was not found.\n\n%2 may not be exported, or a corrupt version of %1 may be in memory. Consider using PView to detect and remove it."
+	IDS_CALLFAILED          "%1 in %2 failed."
+	IDS_CALLSUCCEEDED       "%1 in %2 succeeded."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "regsvr.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

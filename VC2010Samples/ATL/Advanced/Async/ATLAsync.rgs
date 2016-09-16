@@ -1,0 +1,26 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {012F24D4-35B0-11D0-BF2D-0000E8D0D146} = s 'ATLAsync Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			
+			DefaultIcon = s '%MODULE%, 1'
+			MiscStatus = s '0'
+			{
+				1 = s '131473'
+			}
+			
+			val LocalizedString = s '@%MODULE%,-100'
+			
+			'Implemented Categories' 
+			{				
+				'{7DD95802-9882-11CF-9FA9-00AA006C42C4}'
+			}
+		}
+	}
+}

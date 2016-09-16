@@ -1,0 +1,16 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below can be registered
+;   by running "regsvr32 inproc.dll".
+
+HKEY_CLASSES_ROOT\mfc.inproc.varmap = MFC Variant Map
+HKEY_CLASSES_ROOT\mfc.inproc.varmap\CLSID = {7ACE7860-9A1C-11CD-9A90-00DD01113F12}
+HKEY_CLASSES_ROOT\CLSID\{7ACE7860-9A1C-11CD-9A90-00DD01113F12} = MFC Variant Map
+HKEY_CLASSES_ROOT\CLSID\{7ACE7860-9A1C-11CD-9A90-00DD01113F12}\InProcServer32 = inproc.dll
+HKEY_CLASSES_ROOT\CLSID\{7ACE7860-9A1C-11CD-9A90-00DD01113F12}\ProgId = mfc.inproc.varmap
+
+HKEY_CLASSES_ROOT\mfc.inproc.strcoll = MFC String Collection
+HKEY_CLASSES_ROOT\mfc.inproc.strcoll\CLSID = {BA0357C0-C377-11CD-9A90-00DD01113F12}
+HKEY_CLASSES_ROOT\CLSID\{BA0357C0-C377-11CD-9A90-00DD01113F12} = MFC String Collection
+HKEY_CLASSES_ROOT\CLSID\{BA0357C0-C377-11CD-9A90-00DD01113F12}\InProcServer32 = inproc.dll
+HKEY_CLASSES_ROOT\CLSID\{BA0357C0-C377-11CD-9A90-00DD01113F12}\ProgId = mfc.inproc.strcoll

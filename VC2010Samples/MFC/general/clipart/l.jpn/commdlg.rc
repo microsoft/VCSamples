@@ -1,0 +1,288 @@
+//Microsoft App Studio generated resource script.
+//
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// From TEXTINCLUDE 2
+//
+#include "winres.h"
+#include "dlgs.h"
+#include "colordlg.h"
+////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+PRINTDLGORD DIALOG DISCARDABLE  36, 52, 225, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Print"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "Printer:",stc6,4,4,40,8
+	LTEXT           "System Default",stc1,44,4,120,18
+	GROUPBOX        "Print Range",grp1,4,27,132,67
+	RADIOBUTTON     "&All",rad1,10,39,76,12,WS_GROUP | WS_TABSTOP
+	RADIOBUTTON     "S&election",rad2,10,52,76,12
+	RADIOBUTTON     "&Pages",rad3,10,65,76,12
+	RTEXT           "&From:",stc2,24,80,24,9
+	EDITTEXT        edt1,52,78,26,12,ES_RIGHT
+	RTEXT           "&To:",stc3,82,80,16,9
+	EDITTEXT        edt2,102,78,26,12,ES_RIGHT
+	LTEXT           "Print &Quality:",stc4,4,100,50,9
+	COMBOBOX        cmb1,55,98,81,36,CBS_DROPDOWNLIST | WS_BORDER |
+					WS_VSCROLL | WS_GROUP | WS_TABSTOP
+	LTEXT           "&Copies:",stc5,153,100,29,9
+	EDITTEXT        edt3,184,98,26,12,ES_RIGHT
+	CONTROL         "Print to Fi&le",chx1,"Button",BS_AUTOCHECKBOX |
+					WS_GROUP | WS_TABSTOP,4,113,120,12
+	CONTROL         "Collate Cop&ies",chx2,"Button",BS_AUTOCHECKBOX |
+					WS_GROUP | WS_TABSTOP,153,113,67,12
+	DEFPUSHBUTTON   "OK",IDOK,170,4,50,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,170,21,50,14,WS_GROUP
+	PUSHBUTTON      "&Setup...",psh1,170,41,50,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,170,75,50,14,WS_GROUP
+END
+
+PRNSETUPDLGORD DIALOG DISCARDABLE  30, 23, 287, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Print Setup"
+FONT 8, "Helv"
+BEGIN
+	GROUPBOX        "Printer",grp3,4,6,224,66
+	LTEXT           "(No Default Printer)",stc1,18,30,208,9
+	RADIOBUTTON     "&Default Printer",rad3,8,16,218,12,WS_GROUP |
+					WS_TABSTOP
+	RADIOBUTTON     "Specific &Printer:",rad4,8,42,218,12
+	COMBOBOX        cmb1,18,56,208,80,CBS_DROPDOWNLIST | WS_BORDER |
+					WS_VSCROLL | WS_GROUP
+	GROUPBOX        "Orientation",grp1,4,74,91,46
+	ICON            "",ico1,12,92,24,16
+	RADIOBUTTON     "Po&rtrait",rad1,40,86,53,12,WS_GROUP | WS_TABSTOP
+	RADIOBUTTON     "&Landscape",rad2,40,102,53,12
+	GROUPBOX        "Paper",grp2,100,74,128,46,WS_GROUP
+	LTEXT           "Si&ze:",stc2,104,88,26,9
+	COMBOBOX        cmb2,134,86,92,80,CBS_DROPDOWNLIST | WS_BORDER |
+					WS_VSCROLL | WS_TABSTOP
+	LTEXT           "&Source:",stc3,104,104,28,9
+	COMBOBOX        cmb3,134,102,92,80,CBS_DROPDOWNLIST | WS_BORDER |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "OK",IDOK,232,4,50,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,232,20,50,14,WS_GROUP
+	PUSHBUTTON      "&Options...",psh1,232,40,50,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,232,56,50,14,WS_GROUP
+END
+
+FORMATDLGORD31 DIALOG DISCARDABLE  13, 54, 264, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "&Font:",stc1,6,3,40,9
+	COMBOBOX        cmb1,6,13,94,54,CBS_SIMPLE | CBS_OWNERDRAWFIXED |
+					CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS |
+					CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+	LTEXT           "Font St&yle:",stc2,108,3,44,9
+	COMBOBOX        cmb2,108,13,64,54,CBS_SIMPLE | CBS_DISABLENOSCROLL |
+					WS_VSCROLL | WS_TABSTOP
+	LTEXT           "&Size:",stc3,179,3,30,9
+	COMBOBOX        cmb3,179,13,32,54,CBS_SIMPLE | CBS_OWNERDRAWFIXED |
+					CBS_SORT | CBS_HASSTRINGS | CBS_DISABLENOSCROLL |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "OK",IDOK,218,6,40,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,218,23,40,14,WS_GROUP
+	PUSHBUTTON      "&Apply",psh3,218,40,40,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,218,57,40,14,WS_GROUP
+	GROUPBOX        "Effects",grp1,6,72,84,34,WS_GROUP
+	CONTROL         "Stri&keout",chx1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+					10,82,49,10
+	CONTROL         "&Underline",chx2,"Button",BS_AUTOCHECKBOX,10,94,51,10
+	LTEXT           "&Color:",stc4,6,110,30,9
+	COMBOBOX        cmb4,6,120,84,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED |
+					CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER |
+					WS_VSCROLL | WS_TABSTOP
+	GROUPBOX        "Sample",grp2,98,72,160,49,WS_GROUP
+	CTEXT           "",stc6,98,124,160,20,SS_NOPREFIX | NOT WS_GROUP
+	CTEXT           "AaBbYyZz",stc5,104,81,149,37,SS_NOPREFIX | NOT
+					WS_VISIBLE
+END
+
+FINDDLGORD DIALOG DISCARDABLE  30, 73, 236, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "Fi&nd What:",-1,4,8,42,8,NOT WS_GROUP
+	EDITTEXT        edt1,47,7,128,12,ES_AUTOHSCROLL | WS_GROUP
+	CONTROL         "Match &Whole Word Only",chx1,"Button",BS_AUTOCHECKBOX |
+					WS_GROUP | WS_TABSTOP,4,26,100,12
+	CONTROL         "Match &Case",chx2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+					4,42,64,12
+	GROUPBOX        "Direction",grp1,107,26,68,28
+	CONTROL         "&Up",rad1,"Button",BS_AUTORADIOBUTTON | WS_GROUP |
+					WS_TABSTOP,111,38,20,12
+	CONTROL         "&Down",rad2,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,
+					138,38,30,12
+	DEFPUSHBUTTON   "&Find Next",IDOK,182,5,50,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,182,23,50,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,182,45,50,14,WS_GROUP
+END
+
+REPLACEDLGORD DIALOG DISCARDABLE  36, 44, 230, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "Fi&nd What:",-1,4,9,48,8,NOT WS_GROUP
+	EDITTEXT        edt1,54,7,114,12,ES_AUTOHSCROLL | WS_GROUP
+	LTEXT           "Re&place With:",-1,4,26,48,8,NOT WS_GROUP
+	EDITTEXT        edt2,54,24,114,12,ES_AUTOHSCROLL | WS_GROUP
+	CONTROL         "Match &Whole Word Only",chx1,"Button",BS_AUTOCHECKBOX |
+					WS_GROUP | WS_TABSTOP,5,46,104,12
+	CONTROL         "Match &Case",chx2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+					5,62,59,12
+	DEFPUSHBUTTON   "&Find Next",IDOK,174,4,50,14,WS_GROUP
+	PUSHBUTTON      "&Replace",psh1,174,21,50,14,WS_GROUP
+	PUSHBUTTON      "Replace &All",psh2,174,38,50,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,174,55,50,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,174,75,50,14,WS_GROUP
+END
+
+FILEOPENORD DIALOG DISCARDABLE  36, 24, 264, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "File &Name:",stc3,6,6,76,9
+	EDITTEXT        edt1,6,16,90,12,ES_AUTOHSCROLL | ES_OEMCONVERT
+	LISTBOX         lst1,6,32,90,68,LBS_SORT | LBS_OWNERDRAWFIXED |
+					LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL |
+					WS_TABSTOP
+	LTEXT           "&Directories:",-1,110,6,92,9
+	LTEXT           "",stc1,110,18,92,9,SS_NOPREFIX
+	LISTBOX         lst2,110,32,92,68,LBS_SORT | LBS_OWNERDRAWFIXED |
+					LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL |
+					WS_TABSTOP
+	LTEXT           "List Files of &Type:",stc2,6,104,90,9
+	COMBOBOX        cmb1,6,114,90,36,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL |
+					WS_BORDER | WS_VSCROLL | WS_TABSTOP
+	LTEXT           "Dri&ves:",stc4,110,104,92,9
+	COMBOBOX        cmb2,110,114,92,68,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED |
+					CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "OK",IDOK,208,6,50,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,208,24,50,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,208,46,50,14,WS_GROUP
+	CONTROL         "&Read Only",chx1,"Button",BS_AUTOCHECKBOX | WS_GROUP |
+					WS_TABSTOP,208,68,50,12
+END
+
+MULTIFILEOPENORD DIALOG DISCARDABLE  36, 24, 264, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "File &Name:",stc3,6,6,76,10
+	EDITTEXT        edt1,6,16,90,12,ES_AUTOHSCROLL | ES_OEMCONVERT
+	LISTBOX         lst1,6,32,90,68,LBS_SORT | LBS_OWNERDRAWFIXED |
+					LBS_HASSTRINGS | LBS_EXTENDEDSEL | LBS_DISABLENOSCROLL |
+					WS_VSCROLL | WS_TABSTOP
+	LTEXT           "&Directories:",-1,110,6,92,9
+	LTEXT           "",stc1,110,16,92,9,SS_NOPREFIX
+	LISTBOX         lst2,110,32,92,68,LBS_SORT | LBS_OWNERDRAWFIXED |
+					LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL |
+					WS_TABSTOP
+	LTEXT           "List Files of &Type:",stc2,6,102,90,9
+	COMBOBOX        cmb1,6,112,90,36,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL |
+					WS_BORDER | WS_VSCROLL | WS_TABSTOP
+	LTEXT           "Dri&ves:",stc4,110,102,92,9
+	COMBOBOX        cmb2,110,112,92,68,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED |
+					CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER |
+					WS_VSCROLL | WS_TABSTOP
+	DEFPUSHBUTTON   "OK",IDOK,208,6,50,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,208,24,50,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,208,46,50,14,WS_GROUP
+	CONTROL         "&Read Only",chx1,"Button",BS_AUTOCHECKBOX | WS_GROUP |
+					WS_TABSTOP,208,68,50,12
+END
+
+CHOOSECOLOR DIALOG DISCARDABLE  2, 0, 298, 184
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color"
+FONT 8, "Helv"
+BEGIN
+	LTEXT           "&Basic Colors:",-1,4,4,140,9
+	CONTROL         "",COLOR_BOX1,"Static",SS_SIMPLE | WS_GROUP | WS_TABSTOP,
+					4,14,140,86
+	LTEXT           "&Custom Colors:",-1,4,106,140,9
+	CONTROL         "",COLOR_CUSTOM1,"Static",SS_SIMPLE | WS_GROUP |
+					WS_TABSTOP,4,116,140,28
+	PUSHBUTTON      "&Define Custom Colors...",COLOR_MIX,4,150,140,14,
+					WS_GROUP
+	DEFPUSHBUTTON   "OK",IDOK,4,166,44,14,WS_GROUP
+	PUSHBUTTON      "Cancel",IDCANCEL,52,166,44,14,WS_GROUP
+	PUSHBUTTON      "&Help",pshHelp,100,166,44,14,WS_GROUP
+	CONTROL         "",COLOR_RAINBOW,"Static",SS_BLACKFRAME,152,4,118,116
+	CONTROL         "",COLOR_LUMSCROLL,"Static",SS_SIMPLE,280,4,8,116
+	CONTROL         "",COLOR_CURRENT,"Static",SS_BLACKFRAME,152,124,40,26
+	PUSHBUTTON      "&o",COLOR_SOLID,300,200,4,14,WS_GROUP
+	RTEXT           "Color|",-1,152,151,20,9
+	LTEXT           "S&olid",-1,172,151,20,9
+	RTEXT           "&Hue:",COLOR_HUEACCEL,194,126,20,9
+	EDITTEXT        COLOR_HUE,216,124,18,12,WS_GROUP
+	RTEXT           "&Sat:",COLOR_SATACCEL,194,140,20,9
+	EDITTEXT        COLOR_SAT,216,138,18,12,WS_GROUP
+	RTEXT           "&Lum:",COLOR_LUMACCEL,194,154,20,9
+	EDITTEXT        COLOR_LUM,216,152,18,12,WS_GROUP
+	RTEXT           "&Red:",COLOR_REDACCEL,243,126,24,9
+	EDITTEXT        COLOR_RED,269,124,18,12,WS_GROUP
+	RTEXT           "&Green:",COLOR_GREENACCEL,243,140,24,9
+	EDITTEXT        COLOR_GREEN,269,138,18,12,WS_GROUP
+	RTEXT           "Bl&ue:",COLOR_BLUEACCEL,243,154,24,9
+	EDITTEXT        COLOR_BLUE,269,152,18,12,WS_GROUP
+	PUSHBUTTON      "&Add to Custom Colors",COLOR_ADD,152,166,142,14,
+					WS_GROUP
+END
+
+#ifdef APSTUDIO_INVOKED
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+// This resource will prevent the App Studio user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"Cannot change standard MFC resources.\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""winres.h""\r\n"
+	"#include ""dlgs.h""\r\n"
+	"#include ""colordlg.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"\r\n"
+	"\0"
+END
+
+//////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// From TEXTINCLUDE 3
+//
+
+
+////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

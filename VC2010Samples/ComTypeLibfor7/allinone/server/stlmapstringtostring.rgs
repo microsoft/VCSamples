@@ -1,0 +1,21 @@
+HKCR
+{
+	ForceRemove Stlcoll.StlMapStringToString.1 = s 'StlMapStringToString Class'
+	{
+		CLSID = s '{7CE086D1-3E78-11D0-AE6B-00C04FD7D06E}'
+	}
+	ForceRemove Stlcoll.StlMapStringToString = s 'StlMapStringToString Class'
+	{
+		CurVer = s 'Stlcoll.StlMapStringToString.1'
+	}
+	NoRemove CLSID
+	{
+		{7CE086D1-3E78-11D0-AE6B-00C04FD7D06E} = s 'StlMapStringToString Class'
+		{
+			ProgID = s 'Stlcoll.StlMapStringToString.1'
+			VersionIndependentProgID = s 'Stlcoll.StlMapStringToString'
+			val AppID = s '{7CE086C8-3E78-11D0-AE6B-00C04FD7D06E}'
+			LocalServer32 = s '%Module%'
+		}
+	}
+}

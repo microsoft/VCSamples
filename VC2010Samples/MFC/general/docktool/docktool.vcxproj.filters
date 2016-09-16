@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{090fcfd5-0c0e-4242-bfde-54b1a4b49d4c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{779770e1-c700-4ddb-bfc7-728045924eee}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3d3124da-22e4-4a04-86eb-b245e16595ed}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dockdoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="docktool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dockvw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="editbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="palette.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="searchbx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tooldlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\cbrowse.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cdebug.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cedit.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cmain.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cpalette.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cresrc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\docktool.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\docktool.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mbrowse.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mdebug.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\medit.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mmain.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mpalette.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mresrc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="docktool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dockdoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="docktool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dockvw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="palette.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="searchbx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tooldlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

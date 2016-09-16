@@ -1,0 +1,184 @@
+// AutoClik.odl : type library source for AutoClik.exe
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (AutoClik.tlb).
+
+// DUAL_SUPPORT_START
+// Original Code:
+//    [ uuid(FC866851-9F96-11CE-B0F2-00AA006C28B3), version(1.0) ]
+//    library AutoClik
+[ uuid(4B115284-32F0-11cf-AC85-444553540000), version(1.0) ]
+library ACDual
+// DUAL_SUPPORT_END
+{
+	importlib("stdole32.tlb");
+	
+	// DUAL_SUPPORT_START
+	// Original Code:
+	//    //  Primary dispatch interface for CAutoClickDoc
+	//
+	//    [ uuid(FC866852-9F96-11CE-B0F2-00AA006C28B3) ]
+	//    dispinterface IAClick
+
+	// Primary dispatch interface for ACDual.Document
+	//    Used for IDispatch::Invoke access only!
+
+	[ uuid(4B115280-32F0-11cf-AC85-444553540000) ]
+	dispinterface IAClick
+	// DUAL_SUPPORT_END
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAutoClickDoc)
+			[id(1)] BSTR text;
+			[id(2)] short x;
+			[id(3)] short y;
+			[id(4)] IDispatch* Position;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAutoClickDoc)
+			[id(5)] void RefreshWindow();
+			[id(6)] void SetAllProps(short x, short y, BSTR text);
+			[id(7)] void ShowWindow();
+			[id(8)] void TestError(short wCode);
+			//}}AFX_ODL_METHOD
+
+	};
+
+	// DUAL_INTERFACE_START
+	//    add equivalent interface definitions, which will be used
+	//    for VTBL binding. You must specify the attributes
+	//	  "oleautomation" and "dual" for dual interfaces, and
+	//	  your interface must be derived from IDispatch
+
+	interface IDualAutoClickPoint;	// defined below
+
+	[ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000),	// IID_IDualAClick
+	  oleautomation,
+	  dual
+	]
+	interface IDualAClick : IDispatch
+	{
+		// For dual interfaces, methods and properties should 
+		// return HRESULTs and pass return values as parameters
+		// with the attributes "[out, retval]".
+
+		// Convert dispinterface properties...
+		//    read/write properties need two entries each, one
+		//    for read (attribute "propget") and one for write
+		//    (attribute "propput"), with the same id.
+		[propput, id(1)] HRESULT text([in] BSTR newText);
+		[propget, id(1)] HRESULT text([out, retval] BSTR* retval); 
+
+		[propput, id(2)] HRESULT x([in] short newX);
+		[propget, id(2)] HRESULT x([out, retval] short* retval);
+
+		[propput, id(3)] HRESULT y([in] short newY);
+		[propget, id(3)] HRESULT y([out, retval] short* retval);
+
+		[propput, id(4)] HRESULT Position([in] IDualAutoClickPoint* newPosition);
+		[propget, id(4)] HRESULT Position([out, retval] IDualAutoClickPoint** retval);
+		[propputref, id(4)] HRESULT Position([in] IDualAutoClickPoint* newPosition);
+
+		// Convert dispinterface methods
+		[id(5)] HRESULT RefreshWindow();
+		[id(6)] HRESULT SetAllProps([in] short x, [in] short y, [in] BSTR text);
+		[id(7)] HRESULT ShowWindow();
+		[id(8)] HRESULT TestError([in] short wCode);
+
+	};
+	// DUAL_SUPPORT_END
+
+	// DUAL_SUPPORT_START
+	// Original Code:
+	//	  //  Class information for CAutoClickDoc
+	//
+	//    [ uuid(FC866850-9F96-11CE-B0F2-00AA006C28B3) ]
+	//    coclass CAutoClickDoc
+	//    {
+	//         [default] dispinterface IAClick;
+	//    };
+	
+	// Class information for ACDual.Document
+	//	  include both the dispinterface and dual interface,
+    //    but make the dual interface the default.
+
+	[ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
+	coclass Document
+	{
+		dispinterface IAClick;
+		[default] interface IDualAClick;
+	};
+	// DUAL_SUPPORT_END
+
+
+	// DUAL_SUPPORT_START
+	// Original Code:
+	//    //  Primary dispatch interface for CAutoClickPoint
+	//
+	//    [ uuid(0368D830-A050-11CE-B0F3-00AA006C28B3) ]
+	//    dispinterface IAutoClickPoint
+
+	//  Primary dispatch interface for ACDual.Point
+	//		Used for IDispatch::Invoke access only!
+	
+	[ uuid(4B115283-32F0-11cf-AC85-444553540000) ]
+	dispinterface IAutoClickPoint
+	// DUAL_SUPPORT_END
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAutoClickPoint)
+			[id(1)] short x;
+			[id(2)] short y;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAutoClickPoint)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	// DUAL_SUPPORT_START
+	[ uuid(0BDD0E80-0DD7-11cf-BBA8-444553540000),	// IID_IDualAutoClickPoint
+	  oleautomation,
+	  dual
+	]
+	interface IDualAutoClickPoint : IDispatch
+	{
+		[propput, id(1)] HRESULT x([in] short newX);
+		[propget, id(1)] HRESULT x([out, retval] short* retval);
+		[propput, id(2)] HRESULT y([in] short newY);
+		[propget, id(2)] HRESULT y([out, retval] short* retval);
+	};
+	// DUAL_SUPPORT_END
+
+	// DUAL_SUPPORT_START
+	// Original Code:
+	//     //  Class information for CAutoClickPoint
+	//
+	//     [ uuid(0368D831-A050-11CE-B0F3-00AA006C28B3) ]
+	//     coclass CAutoClickPoint
+	//     {
+	//         [default] dispinterface IAutoClickPoint;
+	//     };
+
+	//  Class information for ACDual.Point
+	
+	[ uuid(4B115285-32F0-11cf-AC85-444553540000) ]
+	coclass Point
+	{
+		dispinterface IAutoClickPoint;
+		[default] interface IDualAutoClickPoint;
+	};
+	// DUAL_SUPPORT_END
+
+	//{{AFX_APPEND_ODL}}
+};

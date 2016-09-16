@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove DrawCtl.DrawCtl.1 = s 'DrawCtl Class'
+	{
+		CLSID = s '{48DDCC1D-1FE0-11D0-B91B-000000000000}'
+	}
+	ForceRemove DrawCtl.DrawCtl = s 'DrawCtl Class'
+	{
+		CurVer = s 'DrawCtl.DrawCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {48DDCC1D-1FE0-11D0-B91B-000000000000} = s 'DrawCtl Class'
+		{
+			ProgID = s 'DrawCtl.DrawCtl.1'
+			VersionIndependentProgID = s 'DrawCtl.DrawCtl'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			MiscStatus = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '{48DDCC1B-1FE0-11D0-B91B-000000000000}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

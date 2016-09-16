@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 10
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InProc", "inproc.vcxproj", "{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Debug|Win32.Build.0 = Debug|Win32
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Debug|x64.ActiveCfg = Debug|X64
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Debug|x64.Build.0 = Debug|X64
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Release|Win32.ActiveCfg = Release|Win32
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Release|Win32.Build.0 = Release|Win32
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Release|x64.ActiveCfg = Release|X64
+		{51835F9C-8F96-4DCC-882B-DD30CD15DBF4}.Release|x64.Build.0 = Release|X64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

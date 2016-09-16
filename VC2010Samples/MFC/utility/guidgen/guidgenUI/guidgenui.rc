@@ -1,0 +1,16 @@
+#define _AFX_INTL_RESOURCES
+
+#include "guidgen.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#define VER_FILETYPE	VFT_DLL
+#define VER_FILEDESCRIPTION_STR "Microsoft \256 GUIDGEN Application Resource DLL"
+#define VER_INTERNALNAME_STR "GuidGenUI"
+#define VER_ORIGINALFILENAME_STR "GuidGenUI.DLL"
+#define VER_COPYRIGHTSTARTYEAR_STR	"1996"
+
+#include "ver_.rc"

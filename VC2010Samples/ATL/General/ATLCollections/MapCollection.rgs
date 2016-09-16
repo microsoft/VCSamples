@@ -1,0 +1,28 @@
+HKCR
+{
+	ForceRemove ATLCollections.Items.1 = s 'Items Class'
+	{
+		CLSID = s '{0D44F683-B373-11D2-9A7F-50F653C10000}'
+	}
+	ForceRemove ATLCollections.Items = s 'Items Class'
+	{
+		CurVer = s 'ATLCollections.Items.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0D44F683-B373-11D2-9A7F-50F653C10000} = s 'Items Class'
+		{
+			ProgID = s 'ATLCollections.Items.1'
+			VersionIndependentProgID = s 'ATLCollections.Items'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{50F5DEE1-B372-11D2-9A7F-50F653C10000}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

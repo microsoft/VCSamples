@@ -1,0 +1,23 @@
+HKCR
+{
+	ForceRemove Stlcoll.StlMapsStringToMyObject.1 = s 'StlMapsStringToMyObject Class'
+	{
+		CLSID = s '{7CE086CF-3E78-11D0-AE6B-00C04FD7D06E}'
+	}
+	ForceRemove Stlcoll.StlMapsStringToMyObject = s 'StlMapsStringToMyObject Class'
+	{
+		CurVer = s 'Stlcoll.StlMapsStringToMyObject.1'
+	}
+	NoRemove CLSID
+	{
+		{7CE086CF-3E78-11D0-AE6B-00C04FD7D06E} = s 'StlMapsStringToMyObject Class'
+		{
+			ProgID = s 'Stlcoll.StlMapsStringToMyObject.1'
+			VersionIndependentProgID = s 'Stlcoll.StlMapsStringToMyObject'
+			InprocServer32 = s '%Module%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

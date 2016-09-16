@@ -1,0 +1,189 @@
+Private Sub InitAgent()
+   Dim objGenie
+         
+   Agent.Connected = True
+   Agent.Characters.Load "Genie", "C:\Program Files\Microsoft Agent\Characters\Genie.acs"
+   Set objGenie = Agent.Characters( "Genie" )
+
+   objGenie.Show
+
+   objGenie.Commands.Caption = "Simon"
+   objGenie.Commands.Add "Play", "Play", "play", True, True
+   objGenie.Commands.Add "Hello", "Hello", "hello", True, True
+   objGenie.Commands.Add "Red", "Red", "red", True, True
+   objGenie.Commands.Add "Blue", "Blue", "blue", True, True
+   objGenie.Commands.Add "Green", "Green", "green", True, True
+   objGenie.Commands.Add "Yellow", "Yellow", "yellow", True, True
+End Sub
+
+Dim intTick  ' How many timer ticks have gone by for this move?
+Dim intMoves  ' How many moves in this sequence?
+Dim blnRunning  ' Playing sequence for player
+Dim blnWaiting  ' Waiting for player to move
+Dim intHighlightedColor  ' Which color is currently highlighted
+Dim intMove  ' Current move
+Dim intSpeed  ' Number of ms in one timer tick
+Dim aintMoves( 20 )  ' The sequence of moves
+
+intTick = 0
+intMove = 0
+intMoves = 1
+intMaxMoves = 6
+intSpeed = 1000
+blnRunning = False
+blnWaiting = False
+intDoneTurn = 0
+intHighlightedColor = 0
+InitAgent
+
+Private Sub EndTurn()
+   Timer.Interval = 0
+   blnWaiting = False
+   If intMoves = intMaxMoves Then
+      EndGame( True )
+   Else
+      intMoves = intMoves+1
+      Agent.Characters( "Genie" ).Speak "My turn"
+      intTick = 0
+      intMove = 0
+      Timer.Interval = intSpeed
+      blnRunning = True
+   End If
+End Sub
+
+Private Sub EndGame( ByVal blnWin )
+   Timer.Interval = 0
+   blnWaiting = False
+   blnRunning = False
+   If blnWin Then
+      Agent.Characters( "Genie" ).Speak "You win!"
+      Agent.Characters( "Genie" ).Speak "Kick ass!"
+   Else
+      Agent.Characters( "Genie" ).Speak "You lose!"
+   End If
+End Sub
+
+Private Sub MakeMove( ByVal intColor )
+   If aintMoves( intMove ) = intColor Then
+      intMove = intMove+1
+      intTick = 0
+      If intMove = intMoves Then
+         intDoneTurn = 2
+      End If
+   Else
+      EndGame( False )
+   End If
+End Sub
+
+Sub Red_Click()
+   If blnWaiting Then
+      MakeMove( 0 )
+   End If
+End Sub
+
+Sub Green_Click()
+   If blnWaiting Then
+      MakeMove( 1 )
+   End If
+End Sub
+
+Sub Blue_Click()
+   If blnWaiting Then
+      MakeMove( 2 )
+   End If
+End Sub
+
+Sub Yellow_Click()
+   If blnWaiting Then
+      MakeMove( 3 )
+   End If
+End Sub
+
+Sub Play_Click()
+   If (Not blnRunning) And (Not blnWaiting) Then
+      intTick = 0
+      intMove = 0
+
+      Randomize()
+      blnRunning = True
+      Timer.Interval = intSpeed
+   End If
+End Sub
+
+Sub Agent_Command( ByVal objUserInput )
+   If objUserInput.Name = "Red" Then
+      Red_Click
+   ElseIf objUserInput.Name = "Green" Then
+      Green_Click
+   ElseIf objUserInput.Name = "Blue" Then
+      Blue_Click
+   ElseIf objUserInput.Name = "Yellow" Then
+      Yellow_Click
+   ElseIf objUserInput.Name = "Play" Then
+      Play_Click
+   ElseIf objUserInput.Name = "Hello" Then
+      Agent.Characters( "Genie" ).Speak "Hey, how's it going?"
+   End If
+End Sub
+
+Sub Timer_Timer()
+   Dim intColor
+
+   If intDoneTurn > 0 Then
+      intDoneTurn = intDoneTurn-1
+      If intDoneTurn = 0 Then
+         EndTurn
+      End If
+   ElseIf blnRunning Then
+      If intTick = 0 Then
+         If intMove < intMoves-1 Then
+            intColor = aintMoves( intMove )
+         Else
+            intColor = Int( 4*Rnd )
+         End If
+         Select Case intColor
+            Case 0
+               Red.BackColor = vbRed
+               intHighlightedColor = 0
+            Case 1
+               Green.BackColor = vbGreen
+               intHighlightedColor = 1
+            Case 2
+               Blue.BackColor = vbBlue
+               intHighlightedColor = 2
+            Case 3
+               Yellow.BackColor = vbYellow
+               intHighlightedColor = 3
+         End Select
+         aintMoves( intMove ) = intColor
+      ElseIf intTick = 1 Then
+         Select Case intHighlightedColor
+            Case 0
+               Red.BackColor = vbWhite
+            Case 1
+               Green.BackColor = vbWhite
+            Case 2
+               Blue.BackColor = vbWhite
+            Case 3
+               Yellow.BackColor = vbWhite
+         End Select
+         intMove = intMove+1
+      End If
+      intTick = intTick+1
+      If intTick >= 3 Then 
+         intTick = 0
+      End If
+      If intMove = intMoves Then
+         blnRunning = False
+         intMove = 0
+         Agent.Characters( "Genie" ).Speak "Your turn"
+         blnWaiting = True
+         intTick = 0
+      End If
+   ElseIf blnWaiting Then
+      intTick = intTick+1
+      If intTick = 6 Then
+         EndGame( False )
+      End If
+   End If
+End Sub

@@ -1,0 +1,27 @@
+// MultiRead.idl : IDL source for MultiRead.dll
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MultiRead.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(186F6FA3-7435-11D1-8F0F-000000000000),
+	version(1.0),
+	helpstring("MultiRead 1.0 Type Library")
+]
+library MULTIREADLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

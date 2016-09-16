@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="cntritem.cpp" />
+    <ClCompile Include="DrawClient.cpp" />
+    <ClCompile Include="drawdoc.cpp" />
+    <ClCompile Include="drawobj.cpp" />
+    <ClCompile Include="drawtool.cpp" />
+    <ClCompile Include="drawvw.cpp" />
+    <ClCompile Include="LineWeightDlg.cpp" />
+    <ClCompile Include="mainfrm.cpp" />
+    <ClCompile Include="propset.cpp" />
+    <ClCompile Include="rectdlg.cpp" />
+    <ClCompile Include="RibbonListButton.cpp" />
+    <ClCompile Include="splitfrm.cpp" />
+    <ClCompile Include="statpage.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="summinfo.cpp" />
+    <ClCompile Include="summpage.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cntritem.h" />
+    <ClInclude Include="DrawClient.h" />
+    <ClInclude Include="drawdoc.h" />
+    <ClInclude Include="drawobj.h" />
+    <ClInclude Include="drawtool.h" />
+    <ClInclude Include="drawvw.h" />
+    <ClInclude Include="LineWeightDlg.h" />
+    <ClInclude Include="mainfrm.h" />
+    <ClInclude Include="propset.h" />
+    <ClInclude Include="rectdlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="RibbonListButton.h" />
+    <ClInclude Include="splitfrm.h" />
+    <ClInclude Include="statpage.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="summinfo.h" />
+    <ClInclude Include="summpage.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DrawClient.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.htm" />
+    <None Include="res\DrawClient.ico" />
+    <None Include="res\DrawClient.rc2" />
+    <None Include="res\drawdoc.ico" />
+    <None Include="res\filelarge.png" />
+    <None Include="res\filesmall.png" />
+    <None Include="res\formatlarge.PNG" />
+    <None Include="res\formatsmall.PNG" />
+    <None Include="res\homelarge.png" />
+    <None Include="res\homesmall.png" />
+    <None Include="res\lineweight.png" />
+    <None Include="res\main.png" />
+    <None Include="res\pencil.cur" />
+    <None Include="res\prop24.bmp" />
+    <None Include="res\ribbonicons.png" />
+    <None Include="res\sb_1.png" />
+    <None Include="res\sb_2.png" />
+    <None Include="res\styles.png" />
+    <None Include="res\viewlarge.png" />
+    <None Include="res\viewsmall.png" />
+    <None Include="setup.rul" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,68 @@
+// File: ATLFire.idl
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+#include <olectl.h>
+// ATLFire.idl : IDL source for ATLFire.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLFire.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+	[
+		object,
+		uuid(479B29EE-9A2C-11D0-B696-00A0C903487A),
+		dual,
+		helpstring("IFireTabCtrl Interface"),
+		pointer_default(unique)
+	]
+	interface IFireTabCtrl : IUnknown
+	{
+		[propget, id(1), helpstring("property Decay")] HRESULT Decay([out, retval] long *pVal);
+		[propput, id(1), helpstring("property Decay")] HRESULT Decay([in] long newVal);
+		[propget, id(2), helpstring("property Flammability")] HRESULT Flammability([out, retval] long *pVal);
+		[propput, id(2), helpstring("property Flammability")] HRESULT Flammability([in] long newVal);
+		[propget, id(3), helpstring("property MaxHeat")] HRESULT MaxHeat([out, retval] long *pVal);
+		[propput, id(3), helpstring("property MaxHeat")] HRESULT MaxHeat([in] long newVal);
+		[propget, id(4), helpstring("property SpreadRate")] HRESULT SpreadRate([out, retval] long *pVal);
+		[propput, id(4), helpstring("property SpreadRate")] HRESULT SpreadRate([in] long newVal);
+		[propget, id(5), helpstring("property Size")] HRESULT Size([out, retval] long *pVal);
+		[propput, id(5), helpstring("property Size")] HRESULT Size([in] long newVal);
+		[propget, id(6), helpstring("property Smoothness")] HRESULT Smoothness([out, retval] long *pVal);
+		[propput, id(6), helpstring("property Smoothness")] HRESULT Smoothness([in] long newVal);
+		[propget, id(7), helpstring("property Distribution")] HRESULT Distribution([out, retval] long *pVal);
+		[propput, id(7), helpstring("property Distribution")] HRESULT Distribution([in] long newVal);
+		[propget, id(8), helpstring("property Chaos")] HRESULT Chaos([out, retval] long *pVal);
+		[propput, id(8), helpstring("property Chaos")] HRESULT Chaos([in] long newVal);
+		[propget, id(9), helpstring("property StartTab")] HRESULT StartTab([out, retval] long *pVal);
+		[propput, id(9), helpstring("property StartTab")] HRESULT StartTab([in] long newVal);
+		[id(-552), helpstring("method AboutBox")] HRESULT AboutBox();
+	};
+[
+	uuid(479B29E1-9A2C-11D0-B696-00A0C903487A),
+	version(1.0),
+	helpstring("ATLFire 1.0 Type Library")
+]
+library ATLFIRELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(479B29EF-9A2C-11D0-B696-00A0C903487A),
+		helpstring("FireTabCtrl Class")
+	]
+	coclass FireTabCtrl
+	{
+		[default] interface IFireTabCtrl;
+	};
+};

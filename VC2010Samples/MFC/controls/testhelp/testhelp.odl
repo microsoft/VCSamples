@@ -1,0 +1,85 @@
+// This is part of the Microsoft Foundation Classes C++ Library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+// testhelp.odl : type library source for OLE Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (testhelp.tlb) that will become a resource in
+// testhelp.ocx.
+
+#include <olectl.h>
+
+[ uuid(31A2B280-8C11-11Cf-B37F-00AA00B92B50), version(1.0),
+  helpstring("testhelp OLE Control module"), helpfile("testhelp.chm"),control ]
+library TESTHELPLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CTesthelpCtrl
+
+	[ uuid(31A2B281-8C11-11Cf-B37F-00AA00B92B50),
+	  helpstring("Dispatch interface for Testhelp Control"), hidden ]
+	dispinterface _DTesthelp
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CTesthelpCtrl)
+			[id(DISPID_FONT), bindable] IFontDisp* Font;
+			[id(DISPID_BACKCOLOR), bindable, requestedit] OLE_COLOR BackColor;
+			[id(DISPID_FORECOLOR), bindable, requestedit] OLE_COLOR ForeColor;
+			[id(1)] BSTR Name1;
+			[id(2)] BSTR Name2;
+			[id(3)] BSTR Name3;
+			[id(DISPID_BORDERSTYLE), bindable, requestedit] short BorderStyle;
+			[id(4)] boolean UseMyHelp;
+			[id(5)] boolean ShowToolTip;
+			[id(6)] BSTR ToolTipText;
+			[id(7)] short UsePopupHelp;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CTesthelpCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CTesthelpCtrl
+
+	[ uuid(31A2B282-8C11-11Cf-B37F-00AA00B92B50),
+	  helpstring("Event interface for Testhelp Control") ]
+	dispinterface _DTesthelpEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CTesthelpCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CTesthelpCtrl
+
+	[ uuid(31A2B283-8C11-11CF-B37F-00AA00B92B50),
+	  helpstring("Testhelp Control"), helpcontext(0x20064),control ]
+	coclass Testhelp
+	{
+		[default] dispinterface _DTesthelp;
+		[default, source] dispinterface _DTesthelpEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

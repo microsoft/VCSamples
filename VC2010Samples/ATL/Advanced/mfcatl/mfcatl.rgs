@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{57C20D1C-EEFE-4929-BD7E-6B467803B1CF}' = s 'mfcatl'
+				'mfcatl.EXE'
+				{
+			val AppID = s {57C20D1C-EEFE-4929-BD7E-6B467803B1CF}
+		}
+	}
+}

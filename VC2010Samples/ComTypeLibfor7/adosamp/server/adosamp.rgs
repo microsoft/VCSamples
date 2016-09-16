@@ -1,0 +1,13 @@
+HKCR
+{
+    NoRemove AppID
+    {
+        ForceRemove {7A319992-48C0-11D0-AE70-00C04FD7D06E} = s 'ADOSamp'
+        {
+        }
+        ForceRemove 'ADOSamp.EXE'
+        {
+            val AppID = s {7A319992-48C0-11D0-AE70-00C04FD7D06E}
+        }
+    }
+}

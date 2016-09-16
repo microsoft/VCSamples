@@ -1,0 +1,295 @@
+// stlcoll.idl : IDL source for stlcoll.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (stlcoll.tlb) and marshalling code.
+
+import "idata.idl";
+
+    [
+        object,
+        uuid(7CE086C9-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlMaps Interface"),
+        pointer_default(unique)
+    ]
+
+    interface IStlMaps : IUnknown
+    {
+        import "oaidl.idl";
+    };
+
+    [
+        object,
+        uuid(7CE086CE-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlMapStringToMyObject Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlMapStringToMyObject : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1), propget] HRESULT Map([in] BSTR str, [out, retval] IMyStruct** obj);
+        [id(1), propput] HRESULT Map([in] BSTR str, [in] IMyStruct* obj);
+        [id(2)] HRESULT Lookup([in] BSTR str, IMyStruct** obj, [out, retval] VARIANT_BOOL* b);
+        [id(3)] HRESULT First();
+        [id(4)] HRESULT Next([out] BSTR* str, [out] IMyStruct** obj, [out, retval] VARIANT_BOOL* b);
+        [id(5), propget] HRESULT Remove([out, retval] BSTR* str);
+        [id(6)] HRESULT RemoveAll();
+        [id(7), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086D3-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlMapDWordToMyStruct Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlMapDWordToMyStruct : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1), propget] HRESULT Map([in] DWORD dw, [out, retval] IMyStruct** str);
+        [id(1), propput] HRESULT Map([in] DWORD dw, [in] IMyStruct* str);
+        [id(2)] HRESULT Lookup([in] DWORD dw, [out] IMyStruct** str, [out, retval] VARIANT_BOOL* b);
+        [id(3)] HRESULT First();
+        [id(4)] HRESULT Next([out] DWORD* dw, [out] IMyStruct** str, [out, retval] VARIANT_BOOL* b);
+        [id(5), propget] HRESULT Remove([out, retval] DWORD* str);
+        [id(6)] HRESULT RemoveAll();
+        [id(7), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086D8-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlMapStringToString Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlMapStringToString : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1), propget] HRESULT Map([in] BSTR str1, [out, retval] BSTR* str2);
+        [id(1), propput] HRESULT Map([in] BSTR str1, [in] BSTR str2);
+        [id(2)] HRESULT Lookup([in] BSTR str1, [out] BSTR* str2, [out, retval] VARIANT_BOOL* b);
+        [id(3)] HRESULT First();
+        [id(4)] HRESULT Next([out] BSTR* str1, [out] BSTR* str2, [out, retval] VARIANT_BOOL* b);
+        [id(5), propget] HRESULT Remove([out, retval] BSTR* str);
+        [id(6)] HRESULT RemoveAll();
+        [id(7), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086DD-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlLists Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlLists : IUnknown
+    {
+        import "oaidl.idl";
+    };
+
+    [
+        object,
+        uuid(7CE086E2-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlStringList Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlStringList : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1)] HRESULT Find([in] BSTR str, [out, retval] VARIANT_BOOL* b);
+        [id(2), propput] HRESULT SetAt([in] BSTR str);
+        [id(3), propput] HRESULT Add([in] BSTR str);
+        [id(4), propput] HRESULT InsertBefore([in] BSTR str);
+        [id(5), propget] HRESULT Remove([out, retval] BSTR* str);
+        [id(6)] HRESULT RemoveAll();
+        [id(7)] HRESULT First();
+        [id(8)] HRESULT Next([out] BSTR* str, [out, retval] VARIANT_BOOL* b);
+        [id(9), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086E7-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlMyStructList Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlMyStructList : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1)] HRESULT Find([in] IMyStruct* str, [out, retval] VARIANT_BOOL* b);
+        [id(2), propput] HRESULT SetAt([in] IMyStruct* str);
+        [id(3), propput] HRESULT Add([in] IMyStruct* str);
+        [id(4), propput] HRESULT InsertBefore([in] IMyStruct* str);
+        [id(5), propget] HRESULT Remove([out, retval] IMyStruct** str);
+        [id(6)] HRESULT RemoveAll();
+        [id(7)] HRESULT First();
+        [id(8)] HRESULT Next([out] IMyStruct** str, [out, retval] VARIANT_BOOL* b);
+        [id(9), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086EC-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlintList Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlintList : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1)] HRESULT Find([in] long n, [out, retval] VARIANT_BOOL* b);
+        [id(2), propput] HRESULT SetAt([in] long n);
+        [id(3), propput] HRESULT Add([in] long n);
+        [id(4), propput] HRESULT InsertBefore([in] long n);
+        [id(5), propget] HRESULT Remove([out, retval] long* n);
+        [id(6)] HRESULT RemoveAll();
+        [id(7)] HRESULT First();
+        [id(8)] HRESULT Next([out] long* n, [out, retval] VARIANT_BOOL* b);
+        [id(9), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086F1-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlArrays Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlArrays : IUnknown
+    {
+        import "oaidl.idl";
+    };
+
+    [
+        object,
+        uuid(7CE086F6-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlDWordArray Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlDWordArray : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1), propget] HRESULT Array([in] long idx, [out, retval] DWORD* dw);
+        [id(1), propput] HRESULT Array([in] long idx, [in] DWORD dw);
+        [id(2), propput] HRESULT Add([in] DWORD dw);
+        [id(3), propget] HRESULT Remove([in] long idx, [out, retval] DWORD* dw);
+        [id(4)] HRESULT RemoveAll();
+        [id(5)] HRESULT First();
+        [id(6)] HRESULT Next([out] DWORD* pt, [out, retval] VARIANT_BOOL* b);
+        [id(7), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE086FB-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlMyObjectArray Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlMyObjectArray : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1), propget] HRESULT Array([in] long idx, [out, retval] IMyStruct** str);
+        [id(1), propput] HRESULT Array([in] long idx, [in] IMyStruct* str);
+        [id(2), propput] HRESULT Add([in] IMyStruct* str);
+        [id(3), propget] HRESULT Remove([in] long idx, [out, retval] IMyStruct** str);
+        [id(4)] HRESULT RemoveAll();
+        [id(5)] HRESULT First();
+        [id(6)] HRESULT Next([out] IMyStruct** pt, [out, retval] VARIANT_BOOL* b);
+        [id(7), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+    [
+        object,
+        uuid(7CE08700-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("IStlPointArray Interface"),
+        pointer_default(unique)
+    ]
+    interface IStlPointArray : IUnknown
+    {
+        import "oaidl.idl";
+        [id(1), propget] HRESULT Array([in] long idx, [out, retval] POINT* pt);
+        [id(1), propput] HRESULT Array([in] long idx, [in] POINT pt);
+        [id(2), propput] HRESULT Add([in] POINT pt);
+        [id(3), propget] HRESULT Remove([in] long idx, [out, retval] POINT* pt);
+        [id(4)] HRESULT RemoveAll();
+        [id(5)] HRESULT First();
+        [id(6)] HRESULT Next([out] POINT* pt, [out, retval] VARIANT_BOOL* b);
+        [id(7), propget] HRESULT Count([out, retval] UINT* dw);
+    };
+
+[
+    uuid(7CE086C7-3E78-11D0-AE6B-00C04FD7D06E),
+    version(1.0),
+    helpstring("stlcoll 1.0 Type Library")
+]
+library STLCOLLLib
+{
+    importlib("stdole32.tlb");
+
+    [
+        uuid(7CE086CD-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlMaps Class")
+    ]
+    coclass CStlMaps
+    {
+        [default] interface IStlMaps;
+    };
+
+    [
+        uuid(7CE086CF-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlMapStringToMyObject Class")
+    ]
+    coclass CStlMapStringToMyObject
+    {
+        [default] interface IStlMapStringToMyObject;
+    };
+
+    [
+        uuid(7CE086D0-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlMapDWordToMyStruct Class")
+    ]
+    coclass CStlMapDWordToMyStruct
+    {
+        [default] interface IStlMapDWordToMyStruct;    
+    };
+
+    [
+        uuid(7CE086D1-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlMapStringToString Class")
+    ]
+    coclass CStlMapStringToString
+    {
+        [default] interface IStlMapStringToString;
+    };
+
+    [
+        uuid(7CE086D2-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlLists Class")
+    ]
+    coclass CStlLists
+    {
+        [default] interface IStlLists;
+        interface IStlStringList;
+        interface IStlMyStructList;
+        interface IStlintList;
+    };
+
+    [
+        uuid(7CE086D7-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlArrays Class")
+    ]
+    coclass CStlArrays
+    {
+        [default] interface IStlArrays;
+        interface IStlMyObjectArray;
+        interface IStlPointArray;
+    };
+
+    [
+        uuid(7CE086D9-3E78-11D0-AE6B-00C04FD7D06E),
+        helpstring("StlDWordArray Class")
+    ]
+    coclass CStlDWordArray
+    {
+        [default] interface IStlDWordArray;
+    };
+
+};
+

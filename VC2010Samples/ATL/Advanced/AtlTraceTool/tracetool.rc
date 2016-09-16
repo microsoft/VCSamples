@@ -1,0 +1,209 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TraceTool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _AFX_INTL_RESOURCES
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TraceTool.ico"
+
+#endif // _AFX_INTL_RESOURCES
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+#define ABOUT_CAPTION		"About TraceTool"
+#define ABOUT_DESCRIPTION	"TraceTool Version 1.0"
+#define IDI_ABOUTICON		IDR_MAINFRAME
+#include <about_.rc>
+
+IDD_TRACETOOL_DIALOG DIALOGEX 0, 0, 370, 308
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ATL/MFC Trace Tool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "&Trace List",IDC_STATIC,12,9,32,8
+    CONTROL         "Tree1",ID_TRACE_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,12,20,125,253
+    PUSHBUTTON      "&Refresh",ID_REFRESH,45,282,50,14
+    GROUPBOX        "&Process",ID_PROCESS_GROUPBOX,147,9,151,90,WS_GROUP
+    LTEXT           "Amount of trace messages",ID_PROCESS_STATIC1,158,21,84,
+                    8
+    LTEXT           "Less",ID_PROCESS_STATIC2,158,37,16,8
+    CONTROL         "",ID_PROCESS_SLIDER_LEVEL,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,183,33,76,19
+    LTEXT           "More",ID_PROCESS_STATIC3,267,37,17,8
+    CONTROL         "Enabled",ID_PROCESS_CHECKBOX_ENABLED,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,157,57,42,10
+    CONTROL         "Category && Function Names",
+                    ID_PROCESS_CHECKBOX_FUNCANDCATNAMES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,157,69,103,10
+    CONTROL         "File Name && Line No.",
+                    ID_PROCESS_CHECKBOX_FILENAMEANDLINENO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,157,81,82,10
+    GROUPBOX        "&Module",ID_MODULE_GROUPBOX,147,108,151,90,WS_GROUP
+    LTEXT           "Amount of trace messages",ID_MODULE_STATIC1,158,120,84,
+                    8
+    LTEXT           "Less",ID_MODULE_STATIC2,158,136,16,8
+    CONTROL         "",ID_MODULE_SLIDER_LEVEL,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,183,132,76,19
+    LTEXT           "More",ID_MODULE_STATIC3,267,135,17,8
+    CONTROL         "Inherit from Process",ID_MODULE_RADIO_INHERIT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,157,156,78,10
+    CONTROL         "Enabled",ID_MODULE_RADIO_ENABLED,"Button",
+                    BS_AUTORADIOBUTTON,157,168,42,10
+    CONTROL         "Disabled",ID_MODULE_RADIO_DISABLED,"Button",
+                    BS_AUTORADIOBUTTON,157,180,43,10
+    GROUPBOX        "Cat&egory",ID_CATEGORY_GROUPBOX,147,207,151,90,WS_GROUP
+    LTEXT           "Amount of trace messages",ID_CATEGORY_STATIC1,158,218,
+                    84,8
+    LTEXT           "Less",ID_CATEGORY_STATIC2,158,234,16,8
+    CONTROL         "",ID_CATEGORY_SLIDER_LEVEL,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,183,231,76,19
+    LTEXT           "More",ID_CATEGORY_STATIC3,267,234,17,8
+    CONTROL         "Inherit from Module",ID_CATEGORY_RADIO_INHERIT,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,157,255,76,10
+    CONTROL         "Enabled",ID_CATEGORY_RADIO_ENABLED,"Button",
+                    BS_AUTORADIOBUTTON,157,266,42,10
+    CONTROL         "Disabled",ID_CATEGORY_RADIO_DISABLED,"Button",
+                    BS_AUTORADIOBUTTON,157,279,43,10
+    PUSHBUTTON      "&Save...",ID_SAVE,309,12,50,14,WS_GROUP
+    PUSHBUTTON      "&Load...",ID_LOAD,309,30,50,14
+    PUSHBUTTON      "&Apply",ID_APPLY,309,49,50,14
+    DEFPUSHBUTTON   "&Close",ID_CLOSE,309,66,50,14
+    PUSHBUTTON      "&Help",ID_HELP,309,84,50,14
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TRACETOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 363
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 301
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About TraceTool..."
+    IDS_CLOSEWITHOUTAPPLY   "Trace settings were changed and not applied.  Are you sure you want to exit?"
+    IDS_INVALIDFILENAME "Invalid characters in file name."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\TraceTool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

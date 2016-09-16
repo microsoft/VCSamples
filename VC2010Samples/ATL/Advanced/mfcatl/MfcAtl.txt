@@ -1,0 +1,35 @@
+
+MFCATL
+
+This sample illustrates how ATL COM objects can be used in an MFC server EXE.
+The server allows the creation of two objects, "ObjectOne" (implemented in MFC and
+supporting a dispinterface) and "ObjectTwo" (implemented in ATL and supporting a
+dual interface).
+
+HOW TO RUN IT:
+Build the MfcAtl.EXE server and run it standalone to register it. Then open the mfcatl.htm
+html file in Internet Explorer and click on buttons to call into appropriate objects. You
+can call each object individually or both at the same time.
+
+
+REMARKS:
+Originally, the project had both objects implemented in MFC (by deriving them from CCmdTarget).
+"ObjectTwo" has been reimplemented using ATL. In doing so, these steps were followed:
+
+* Included ATL header files (atlbase.h and atlcom.h) into premfcat.h
+* Implemented the Lock() an Unlock() methods to forward lock counts to MFC by calling
+	AfxOleLockApp()/AfxOleUnlockApp()
+* Added an object map macro OBJECT_ENTRY_AUTO into the MfcAtl.cpp
+	and added a static instance of the module class called _AtlModule
+* Added the typelib as a resource
+* Called _AtlModule.RegisterServer(TRUE) from InitInstance(), to match the MFC call to
+	COleObjectFactory::UpdateRegistryAll()
+* Called _AtlModule.RegisterClassObjects(CLSCTX_LOCAL_SERVER, REGCLS_MULTIPLEUSE), matching
+	the REGCLS_MULTIPLEUSE of MFC's class factories, as implicitly done by the
+	IMPLEMENT_OLECREATE() macro
+* Reimplemented "ObjectTwo" using ATL:
+	+ changed the IDL file from dispinterface to dual interface
+	+ had the IDL compilation generate a header file (mfcatl_h.h), needed by ATL
+	+ rewrote .h and .cpp file (the quickest way is to run ATL Wizard and copy/paste/rename
+	  the automatically generated code in place of the original MFC one)
+

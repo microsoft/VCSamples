@@ -1,0 +1,45 @@
+HKCR
+{
+	ForceRemove Circ.CircCtl.1 = s 'CircCtl Class'
+	{
+		CLSID = s '{C978F531-E584-11CF-AF44-00A0C9034837}'
+	}
+	ForceRemove Circ.CircCtl = s 'CircCtl Class'
+	{
+		CurVer = s 'Circ.CircCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove '{C978F531-E584-11CF-AF44-00A0C9034837}' = s 'CircCtl Class'
+		{
+			val AppID = s '{C978F52C-E584-11CF-AF44-00A0C9034837}'
+			val LocalizedString = s '@%MODULE%,-1'
+
+			ProgID = s 'Circ.CircCtl.1'
+			VersionIndependentProgID = s 'Circ.CircCtl'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '{C978F52B-E584-11CF-AF44-00A0C9034837}'
+			'Version' = s '1.0'
+			'verb'
+			{
+				'1' = s '&CircProps,0,2'
+				{
+					val LocalizedString = s '@%MODULE%,-5'
+				}
+				'2' = s '&Activate,0,2'
+				{
+					val LocalizedString = s '@%MODULE%,-6'
+				}
+			}
+		}
+	}
+}

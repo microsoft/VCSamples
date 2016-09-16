@@ -1,0 +1,77 @@
+// Polygon.idl : IDL source for Polygon.dll
+
+// This is a part of the Active Template Library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Active Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Active Template Library product.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Polygon.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(2885EE04-A26B-11D1-B49B-00C04F98EFE0),
+		dual,
+		helpstring("IPolyCtl Interface"),
+		pointer_default(unique)
+	]
+	interface IPolyCtl : IDispatch
+	{
+		[propput, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([in]OLE_COLOR clr);
+		[propget, id(DISPID_FILLCOLOR)]
+		HRESULT FillColor([out, retval]OLE_COLOR* pclr);
+		[propget, id(1), helpstring("property Sides")] HRESULT Sides([out, retval] short *pVal);
+		[propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
+	};
+
+[
+	uuid(2885EDF8-A26B-11D1-B49B-00C04F98EFE0),
+	version(1.0),
+	helpstring("Polygon 1.0 Type Library")
+]
+library POLYGONLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(2885EE06-A26B-11D1-B49B-00C04F98EFE0),
+		helpstring("_IPolyCtlEvents Interface")
+	]
+	dispinterface _IPolyCtlEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method ClickIn")] void ClickIn([in] long x, [in] long y);
+		[id(2), helpstring("method ClickOut")] void ClickOut([in] long x, [in] long y );
+	};
+
+	[
+		uuid(2885EE05-A26B-11D1-B49B-00C04F98EFE0),
+		helpstring("PolyCtl Class")
+	]
+	coclass PolyCtl
+	{
+		[default] interface IPolyCtl;
+		[default, source] dispinterface _IPolyCtlEvents;
+	};
+
+	[
+		uuid(2885EE07-A26B-11D1-B49B-00C04F98EFE0),
+		helpstring("PolyProp Class")
+	]
+	coclass PolyProp
+	{
+		interface IUnknown;
+	};
+};

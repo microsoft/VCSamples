@@ -1,0 +1,62 @@
+// Connect.idl : IDL source for Connect.dll
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Connect.tlb) and marshalling code.
+
+	[
+		object,
+		uuid(CCE84211-DB31-11CF-9D75-00A0C90391D3),
+		dual,
+		helpstring("IRandom Interface"),
+		pointer_default(unique)
+	]
+	interface IRandom : IDispatch
+	{
+		import "oaidl.idl";
+		HRESULT Start([out]long* pnID);
+		HRESULT Stop([in]long nID);
+		HRESULT StopAll();
+	};
+
+	[
+		object,
+		uuid(CCE84212-DB31-11CF-9D75-00A0C90391D3),
+		dual,
+		helpstring("IRandomEvent Interface"),
+		pointer_default(unique)
+	]
+	interface IRandomEvent : IDispatch
+	{
+		import "oaidl.idl";
+		HRESULT Fire([in]long nID);
+	};
+
+
+[
+	uuid(CCE8420F-DB31-11CF-9D75-00A0C90391D3),
+	version(1.0),
+	helpstring("Connect 1.0 Type Library")
+]
+library CONNECTLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(CCE84215-DB31-11CF-9D75-00A0C90391D3),
+		helpstring("Random Class")
+	]
+	coclass CoRandom
+	{
+		[default] interface IRandom;
+		[default, source] interface IRandomEvent;
+	};
+
+};

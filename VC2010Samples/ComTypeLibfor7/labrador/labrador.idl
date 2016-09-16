@@ -1,0 +1,68 @@
+// Labrador.idl : IDL source for Labrador.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Labrador.tlb) and marshalling code.
+
+// This is a part of the ActiveX Template Library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// ActiveX Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// ActiveX Template Library product.
+
+import "unknwn.idl";
+
+#define MAX_MY_BSTR_LEN 32
+typedef char MY_BSTR[MAX_MY_BSTR_LEN];
+
+	[
+		object,
+		uuid(08db96f2-0b41-4536-813e-7ad0f496d7d6),
+		helpstring("IMammal Interface"),
+		pointer_default(unique)
+	]
+	interface IMammal : IUnknown
+	{
+		import "oaidl.idl";
+		HRESULT GetSpeciesName([out] MY_BSTR p);
+		HRESULT IsAlive([out] BOOL* pBool);
+	};
+
+	[
+		object,
+		uuid(cd4f7450-b55e-4341-b307-81636603aa59),
+		helpstring("IDog Interface"),
+		pointer_default(unique)
+	]
+	interface IDog : IUnknown
+	{
+		import "oaidl.idl";
+		HRESULT GetPetName([out] MY_BSTR p);
+		HRESULT SetPetName([in] MY_BSTR p);
+		HRESULT IsBarking([out] BOOL* pBool);
+	};
+
+
+[
+	uuid(C9E9EE3D-8852-436A-B05D-33259247C7A0),
+	version(1.0),
+	helpstring("Labrador 1.0 Type Library")
+]
+library LABRADORLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(7094E681-F405-435C-A201-E205A1289FDC),
+		helpstring("Labrador Class")
+	]
+	coclass Labrador
+	{
+		[default] interface IMammal;
+		interface IDog;
+	};
+
+};

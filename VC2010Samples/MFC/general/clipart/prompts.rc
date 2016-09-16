@@ -1,0 +1,101 @@
+// RC file for all standard AFX menu prompts
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include "afxres.h"
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+// This resource will prevent the App Studio user from saving this file
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+"Cannot change standard MFC resources.\0"
+END
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Standard Menu commands
+STRINGTABLE
+BEGIN
+	ID_FILE_NEW,        "Create a new document"
+	ID_FILE_OPEN,       "Open an existing document"
+	ID_FILE_CLOSE,      "Close the active document"
+	ID_FILE_SAVE,       "Save the active document"
+	ID_FILE_SAVE_AS,    "Save the active document with a new name"
+	ID_FILE_SAVE_COPY_AS, "Save a copy of this document to a file"
+	ID_FILE_UPDATE,     "Update the container to show any changes"
+	ID_FILE_PAGE_SETUP, "Change the printing options"
+	ID_FILE_PRINT_SETUP, "Change the printer and printing options"
+	ID_FILE_PRINT,      "Print the active document"
+	ID_FILE_PRINT_PREVIEW, "Display full pages"
+	ID_APP_ABOUT,       "Display program information, version number and copyright"
+	ID_APP_EXIT,        "Quit the application; prompts to save documents"
+	ID_FILE_MRU_FILE1,  "Open this document"
+	ID_FILE_MRU_FILE2,  "Open this document"
+	ID_FILE_MRU_FILE3,  "Open this document"
+	ID_FILE_MRU_FILE4,  "Open this document"
+	ID_CONTEXT_HELP,    "Display help for clicked on buttons, menus and windows"
+	ID_HELP,            "Display help for current task or command"
+	ID_HELP_INDEX,      "List Help topics"
+	ID_HELP_USING,      "Display instructions about how to use help"
+	ID_NEXT_PANE,       "Switch to the next window pane"
+	ID_PREV_PANE,       "Switch back to the previous window pane"
+	ID_WINDOW_NEW,      "Open another window for the active document"
+	ID_WINDOW_ARRANGE,  "Arrange icons at the bottom of the window"
+	ID_WINDOW_CASCADE,  "Arrange windows so they overlap"
+	ID_WINDOW_TILE_HORZ,"Arrange windows as non-overlapping tiles"
+	ID_WINDOW_TILE_VERT,"Arrange windows as non-overlapping tiles"
+	ID_WINDOW_SPLIT,    "Split the active window into panes"
+	ID_EDIT_CLEAR,      "Erase the selection"
+	ID_EDIT_CLEAR_ALL,  "Erase everything"
+	ID_EDIT_COPY,       "Copy the selection and put it on the Clipboard"
+	ID_EDIT_CUT,        "Cut the selection and put it on the Clipboard"
+	ID_EDIT_FIND,       "Find the specified text"
+	ID_EDIT_PASTE,      "Insert Clipboard contents"
+	ID_EDIT_PASTE_LINK, "Insert Clipboard contents and a link to its source"
+	ID_EDIT_PASTE_SPECIAL,"Insert Clipboard contents with options"
+	ID_EDIT_REPEAT,     "Repeat the last action"
+	ID_EDIT_REPLACE,    "Replace specific text with different text"
+	ID_EDIT_SELECT_ALL, "Select the entire document"
+	ID_EDIT_UNDO,       "Undo the last action"
+	ID_EDIT_REDO,       "Redo the previously undone action"
+	ID_VIEW_TOOLBAR,    "Show or hide the toolbar"
+	ID_VIEW_STATUS_BAR, "Show or hide the status bar"
+END
+
+
+// OLE specific
+STRINGTABLE
+BEGIN
+	ID_OLE_EDIT_LINKS,  "Edit linked objects"
+	ID_OLE_INSERT_NEW,  "Insert new embedded object"
+	ID_OLE_EDIT_CONVERT,"Convert selected object between types"
+	ID_OLE_EDIT_CHANGE_ICON, "Change icon of selected object"
+	ID_OLE_VERB_FIRST,  "Activate embedded or linked object"
+END
+
+// Database specific
+STRINGTABLE
+BEGIN
+	ID_RECORD_NEXT  "Move to next record"
+	ID_RECORD_PREV  "Move to previous record"
+	ID_RECORD_LAST  "Move to final record"
+	ID_RECORD_FIRST "Move to first record"
+END
+
+// System commands
+STRINGTABLE
+BEGIN
+	AFX_IDS_SCSIZE,         "Change the window size"
+	AFX_IDS_SCMOVE,         "Change the window position"
+	AFX_IDS_SCMINIMIZE,     "Reduce the window to an icon"
+	AFX_IDS_SCMAXIMIZE,     "Enlarge the window to full size"
+	AFX_IDS_SCNEXTWINDOW,   "Switch to the next document window"
+	AFX_IDS_SCPREVWINDOW,   "Switch to the previous document window"
+	AFX_IDS_SCCLOSE,        "Close the active window and prompts to save the documents"
+	AFX_IDS_SCRESTORE,      "Restore the window to normal size"
+	AFX_IDS_SCTASKLIST,     "Activate Task List"
+	AFX_IDS_MDICHILD,       "Activate this window"
+END
+
+/////////////////////////////////////////////////////////////////////////////
