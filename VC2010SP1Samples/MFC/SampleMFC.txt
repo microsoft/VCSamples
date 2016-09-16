@@ -1,0 +1,1 @@
+MFC Samples added in VC 2010 SP1
