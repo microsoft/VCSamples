@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cube", "cube.vcproj", "{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Debug|Itanium.Build.0 = Debug|Itanium
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Debug|Win32.Build.0 = Debug|Win32
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Debug|x64.ActiveCfg = Debug|x64
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Debug|x64.Build.0 = Debug|x64
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Release|Itanium.ActiveCfg = Release|Itanium
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Release|Itanium.Build.0 = Release|Itanium
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Release|Win32.ActiveCfg = Release|Win32
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Release|Win32.Build.0 = Release|Win32
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Release|x64.ActiveCfg = Release|x64
+		{D2BB92E8-8C17-4F0E-AE92-754A671A2F92}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

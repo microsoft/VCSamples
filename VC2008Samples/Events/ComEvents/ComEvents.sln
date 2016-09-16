@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EventSource", "EventSource\EventSource.vcproj", "{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EventReceiver", "EventReceiver\EventReceiver.vcproj", "{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB} = {CA12ABF3-A1D3-4D6E-837D-D84208900FBB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Debug|Itanium.Build.0 = Debug|Itanium
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Debug|Win32.Build.0 = Debug|Win32
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Debug|x64.ActiveCfg = Debug|x64
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Debug|x64.Build.0 = Debug|x64
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Release|Itanium.ActiveCfg = Release|Itanium
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Release|Itanium.Build.0 = Release|Itanium
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Release|Win32.ActiveCfg = Release|Win32
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Release|Win32.Build.0 = Release|Win32
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Release|x64.ActiveCfg = Release|x64
+		{CA12ABF3-A1D3-4D6E-837D-D84208900FBB}.Release|x64.Build.0 = Release|x64
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Debug|Itanium.Build.0 = Debug|Itanium
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Debug|Win32.Build.0 = Debug|Win32
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Debug|x64.ActiveCfg = Debug|x64
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Debug|x64.Build.0 = Debug|x64
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Release|Itanium.ActiveCfg = Release|Itanium
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Release|Itanium.Build.0 = Release|Itanium
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Release|Win32.ActiveCfg = Release|Win32
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Release|Win32.Build.0 = Release|Win32
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Release|x64.ActiveCfg = Release|x64
+		{812FAA75-5743-45B2-B8D3-3F9F2D6A70A7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

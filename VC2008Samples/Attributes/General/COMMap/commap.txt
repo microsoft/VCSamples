@@ -1,0 +1,12 @@
+
+COMMAP
+
+   This basic sample shows how different COM interface
+   map entry macros are used.
+
+HOW TO RUN IT:
+
+   Build AGGREG.DLL first, then build COMMAP.DLL. Use COMMAP.HTM
+   (HTML file that uses VBScript)  from Internet Explorer 3.0 or 4.0.
+   COMMAP.HTM  includes comments about each type of map entry. You
+   can also load the .VBP file into VB and run.

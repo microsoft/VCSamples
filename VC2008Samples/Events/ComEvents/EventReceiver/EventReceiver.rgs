@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{89E5A60A-52A5-4525-9121-4DA74BA19480}' = s 'EventReceiver'
+		'EventReceiver.EXE'
+		{
+			val AppID = s '{89E5A60A-52A5-4525-9121-4DA74BA19480}'
+		}
+	}
+}

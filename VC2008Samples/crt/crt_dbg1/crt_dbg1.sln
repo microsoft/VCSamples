@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crt_dbg1", "crt_dbg1.vcproj", "{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}.Debug|Itanium.Build.0 = Debug|Itanium
+		{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}.Debug|Win32.Build.0 = Debug|Win32
+		{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}.Debug|x64.ActiveCfg = Debug|x64
+		{EAFE7FB6-4183-4CBF-B1CD-ECDA31B02CDF}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

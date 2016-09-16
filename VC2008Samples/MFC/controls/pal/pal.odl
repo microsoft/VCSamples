@@ -1,0 +1,77 @@
+// pal.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (pal.tlb) that will become a resource in
+// pal.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(5733F771-BE58-101A-B57A-0000C0C3ED5F), version(1.0),
+  helpstring("Pal OLE Custom Control module"), control ]
+library PalLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CPalCtrl
+
+	[ uuid(37446B83-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Pal Control"), hidden ]
+	dispinterface _DPal
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CPalCtrl)
+			[id(1)] short Length;
+			[id(2)] IPictureDisp* Picture;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CPalCtrl)
+			[id(3), propget] OLE_COLOR Entry(short nIndex);
+			[id(3), propput] void Entry(short nIndex, OLE_COLOR newValue);
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CPalCtrl
+
+	[ uuid(37446B84-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Pal Control") ]
+	dispinterface _DPalEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CPalCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CPalCtrl
+
+	[ uuid(5733F76E-BE58-101A-B57A-0000C0C3ED5F),
+	  helpstring("Pal Control"), control ]
+	coclass Pal
+	{
+		[default] dispinterface _DPal;
+		[default, source] dispinterface _DPalEvents;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

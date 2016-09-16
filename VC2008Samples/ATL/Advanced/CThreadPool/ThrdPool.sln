@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThrdPool", "ThrdPool.vcproj", "{8499F942-74D2-4F13-B833-D4AE5D311401}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Debug|Itanium = Debug|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		Release|Itanium = Release|Itanium
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Debug|Win32.Build.0 = Debug|Win32
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Debug|x64.ActiveCfg = Debug|x64
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Debug|x64.Build.0 = Debug|x64
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Debug|Itanium.Build.0 = Debug|Itanium
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Release|Win32.ActiveCfg = Release|Win32
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Release|Win32.Build.0 = Release|Win32
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Release|x64.ActiveCfg = Release|x64
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Release|x64.Build.0 = Release|x64
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Release|Itanium.ActiveCfg = Release|Itanium
+		{8499F942-74D2-4F13-B833-D4AE5D311401}.Release|Itanium.Build.0 = Release|Itanium
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

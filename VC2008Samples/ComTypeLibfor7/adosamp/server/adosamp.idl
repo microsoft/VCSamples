@@ -1,0 +1,115 @@
+// ADOSamp.idl : IDL source for ADOSamp.dll
+//
+import "oaidl.idl";
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ADOSamp.tlb) and marshalling code.
+
+
+
+enum DataTypeEnum
+{
+    adEmpty = 0,
+    adTinyInt = 16,
+    adSmallInt = 2,
+    adInteger = 3,
+    adBigInt = 20,
+    adUnsignedTinyInt = 17,
+    adUnsignedSmallInt = 18,
+    adUnsignedInt = 19,
+    adUnsignedBigInt = 21,
+    adSingle = 4,
+    adDouble = 5,
+    adCurrency = 6,
+    adDecimal = 14,
+    adNumeric = 131,
+    adBoolean = 11,
+    adError = 10,
+    adUserDefined = 132,
+    adVariant = 12,
+    adIDispatch = 9,
+    adIUnknown = 13,
+    adGUID = 72,
+    adDate = 7,
+    adDBDate = 133,
+    adDBTime = 134,
+    adDBTimeStamp = 135,
+    adBSTR = 8,
+    adChar = 129,
+    adVarChar = 200,
+    adLongVarChar = 201,
+    adWChar = 130,
+    adVarWChar = 202,
+    adLongVarWChar = 203,
+    adBinary = 128,
+    adVarBinary = 204,
+    adLongVarBinary = 205
+};
+
+enum ParameterDirectionEnum
+{
+    adParamUnknown = 0,
+    adParamInput = 1,
+    adParamOutput = 2,
+    adParamInputOutput = 3,
+    adParamReturnValue = 4
+};
+
+    [
+        object,
+        uuid(7A319993-48C0-11D0-AE70-00C04FD7D06E),
+        dual,
+        helpstring("IADOTier Interface"),
+        pointer_default(unique)
+    ]
+    interface IADOTier : IDispatch
+    {
+        [id(1), helpstring("method Open")] HRESULT Open([in] BSTR source, [in] BSTR user, [in] BSTR pwd);
+        [id(3), helpstring("method OpenRecordset")] HRESULT OpenRecordset([in] VARIANT query);
+        [id(4), helpstring("method CloseRecordset")] HRESULT CloseRecordset(void);
+        [id(5), helpstring("method ExecuteConnection")] HRESULT ExecuteConnection([in] BSTR query, [in] VARIANT_BOOL bChangeRec);
+        [id(6), helpstring("method ExecuteCommand")] HRESULT ExecuteCommand([in] VARIANT_BOOL bStoredProcedure, [in] VARIANT_BOOL bChangeRec);
+        [propget, id(7), helpstring("property CommandText")] HRESULT CommandText([out, retval] BSTR *newVal);
+        [propput, id(7), helpstring("property CommandText")] HRESULT CommandText([in] BSTR newVal);
+        [id(8), helpstring("method AppendParameter")] HRESULT AppendParameter([in] enum DataTypeEnum type, [in] VARIANT value, [in] enum ParameterDirectionEnum where, [in] long size);
+        [id(9), helpstring("method Update")] HRESULT Update();
+        [id(10), helpstring("method Delete")] HRESULT Delete();
+        [propget, id(11), helpstring("property Field")] HRESULT Field([in] VARIANT idx, [out, retval] VARIANT *newVal);
+        [propput, id(11), helpstring("property Field")] HRESULT Field([in] VARIANT idx, [in] VARIANT newVal);
+        [propget, id(12), helpstring("property FieldCount")] HRESULT FieldCount([out, retval] long *newVal);
+        [id(13), helpstring("method Close")] HRESULT Close();
+        [id(14), helpstring("method First")] HRESULT First();
+        [id(15), helpstring("method Next")] HRESULT Next();
+        [id(16), helpstring("method Last")] HRESULT Last();
+        [id(17), helpstring("method Prev")] HRESULT Prev();
+        [propget, id(18), helpstring("property EOF")] HRESULT EOF([out, retval] VARIANT_BOOL *newVal);
+        [propget, id(19), helpstring("property BOF")] HRESULT BOF([out, retval] VARIANT_BOOL *newVal);
+        [id(20), helpstring("method ParamQuery")] HRESULT ParamQuery([in] BSTR query, [in] long idx1, [in] BSTR idx2, [in] BSTR idx3);
+        [id(21), helpstring("method CallStoredProc")] HRESULT CallStoredProc([in] long idx1, [in] BSTR idx2, [in] BSTR idx3);
+        [propput, id(22), helpstring("property StoredProc")] HRESULT StoredProc([in] BSTR newVal);
+        [id(23), helpstring("method ChangeParameter")] HRESULT ChangeParameter([in] long idx, [in] enum DataTypeEnum type, [in] VARIANT value, [in] enum ParameterDirectionEnum where, [in] long size);
+        [id(24), helpstring("method Requery")] HRESULT Requery();
+        [id(25), helpstring("method ADORelease")] HRESULT ADORelease();
+        [propget, id(26), helpstring("property Empty")] HRESULT Empty([out, retval] VARIANT_BOOL* bEmpty);
+    };
+
+
+[
+    uuid(7A319991-48C0-11D0-AE70-00C04FD7D06E),
+    version(1.0),
+    helpstring("ADOSamp 1.0 Type Library")
+]
+library ADOSAMPLib
+{
+    importlib("stdole32.tlb");
+
+    [
+        uuid(7A319997-48C0-11D0-AE70-00C04FD7D06E),
+        helpstring("ADOTier Class")
+    ]
+    coclass CADOTier
+    {
+        [default] interface IADOTier;
+    };
+
+};

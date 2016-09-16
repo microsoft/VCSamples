@@ -1,0 +1,29 @@
+HKCR
+{
+	LABRADOR.Labrador.1 = s 'Labrador Class'
+	{
+		CLSID = s '{7094E681-F405-435C-A201-E205A1289FDC}'
+	}
+	LABRADOR.Labrador = s 'Labrador Class'
+	{
+		CurVer = s 'LABRADOR.Labrador.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7094E681-F405-435C-A201-E205A1289FDC} = s 'Labrador Class'
+		{
+			ProgID = s 'LABRADOR.Labrador.1'
+			VersionIndependentProgID = s 'LABRADOR.Labrador'
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+			'TypeLib' = s '{C9E9EE3D-8852-436A-B05D-33259247C7A0}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-1'
+		}
+	}
+}

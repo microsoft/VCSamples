@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage">
+<title>ATL test page for object CDInfo</title>
+</head>
+
+<body>
+
+<p><font size="5"><strong>Test the CDInfo control</strong></font></p>
+
+<p><font size="3">With an audio CD in your drive, click Read CD, then click a track to start playing</font></p>
+
+<p><object id="CDInfo"
+classid="CLSID:A393BE4E-2FBD-11D0-B939-000000000000"
+align="baseline" border="0" width="192" height="192" <></object></p>
+
+<p><input type="button" name="Read" value="Read CD"></p>
+<script language="VBScript">
+	Sub Read_OnClick
+		CDInfo.Read
+	End Sub
+	Sub CDInfo_Click(Track)
+		CDInfo.Play(Track)
+	End Sub
+</script>
+</body>
+</html>

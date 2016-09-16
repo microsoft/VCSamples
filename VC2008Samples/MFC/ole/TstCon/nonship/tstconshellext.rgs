@@ -1,0 +1,79 @@
+HKCR
+{
+    .tcs = s 'TstCon8.Session'
+    {
+        ShellNew
+        {
+            val NullFile = s ''
+        }
+    }
+    TstCon8.Session = s 'Test Container Session'
+    {
+        DefaultIcon = s '[#FilePath],0'
+        shell
+        {
+            open
+            {
+                command = s '"[#FilePath]" /dde'
+                ddeexec = s '[\[]open("%1")[\]]'
+            }
+        }
+    }
+    .dsm = s 'TstCon8.Script'
+    {
+        ShellNew
+        {
+            val NullFile = s ''
+        }
+    }
+    TstCon8.Script = s 'Test Container Script'
+    {
+        DefaultIcon = s '[#FilePath],0'
+        shell
+        {
+            open
+            {
+                command = s '"[#FilePath]" /dde'
+                ddeexec = s '[\[]open("%1")[\]]'
+            }
+        }
+    }
+    .tsg = s 'TstCon8.Storage'
+    {
+        ShellNew
+        {
+            val NullFile = s ''
+        }
+    }
+    TstCon8.Storage = s 'Test Container Storage'
+    {
+        DefaultIcon = s '[#FilePath],0'
+        shell
+        {
+            open
+            {
+                command = s '"[#FilePath]" /dde'
+                ddeexec = s '[\[]open("%1")[\]]'
+            }
+        }
+    }
+    .tsm = s 'TstCon8.Stream'
+    {
+        ShellNew
+        {
+            val NullFile = s ''
+        }
+    }
+    TstCon8.Stream = s 'Test Container Stream'
+    {
+        DefaultIcon = s '[#FilePath],0'
+        shell
+        {
+            open
+            {
+                command = s '"[#FilePath]" /dde'
+                ddeexec = s '[\[]open("%1")[\]]'
+            }
+        }
+    }
+}

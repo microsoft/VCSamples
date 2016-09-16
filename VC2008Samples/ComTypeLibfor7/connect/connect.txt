@@ -1,0 +1,37 @@
+
+NOTE:
+    This is a modification of the Atl sample connect, to demonstrate VCCOM
+support for connection point sinks.  drive is a naive implementaion, whereas
+mdrive slightly belabors COM-correctness in using a ClassFactory to create
+sink objects.  Neither drive nor mdrive are dependent upon ATL or MFC for
+any COM support.
+
+CONNECT
+
+This sample illustrates the use and implementation of connection points (the ICOnnectionPointContainer
+and IConnectionPoint interfaces)in a multithreaded environment.
+
+The server is implemented in the CONNECT.DLL. This DLL allows the creation of a CoRandom COM object,
+implemented by the CRandom C++ class. The COM object supports IRandom (a dual interface)and 
+IConnectionPointContainer, and it accepts connections for the IRandomEvent interface.
+
+The IRandom interface supports the following methods:
+    Start(): starts a thread inside the object
+    Stop(): stops a thread inside the object
+    StopAll(): stops all the running threads
+
+When running, the secondary threads inside the object keep firing events through the connection point.
+
+Two clients are provided: DRIVE and MDRIVE. They can be found in the DRIVE and MDRIVE subdirectories.
+
+DRIVE.EXE is a simple console application that provides a single object implementing the IRandomEvent
+interface. It creates a CoRandom object, calls Advise()/Unadvise() on the connection point, and has the 
+CoRandom object fire events into the drive's object.
+
+MDRIVE.EXE is an MFC dialog based application, able to create multiple advise sinks and to control the
+number of threads the server creates.
+
+HOW TO RUN IT:
+
+Build CONNECT.DLL and register it. You can build and run DRIVE.EXE from a console, or build and run MDRIVE.EXE
+directly from Developer Studio.

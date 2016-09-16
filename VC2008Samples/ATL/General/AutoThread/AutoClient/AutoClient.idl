@@ -1,0 +1,51 @@
+// This is a part of the Active Template Library. 
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Active Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Active Template Library product.
+// AutoClient.idl : IDL source for AutoClient.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AutoClient.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(A6D89F2B-35F4-11D2-9375-00C04FD9757C),
+		dual,
+		helpstring("IAutoCtl Interface"),
+		pointer_default(unique)
+	]
+	interface IAutoCtl : IDispatch
+	{
+		[propget, id(1), helpstring("property Delay")] HRESULT Delay([out, retval] long *pVal);
+		[propput, id(1), helpstring("property Delay")] HRESULT Delay([in] long newVal);
+	};
+
+[
+	uuid(A6D89F1F-35F4-11D2-9375-00C04FD9757C),
+	version(1.0),
+	helpstring("AutoClient 1.0 Type Library")
+]
+library AUTOCLIENTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(A6D89F2C-35F4-11D2-9375-00C04FD9757C),
+		helpstring("AutoCtl Class")
+	]
+	coclass AutoCtl
+	{
+		[default] interface IAutoCtl;
+	};
+};

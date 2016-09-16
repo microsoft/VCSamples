@@ -1,0 +1,104 @@
+
+<head>
+<style>
+<!--
+h2
+	{margin:6.0pt 0in; line-height:24.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:22.0pt;
+	font-family:Verdana;
+	color:gray;
+	}
+p.Text
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+p.BulletedList1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:12.0pt;
+	tab-stops:.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+h4
+	{margin:6.0pt 0in; line-height:20.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:18.0pt;
+	font-family:Verdana;
+	}
+span.MsoFootnoteReference
+	{color:blue;
+	vertical-align:super}
+p.MsoFootnoteText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	color:blue}
+-->
+</style>
+</head>
+
+<h2>Extended Properties and Methods</h2>
+<p class="Text">Whenever a control supports aggregation, Test Container creates 
+an extended control, which adds additional properties and methods to the control 
+that are specific to Test Container.&nbsp; These additional properties and methods 
+are accessed exactly as if they were implemented by the control itself.</p>
+<p class="Text">There are five additional properties and methods:</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Name</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Activate</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Deactivate</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>UIActivate</p>
+<p class="BulletedList1"><span style="font-family: Symbol">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>UIDeactivate</p>
+<h4 style="page-break-after: auto">Name</h4>
+<p class="Text">This property is the user-assigned name of the control and is 
+used by scripts to refer to the control.&nbsp; This name should be unique with 
+respect to any other controls on the form.&nbsp; If a control is created by the <b>
+TCForm.InsertControl</b> method, the initial value of the <b>Name</b> property 
+is the <i>Name</i> parameter supplied in that method.&nbsp; If the control is 
+inserted manually, it is assigned a default name based on the type of the 
+control.</p>
+<p class="Text"><i>control</i>.<b>Name</b> = “MyControl”</p>
+<h4 style="page-break-after: auto">Activate</h4>
+<p class="Text">The <b>Activate</b> method in-place activates the control<span style="color:red">.</span> 
+This is the same as selecting the control and choosing <b>Activate</b> from the
+<b>Control</b> menu.</p>
+<p class="Text"><i>control</i>.<b>Activate</b></p>
+<h4 style="page-break-after: auto">Deactivate</h4>
+<p class="Text">The <b>Deactivate</b> method in-place deactivates the control<span style="color:red">.</span> 
+This is the same as selecting the control and choosing <b>Deactivate</b> from 
+the <b>Control</b> menu.</p>
+<p class="Text"><i>control</i>.<b>Deactivate</b></p>
+<h4 style="page-break-after: auto">UIActivate</h4>
+<p class="Text">The <b>UIActivate</b> method UI activates the control. This is 
+the same as selecting the control and choosing <b>UI Activate</b> from the <b>
+Control</b> menu.</p>
+<p class="Text"><i>control</i>.<b>UIActivate</b></p>
+<h4 style="page-break-after: auto">UIDeactivate</h4>
+<p class="Text">The <b>UIDeactivate</b> method UI deactivates the control. This 
+is the same as selecting the control and choosing <b>UI Deactivate</b> from the
+<b>Control</b> menu.</p>
+<p class="Text"><i>control</i>.<b>UIDeactivate</b></p>

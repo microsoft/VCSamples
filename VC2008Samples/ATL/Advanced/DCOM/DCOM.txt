@@ -1,0 +1,34 @@
+DCOM Sample
+
+This sample demonstrates how to call a COM object implemented in an NT service from
+multiple clients running on different machines. It is composed of the following parts:
+
+1.DrawServ - This is the NT service that implements the COM object.
+2.ATLDraw  - This is the client that connects to the DrawServ COM object.
+3.DrawCtl  - This is a control version of ATLDraw. It has a Connect method (that takes
+             a machine name string parameter), and a Disconnect method.
+
+Instructions
+
+Note that for this sample to work all machines must be running NT 4.0 Beta 2 or later.
+
+1. Build the DrawServ and ATLDraw samples.
+
+2. Copy the DRAWSERV.EXE and ATLDRAW.EXE to each machine that you want to run the sample
+   from. Register the server on each machine by running DrawServ with the command-line
+   argument /RegServer or -RegServer (case-insensitive), for example, DrawServ /RegServer.
+   (REGISTER.DLL must be registered for this to work.) The reason you must copy the server
+   to each client is because the CLSID for the server and the server type library need to
+   be registered on the client.
+
+3. Start the service on the server by using the Services icon in Control Panel.
+
+4. Using DCOMCNFG on each client, select the Properties of the DrawServ Class. From the
+   Location tab select "Run application on the following computer", then enter the name of
+   the computer that you are running the server object on. Uncheck the "Run application on
+   this computer" box.
+
+5. Run ATLDRAW and select Server.Connect from the menu on each client. Draw on the client
+   window by holding the left mouse button down and dragging a line. The drawn line should
+   appear on each client that is also connected to the same server. You can also use the
+   View.Color menu option to change the color for each client.

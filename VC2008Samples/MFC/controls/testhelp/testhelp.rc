@@ -1,0 +1,206 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""testhelp.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "testhelp OLE Control Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TESTHELP"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "TESTHELP.OCX"
+            VALUE "ProductName", "testhelp OLE Control Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON                    "testhelp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TESTHELP            BITMAP                  "ThelpCtl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_TESTHELP DIALOGEX 34, 22, 215, 63
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Testhelp Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,21,20
+    LTEXT           "Testhelp Control, Version 1.0",IDC_STATIC,43,10,131,8
+    LTEXT           "© 1992 - 2001 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,43,21,121,17
+    DEFPUSHBUTTON   "OK",IDOK,172,7,32,14,WS_GROUP
+    LTEXT           "Created by Mike Dice",IDC_STATIC,43,41,69,8
+END
+
+IDD_PROPPAGE_TESTHELP DIALOG  0, 0, 250, 110
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_NAME1,55,9,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME2,55,37,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME3,55,65,40,14,ES_AUTOHSCROLL
+    LTEXT           "Name1",IDC_STATIC,30,12,24,8,NOT WS_GROUP
+    LTEXT           "Name2",IDC_STATIC,30,39,24,8,NOT WS_GROUP
+    LTEXT           "Name3",IDC_STATIC,30,68,24,8,NOT WS_GROUP
+    CONTROL         "Use Control's Help File",IDC_USEMINE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,122,53,87,10
+    CONTROL         "Use ToolTip For this Control",IDC_USETOOLTIP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,73,103,10
+    EDITTEXT        IDC_TIPCAPTION,178,84,65,14,ES_AUTOHSCROLL
+    LTEXT           "Tooltip Caption:",IDC_STATIC,122,85,50,8,NOT WS_GROUP
+    GROUPBOX        "Type of Help to Use",IDC_STATIC,121,7,112,35
+    CONTROL         "Help in a Popup Window",IDC_POPUPHELP,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,128,17,99,10
+    CONTROL         "Show the Whole Help File",IDC_FULLHELP,"Button",
+                    BS_AUTORADIOBUTTON,128,28,98,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX_TESTHELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_PROPPAGE_TESTHELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_TESTHELP            "Testhelp Control"
+    IDS_TESTHELP_PPG        "Testhelp Property Page"
+    IDS_COMPONENT_TYPE      "My ocx component"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TESTHELP_PPG_CAPTION "General"
+    IDS_COMPONENT0_TITLE    "Mike's Testhelp Control"
+    IDS_COMPONENT0_DESCRIPTION 
+                            "A Control that shows you how to use help in an OCX."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "testhelp.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

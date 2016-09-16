@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{623C3042-B3D2-4F3E-856B-CC75B6CF7AF9}' = s 'AtlSafeArray'
+		'AtlSafeArray.DLL'
+		{
+			val AppID = s '{623C3042-B3D2-4F3E-856B-CC75B6CF7AF9}'
+		}
+	}
+}

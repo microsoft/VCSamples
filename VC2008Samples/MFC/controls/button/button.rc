@@ -1,0 +1,186 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB Button.tlb\r\n"
+    "\r\n"
+    "#include ""afxres.rc""\r\n"
+    "#include ""button.rc2""  // non-App Studio edited resources\r\n"
+    "#if 0\r\n"
+    "#include "".\\tlb16\\button.tlb""  // 16-bit: force dependency on .TLB file\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON                    "BUTTON.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BUTTON              BITMAP                  "BTNCTL.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_BUTTON DIALOGEX 34, 22, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Button Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,20,20
+    LTEXT           "Button Control, Version 1.0",IDC_STATIC,40,10,170,8
+    LTEXT           "© 1998 - 2001 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,40,25,122,23
+    DEFPUSHBUTTON   "OK",IDOK,180,10,46,14,WS_GROUP
+END
+
+IDD_PROPPAGE_BUTTON DIALOG  0, 0, 250, 62
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Caption:",IDC_STATIC,3,5,33,11
+    EDITTEXT        IDC_CAPTIONEDIT,40,3,100,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_INPLACEMENU MENU 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT, GRAYED
+        MENUITEM "&Copy",                       ID_EDIT_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_EDIT_PASTE, GRAYED
+    END
+    MENUITEM SEPARATOR
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Option &1",                   ID_OPTIONS_OPTION1
+        MENUITEM "Option &2",                   ID_OPTIONS_OPTION2
+        MENUITEM "Option &3",                   ID_OPTIONS_OPTION3
+    END
+    MENUITEM SEPARATOR
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Button Control...",    ID_HELP_BUTTONCONTROL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX_BUTTON, DIALOG
+    BEGIN
+        RIGHTMARGIN, 229
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_BUTTON              "Button Control"
+    IDS_BUTTON_PPG          "Button Property Page"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BUTTON_PPG_CAPTION  "General"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OPTIONS_OPTION1      "The first of three options"
+    ID_OPTIONS_OPTION2      "The second of three options"
+    ID_OPTIONS_OPTION3      "The third of three options"
+    ID_HELP_BUTTONCONTROL   "Displays button information"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB Button.tlb
+
+#include "afxres.rc"
+#include "button.rc2"  // non-App Studio edited resources
+#if 0
+#include ".\tlb16\button.tlb"  // 16-bit: force dependency on .TLB file
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

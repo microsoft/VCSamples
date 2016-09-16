@@ -1,0 +1,203 @@
+.topic HIDC_PROPNAME
+Lists and allows you to select an ambient property of the container.
+
+.topic HIDC_DISPID
+Displays the Dispatch ID of the selected ambient property.
+
+.topic HIDC_ENABLED
+Specifies whether the controls on the page will see the ambient property.
+
+.topic HIDC_CHOOSECOLOR_AMBIENT
+Allows you to change the color associated with an ambient property. 
+
+.topic HIDC_DATE_AMBIENT
+Provides a space for you to enter a date value for an ambient property. 
+
+.topic HIDC_STATIC_PROPERTYVALUE
+Provides a space for you to enter a value for an ambient property.
+
+.topic HIDC_PROPVALUECOMBO_AMBIENT
+Select a value from the list of items that are valid for the selected ambient property.
+
+.topic HIDC_CHOOSEFONT_AMBIENT
+Allows you to change the font associated with an ambient property.
+
+.topic HIDC_PROPVALUE
+Provides a space for you to type a property value.
+
+.topic HIDC_PROPTYPE
+Lists the current property type or enables you to select a new property type.
+
+.topic HIDC_SETVALUE_AMBIENT
+Sets the selected ambient property to the values shown in the Property Value box and the Property Type list.
+
+.topic HIDC_NEWPROPERTY
+Allows you to add a new ambient property.
+
+.topic HIDC_CATEGORIES
+Lists all available component categories on your machine and allows you to select one or more categories. 
+
+.topic HIDC_SELECTALL
+Selects all available component categories on your machine.
+
+.topic HIDC_OBJECTS
+Displays all of the controls currently in the container and provides information on their state: activated, windowless, etc.
+
+.topic HIDC_ALLOWWINDOWLESS
+Specifies that the controls will be windowless.
+
+.topic HIDC_TWOPASSDRAWING
+When checked, enables two-pass (flicker-free) drawing.
+
+.topic HIDC_IGNOREACTIVATEWHENVISIBLE
+Honors the IGNOREACTIVATEWHENVISIBLE flag.
+
+.topic HIDC_USEIPOINTERINACTIVE
+Specifies that the container will delay activating controls until necessary by using the IPointerInactive interface.
+
+.topic HIDC_USEQUICKACTIVATION
+Specifies that the container will implement the IQuickActivate interface. See the OCX96 specification for more information.
+
+.topic HIDC_IOLEINPLACESITEEX
+Specifies that the container will implement the IOleInPlaceSiteEx interface.
+
+.topic HIDC_IOLEINPLACESITEWINDOWLESS
+Specifies that the container will implement the IOleInPlaceSiteWindowless interface.
+
+.topic HIDC_IADVISESINKEX
+Specifies that the container will implement the IAdviseSinkEx interface. For more information, read about flicker-free drawing and the OCX96 specification.
+
+.topic HIDC_SBINDHOST
+Specifies that the container will implement SBindHost, requesting an object that allows you to bind to a given moniker. SBindHost usually implements the IBindHost interface.
+
+.topic HIDC_EVENTS
+Specifies which events the container will log.
+
+.topic HIDC_PROPERTIES_CHANGES
+Specifies which property changes the container will log.
+
+.topic HIDC_PROPERTIES_EDITREQUESTS
+Lists properties that generate edit requests and allows you to select which edit requests the container will log.
+
+.topic HIDC_ALWAYS
+Specifies that the container will always allow this property edit.
+
+.topic HIDC_NEVER
+Specifies that the container will never allow the property edit.
+
+.topic HIDC_PROMPT
+Specifies that the container will prompt for a response to the property edit request.
+
+.topic HIDC_SELECTALL_EDITREQUESTS
+Selects all the properties in the EditRequest Properties list box.
+
+.topic HIDC_CONTROLS
+Lists the registered controls that you can insert into the test container.
+
+.topic HIDC_IMPLEMENTEDCATEGORIES
+Allows you to specify what categories of objects can be inserted into the test container. 
+
+.topic HIDC_REQUIREDCATEGORIES
+Allows you to specify which component categories the container will support.
+
+.topic HIDC_IGNOREREQUIREDCATEGORIES
+When selected, displays all controls regardless of whether they require specific container functionality.
+
+.topic HIDC_LOGTONULL
+Specifies no recording or display of control events, property changes, property edits, or logging output from scripts.
+
+.topic HIDC_LOGTOOUTPUT
+Specifies that logging output will be sent to the Output window.
+
+.topic HIDC_LOGTODEBUG
+Specifies that logging output will be sent to the Debugger window.
+
+.topic HIDC_LOGTOFILE
+Specifies that logging output will be sent to a specified file.
+
+.topic HIDC_FILENAME
+Displays or lets you specify the file that will receive logging data.  You must exit test container to complete writing data to the file. 
+
+.topic HIDC_FILENAME_BROWSE
+Enables you to browse your hard disk directory structure for a file in which to store logging data.
+
+.topic HIDC_MACROS
+Shows the list of macros available in the current session.  
+
+.topic HIDC_OPENFILE
+Lets you load a file containing macros.
+
+.topic HIDC_METHODNAME
+Allows you to select a method or property to invoke.
+
+.topic HIDC_PARAMS
+Lists the parameters required by the selected method.
+
+.topic HIDC_PARAMVALUE
+Enables you to select a parameter value for the currently selected parameter.
+
+.topic HIDC_STATIC_PARAMETERVALUE
+Enables you to select a parameter value for the currently selected parameter. 
+
+.topic HIDC_DATE
+Provides a space for you to enter a date value for the currently selected parameter. 
+
+.topic HIDC_PARAMVALUECOMBO
+Select a value from the list of items that are valid for the selected parameter.
+
+.topic HIDC_PARAMTYPE
+Lists the current type of parameter or enables you to select a new parameter type.
+
+.topic HIDC_SETVALUE
+Sets the selected parameter to the values shown in the Parameter Value box and the Parameter Type list.
+
+.topic HIDC_RETURNVALUE
+Displays the value returned by the most recently invoked method.
+
+.topic HIDC_EXCEPTIONSOURCE
+Displays the file that caused an exception in the most recently invoked method.
+
+.topic HIDC_EXCEPTIONDESC
+Displays a description of the exception.
+
+.topic HIDC_EXCEPTIONHELP
+Starts the Help file for the control’s exception.
+
+.topic HIDC_INVOKE
+Invokes the selected method with the current parameters.
+
+.topic HIDC_CHOOSEFONT
+Allows you to change the font value of the parameter.
+
+.topic HIDC_CHOOSECOLOR
+Allows you to change the color value of the parameter.  
+
+.topic HIDC_PROPNAME_NEW
+Allows you to type a name for the new ambient property.
+ 
+.topic HIDC_DISPID_NEW
+Allows you to type a Dispatch ID for the new ambient property.
+
+.topic HIDC_OUTPUT
+Displays events and other logging information when you select “Log to output window” in the Logging Options dialog box (Click the Options menu, then choose Logging).
+
+.topic HIDC_CLEAROUTPUTWINDOW
+Clears event and other logging information from the Output window. (Button is gone) 
+
+.topic HIDC_PROPERTIES
+Creates a property bag and tells the control to persist its state into the property bag and then displays the contents of the property bag.
+
+.topic HIDC_REGISTEREDCONTROLS
+Lists all controls registered on your machine.
+
+.topic HIDC_UNREGISTER
+Unregisters a control from your machine by running DLLUnregisterServer and removing the control’s class ID information from the registry.
+
+.topic HIDC_REGISTER
+Registers a control on your machine by allowing you to search your machine and select a file with a dll, .ocx or .ax file extension and then run DLLRegisterServer to put the control’s class ID information in your machine’s registry.
+
+.topic HIDC_REREGISTER
+Allows you to select and reregister one of the displayed controls.
+
+.topic HIDC_TABORDER
+Displays and enables you to modify the tab order of the controls in the test container; just select and drag a control name.  The first control in the list is first in the tab order.

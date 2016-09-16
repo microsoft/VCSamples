@@ -1,0 +1,6 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below can be registered
+;   by running "regsvr32 iviewers.dll".
+
+HKEY_CLASSES_ROOT\Interface\{00020402-0000-0000-C000-000000000046}\Ole2ViewIViewerCLSID = {57EFBF49-4A8B-11CE-870B-0800368D2302}

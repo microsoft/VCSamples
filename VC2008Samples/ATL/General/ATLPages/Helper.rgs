@@ -1,0 +1,28 @@
+HKCR
+{
+	ForceRemove ATLPages7.Helper.1 = s 'Helper Class'
+	{
+		CLSID = s '{BEE27806-AF8E-42A9-864D-6F50E2788CBF}'
+	}
+	ForceRemove ATLPages7.Helper = s 'Helper Class'
+	{
+		CurVer = s 'ATLPages7.Helper.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {BEE27806-AF8E-42A9-864D-6F50E2788CBF} = s 'Helper Class'
+		{
+			ProgID = s 'ATLPages7.Helper.1'
+			VersionIndependentProgID = s 'ATLPages7.Helper'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{1247E9A2-F532-46A9-946E-B1B78F3B14FA}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

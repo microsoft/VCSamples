@@ -1,0 +1,12 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{789C6FDF-E206-4DE5-A635-7311E1ADC6B4}' = s 'AdvancedPV'
+		'AdvancedPV.DLL'
+		{
+			val AppID = s '{789C6FDF-E206-4DE5-A635-7311E1ADC6B4}'
+		}
+	}
+}
+

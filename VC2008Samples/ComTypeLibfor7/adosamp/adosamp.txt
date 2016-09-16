@@ -1,0 +1,42 @@
+/******************************************************************
+	3-Tier client server example using ADO/ATL/VCCOM
+	(For Access or SQLServer using Windows NT 4.0)
+*******************************************************************/
+
+SET UP DSN:
+
+Under NT4 go to the ODBC Data Source Administrator in Control Panel.
+Using either Access or SQLServer, add a (User) DSN with
+Data Source Name: HotBikes
+
+For Access, create a Database test.mdb (for example).
+
+For SQLServer, provide the Server name and under Options
+specify a Database Name HotBikesDB (for example).
+
+BUILD MIDDLE TIER:
+
+Open samples\com\ADOSamp\Server\ADOSamp.dsw.
+In StdAfx.h edit the path of MSADO10.dll in the #import statement.
+If OleDB/ADO has not been installed do it from the DevStudio CD.
+It will most likely be installed in 
+	\Program Files\Common Files\System\ADO\MSADO10.DLL.
+Build ADOSamp as either an in-proc (DLL) or local (EXE) server.
+Registration should be automatic, however if necessary run
+regsvr32 ADOSamp.dll or ADOSamp.exe /RegServer.
+
+BUILD CLIENT:
+
+Open samples\com\ADOSamp\RunADO\RunADO.dsw.
+Near the top of RunADO.cpp is the line:
+
+//#define SQLSERVER
+
+Uncomment this line if using SQLServer.  This disables a SQL command
+that Access can understand but SQLServer cannot:
+	"ALTER TABLE HotBikes DROP COLUMN ID"
+
+Run RunADO.exe.  A table will be created (the existing one deleted), 
+several rows added, deleted and updated.  A new column is added, 
+populated with data and in the case of Access, a column is deleted.  
+The contents of the table is displayed after each modification.

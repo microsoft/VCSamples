@@ -1,0 +1,23 @@
+HKCR
+{
+	ForceRemove Connect.Random.1 = s 'Random Class'
+	{
+		CLSID = s '{CCE84215-DB31-11CF-9D75-00A0C90391D3}'
+	}
+	ForceRemove Connect.Random = s 'Random Class'
+	{
+		CurVer = s 'Connect.Random.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CCE84215-DB31-11CF-9D75-00A0C90391D3} = s 'Random Class'
+		{
+			ProgID = s 'Connect.Random.1'
+			VersionIndependentProgID = s 'Connect.Random'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+HKCR
+{
+	ForceRemove ActiveDoc.ActiveDoc.1 = s 'ActiveDoc Class'
+	{
+		CLSID = s '{93901785-436B-11D0-B965-000000000000}'
+		DocObject
+	}
+	ForceRemove ActiveDoc.ActiveDoc = s 'ActiveDoc Class'
+	{
+		CurVer = s 'ActiveDoc.ActiveDoc.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {93901785-436B-11D0-B965-000000000000} = s 'ActiveDoc Class'
+		{
+			ProgID = s 'ActiveDoc.ActiveDoc.1'
+			VersionIndependentProgID = s 'ActiveDoc.ActiveDoc'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			DefaultIcon = s '%MODULE%, 1'
+			DocObject
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			MiscStatus = s '0'
+			{
+				'1' = s '131473'
+			}
+			TypeLib = s '{93901783-436B-11D0-B965-000000000000}'
+			Version = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

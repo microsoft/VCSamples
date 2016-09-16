@@ -1,0 +1,40 @@
+
+ActiveX Document Sample
+
+This sample demonstrates how to implement an ActiveX Document
+Server. The program demonstrates the following:
+
+ * How to implement the interfaces IOleDocument and IOleDocumentView
+ * How to perform menu merging with the container
+ * How to implement a toolbar in your object
+ * How to override IPersistStreamInit Load and Save to perform custom
+	saving and loading
+ * How to use CDialogImpl to implement an About dialog box.
+ * How to subclass the Rich Text Edit Control
+
+To use the sample, build the project. Then, there are 2 ways of running
+this sample:
+
+1. Open the ActiveDoc.htm or ActiveDoc.AAA generated file in Internet
+Explorer (to open ActiveDoc.AAA, click Open button when prompted to open
+this file). Use the Format menu that has been merged into Explorer's menu
+bar, or just click on toolbar colors to change the color of the typed text.
+
+2. If you have Microsoft Office Binder, run it and from the Section menu
+select Add. You should then see an icon labeled ActiveDoc Class. Select
+this icon and click OK. You should see the object embedded in Office Binder.
+Notice that the menus have been merged and the ActiveDoc's toolbar is shown.
+You can enter text and use the menu and toolbar buttons to change the color
+of the text that is typed.
+
+The sample contains the following main files:
+
+Menu.h        - Code to handle menu merging and sharing
+ActiveDoc.cpp - Implementation of DLL Exports
+ActiveCtl.h   - Declaration of the CActiveDoc class
+ActiveCtl.cpp - Implements CActiveDoc which represents the
+		overall ActiveDoc object
+OleDocument.h - Contains the implementation of the IOleDocument
+		and IOleDocumentView interfaces.
+Toolbar.h     - Contains CToolbar which helps with the
+		implementation of the toolbar

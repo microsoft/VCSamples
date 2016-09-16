@@ -1,0 +1,49 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "beeper", "beeper.vcproj", "{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		DebugDll|Win32 = DebugDll|Win32
+		DebugDll|x64 = DebugDll|x64
+		DebugDll|Itanium = DebugDll|Itanium
+		DebugExe|Win32 = DebugExe|Win32
+		DebugExe|x64 = DebugExe|x64
+		DebugExe|Itanium = DebugExe|Itanium
+		ReleaseDll|Win32 = ReleaseDll|Win32
+		ReleaseDll|x64 = ReleaseDll|x64
+		ReleaseDll|Itanium = ReleaseDll|Itanium
+		ReleaseExe|Win32 = ReleaseExe|Win32
+		ReleaseExe|x64 = ReleaseExe|x64
+		ReleaseExe|Itanium = ReleaseExe|Itanium
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugDll|Win32.ActiveCfg = DebugDll|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugDll|Win32.Build.0 = DebugDll|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugDll|x64.ActiveCfg = DebugDll|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugDll|x64.Build.0 = DebugDll|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugDll|Itanium.ActiveCfg = DebugDll|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugDll|Itanium.Build.0 = DebugDll|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugExe|Win32.ActiveCfg = DebugExe|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugExe|Win32.Build.0 = DebugExe|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugExe|x64.ActiveCfg = DebugExe|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugExe|x64.Build.0 = DebugExe|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugExe|Itanium.ActiveCfg = DebugExe|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.DebugExe|Itanium.Build.0 = DebugExe|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseDll|Win32.ActiveCfg = ReleaseDll|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseDll|Win32.Build.0 = ReleaseDll|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseDll|x64.ActiveCfg = ReleaseDll|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseDll|x64.Build.0 = ReleaseDll|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseDll|Itanium.ActiveCfg = ReleaseDll|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseDll|Itanium.Build.0 = ReleaseDll|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseExe|Win32.ActiveCfg = ReleaseExe|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseExe|Win32.Build.0 = ReleaseExe|Win32
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseExe|x64.ActiveCfg = ReleaseExe|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseExe|x64.Build.0 = ReleaseExe|x64
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseExe|Itanium.ActiveCfg = ReleaseExe|Itanium
+		{8DE3A4C5-41BD-42E5-8715-77AC34C88D41}.ReleaseExe|Itanium.Build.0 = ReleaseExe|Itanium
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

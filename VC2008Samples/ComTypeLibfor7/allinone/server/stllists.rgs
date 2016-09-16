@@ -1,0 +1,21 @@
+HKCR
+{
+    ForceRemove Stlcoll.StlLists.1 = s 'StlLists Class'
+    {
+        CLSID = s '{7CE086D2-3E78-11D0-AE6B-00C04FD7D06E}'
+    }
+    ForceRemove Stlcoll.StlLists = s 'StlLists Class'
+    {
+        CurVer = s 'Stlcoll.StlLists.1'
+    }
+    NoRemove CLSID
+    {
+        {7CE086D2-3E78-11D0-AE6B-00C04FD7D06E} = s 'StlLists Class'
+        {
+            ProgID = s 'Stlcoll.StlLists.1'
+            VersionIndependentProgID = s 'Stlcoll.StlLists'
+            val AppID = s '{7CE086C8-3E78-11D0-AE6B-00C04FD7D06E}'
+            LocalServer32 = s '%Module%'
+        }
+    }
+}

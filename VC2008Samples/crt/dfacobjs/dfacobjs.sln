@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dfacobjs", "dfacobjs.vcproj", "{E02569A8-260F-40BF-9B75-9BC2AC8280A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E02569A8-260F-40BF-9B75-9BC2AC8280A3}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{E02569A8-260F-40BF-9B75-9BC2AC8280A3}.Debug|Itanium.Build.0 = Debug|Itanium
+		{E02569A8-260F-40BF-9B75-9BC2AC8280A3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E02569A8-260F-40BF-9B75-9BC2AC8280A3}.Debug|Win32.Build.0 = Debug|Win32
+		{E02569A8-260F-40BF-9B75-9BC2AC8280A3}.Debug|x64.ActiveCfg = Debug|x64
+		{E02569A8-260F-40BF-9B75-9BC2AC8280A3}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

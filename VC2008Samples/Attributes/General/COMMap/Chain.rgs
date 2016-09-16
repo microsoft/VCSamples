@@ -1,0 +1,24 @@
+HKCR
+{
+	ForceRemove [!progid] = s 'Chain Class'
+	{
+		CLSID = s '{[!uuid]}'
+	}
+	ForceRemove [!vi_progid] = s 'Chain Class'
+	{
+		CurVer = s '[!progid]'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {[!uuid]} = s 'Chain Class'
+		{
+			val AppID = s '{4F9A68DE-DD9D-11CF-9462-00AA00BBAD7F}'
+			ProgID = s '[!progid]'
+			VersionIndependentProgID = s '[!vi_progid]'
+			%MODULETYPE% = s '%MODULE%'
+			{
+				val ThreadingModel = s '[!threading]'
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+﻿<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="TESTHELP Help Index">
+		<param name="Local" value="main_index.htm">
+		</OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="What is this?">
+    <param name="Local" value="IDH_WHATISTHISTHING.htm">
+	</OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+    <param name="Name" value="How do I use this?">
+    <param name="Local" value="IDH_HOWDOIUSE.htm">
+  </OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Properties">
+		</OBJECT>
+	<UL>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Properties">
+      <param name="Local" value="IDH_PROPERTIES.htm">
+      </OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Name1">
+			<param name="Local" value="HIDC_NAME1.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Name2">
+			<param name="Local" value="HIDC_NAME2.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Name3">
+			<param name="Local" value="HIDC_NAME3.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Type of Help to Use">
+			<param name="Local" value="HIDC_HELPTYPE.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Use Control's Help File">
+			<param name="Local" value="HIDC_USEMINE.htm">
+			</OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Use ToolTip for this Control">
+      <param name="Local" value="HIDC_USETOOLTIPS.htm">
+		  </OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

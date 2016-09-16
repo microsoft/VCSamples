@@ -1,0 +1,30 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+HKEY_CLASSES_ROOT\.SCB = Scribble.Document
+HKEY_CLASSES_ROOT\Scribble.Document\shell\open\command = SCRIBBLE.EXE %1
+HKEY_CLASSES_ROOT\Scribble.Document\shell\open\ddeexec = [open("%1")]
+HKEY_CLASSES_ROOT\Scribble.Document\shell\open\ddeexec\application = SCRIBBLE
+    ; note: the application is optional
+    ;  (it defaults to the app name in "command")
+
+HKEY_CLASSES_ROOT\Scribble.Document = Scribb Document
+HKEY_CLASSES_ROOT\Scribble.Document\protocol\StdFileEditing\server = SCRIBBLE.EXE
+HKEY_CLASSES_ROOT\Scribble.Document\protocol\StdFileEditing\verb\0 = &Edit
+HKEY_CLASSES_ROOT\Scribble.Document\Insertable =
+HKEY_CLASSES_ROOT\Scribble.Document\CLSID = {AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}
+
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3} = Scribb Document
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\DefaultIcon = SCRIBBLE.EXE,1
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\LocalServer32 = SCRIBBLE.EXE
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\ProgId = Scribble.Document
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\MiscStatus = 32
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\AuxUserType\3 = Scribble
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\AuxUserType\2 = Scribb
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\Insertable = 
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\verb\1 = &Open,0,2
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\verb\0 = &Edit,0,2
+HKEY_CLASSES_ROOT\CLSID\{AF8A8120-9BA5-11CE-B0F0-00AA006C28B3}\InprocHandler32 = ole32.dll

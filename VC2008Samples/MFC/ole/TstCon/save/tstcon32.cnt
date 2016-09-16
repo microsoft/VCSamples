@@ -1,0 +1,23 @@
+:Base TstCon32.hlp
+1 Test Container
+2 Test Container=_ASUG_Contents
+2 Get Control Help in the Test Container=help
+2 Insert an ActiveX control into Test Container=_ASUG_Inserting_an_ActiveX_Control
+2 Invoke Properties and Object Verbs=Verbs
+2 Set the Level of Debugging=_ASUG_Setting_the_level
+2 Choose Design or User Mode=_ASUG_Choosing_Design_or_User_Mode
+2 Choose which Events to Log=_ASUG_Choose_Which_Events
+2 Choose a Location for Logging Output=_ASUG_Choosing_a_Location
+2 Invoke the Object's Methods=_ASUG_Invoking_an_Object's_Methods
+2 Change the Ambient Properties of Test Container=_ASUG_Changing_Ambient_Properties
+2 Test Persistence=_ASUG_Testing_Persistence
+2 Save a Session for Later Use=_ASUG_Saving_and_Restoring
+2 Use Command-line options to Customize the Startup Mode of Test Container=_ASUG_Using_Command-Line
+1 Automation and the Test Container
+2 Using Automation and the Test Container=_automation
+2 Object Model=poot
+2 Extended Properties and Methods=poot2
+2 Event Handling=poot3
+2 Macros=poot4
+1 Samples
+2 Samples=samples

@@ -1,0 +1,28 @@
+HKCR
+{
+	ForceRemove ATLCollections.Words.1 = s 'Words Class'
+	{
+		CLSID = s '{0D44F68A-B373-11D2-9A7F-50F653C10000}'
+	}
+	ForceRemove ATLCollections.Words = s 'Words Class'
+	{
+		CurVer = s 'ATLCollections.Words.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0D44F68A-B373-11D2-9A7F-50F653C10000} = s 'Words Class'
+		{
+			ProgID = s 'ATLCollections.Words.1'
+			VersionIndependentProgID = s 'ATLCollections.Words'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{50F5DEE1-B372-11D2-9A7F-50F653C10000}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

@@ -1,0 +1,75 @@
+// TCProps.idl : IDL source for TCProps.dll
+//
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TCProps.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid( FFC3C462-18DE-11d1-8E2F-00C04FB68D60 ),
+	version( 1.0 ),
+	helpstring( "TCProps 1.0 Type Library" )
+]
+library TCPropsLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		object,
+		uuid( 3E6F10A8-E1D1-11d0-8E14-00C04FB68D60 ),
+		dual,
+		helpstring( "ITCExtendedControl Interface"),
+		pointer_default( unique )
+	]
+	interface ITCExtendedControl : IDispatch
+	{
+      [propput, id(0x80010000)]
+      HRESULT Name( [in] BSTR bstrName );
+      [propget, id(0x80010000)]
+      HRESULT Name( [out, retval] BSTR* pbstrName );
+      [propput, id(0x80010001)]
+      HRESULT PositionX( [in] long x );
+      [propget, id(0x80010001)]
+      HRESULT PositionX( [out, retval] long* px );
+      [propput, id(0x80010002)]
+      HRESULT PositionY( [in] long y );
+      [propget, id(0x80010002)]
+      HRESULT PositionY( [out, retval] long* py );
+      [propput, id(0x80010003)]
+      HRESULT SizeX( [in] long x );
+      [propget, id(0x80010003)]
+      HRESULT SizeX( [out, retval] long* px );
+      [propput, id(0x80010004)]
+      HRESULT SizeY( [in] long y );
+      [propget, id(0x80010004)]
+      HRESULT SizeY( [out, retval] long* py );
+
+      [id(0x80010100)]
+      HRESULT Activate();
+      [id(0x80010101)]
+      HRESULT Deactivate();
+      [id(0x80010102)]
+      HRESULT UIActivate();
+      [id(0x80010103)]
+      HRESULT UIDeactivate();
+	};
+
+	[
+		uuid( AB39F080-0F5D-11D1-8E2F-00C04FB68D60 ),
+		helpstring( "TCExtPage Class" )
+	]
+	coclass TCExtPage
+	{
+		interface IUnknown;
+	};
+};

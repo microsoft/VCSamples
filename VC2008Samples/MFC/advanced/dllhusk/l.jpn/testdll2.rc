@@ -1,0 +1,98 @@
+//Microsoft App Studio generated resource script.
+//
+#include "testres2.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"testres2.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"#include ""resource.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_LISTOUTFRAME        ICON    DISCARDABLE     "RES\\LISTOUT.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOGBAR1 DIALOG DISCARDABLE  0, 0, 128, 12
+STYLE WS_CHILD
+FONT 8, "System"
+BEGIN
+	PUSHBUTTON      "Clear",ID_EDIT_CLEAR,2,1,34,10
+	PUSHBUTTON      "Cut",ID_EDIT_CUT,42,1,34,10
+	PUSHBUTTON      "Copy",ID_EDIT_COPY,82,1,34,10
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_LISTOUTPUT MENU DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                57600
+		MENUITEM "&Open...\tCtrl+O",            57601
+		MENUITEM SEPARATOR
+		MENUITEM "P&rint Setup...",             57606
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 57616, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit\tAlt+F4",               57665
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    59392
+		MENUITEM "&Status Bar",                 59393
+	END
+	POPUP "&Window"
+	BEGIN
+		MENUITEM "&Cascade",                    57650
+		MENUITEM "&Tile",                       57651
+		MENUITEM "&Arrange Icons",              57649
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About...",                   57664
+	END
+END

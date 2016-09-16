@@ -1,0 +1,58 @@
+// ATLCon.idl : IDL source for ATLCon.EXE
+//
+// This is a part of the Active Template Library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Active Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Active Template Library product.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLCon.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "atliface.idl";
+#include "olectl.h"
+
+[
+	object,
+	uuid(A144CF60-B137-11d1-AB87-004005352C49),
+	dual,
+	helpstring("IATLConPropertyBrowser Interface"),
+	pointer_default(unique)
+]
+interface IATLConPropertyBrowser : IDispatch
+{
+	[propput, helpstring("Set the interface to browse")]
+	HRESULT Dispatch([in]IDispatch* pDispatch);
+	[propget, helpstring("Get the interface being browsed")]
+	HRESULT Dispatch([out,retval]IDispatch** ppDispatch);
+	[propget, id(1), helpstring("Enable/Disable the property description")] HRESULT ShowDescription([out, retval] BOOL *pVal);
+	[propput, id(1), helpstring("Is property description enabled")] HRESULT ShowDescription([in] BOOL newVal);
+	[propget, id(DISPID_CAPTION), helpstring("property Caption")] HRESULT Caption([out, retval] BSTR* pVal);
+	[propput, id(DISPID_CAPTION), helpstring("property Caption")] HRESULT Caption([in] BSTR newVal);
+};
+
+[
+	uuid(48C9E96F-76B0-11D1-B293-0040053089AE),
+	version(1.0),
+	helpstring("ATLCon 1.0 Type Library")
+]
+library ATLCONLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(A144CF61-B137-11d1-AB87-004005352C49),
+		helpstring("ATLConPropertyBrowser Class")
+	]
+	coclass ATLConPropertyBrowser
+	{
+		[default] interface IATLConPropertyBrowser;
+	};
+	interface IAxWinAmbientDispatchEx;
+};

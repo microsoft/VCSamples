@@ -1,0 +1,35 @@
+HKCR
+{
+	ForceRemove [!progid] = s 'AtlEdit Class'
+	{
+		CLSID = s '{[!uuid]}'
+		'Insertable'
+	}
+	ForceRemove [!vi_progid] = s 'AtlEdit Class'
+	{
+		CurVer = s '[!progid]'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {[!uuid]} = s 'AtlEdit Class'
+		{
+			ProgID = s '[!progid]'
+			VersionIndependentProgID = s '[!vi_progid]'
+			%MODULETYPE% = s '%MODULE%'
+			{
+				val ThreadingModel = s '[!threading]'
+			}
+			'Programmable'
+			'Insertable'
+			'ToolboxBitmap32' = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '%MODULEGUID%'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

@@ -1,0 +1,52 @@
+//
+// TESTCONTAINER98.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+#ifdef _DEBUG
+
+#ifdef _M_IA64
+2 TYPELIB "TCProps/ia64/Debug/TCProps.tlb"
+#elif defined(_M_AMD64)
+2 TYPELIB "TCProps/amd64/Debug/TCProps.tlb"
+#else
+2 TYPELIB "TCProps/Debug/TCProps.tlb"
+#endif
+
+#else
+
+#ifdef _M_IA64
+2 TYPELIB "TCProps/ia64/Release/TCProps.tlb"
+#elif defined(_M_AMD64)
+2 TYPELIB "TCProps/amd64/Release/TCProps.tlb"
+#else
+2 TYPELIB "TCProps/Release/TCProps.tlb"
+#endif
+
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#define VER_FILETYPE	VFT_APP
+
+#define VER_FILEDESCRIPTION_STR "Microsoft \256 ActiveX Control Test Container"
+
+#define VER_INTERNALNAME_STR "TstCon32"
+
+#define VER_ORIGINALFILENAME_STR "TstCon32.EXE"
+
+#define VER_COPYRIGHTSTARTYEAR_STR	"1996"
+
+#include "ver_.rc"
+
+
+/////////////////////////////////////////////////////////////////////////////

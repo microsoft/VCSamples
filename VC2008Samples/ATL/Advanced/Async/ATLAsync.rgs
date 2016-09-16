@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove ATLAsync.ATLAsync.1 = s 'ATLAsync Class'
+	{
+		CLSID = s '{012F24D4-35B0-11D0-BF2D-0000E8D0D146}'
+	}
+	ForceRemove ATLAsync.ATLAsync = s 'ATLAsync Class'
+	{
+		CurVer = s 'ATLAsync.ATLAsync.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {012F24D4-35B0-11D0-BF2D-0000E8D0D146} = s 'ATLAsync Class'
+		{
+			ProgID = s 'ATLAsync.ATLAsync.1'
+			VersionIndependentProgID = s 'ATLAsync.ATLAsync'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			MiscStatus = s '0'
+			{
+				1 = s '131473'
+			}
+			TypeLib = s '{012F24C1-35B0-11D0-BF2D-0000E8D0D146}'
+			Version = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

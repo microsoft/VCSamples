@@ -1,0 +1,291 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\MULTIPAD.ICO"
+IDR_TEXTTYPE            ICON    DISCARDABLE     "RES\\PADDOC.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "RES\\TOOLBAR.BMP"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM SEPARATOR
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About MultiPad...",          ID_APP_ABOUT
+	END
+END
+
+IDR_TEXTTYPE MENU DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM "&Close",                      ID_FILE_CLOSE
+		MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+		MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+		MENUITEM SEPARATOR
+		MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+	END
+	POPUP "&Edit"
+	BEGIN
+		MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+		MENUITEM SEPARATOR
+		MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+		MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+		MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+		MENUITEM "Delete\tDel",                 ID_EDIT_CLEAR
+		MENUITEM SEPARATOR
+		MENUITEM "&Find...",                    ID_EDIT_FIND
+		MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+		MENUITEM "&Replace...",                 ID_EDIT_REPLACE
+		MENUITEM SEPARATOR
+		MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Window"
+	BEGIN
+		MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+		MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+		MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About MultiPad...",          ID_APP_ABOUT
+	END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE
+BEGIN
+	"C",            ID_EDIT_COPY,           VIRTKEY,CONTROL, NOINVERT
+	"N",            ID_FILE_NEW,            VIRTKEY,CONTROL, NOINVERT
+	"O",            ID_FILE_OPEN,           VIRTKEY,CONTROL, NOINVERT
+	"P",            ID_FILE_PRINT,          VIRTKEY,CONTROL, NOINVERT
+	"S",            ID_FILE_SAVE,           VIRTKEY,CONTROL, NOINVERT
+	"V",            ID_EDIT_PASTE,          VIRTKEY,CONTROL, NOINVERT
+	VK_BACK,        ID_EDIT_UNDO,           VIRTKEY,ALT, NOINVERT
+	VK_DELETE,      ID_EDIT_CUT,            VIRTKEY,SHIFT, NOINVERT
+	VK_F1,          ID_CONTEXT_HELP,        VIRTKEY,SHIFT, NOINVERT
+	VK_F3,          ID_EDIT_REPEAT,         VIRTKEY,NOINVERT
+	VK_F6,          ID_NEXT_PANE,           VIRTKEY,NOINVERT
+	VK_F6,          ID_PREV_PANE,           VIRTKEY,SHIFT, NOINVERT
+	VK_INSERT,      ID_EDIT_COPY,           VIRTKEY,CONTROL, NOINVERT
+	VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY,SHIFT, NOINVERT
+	"X",            ID_EDIT_CUT,            VIRTKEY,CONTROL, NOINVERT
+	"Z",            ID_EDIT_UNDO,           VIRTKEY,CONTROL, NOINVERT
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 144, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Multipad"
+FONT 8, "MS Sans Serif"
+BEGIN
+	CTEXT           "Microsoft Windows 3.1",IDC_STATIC,0,5,144,8
+	CTEXT           "MFC v2.0",IDC_STATIC,0,14,144,8
+	CTEXT           "Multipad App",IDC_STATIC,0,23,144,8
+	CTEXT           "Version 1.0",IDC_STATIC,0,36,144,8
+	DEFPUSHBUTTON   "OK",IDOK,56,53,32,14,WS_GROUP
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.rc""\r\n"
+	"#include ""afxprint.rc""\r\n"
+	"\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_INDICATOR_EXT        "EXT"
+	ID_INDICATOR_CAPS       "CAP"
+	ID_INDICATOR_NUM        "NUM"
+	ID_INDICATOR_SCRL       "SCRL"
+	ID_INDICATOR_OVR        "OVR"
+	ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_NEW             "Create a new document"
+	ID_FILE_OPEN            "Open an existing document"
+	ID_FILE_CLOSE           "Close the active document"
+	ID_FILE_SAVE            "Save the active document"
+	ID_FILE_SAVE_AS         "Save the active document with a new name"
+	ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+	ID_FILE_PRINT           "Print the active document"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_APP_ABOUT            "Display program information, version number and copyright"
+	ID_APP_EXIT             "Quit the application; prompts to save documents"
+	ID_HELP_INDEX           "List Help topics"
+	ID_HELP_USING           "Display instructions about how to use help"
+	ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows"
+	ID_HELP                 "Display help for current task or command"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_FILE_MRU_FILE1       "Open this document"
+	ID_FILE_MRU_FILE2       "Open this document"
+	ID_FILE_MRU_FILE3       "Open this document"
+	ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window"
+	ID_WINDOW_CASCADE       "Arrange windows so they overlap"
+	ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_EDIT_CLEAR           "Erase the selection"
+	ID_EDIT_COPY            "Copy the selection and puts it on the Clipboard"
+	ID_EDIT_CUT             "Cut the selection and puts it on the Clipboard"
+	ID_EDIT_FIND            "Find the specified text"
+	ID_EDIT_PASTE           "Insert Clipboard contents"
+	57640                   "Repeat last find command"
+	ID_EDIT_REPLACE         "Replace specific text with different text"
+	ID_EDIT_SELECT_ALL      "Select the entire document"
+	ID_EDIT_UNDO            "Undo the last action"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+	ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_SCSIZE          "Change the window size"
+	AFX_IDS_SCMOVE          "Change the window position"
+	AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+	AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+	AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+	AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_SCRESTORE       "Restore the window to normal size"
+	AFX_IDS_SCTASKLIST      "Activate Task List"
+	AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	AFX_IDS_APP_TITLE       "MultiPad"
+	AFX_IDS_IDLEMESSAGE     "Ready"
+	AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDR_MAINFRAME           "MultiPad"
+	IDR_TEXTTYPE            "\nUntitled\nTEXT Document\nText Files (*.txt)\n.txt\nTextFileType\nTEXT File Type"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc"
+#include "afxprint.rc"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

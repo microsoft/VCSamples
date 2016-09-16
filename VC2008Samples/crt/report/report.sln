@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "report", "report.vcproj", "{F3EE2AED-C74B-4934-B692-286033BF8A82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3EE2AED-C74B-4934-B692-286033BF8A82}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{F3EE2AED-C74B-4934-B692-286033BF8A82}.Debug|Itanium.Build.0 = Debug|Itanium
+		{F3EE2AED-C74B-4934-B692-286033BF8A82}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3EE2AED-C74B-4934-B692-286033BF8A82}.Debug|Win32.Build.0 = Debug|Win32
+		{F3EE2AED-C74B-4934-B692-286033BF8A82}.Debug|x64.ActiveCfg = Debug|x64
+		{F3EE2AED-C74B-4934-B692-286033BF8A82}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

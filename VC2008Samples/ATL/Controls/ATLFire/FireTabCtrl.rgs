@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove AtlFireCtl.AtlFireCtl.1 = s 'AtlFireCtl Class'
+	{
+		CLSID = s '{479B29EF-9A2C-11D0-B696-00A0C903487A}'
+	}
+	ForceRemove AtlFireCtl.AtlFireCtl = s 'AtlFireCtl Class'
+	{
+		CurVer = s 'AtlFireCtl.AtlFireCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {479B29EF-9A2C-11D0-B696-00A0C903487A} = s 'AtlFireCtl Class'
+		{
+			ProgID = s 'AtlFireCtl.AtlFireCtl.1'
+			VersionIndependentProgID = s 'AtlFireCtl.AtlFireCtl'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			'MiscStatus' = s '0'
+			{
+				'1' = s '131473'
+			}
+			'TypeLib' = s '{479B29E1-9A2C-11D0-B696-00A0C903487A}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

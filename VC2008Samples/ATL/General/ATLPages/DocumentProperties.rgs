@@ -1,0 +1,25 @@
+HKCR
+{
+	ForceRemove ATLPages7.DocumentProperties.1 = s 'DocumentProperties Class'
+	{
+		CLSID = s '{3C1385A2-4759-4EA1-9DCD-8F0E5D3737FA}'
+	}
+	ForceRemove ATLPages7.DocumentProperties = s 'DocumentProperties Class'
+	{
+		CurVer = s 'ATLPages7.DocumentProperties.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {3C1385A2-4759-4EA1-9DCD-8F0E5D3737FA} = s 'DocumentProperties Class'
+		{
+			ProgID = s 'ATLPages7.DocumentProperties.1'
+			VersionIndependentProgID = s 'ATLPages7.DocumentProperties'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'v
+			}
+			'TypeLib' = s '{1247E9A2-F532-46A9-946E-B1B78F3B14FA}'
+			'Version' = s '1.0'
+		}
+	}
+}

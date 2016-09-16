@@ -1,0 +1,89 @@
+// File: atlbutn.idl
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+#include <olectl.h>
+// atlbutn.idl : IDL source for atlbutn.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (atlbutn.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+// We can safely disable the MIDL2039 warnings
+#if (__midl >= 501)
+midl_pragma warning(disable:2039)
+#endif
+
+[
+	uuid(2499388C-3A64-11D0-BFAB-080000185165),
+	version(1.0),
+	helpstring("atlbutn 1.0 Type Library")
+]
+library ATLBUTNLib
+{
+	importlib("stdole32.tlb");
+	[
+		object,
+		uuid(2499388F-3A64-11D0-BFAB-080000185165),
+		dual,
+		helpstring("IAtlButton Interface"),
+		pointer_default(unique)
+	]
+	interface IAtlButton : IDispatch
+	{
+		[propputref, id(3)]
+		HRESULT PictureStatic([in]IPictureDisp* pPicture);
+		[propput, id(3)]
+		HRESULT PictureStatic([in]IPictureDisp* pPicture);
+		[propget, id(3)]
+		HRESULT PictureStatic([out, retval]IPictureDisp** ppPicture);
+
+		[propputref, id(4)]
+		HRESULT PictureHover([in]IPictureDisp* pPicture);
+		[propput, id(4)]
+		HRESULT PictureHover([in]IPictureDisp* pPicture);
+		[propget, id(4)]
+		HRESULT PictureHover([out, retval]IPictureDisp** ppPicture);
+
+		[propputref, id(5)]
+		HRESULT PicturePush([in]IPictureDisp* pPicture);
+		[propput, id(5)]
+		HRESULT PicturePush([in]IPictureDisp* pPicture);
+		[propget, id(5)]
+		HRESULT PicturePush([out, retval]IPictureDisp** ppPicture);
+
+		HRESULT _OnTimer();
+	};
+
+	[ uuid(24993891-3A64-11D0-BFAB-080000185165),
+	  helpstring("Event interface for ATL button control") ]
+	dispinterface _ATLButton
+	{
+		properties:
+		//  Event interface has no properties
+		methods:
+		[id(1)] void OnClick();
+	};
+
+	[
+		uuid(2499388E-3A64-11D0-BFAB-080000185165),
+		helpstring("AtlButton Class")
+	]
+	coclass CAtlButton
+	{
+		[default] interface IAtlButton;
+		[default, source] interface _ATLButton;
+	};
+};
+
+#if (__midl >= 501)
+midl_pragma warning(default:2039)
+#endif

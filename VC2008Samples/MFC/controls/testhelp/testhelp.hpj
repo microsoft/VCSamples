@@ -1,0 +1,24 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+HCW=0
+COMPRESS=60 Hall Zeck
+LCID=0x409 0x0 0x0 ;English (United States)
+REPORT=Yes
+CONTENTS=main_index
+TITLE=TESTHELP Control Help
+BMROOT=hlp
+HLP=.\testhelp.hlp
+
+[FILES]
+hlp\testhelp.rtf
+
+[ALIAS]
+HIDD_ABOUTBOX_TESTHELP=HID_APP_ABOUT_TESTHELP
+HIDD_PROPPAGE_TESTHELP=main_index
+
+[MAP]
+#include hlp\testhelp.hm
+IDH_HOWDOIUSE=18002           ; How do I use this, Added by Mike
+IDH_PROPERTIES=18004            ; Added by Mike
+IDH_WHATISTHISTHING=18001         ; What is this, added by Mike

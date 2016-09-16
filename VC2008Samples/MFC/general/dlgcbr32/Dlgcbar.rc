@@ -1,0 +1,287 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAIN                BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 210, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About DLGCBR32"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,87,65,50,14
+    ICON            IDR_MAIN,IDR_MAIN,17,20,20,20
+    LTEXT           "Dialog with Control Bars Sample",IDC_STATIC,53,13,101,8
+    LTEXT           "Version 9.0 © 1992 - 2006, Microsoft Corp.",IDC_STATIC,
+                    53,26,147,8
+    LTEXT           "Created by Mary Kirtland, Mike Hedley, and Sridhar Madhugiri",
+                    IDC_STATIC,53,40,101,17
+END
+
+IDD_RATE DIALOG  0, 0, 165, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Set Update Rate"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Update Rate (sec):",IDC_STATIC,29,23,63,8
+    EDITTEXT        IDC_INTERVAL,100,20,37,14
+    DEFPUSHBUTTON   "OK",IDOK,24,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,90,72,50,14
+END
+
+IDR_MAIN DIALOG  0, 0, 243, 207
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog with Control Bars Sample"
+MENU IDR_MAIN
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_WNDLIST,25,27,192,92,LBS_SORT | LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Class:",IDC_STATIC,25,134,30,8
+    LTEXT           "Window Class",IDC_CLASS,69,134,145,8
+    LTEXT           "Module:",IDC_STATIC,25,146,30,8
+    LTEXT           "Module Name",IDC_MODULE,69,146,145,8
+    LTEXT           "Parent:",IDC_STATIC,25,158,30,8
+    LTEXT           "Parent Window",IDC_PARENT,69,158,145,8
+    LTEXT           "Rect:",IDC_STATIC,25,170,30,8
+    LTEXT           "Window Rectangle",IDC_RECT,69,170,145,8
+    LTEXT           "Style:",IDC_STATIC,25,182,30,8
+    LTEXT           "Window Style",IDC_STYLE,69,182,145,8
+    LTEXT           "List of Window Handles",IDC_STATIC,25,15,76,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAIN                ICON                    "RES\\DLGCBAR.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Update &Now",                 ID_OPTION_NOW
+        MENUITEM "Update &Interval...",         ID_OPTION_RATE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,1
+ PRODUCTVERSION 4,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "32-bit Sample demonstrating CStatusBar and CToolBar in a dialog"
+            VALUE "CompanyName", "Microsoft"
+            VALUE "FileDescription", "DLGCBR32"
+            VALUE "FileVersion", "4, 0, 0, 1"
+            VALUE "InternalName", "DLGCBR32"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "DLGCBR32.exe"
+            VALUE "ProductName", "DLGCBR32"
+            VALUE "ProductVersion", "4, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAIN TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_APP_EXIT
+    SEPARATOR
+    BUTTON      ID_OPTION_NOW
+    BUTTON      ID_OPTION_RATE
+    SEPARATOR
+    BUTTON      ID_HELP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    AFX_IDP_PARSE_INT       "Please enter an integer."
+    AFX_IDP_PARSE_REAL      "Please enter a number."
+    AFX_IDP_PARSE_INT_RANGE "Please enter an integer between %1 and %2."
+    AFX_IDP_PARSE_REAL_RANGE "Please enter a number between %1 and %2."
+    AFX_IDP_PARSE_STRING_SIZE "Please enter no more than %1 characters."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Toggle toolbar display"
+    ID_VIEW_STATUS_BAR      "Toggle status bar display"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_EXIT             "Exit Application\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Dialog with Control Bars Sample"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OPTION_NOW           "Update Window list display now\nRefresh"
+    ID_OPTION_RATE          "Set interval for updating Windows list display\nSet Interval"
+    ID_HELP_ABOUT           "Display information about application\nAbout"
+END
+
+STRINGTABLE 
+BEGIN
+    IDP_NOTIMER             "No timers are available.  Auto-update will be disabled."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_CAPS       "CAPS"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_TIME       "HH:MM"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

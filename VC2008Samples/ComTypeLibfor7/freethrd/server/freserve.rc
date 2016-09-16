@@ -1,0 +1,86 @@
+//===========================================================================
+//  File:      FRESERVE.RC
+//
+//  Summary:   Resource definition file for FRESERVE.DLL.
+//
+//  Origin:    4-5-96: atrent - Editor-inheritance from the DLLSERVE source.
+//
+// -------------------------------------------------------------------------
+//  This file is part of the Microsoft OLE Tutorial Code Samples.
+//
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+//  This source code is intended only as a supplement to Microsoft
+//  Development Tools and/or on-line documentation.  See these other
+//  materials for detailed information regarding Microsoft code samples.
+//
+//  THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY
+//  KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+//  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+//  PARTICULAR PURPOSE.
+//===========================================================================
+
+// We include winver.h because we're defining the Version Info.
+// We include server.h for Resource IDs unique to FRESERVE.DLL.
+#include <winver.h>
+#include "server.h"
+
+// The main icon resource for the application.
+AppIcon ICON DISCARDABLE "freserve.ico"
+
+// Error Box String Resources.
+STRINGTABLE DISCARDABLE
+BEGIN
+  IDS_ASSERT_FAIL         "FRESERVE: Assertion Failed."
+END
+
+
+// If being read in by AppStudio we don't confuse it with this Version Info.
+#ifndef APSTUDIO_INVOKED
+
+// The version information for the binary.
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEFLAGSMASK  VS_FFI_FILEFLAGSMASK
+#ifndef DEBUG
+  FILEFLAGS    0
+#else
+  FILEFLAGS    VS_FF_DEBUG | VS_FF_PRERELEASE
+#endif
+FILEOS         VOS_NT_WINDOWS32
+FILETYPE       VFT_DLL
+FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    #ifdef UNICODE
+      BLOCK "040904B0" // LANG_ENGLISH/SUBLANG_ENGLISH_US, CharSet=Unicode
+    #else
+      BLOCK "040904E4" // LANG_ENGLISH/SUBLANG_ENGLISH_US, CharSet=MultiLang
+    #endif
+    BEGIN
+      VALUE "CompanyName",     "Microsoft Corporation"
+      VALUE "FileDescription", "FRESERVE: OLE Tutorial Code Sample"
+      VALUE "FileVersion",     "1.00"
+      VALUE "InternalName",    "FRESERVE"
+      VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+      VALUE "OriginalFilename","FRESERVE.DLL"
+      VALUE "ProductName",     "Microsoft\256 OLE Tutorial Code Samples"
+      VALUE "ProductVersion",  "1.00"
+      VALUE "OLESelfRegister", "\0"
+    END
+  END
+
+  BLOCK "VarFileInfo"
+  BEGIN
+    #ifdef UNICODE
+      VALUE "Translation", 0x409, 1200  //English (0x409), Unicode (1200)
+    #else
+      VALUE "Translation", 0x409, 1252  //English (0x409), ANSI (1252)
+    #endif
+  END
+END
+
+#endif
+

@@ -1,0 +1,2 @@
+<%@ WebService Class=ScribbleWS.ScribbleWSClass %>
+

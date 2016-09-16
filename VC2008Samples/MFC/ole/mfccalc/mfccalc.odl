@@ -1,0 +1,49 @@
+// mfccalc.odl : type library source for mfccalc.exe
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (mfccalc.tlb).
+
+[ uuid(5627AF00-F44C-11CD-8C3D-00AA004BB3B7), version(1.0) ]
+library mfccalc
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CCalcDlg
+	
+	[ uuid(990BA900-F45E-11cd-8C3D-00AA004BB3B7) ]
+	dispinterface ICalcDlg
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CCalcDlg)
+			[id(1)] long Accum;
+			[id(2)] long Operand;
+			[id(3)] short Operation;
+			[id(4)] boolean Visible;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CCalcDlg)
+			[id(5)] boolean Evaluate();
+			[id(6)] void Clear();
+			[id(7)] void Display();
+			[id(8)] void Close();
+			[id(9)] boolean Button(BSTR szButton);
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CCCalcDlg
+
+	[ uuid(62C4DD10-F45E-11cd-8C3D-00AA004BB3B7) ]
+	coclass CCCalcDlg
+	{
+		[default] dispinterface ICalcDlg;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SCRTbefore", "before\SCRTbefore.vcproj", "{46590B0E-2091-41F2-9F54-37B26795FCD3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SCRTafter", "after\SCRTafter.vcproj", "{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Debug|Itanium.Build.0 = Debug|Itanium
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Debug|Win32.Build.0 = Debug|Win32
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Debug|x64.ActiveCfg = Debug|x64
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Debug|x64.Build.0 = Debug|x64
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Release|Itanium.ActiveCfg = Release|Itanium
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Release|Itanium.Build.0 = Release|Itanium
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Release|Win32.ActiveCfg = Release|Win32
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Release|Win32.Build.0 = Release|Win32
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Release|x64.ActiveCfg = Release|x64
+		{46590B0E-2091-41F2-9F54-37B26795FCD3}.Release|x64.Build.0 = Release|x64
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Debug|Itanium.Build.0 = Debug|Itanium
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Debug|Win32.Build.0 = Debug|Win32
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Debug|x64.ActiveCfg = Debug|x64
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Debug|x64.Build.0 = Debug|x64
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Release|Itanium.ActiveCfg = Release|Itanium
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Release|Itanium.Build.0 = Release|Itanium
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Release|Win32.ActiveCfg = Release|Win32
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Release|Win32.Build.0 = Release|Win32
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Release|x64.ActiveCfg = Release|x64
+		{571E2FC2-637D-4908-8DF3-B3AA3986F6CC}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

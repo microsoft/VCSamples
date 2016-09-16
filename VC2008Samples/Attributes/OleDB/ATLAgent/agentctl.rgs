@@ -1,0 +1,27 @@
+HKCR
+{
+	AgentCtl.AgentCtl.1 = s 'AgentCtl Class'
+	{
+		CLSID = s '{9DFE0778-9727-45FD-8C2A-D1BC4299F177}'
+	}
+	AgentCtl.AgentCtl = s 'AgentCtl Class'
+	{
+		CurVer = s 'AgentCtl.AgentCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9DFE0778-9727-45FD-8C2A-D1BC4299F177} = s 'AgentCtl Class'
+		{
+			ProgID = s 'AtlAgent.AgentCtl.1'
+			VersionIndependentProgID = s 'AtlAgent.AgentCtl'
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

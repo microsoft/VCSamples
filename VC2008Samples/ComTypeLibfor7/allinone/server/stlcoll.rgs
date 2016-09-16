@@ -1,0 +1,13 @@
+HKCR
+{
+    NoRemove AppID
+    {
+        ForceRemove {7CE086C8-3E78-11D0-AE6B-00C04FD7D06E} = s 'stlcoll'
+        {
+        }
+        ForceRemove 'stlcoll.EXE'
+        {
+            val AppID = s {7CE086C8-3E78-11D0-AE6B-00C04FD7D06E}
+        }
+    }
+}

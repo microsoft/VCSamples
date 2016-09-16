@@ -1,0 +1,11 @@
+
+BEEPER
+
+This basic sample illustrates the implementation of a tearoff interface - a
+collection/enumeration of BSTRs. It can be built as a DLL and as an EXE.
+
+
+HOW TO RUN IT:
+
+Build BEEPER (.EXE or .DLL) and make sure it is registered. With the DLL version, you
+can also use BEEPER.HTM (HTML file that uses VBScript) from Internet Explorer.

@@ -1,0 +1,92 @@
+// COMMap.idl : IDL source for COMMap.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (COMMap.tlb) and marshalling code.
+
+    [
+        object,
+        uuid(4F9A68EF-DD9D-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("IOuter Interface"),
+        pointer_default(unique)
+    ]
+    interface IOuter : IDispatch
+    {
+        import "oaidl.idl";
+        [id(0)] HRESULT GetName([in] short n, [out, retval] BSTR* pbstrName);
+    };
+
+    [
+        object,
+        uuid(9B8A71F7-DB54-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("ITearOff1 Interface"),
+        pointer_default(unique)
+    ]
+    interface ITearOff1 : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name([out, retval] BSTR* pbstrName);
+    };
+
+    [
+        object,
+        uuid(9B8A71F8-DB54-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("ITearOff2 Interface"),
+        pointer_default(unique)
+    ]
+    interface ITearOff2 : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name([out, retval] BSTR* pbstrName);
+    };
+
+
+    [
+        object,
+        uuid(4F9A68F4-DD9D-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("IChain Interface"),
+        pointer_default(unique)
+    ]
+    interface IChain : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name2([out, retval] BSTR* pbstrName);
+    };
+
+
+
+[
+    uuid(4F9A68ED-DD9D-11CF-9462-00AA00BBAD7F),
+    version(1.0),
+    helpstring("VCCOMMap 1.0 Type Library")
+]
+library COMMAPLib
+{
+    importlib("stdole32.tlb");
+
+    [
+        uuid(4F9A68F3-DD9D-11CF-9462-00AA00BBAD7F),
+        helpstring("Outer Class")
+    ]
+    coclass COuter
+    {
+        [default] interface IOuter;
+    };
+
+    [
+        uuid(4F9A68F8-DD9D-11CF-9462-00AA00BBAD7F),
+        helpstring("Chain Class")
+    ]
+    coclass CChain
+    {
+        [default] interface IChain;
+        interface ITearOff1;
+        interface ITearOff2;
+    };
+
+};
+ 

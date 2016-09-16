@@ -1,0 +1,11 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;  If a SETUP program is not available, the entries below will be
+;  registered in your InitInstance automatically with a call ot
+;  COleObjectFactory::UpdateRegistryAll
+
+HKEY_CLASSES_ROOT\mfccalc.calculator = mfccalc.calculator
+HKEY_CLASSES_ROOT\mfccalc.calculator\CLSID = {62C4DD10-F45E-11CD-8C3D-00AA004BB3B7}
+HKEY_CLASSES_ROOT\CLSID\{62C4DD10-F45E-11CD-8C3D-00AA004BB3B7} = mfccalc.calculator
+HKEY_CLASSES_ROOT\CLSID\{62C4DD10-F45E-11CD-8C3D-00AA004BB3B7}\LocalServer32 = mfccalc.exe
+HKEY_CLASSES_ROOT\CLSID\{62C4DD10-F45E-11CD-8C3D-00AA004BB3B7}\ProgID = mfccalc.calculator

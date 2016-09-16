@@ -1,0 +1,53 @@
+// File: Async.idl
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+#include <olectl.h>
+// Async.idl : IDL source for Async.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Async.tlb) and marshalling code.
+
+	[
+		object,
+		uuid(012F24D5-35B0-11D0-BF2D-0000E8D0D146),
+		dual,
+		helpstring("IATLAsync Interface"),
+		pointer_default(unique)
+	]
+	interface IATLAsync : IDispatch
+	{
+		import "oaidl.idl";
+		import "ocidl.idl";
+
+		[propput, id(0)]
+		HRESULT URL([in]BSTR strURL);
+		[propget, id(0)]
+		HRESULT URL([out,retval]BSTR* pstrURL);
+
+	};
+[
+	uuid(012F24C1-35B0-11D0-BF2D-0000E8D0D146),
+	version(1.0),
+	helpstring("Async 1.0 Type Library")
+]
+library ASYNCLib
+{
+	importlib("stdole32.tlb");
+	
+
+	[
+		uuid(012F24D4-35B0-11D0-BF2D-0000E8D0D146),
+		helpstring("ATLAsync Class")
+	]
+	coclass CATLAsync
+	{
+		[default] interface IATLAsync;
+	};
+};

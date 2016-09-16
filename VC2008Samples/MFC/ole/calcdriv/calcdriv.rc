@@ -1,0 +1,112 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""res\\calcdriv.rc2""  // non-App Studio edited resources\r\n"
+	"\r\n"
+	"#include ""afxres.rc""  // Standard components\r\n"
+	"\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_MAINFRAME           ICON    DISCARDABLE     "RES\\CALCDRIV.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CALCDRIV DIALOG DISCARDABLE  40, 200, 257, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "MFC Calc Driver"
+FONT 8, "MS Sans Serif"
+BEGIN
+	LTEXT           "&Expression:",IDC_STATIC,6,11,39,8
+	EDITTEXT        IDC_EXPRESSION,6,22,169,13,ES_AUTOHSCROLL | ES_NOHIDESEL
+	LTEXT           "Last Operand:",IDC_STATIC,6,58,47,8
+	LTEXT           "<<last operand will be placed here>>",IDD_LAST_OPERAND,
+					58,58,137,8
+	LTEXT           "Last Accum:",IDC_STATIC,6,45,47,8
+	LTEXT           "<<last accumulator will be placed here>>",
+					IDC_LAST_ACCUM,58,45,134,8
+	PUSHBUTTON      "&Close",IDOK,201,6,50,14
+	DEFPUSHBUTTON   "&Go",IDC_GO,201,25,50,14
+	PUSHBUTTON      "&Single Step",IDC_SINGLE_STEP,201,44,50,14
+	PUSHBUTTON      "&Refresh",IDC_REFRESH,201,63,50,14
+	LTEXT           "Last Operator:",IDC_STATIC,6,73,51,8
+	LTEXT           "<<last operatorwill be placed here>>",IDD_LAST_OPERATOR,
+					59,74,137,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDP_OLE_INIT_FAILED     "Failed to initialize the OLE libraries!"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+	IDP_UNABLE_TO_CREATE    "Unable to create ""mfccalc.calculator"" object.  To correct the situation, build the MFCCALC sample, run it, and try again."
+	IDP_UNABLE_TO_SHOW      "Unable to show MFC/OLE Calc object."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+	AFX_IDS_APP_TITLE       "Calc Driver"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\calcdriv.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

@@ -1,0 +1,35 @@
+HKCR
+{
+	ForceRemove DispClient.DispCtl.1 = s 'DispCtl Class'
+	{
+		CLSID = s '{A6D89F4B-35F4-11D2-9375-00C04FD9757C}'
+	}
+	ForceRemove DispClient.DispCtl = s 'DispCtl Class'
+	{
+		CurVer = s 'DispClient.DispCtl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A6D89F4B-35F4-11D2-9375-00C04FD9757C} = s 'DispCtl Class'
+		{
+			ProgID = s 'DispClient.DispCtl.1'
+			VersionIndependentProgID = s 'DispClient.DispCtl'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'Control'
+			'Insertable'
+			'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{A6D89F3B-35F4-11D2-9375-00C04FD9757C}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

@@ -1,0 +1,164 @@
+//Microsoft App Studio generated resource script.
+//
+#include "testres1.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"testres1.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\r\n"
+	"#include ""resource.h""\r\n"
+	"\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDR_TEXTTYPE            ICON    DISCARDABLE     "RES\\TEXTTYPE.ICO"
+IDR_HELLOTYPE           ICON    DISCARDABLE     "RES\\HELLO.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TEXTTYPE MENU DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM "&Close",                      ID_FILE_CLOSE
+		MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+		MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+		MENUITEM SEPARATOR
+		MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+	END
+	POPUP "&Edit"
+	BEGIN
+		MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+		MENUITEM SEPARATOR
+		MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+		MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+		MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+		MENUITEM "Delete\tDel",                 ID_EDIT_CLEAR
+		MENUITEM SEPARATOR
+		MENUITEM "&Find...",                    ID_EDIT_FIND
+		MENUITEM "&Replace...",                 ID_EDIT_REPLACE
+		MENUITEM SEPARATOR
+		MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Window"
+	BEGIN
+		MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+		MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+		MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About...",                   ID_APP_ABOUT
+	END
+END
+
+IDR_HELLOTYPE MENU DISCARDABLE
+BEGIN
+	POPUP "&File"
+	BEGIN
+		MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+		MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+		MENUITEM "&Close",                      ID_FILE_CLOSE
+		MENUITEM SEPARATOR
+		MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+		MENUITEM SEPARATOR
+		MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+		MENUITEM SEPARATOR
+		MENUITEM "E&xit\tAlt+F4",               ID_APP_EXIT
+	END
+	POPUP "&Color"
+	BEGIN
+		MENUITEM "&Black",                      IDM_BLACK
+		MENUITEM "&Red",                        IDM_RED
+		MENUITEM "&Green",                      IDM_GREEN
+		MENUITEM "B&lue",                       IDM_BLUE
+		MENUITEM "&White",                      IDM_WHITE
+		MENUITEM "&Custom...",                  IDM_CUSTOM
+	END
+	POPUP "&View"
+	BEGIN
+		MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+		MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+	END
+	POPUP "&Window"
+	BEGIN
+		MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+		MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+		MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+	END
+	POPUP "&Help"
+	BEGIN
+		MENUITEM "&About...",                   ID_APP_ABOUT
+	END
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDR_TEXTTYPE            "\nText\nTEXT Document\nText Files (*.txt)\n.txt\nTextFileType\nTEXT File Type"
+	IDR_HELLOTYPE           "\nHello\nHELLO Document"
+END
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDM_BLACK               "Change the text color to black"
+	IDM_RED                 "Change the text color to red"
+	IDM_GREEN               "Change the text color to green"
+	IDM_BLUE                "Change the text color to blue"
+	IDM_WHITE               "Change the text color to white"
+	IDM_CUSTOM              "Change the text color to a custom color"
+END

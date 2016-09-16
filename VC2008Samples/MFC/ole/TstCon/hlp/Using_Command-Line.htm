@@ -1,0 +1,234 @@
+
+<head>
+<style>
+<!--
+h1
+	{margin:6.0pt 0in; line-height:24.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:22.0pt;
+	font-family:Verdana;
+	}
+p.Text
+	{mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+p.LabelSpecial
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	color:maroon;
+	font-weight:bold}
+p.NumberedList1
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	line-height:12.0pt;
+	tab-stops:.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	}
+span.Bold
+	{font-weight:bold}
+p.FigureTableLabel
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:12.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Verdana;
+	font-weight:bold}
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	}
+-->
+</style>
+</head>
+
+<h1 style="page-break-after: auto">Using Command-Line Options to Customize 
+Startup Mode</h1>
+<p class="Text">You can use a variety of command-line arguments to specify the 
+startup mode for the ActiveX Control Test Container.</p>
+<p class="LabelSpecial" style="page-break-after: auto">To provide arguments to 
+the Test Container</p>
+<p class="NumberedList1">1. From the <span class="Bold">Tools</span> menu in 
+Visual C++, choose <b>Customize</b>.</p>
+<p class="NumberedList1">2. Select the <b>Tools</b> tab.</p>
+<p class="NumberedList1">3. Choose <b>ActiveX Control Test Container</b>.</p>
+<p class="NumberedList1">4. Enter one or more of the following options in the
+<span class="Bold">Arguments</span> box.</p>
+<p class="FigureTableLabel" style="page-break-after: auto">ActiveX Control Test 
+Container Options</p>
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" id="table1">
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-IAdviseSinkEx+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Support IAdviseSinkEx</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-IAdviseSinkEx-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Don’t support IAdviseSinkEx</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-C <i>progid</i>&nbsp;&nbsp;&nbsp; </td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">ProgID of control to initially load</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-Ln</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">No logging</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-Lo</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Log to output window</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-Ld</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Log to debugger</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-Lf <i>filename</i></td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Log to file <i>filename</i></td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-IOleInPlaceSiteEx+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Support IOleInPlaceSiteEx</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-IOleInPlaceSiteEx-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Don't support IOleInPlaceSiteEx</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-IOleInPlaceSiteWindowless+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Support IOleInPlaceSiteWindowless</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-IOleInPlaceSiteWindowless-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Don’t support IOleInPlaceSiteWindowless</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OH+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Honor OLEMISC_IGNOREACTIVATEWHENVISIBLE</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OH-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Don’t honor OLEMISC_IGNOREACTIVATEWHENVISIBLE</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OQ+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Use quick activation</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OQ-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Do not use quick activation</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OT+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Use two-pass drawing</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OT-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Do not use two-pass drawing</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OI+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Support inactive controls</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OI-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Do not support inactive controls</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OW+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Allow windowless activation</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-OW-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Disallow windowless activation</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-SBindHost+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Support SBindHost</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-SBindHost-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Don’t support SBindHost</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-U+</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">User mode</td>
+	</tr>
+	<tr>
+		<td width="229" valign="top" style="width:171.9pt;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">-U-</td>
+		<td width="312" valign="top" style="width:3.25in;padding:0in 5.4pt 0in 5.4pt">
+		<p class="Text">Design mode</td>
+	</tr>
+</table>

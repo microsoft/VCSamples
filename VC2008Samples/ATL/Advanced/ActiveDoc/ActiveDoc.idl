@@ -1,0 +1,42 @@
+#include <olectl.h>
+// ActiveDoc.idl : IDL source for ActiveDoc.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ActiveDoc.tlb) and marshalling code.
+
+	
+
+	[
+		object,
+		uuid(93901786-436B-11D0-B965-000000000000),
+		dual,
+		helpstring("IActiveDoc Interface"),
+		pointer_default(unique)
+	]
+	interface IActiveDoc : IDispatch
+	{
+		import "oaidl.idl";
+		import "ocidl.idl";
+
+	};
+[
+	uuid(93901783-436B-11D0-B965-000000000000),
+	version(1.0),
+	helpstring("ActiveDoc 1.0 Type Library")
+]
+library ACTIVEDOCLib
+{
+	importlib("stdole32.tlb");
+
+	
+
+	[
+		uuid(93901785-436B-11D0-B965-000000000000),
+		helpstring("ActiveDoc Class")
+	]
+	coclass CActiveDoc
+	{
+		[default] interface IActiveDoc;
+	};
+};

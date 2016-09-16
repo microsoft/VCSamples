@@ -1,0 +1,21 @@
+HKCR
+{
+	ForceRemove DrawServ.DrawServ.1 = s 'DrawServ Class'
+	{
+		CLSID = s '{330E9E79-DF48-11CF-8E2C-00A0C90DC94B}'
+	}
+	ForceRemove DrawServ.DrawServ = s 'DrawServ Class'
+	{
+		CurVer = s 'DrawServ.DrawServ.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {330E9E79-DF48-11CF-8E2C-00A0C90DC94B} = s 'DrawServ Class'
+		{
+			val AppID = s '{330E9E74-DF48-11CF-8E2C-00A0C90DC94B}'
+			ProgID = s 'DrawServ.DrawServ.1'
+			VersionIndependentProgID = s 'DrawServ.DrawServ'
+			LocalServer32 = s '%Module%'
+		}
+	}
+}

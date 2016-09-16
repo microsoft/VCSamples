@@ -1,0 +1,137 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\guidgen.rc2""  // non-App Studio edited resources\r\n"
+    "\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\guidgen.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+#define ABOUT_CAPTION		"About Create GUID"
+#define ABOUT_DESCRIPTION	"Create GUID Version 2.0"
+#define IDI_ABOUTICON		IDR_MAINFRAME
+
+#include <about_.rc>
+
+IDD_GUIDGEN_DIALOG DIALOG  0, 0, 246, 193
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create GUID"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Choose the desired format below, then select ""Copy"" to copy the results to the clipboard (the results can then be pasted into your source code).  Choose ""Exit"" when done.",
+                    IDC_STATIC,6,6,178,37
+    GROUPBOX        " GUID Format ",IDC_STATIC,4,43,178,73
+    CONTROL         "&1. IMPLEMENT_OLECREATE(...)",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,57,167,10
+    CONTROL         "&2. DEFINE_GUID(...)",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,9,71,167,10
+    CONTROL         "&3. static const struct GUID = { ... }",IDC_RADIO3,
+                    "Button",BS_AUTORADIOBUTTON,9,85,167,10
+    CONTROL         "&4. Registry Format (ie. {xxxxxxx-xxxx ... xxxx })",
+                    IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,9,99,167,10
+    GROUPBOX        " Result ",IDC_STATIC,4,121,238,59
+    LTEXT           "<<place-holder for resulting text>>",IDC_RESULTS,9,134,
+                    229,41
+    DEFPUSHBUTTON   "&Copy",IDOK,190,6,50,14
+    PUSHBUTTON      "&New GUID",IDC_NEWGUID,190,23,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,190,40,50,14
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Create GUID..."
+    IDP_ERR_INIT_OLE        "Unable to initialize OLE libraries!"
+    IDS_FORMATS             "// {%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nIMPLEMENT_OLECREATE(<<class>>, <<external_name>>, \r\n0x%lx, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x);\r\n"
+    IDS_STRING105           "// {%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nDEFINE_GUID(<<name>>, \r\n0x%lx, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x);\r\n"
+    IDS_STRING106           "// {%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}\r\nstatic const GUID <<name>> = \r\n{ 0x%lx, 0x%x, 0x%x, { 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x, 0x%x } };\r\n"
+    IDS_STRING107           "{%08lX-%04X-%04x-%02X%02X-%02X%02X%02X%02X%02X%02X}"
+END
+
+STRINGTABLE 
+BEGIN
+    IDP_ERR_CREATE_GUID     "Unable to create new GUID."
+    IDP_ERR_OPEN_CLIP       "Clipboard is busy. Unable to copy result to clipboard."
+    IDP_ERR_LOCAL_ONLY      "Warning: Unable to determine your network address.\r\n  The UUID generated is unique on this computer only.\r\n  It should not be used on another computer."
+    IDP_ERR_NO_ADDRESS      "Cannot get the hardware address for this computer."
+    IDP_ERR_NOT_OK          "Unable to get a GUID."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\guidgen.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

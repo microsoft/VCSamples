@@ -1,0 +1,22 @@
+HKCR
+{
+    .trc = s 'AtlTraceTool8.TraceFile'
+    {
+        ShellNew
+        {
+            val NullFile = s ''
+        }
+    }
+    AtlTraceTool8.TraceFile = s 'AtlTraceTool Trace Settings File'
+    {
+        DefaultIcon = s '[#FilePath],0'
+        shell
+        {
+            open
+            {
+                command = s '"[#FilePath]" /dde'
+                ddeexec = s '[\[]open("%1")[\]]'
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+HKCR
+{
+	ForceRemove Circ.CCircProps.1 = s 'Circ Property Page'
+	{
+		CLSID = s '{47536F96-F610-11CF-91F0-00A0C903977F}'
+	}
+	ForceRemove Circ.CCircProps = s 'Circ Property Page'
+	{
+		CurVer = s 'Circ.CCircProps.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {47536F96-F610-11CF-91F0-00A0C903977F} = s 'Circ Property Page'
+		{
+			ProgID = s 'Circ.CCircProps.1'
+			VersionIndependentProgID = s 'Circ.CCircProps'
+			ForceRemove 'Control'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+			'TypeLib' = s '{C978F52B-E584-11CF-AF44-00A0C9034837}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-2'
+		}
+	}
+}

@@ -1,0 +1,117 @@
+<HTML>
+<!--Sitemap 1.0-->
+<OBJECT type="text/site properties">
+</OBJECT>
+<UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Test Container">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Test Container">
+			<param name="Local" value="main_index.htm">
+			</OBJECT>
+			<A HREF="main_index.htm">Test Container</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Get Control Help in the Test Container">
+			<param name="Local" value="help.htm">
+			</OBJECT>
+			<A HREF="help.htm">Get Control Help in the Test Container</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Insert an ActiveX control into Test Container">
+			<param name="Local" value="Inserting_an_Activex_Control.htm">
+			</OBJECT>
+			<A HREF="Inserting_an_Activex_Control.htm">Insert an ActiveX control into Test Container</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Invoke Properties and Object Verbs">
+			<param name="Local" value="verbs.htm">
+			</OBJECT>
+			<A HREF="verbs.htm">Invoke Properties and Object Verbs</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Set the Level of Debugging">
+			<param name="Local" value="Setting_the_level.htm">
+			</OBJECT>
+			<A HREF="Setting_the_level.htm">Set the Level of Debugging</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Choose Design or User Mode">
+			<param name="Local" value="Choosing_Design_or_User_Mode.htm">
+			</OBJECT>
+			<A HREF="Choosing_Design_or_User_Mode.htm">Choose Design or User Mode</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Choose which Events to Log">
+			<param name="Local" value="Choose_Which_Events.htm">
+			</OBJECT>
+			<A HREF="Choose_Which_Events.htm">Choose which Events to Log</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Choose a Location for Logging Output">
+			<param name="Local" value="Choosing_a_Location.htm">
+			</OBJECT>
+			<A HREF="Choosing_a_Location.htm">Choose a Location for Logging Output</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Invoke the Object's Methods">
+			<param name="Local" value="Invoking_an_Objects_Methods.htm">
+			</OBJECT>
+			<A HREF="Invoking_an_Objects_Methods.htm">Invoke the Object's Methods</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Change the Ambient Properties of Test Container">
+			<param name="Local" value="Changing_Ambient_Properties.htm">
+			</OBJECT>
+			<A HREF="Changing_Ambient_Properties.htm">Change the Ambient Properties of Test Container</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Test Persistence">
+			<param name="Local" value="Testing_Persistence.htm">
+			</OBJECT>
+			<A HREF="Testing_Persistence.htm">Test Persistence</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Save a Session for Later Use">
+			<param name="Local" value="Saving_and_Restoring.htm">
+			</OBJECT>
+			<A HREF="Saving_and_Restoring.htm">Save a Session for Later Use</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Use Command-line options to Customize the Startup Mode of Test Container">
+			<param name="Local" value="Using_Command-Line.htm">
+			</OBJECT>
+			<A HREF="Using_Command-Line.htm">Use Command-line options to Customize the Startup Mode of Test Container</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Automation and the Test Container">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Using Automation and the Test Container">
+			<param name="Local" value="automation.htm">
+			</OBJECT>
+			<A HREF="automation.htm">Using Automation and the Test Container</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Object Model">
+			<param name="Local" value="Object_Model.htm">
+			</OBJECT>
+			<A HREF="Object_Model.htm">Object Model</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Extended Properties and Methods">
+			<param name="Local" value="Extended_Properties_and_Methods.htm">
+			</OBJECT>
+			<A HREF="Extended_Properties_and_Methods.htm">Extended Properties and Methods</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Event Handling">
+			<param name="Local" value="Event_Handling.htm">
+			</OBJECT>
+			<A HREF="Event_Handling.htm">Event Handling</A><BR>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Macros">
+			<param name="Local" value="Macros.htm">
+			</OBJECT>
+			<A HREF="Macros.htm">Macros</A><BR>
+	</UL>
+	<LI><OBJECT type="text/sitemap">
+		<param name="Name" value="Samples">
+		</OBJECT>
+	<UL>
+		<LI><OBJECT type="text/sitemap">
+			<param name="Name" value="Samples">
+			<param name="Local" value="Samples.htm">
+			</OBJECT>
+			<A HREF="Samples.htm">Samples</A><BR>
+	</UL>
+</UL>
+</HTML>

@@ -1,0 +1,205 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\mtgdi.rc2""  // non-App Studio edited resources\r\n"
+    "\r\n"
+    "#include ""afxres.rc""  \t// Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\mtgdi.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Thread"
+    BEGIN
+        MENUITEM "New &Ball\tF2",               ID_THREAD_NEWBALL
+        MENUITEM "10 New Balls\tF6",            ID_THREAD_10NEWBALLS
+        MENUITEM "25 New Balls\tF10",           ID_THREAD_25NEWBALLS
+        MENUITEM SEPARATOR
+        MENUITEM "New &Rectangle\tF3",          ID_THREAD_NEWRECTANGLE
+        MENUITEM "10 New Rectangles\tF7",       ID_THREAD_10NEWRECTANGLES
+        MENUITEM "25 New Rectangles\tF11",      ID_THREAD_25NEWRECTANGLES
+        MENUITEM SEPARATOR
+        MENUITEM "New &Line\tF4",               ID_THREAD_NEWLINE
+        MENUITEM "10 New Lines\tF8",            ID_THREAD_10NEWLINES
+        MENUITEM "25 New Lines\tF12",           ID_THREAD_25NEWLINES
+        MENUITEM SEPARATOR
+        MENUITEM "&Kill Threads (fast)\tESC",   ID_THREAD_KILLTHREADS
+        MENUITEM "Kill Threads (slow)",         ID_THREAD_KILLTHREADSSLOW
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Multithread GDI...\tF1", ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_ESCAPE,      ID_THREAD_KILLTHREADS,  VIRTKEY, NOINVERT
+    VK_F1,          ID_APP_ABOUT,           VIRTKEY, NOINVERT
+    VK_F10,         ID_THREAD_25NEWBALLS,   VIRTKEY, NOINVERT
+    VK_F11,         ID_THREAD_25NEWRECTANGLES, VIRTKEY, NOINVERT
+    VK_F12,         ID_THREAD_25NEWLINES,   VIRTKEY, NOINVERT
+    VK_F2,          ID_THREAD_NEWBALL,      VIRTKEY, NOINVERT
+    VK_F3,          ID_THREAD_NEWRECTANGLE, VIRTKEY, NOINVERT
+    VK_F4,          ID_THREAD_NEWLINE,      VIRTKEY, NOINVERT
+    VK_F6,          ID_THREAD_10NEWBALLS,   VIRTKEY, NOINVERT
+    VK_F7,          ID_THREAD_10NEWRECTANGLES, VIRTKEY, NOINVERT
+    VK_F8,          ID_THREAD_10NEWLINES,   VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 217, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Multithread GDI"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Multithread GDI Version 1.0",IDC_STATIC,40,10,119,8
+    LTEXT           L"\251 2005 Microsoft Corporation.  All rights reserved.",IDC_STATIC,39,
+                    25,148,8
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+    LTEXT           "All Rights Reserved.",IDC_STATIC,40,40,148,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "MTGDI MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MTGDI\0"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "MTGDI.EXE\0"
+            VALUE "ProductName", "MTGDI Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Multithread GDI (no threads)\n\nmtgdi\n\n\nmtgdi.Document\nMTGDI Document"
+    IDS_CAPTION_FORMAT      "Multithread GDI (%d threads)"
+    IDS_CAPTION_NOTHREADS   "Multithread GDI (no threads)"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Multithread GDI (no threads)"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\mtgdi.rc2"  // non-App Studio edited resources
+
+#include "afxres.rc"  	// Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

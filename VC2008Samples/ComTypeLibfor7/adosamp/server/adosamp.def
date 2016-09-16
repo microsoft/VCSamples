@@ -1,0 +1,9 @@
+; ADOSamp.def : Declares the module parameters.
+
+LIBRARY      ADOSAMP.DLL
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE

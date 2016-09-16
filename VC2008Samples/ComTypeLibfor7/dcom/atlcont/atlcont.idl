@@ -1,0 +1,34 @@
+// AtlCon.idl : IDL source for AtlCon.dll
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (AtlCon.tlb) and marshalling code.
+
+    [
+        object,
+        uuid(BFD466C3-376C-11D0-96B5-00A0C90DC94B),
+        helpstring("IAtlCont Interface"),
+        pointer_default(unique)
+    ]
+    interface IAtlCont : IUnknown
+    {
+        import "oaidl.idl";
+        HRESULT Run();
+        HRESULT Stop();
+    };
+[
+    uuid(8F3C5551-376C-11D0-96B5-00A0C90DC94B),
+    version(1.0),
+    helpstring("AtlCont 1.0 Type Library")
+]
+library ATLCONTLib
+{
+    importlib("stdole32.tlb");
+    [
+        uuid(BFD466C2-376C-11D0-96B5-00A0C90DC94B),
+        helpstring("AtlCont Class")
+    ]
+    coclass CAtlCont
+    {
+        [default] interface IAtlCont;
+    };
+};

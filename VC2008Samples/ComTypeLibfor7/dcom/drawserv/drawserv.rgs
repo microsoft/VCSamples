@@ -1,0 +1,11 @@
+HKCR
+{
+    NoRemove AppID
+    {
+        ForceRemove {330E9E74-DF48-11CF-8E2C-00A0C90DC94B} = s 'DrawServ'
+        {
+            val LocalService = s 'DrawServ'
+            val ServiceParameters = s '-Service'
+        }
+    }
+}

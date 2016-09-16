@@ -1,0 +1,97 @@
+<HTML>
+
+<BODY>
+<object classid="clsid:4F9A68F3-DD9D-11CF-9462-00AA00BBAD7F" id=outerobj>
+</object>
+<FONT FACE=Arial SIZE=2>
+This sample shows how different COM interface map entry macros are used.  The text on the buttons below indicates the type of the map entry used to expose each interface on the 'outer' object.  When a button is pressed, the GetName() method on the outer object is called.  This method QueryInterfaces the controlling unknown for the interface exposed using the particular type of map entry you chose.  GetName() retrieves the Name property on that interface.  The Name property contains the name of the interface.  This is then displayed on the button you pushed.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY(x)" NAME="Offset">
+<BR>
+This macro is the one you typically use most.  It's job is to expose an interface that you have multiply-inherited into your object.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)" NAME="TearOff">
+<BR>
+This macro exposes a tear-off interface. Tear-off interfaces are implemented using a seperate class.  They are typically used for interfaces that are rarely used.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk, cs)" NAME="CachedTearOff">
+<BR>
+Similar to a tear-off.  Regular tear-off interfaces are created on every QueryInterface for that IID.  With a cached tear-off, the class implementing the tear-off will be instantiated the first time the interface is requested.  Subsequent requests for that interface will then reuse the already instantiated instance.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_CHAIN(classname)" NAME="Chain">
+<BR>
+Causes the COM_MAP to chain to another COM_MAP. You can imagine the other COM_MAP inserted at the position you use this macro.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)" NAME="Aggregate">
+<BR>
+exposes an interface from an object that you are aggregating on.  The pUnk is the inner unknown of the aggregate.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid, cs)" NAME="AutoAggregate">
+<BR>
+This is used to implement delayed aggregation, which means that ATL will automatically create and aggregate on the inner object when someone QIs for this interface.  This only happens if the aggregate hasn't already been created, ie when pUnk != NULL
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)" NAME="AggregateBlind">
+<BR>
+This blindly exposes all the interfaces on an aggregate.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid, cs)" NAME="AutoAggregateBlind">
+<BR>
+Combines delayed (AUTOAGGREGATE) and blind (AUTOAGGREGATE_BLIND) aggregation.
+<BR>
+<BR>
+	<INPUT TYPE=BUTTON VALUE="Reset" NAME="Reset"> 
+<BR>
+<BR>
+</FONT>
+</BODY>
+<SCRIPT LANGUAGE=VBScript>
+	Sub Offset_OnClick
+		Offset.VALUE = outerobj.GetName(0)
+	End Sub
+	Sub TearOff_OnClick
+		TearOff.VALUE = outerobj.GetName(1)
+	End Sub
+	Sub CachedTearOff_OnClick
+		CachedTearOff.VALUE = outerobj.GetName(2)
+	End Sub
+	Sub Chain_OnClick
+		Chain.VALUE = outerobj.GetName(3)
+	End Sub
+	Sub Aggregate_OnClick
+		Aggregate.VALUE = outerobj.GetName(4)
+	End Sub
+	Sub AutoAggregate_OnClick
+		AutoAggregate.VALUE = outerobj.GetName(5)
+	End Sub
+	Sub AggregateBlind_OnClick
+		AggregateBlind.VALUE = outerobj.GetName(6)
+	End Sub
+	Sub AutoAggregateBlind_OnClick
+		AutoAggregateBlind.VALUE = outerobj.GetName(7)
+	End Sub
+	Sub Reset_OnClick
+		Offset.VALUE = "COM_INTERFACE_ENTRY(x)"
+		TearOff.VALUE = "COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)"
+		CachedTearOff.VALUE = "COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk, cs)"
+		Chain.VALUE = "COM_INTERFACE_ENTRY_CHAIN(classname)"
+		Aggregate.VALUE= "COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)"
+		AutoAggregate.VALUE = "COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid, cs)"
+		AggregateBlind.VALUE = "COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)"
+		AutoAggregateBlind.VALUE = "COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid, cs)"
+	End Sub
+</SCRIPT>
+<center>
+<font face="Arial" size=-1 color="000000"><B>
+Best experienced with<BR>
+<IMG SRC="ie_anim.gif" WIDTH=88 HEIGHT=31 ALT="Microsoft Internet Explorer" BORDER=0 ALIGN=center>
+<span style="font-size:10pt; color:0000ff">
+</center>
+</HTML>

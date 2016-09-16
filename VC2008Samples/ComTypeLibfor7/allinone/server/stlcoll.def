@@ -1,0 +1,9 @@
+; stlcoll.def : Declares the module parameters.
+
+LIBRARY      STLCOLL.DLL
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE

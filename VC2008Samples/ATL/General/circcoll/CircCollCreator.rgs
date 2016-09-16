@@ -1,0 +1,25 @@
+HKCR
+{
+	ForceRemove CircColl.MyCircleCollection.1 = s 'MyCircleCollection Class'
+	{
+		CLSID = s '{645C715E-A438-11cf-91E1-00A0C903976F}'
+	}
+	ForceRemove CircColl.MyCircleCollection = s 'MyCircleCollection Class'
+	{
+		CurVer = s 'CircColl.MyCircleCollection.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {645C715E-A438-11cf-91E1-00A0C903976F} = s 'MyCircleCollection Class'
+		{
+			ProgID = s 'CircColl.MyCircleCollection.1'
+			VersionIndependentProgID = s 'CircColl.MyCircleCollection'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			'TypeLib' = s '{5F6CB310-97A9-11CF-B058-00A0C90348FA}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-1'
+		}
+	}
+}

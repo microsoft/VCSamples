@@ -1,0 +1,36 @@
+// UpdatePv.idl : IDL source for UpdatePv.dll
+//
+// This is a part of the ActiveX Template Library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// ActiveX Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// ActiveX Template Library product.
+
+// This file will be processed by the MIDL tool to
+// produce the type library (UpdatePv.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(48851DEF-C43F-11D1-8F0F-0060083E4509),
+	version(1.0),
+	helpstring("UpdatePv 1.0 Type Library")
+]
+library UPDATEPVLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(90C57963-C443-11D1-8F0F-0060083E4509),
+		helpstring("UpProv OLE DB Provider")
+	]
+	coclass UpProv
+	{
+		interface IUnknown;
+	};
+};

@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DBVList", "DBVList.vcproj", "{884A43F3-E16C-4510-ABD6-C4D689E308B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{884A43F3-E16C-4510-ABD6-C4D689E308B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{884A43F3-E16C-4510-ABD6-C4D689E308B0}.Debug|Win32.Build.0 = Debug|Win32
+		{884A43F3-E16C-4510-ABD6-C4D689E308B0}.Release|Win32.ActiveCfg = Release|Win32
+		{884A43F3-E16C-4510-ABD6-C4D689E308B0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

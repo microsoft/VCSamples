@@ -1,0 +1,23 @@
+HKCR
+{
+    AtlCont.AtlCont.1 = s 'AtlCont Class'
+    {
+        CLSID = s '{BFD466C0-376C-11D0-96B5-00A0C90DC94B}'
+    }
+    AtlCont.AtlCont = s 'AtlCont Class'
+    {
+        CurVer = s 'AtlCont.AtlCont.1'
+    }
+    NoRemove CLSID
+    {
+        ForceRemove {BFD466C0-376C-11D0-96B5-00A0C90DC94B} = s 'AtlCont Class'
+        {
+            ProgID = s 'AtlCont.AtlCont.1'
+            VersionIndependentProgID = s 'AtlCont.AtlCont'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
+    }
+}

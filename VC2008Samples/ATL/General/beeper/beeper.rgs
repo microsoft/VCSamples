@@ -1,0 +1,28 @@
+HKCR
+{
+	ForceRemove BeeperLib.Beeper.1 = s 'Beeper Class'
+	{
+		CLSID = s '{8FD6E504-78CA-4236-9819-37A7AA09C2D7}'
+	}
+	ForceRemove BeeperLib.Beeper = s 'Beeper Class'
+	{
+		CurVer = s 'BeeperLib.Beeper.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8FD6E504-78CA-4236-9819-37A7AA09C2D7} = s 'Beeper Class'
+		{
+			ProgID = s 'BeeperLib.Beeper.1'
+			VersionIndependentProgID = s 'BeeperLib.Beeper'
+			'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{1CD7DD6A-7689-4926-842B-8F92DE6D92F0}'
+			'Version' = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-1'
+		}
+	}
+}

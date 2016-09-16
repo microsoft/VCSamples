@@ -1,0 +1,31 @@
+CDINFO
+
+The CD Info sample draws a pie chart representing the length of
+tracks off the audio CD that is in the drive. It uses the Media
+Control Interface (MCI) APIs to retrieve this information. The
+sample also demonstrates how to use the tooltip common control
+to implement tooltips for your control. The tooltip displays
+the track length for the track represented by the pie chart
+segment that the cursor is over.
+
+There is a VB sample in the VBTEST subdirectory that demonstrates
+use of the control.
+
+The control implements the following Methods
+Read:
+	Reads the track length information from the CD in the
+	drive and displays the information in the form of a pie chart.
+Redraw:
+	Redraws the pie chart for the current CD.
+Play:
+	Starts playing the CD at the passed track number. The
+	control also rotates the pie chart so that the played
+	track will be at the top.
+
+The following properties are available.
+Tracks:
+	The number of tracks on the CD.
+Length:
+	The length of the passed track number in seconds.
+TotalLength:
+	The total length of the CD in seconds.

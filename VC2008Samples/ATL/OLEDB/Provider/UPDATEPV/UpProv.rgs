@@ -1,0 +1,26 @@
+HKCR
+{
+	ForceRemove UpdatePv.UpProv.1 = s 'UpProv OLE DB Provider'
+	{
+		CLSID = s '{90C57963-C443-11D1-8F0F-0060083E4509}'
+	}
+	ForceRemove UpdatePv.UpProv = s 'UpProv OLE DB Provider'
+	{
+		CurVer = s 'UpdatePv.UpProv.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {90C57963-C443-11D1-8F0F-0060083E4509} = s 'UpProv OLE DB Provider'
+		{
+			ProgID = s 'UpdatePv.UpProv.1'
+			VersionIndependentProgID = s 'UpdatePv.UpProv'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			'OLE DB Provider' = s 'UpProv OLE DB Provider'
+			'TypeLib' = s '{48851DEF-C43F-11D1-8F0F-0060083E4509}'
+			'Version' = s '1.0'
+		}
+	}
+}

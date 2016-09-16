@@ -1,0 +1,425 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\OleView.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "\r\n"
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  \t// Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\OleView.ico"
+IDI_AUTOMATION          ICON                    "RES\\AUTOMATI.ICO"
+IDI_DRAGDROP            ICON                    "RES\\DRAGDROP.ICO"
+IDI_NOICON              ICON                    "RES\\NOICON.ICO"
+IDI_OLE2                ICON                    "RES\\ICON1.ICO"
+IDI_OLE2_1              ICON                    "RES\\OLE2_1.ICO"
+IDI_INTERFACE           ICON                    "res\\ico00001.ico"
+IDI_ICON1               ICON                    "res\\ico00002.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\toolbar.bmp"
+IDB_AUTOMATION          BITMAP                  "RES\\AUTOMATI.BMP"
+IDB_CONTAINER           BITMAP                  "RES\\CONTAINE.BMP"
+IDB_CONTAINER32         BITMAP                  "RES\\BMP00002.BMP"
+IDB_OBJECT              BITMAP                  "RES\\OBJECT.BMP"
+IDB_OBJECT32            BITMAP                  "RES\\OBJECT32.BMP"
+IDB_OBJECT_CONTROL      BITMAP                  "RES\\CONTROL.BMP"
+IDB_OBJECT_CONTROL32    BITMAP                  "RES\\OBJ_C32.BMP"
+IDB_OBJECT_INSERTABLE   BITMAP                  "RES\\OBJECT_I.BMP"
+IDB_OBJECT_INSERTABLE10 BITMAP                  "RES\\BMP00001.BMP"
+IDB_OBJECT_INSERTABLE1032 BITMAP                  "RES\\INSRT132.BMP"
+IDB_OBJECT_INSERTABLE32 BITMAP                  "RES\\INSRT_32.BMP"
+IDB_QUESTION            BITMAP                  "RES\\QUESTION.BMP"
+IDB_QUESTION32          BITMAP                  "RES\\QUESTN32.BMP"
+IDB_IMAGELIST           BITMAP                  "res\\imagelis.bmp"
+IDB_INTERFACE           BITMAP                  "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Written by Charlie Kindel, Microsoft Developer Relations Group"
+            VALUE "CompanyName", "Microsoft"
+            VALUE "FileDescription", "Ole2View Version 2"
+            VALUE "FileVersion", "2, 0, 0, 1"
+            VALUE "InternalName", "Ole2View"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "LegalTrademarks", "All Rights Reserved"
+            VALUE "OriginalFilename", "OLEVIEW.EXE"
+            VALUE "ProductName", "Ole2View"
+            VALUE "ProductVersion", "2, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Bind to File...",            ID_FILE_BINDTOAFILE
+        MENUITEM "&View TypeLib...",            ID_FILE_VIEWTYPELIB
+        MENUITEM SEPARATOR
+        MENUITEM "&Run The Registry Editor...", ID_FILE_RUNREGEDIT
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_APP_EXIT
+    END
+    POPUP "&Object"
+    BEGIN
+        MENUITEM "&Delete all related info...", ID_OBJECT_DELETE
+        MENUITEM "&Verify...",                  ID_OBJECT_VERIFY
+        MENUITEM SEPARATOR
+        POPUP "&CoCreateInstance Flags"
+        BEGIN
+            MENUITEM "CLSCTX_&INPROC_SERVER",       ID_IFACES_USEINPROCSERVER
+            , CHECKED
+            MENUITEM "Use CLSCTX_INPROC_&HANDLER",  ID_IFACES_USEINPROCHANDLER
+            , CHECKED
+            MENUITEM "Use CLSCTX_&LOCAL_SERVER",    ID_IFACES_USELOCALSERVER
+            , CHECKED
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh\tF5",                ID_VIEW_REFRESH
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Ole2View",             ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 34, 22, 223, 68
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Ole2View 2.0"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,5,8,21,20
+    LTEXT           "Ole2View - Version 2.0",IDC_APPNAME,32,8,91,8
+    LTEXT           "© 1993 - 2001 Microsoft Corporation.  All rights reserved.",
+                    IDC_COPYRIGHT,30,48,183,8
+    DEFPUSHBUTTON   "OK",IDCANCEL,171,7,40,14,WS_GROUP
+    LTEXT           "Written by Charlie Kindel",IDC_WRITTENBY,32,22,104,8
+    LTEXT           "Microsoft Developer Relations",IDC_GROUP,32,32,130,8
+END
+
+IDD_REGVIEW DIALOG  0, 0, 196, 101
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_NOICON,IDC_OBJICON,3,4,18,20
+    CONTROL         "Object name",IDC_OBJECTNAME,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,31,4,165,10
+    CONTROL         "Object CLSID",IDC_OBJECTCLSID,"Static",
+                    SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,31,15,165,10
+    CONTROL         "Generic2",IDC_TREEVIEW,"SysTreeView32",TVS_HASLINES | 
+                    TVS_EDITLABELS | TVS_DISABLEDRAGDROP | WS_BORDER | 
+                    WS_TABSTOP,0,30,120,68
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 61
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Ole2View 2.0\n\nOle2View\nOle2View Files (*.ore)\n.ORE\nOle2View.Document\nOle2View Document"
+    IDS_INI_CONFIG          "Config"
+    IDS_INI_WNDPOS          "WindowPosition"
+    IDS_INI_SHOWCLASSIDS    "ShowCLSIDs"
+    IDS_INI_CLSCTX          "CLSCTX"
+    IDS_INI_SHOWINTERNAL    "ShowInternalObjects"
+    IDS_BADCOMMANDLINE      "Command line processing not implemented."
+    IDS_INI_SHOWOLE1OBJECTS "SHOWOLE1OBJECTS"
+    IDS_INI_SHOWNOTINSERTABLE "ShowNotInsertable"
+    IDS_INI_SHOWCONTAINERS  "ShowContainers"
+    IDS_INI_SHOWCONTROLS    "ShowControls"
+    IDS_INI_SHOWTYPELIBS    "ShowTypeLibs"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Ole2View 2.0"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_BINDTOAFILE     "Bind to a file via a File Moniker\nBind to File"
+    ID_OBJECTS_SHOWOLE10OBJECTS 
+                            "Show OLE 1.0 objects that have entries in the registry.\nShow OLE 1.0 Objects"
+    ID_OBJECTS_SHOWNOTINSERTABLEOBJECTS 
+                            "Show objects that have the NotInsertable key.\nShow NotInsertable"
+    ID_OBJECTS_SHOWCONTAINERS 
+                            "Show OLE linking capable containers\nShow Containers"
+    ID_OBJECTS_SHOWCONTROLS "Show Objects that have the Control key (OLE Controls)\nShow OLE Controls"
+    ID_OBJECTS_SHOWTYPELIBS "Show Type Libraries\nShow TypeLibs"
+    ID_OBJECT_VERIFY        "Verify object's binary exists and CoCreateInstance succeeds\nVerify Object Exists"
+    ID_OBJECT_DELETE        "Delete all related information for this object from the registry\nDelete from Registry"
+    ID_OBJECTS_SHOWINSERTABLE 
+                            "Show Objects that have the Insertable Key\nShow Insertable Objects"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_RUNREGEDIT      "Run the Windows Registry Editor\nRun RegEdit"
+    ID_VIEW_REFRESH         "Refresh all lists.\nRefresh"
+    ID_IFACES_USEINPROCSERVER 
+                            "Use CLSCTX_INPROC_SERVER when calling CoGetClassObject\nCLSCTX_INPROC_SERVER"
+    ID_IFACES_USEINPROCHANDLER 
+                            "Use CLSCTX_INPROC_HANDLER when calling CoGetClassObject\nCLSCTX_INPROC_HANDLER"
+    ID_IFACES_USELOCALSERVER 
+                            "Use CLSCTX_LOCAL_SERVER when calling CoGetClassObject\nCLSCTX_LOCAL_SERVER"
+    ID_OBJECTS_SHOWINTERNAL "Show objects that are implemented within the OLE DLLs.\nShow Internal OLE Objects"
+    ID_FILE_VIEWTYPELIB     "Open a Type Library file and view the contents\nView TypeLib"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_INI_SHOWINSERTABLE  "ShowInsertable"
+    IDS_REGISTRYKEY         "Microsoft"
+    IDS_IVIEWERSNOTFOUND1   "Could not find IVIEWERS.DLL to auto-register the ITypeLib and IDataObject interface viewers.\n\n"
+    IDS_IVIEWERSNOTFOUND2   "Ole2View will operate correctly without this DLL, however you will not be able to use the interface viewers."
+    IDS_IVIEWERSNOTFOUND3   "Could not find DllRegisterServer function in IVIEWERS.DLL.\n\n"
+    IDS_IVIEWERSNOTFOUND4   "  To correct this problem copy  IVIEWERS.DLL to the same directory that OLE2VIEW.EXE resides in and restart Ole2View."
+    IDS_AUTOREGFAILED       "DllRegisterServer in IVIEWERS.DLL failed.\n\n"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\OleView.rc2"  // non-Microsoft Visual C++ edited resources
+
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  	// Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,78 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "runado", "runado\runado.vcproj", "{5EF84D86-5A76-4C9F-813D-5958A9266A65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76} = {82BD2374-0ED1-4DA3-A037-9426E7487F76}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ADOSamp", "server\adosamp.vcproj", "{82BD2374-0ED1-4DA3-A037-9426E7487F76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		Unicode Debug|Itanium = Unicode Debug|Itanium
+		Unicode Debug|Win32 = Unicode Debug|Win32
+		Unicode Debug|x64 = Unicode Debug|x64
+		Unicode Release|Itanium = Unicode Release|Itanium
+		Unicode Release|Win32 = Unicode Release|Win32
+		Unicode Release|x64 = Unicode Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Debug|Itanium.Build.0 = Debug|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Debug|Win32.Build.0 = Debug|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Debug|x64.ActiveCfg = Debug|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Debug|x64.Build.0 = Debug|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Release|Itanium.ActiveCfg = Release|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Release|Itanium.Build.0 = Release|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Release|Win32.ActiveCfg = Release|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Release|Win32.Build.0 = Release|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Release|x64.ActiveCfg = Release|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Release|x64.Build.0 = Release|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Debug|Itanium.ActiveCfg = Debug|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Debug|Itanium.Build.0 = Debug|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Debug|Win32.ActiveCfg = Debug|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Debug|Win32.Build.0 = Debug|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Debug|x64.ActiveCfg = Debug|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Debug|x64.Build.0 = Debug|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Release|Itanium.ActiveCfg = Release|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Release|Itanium.Build.0 = Release|Itanium
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Release|Win32.ActiveCfg = Release|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Release|Win32.Build.0 = Release|Win32
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Release|x64.ActiveCfg = Release|x64
+		{5EF84D86-5A76-4C9F-813D-5958A9266A65}.Unicode Release|x64.Build.0 = Release|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Debug|Itanium.Build.0 = Debug|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Debug|Win32.Build.0 = Debug|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Debug|x64.ActiveCfg = Debug|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Debug|x64.Build.0 = Debug|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Release|Itanium.ActiveCfg = Release|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Release|Itanium.Build.0 = Release|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Release|Win32.ActiveCfg = Release|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Release|Win32.Build.0 = Release|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Release|x64.ActiveCfg = Release|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Release|x64.Build.0 = Release|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Debug|Itanium.ActiveCfg = Unicode Debug|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Debug|Itanium.Build.0 = Unicode Debug|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Debug|Win32.ActiveCfg = Unicode Debug|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Debug|Win32.Build.0 = Unicode Debug|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Debug|x64.ActiveCfg = Unicode Debug|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Debug|x64.Build.0 = Unicode Debug|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Release|Itanium.ActiveCfg = Unicode Release|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Release|Itanium.Build.0 = Unicode Release|Itanium
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Release|Win32.ActiveCfg = Unicode Release|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Release|Win32.Build.0 = Unicode Release|Win32
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Release|x64.ActiveCfg = Unicode Release|x64
+		{82BD2374-0ED1-4DA3-A037-9426E7487F76}.Unicode Release|x64.Build.0 = Unicode Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

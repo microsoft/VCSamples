@@ -1,0 +1,48 @@
+// ATLPages7.idl : IDL source for ATLPages7
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLPages7.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(A07A1BC5-D64B-4A43-80D5-FB70A60DB304),
+	dual,
+	nonextensible,
+	helpstring("IHelper Interface"),
+	pointer_default(unique)
+]
+interface IHelper : IDispatch{
+
+	[id(1), helpstring("method ShowSpecifiedPages")] HRESULT ShowSpecifiedPages([in] BSTR bstrCaption, [in] IUnknown* pUnk);
+
+	[id(2), helpstring("method ShowPage")] HRESULT ShowPage([in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk);
+};
+[
+	uuid(1247E9A2-F532-46A9-946E-B1B78F3B14FA),
+	version(1.0),
+	helpstring("ATLPages7 1.0 Type Library")
+]
+library ATLPages7Lib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(3C1385A2-4759-4EA1-9DCD-8F0E5D3737FA),
+		helpstring("DocProperties Class")
+	]
+	coclass DocProperties
+	{
+		[default] interface IUnknown;
+	};
+	[
+		uuid(BEE27806-AF8E-42A9-864D-6F50E2788CBF),
+		helpstring("Helper Class")
+	]
+	coclass Helper
+	{
+		[default] interface IHelper;
+	};
+};

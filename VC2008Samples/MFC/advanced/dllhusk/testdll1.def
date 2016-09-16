@@ -1,0 +1,54 @@
+; testdll1.def : Declares exports for TESTDLL1.DLL
+;
+; This is a part of the Microsoft Foundation Classes C++ library.
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+;
+; This source code is only intended as a supplement to the
+; Microsoft Foundation Classes Reference and related
+; electronic documentation provided with the library.
+; See these sources for detailed information regarding the
+; Microsoft Foundation Classes product.
+
+EXPORTS
+	??_GCTextDoc@@UAAPAXI@Z
+	??_7CTextDoc@@6B@
+	?GetRuntimeClass@CHelloView@@UBAPAUCRuntimeClass@@XZ
+	?OnCustomColor@CHelloView@@IAAXXZ
+	??0CTextDoc@@QAA@XZ
+	?_messageEntries@CTextDoc@@0QBUAFX_MSGMAP_ENTRY@@B
+	??1CHelloView@@UAA@XZ
+	??_GCDummyDoc@@UAAPAXI@Z
+	?_GetBaseClass@CTextDoc@@KAPAUCRuntimeClass@@XZ
+	?_GetBaseMessageMap@CDummyDoc@@KAPBUAFX_MSGMAP@@XZ
+	?classCDummyDoc@CDummyDoc@@2UCRuntimeClass@@A
+	?classCTextDoc@CTextDoc@@2UCRuntimeClass@@A
+	??_GCHelloView@@UAAPAXI@Z
+	?Construct@CTextDoc@@SAXPAX@Z
+	?GetRuntimeClass@CDummyDoc@@UBAPAUCRuntimeClass@@XZ
+	?Construct@CHelloView@@SAXPAX@Z
+	?_messageEntries@CDummyDoc@@0QBUAFX_MSGMAP_ENTRY@@B
+	?messageMap@CTextDoc@@1UAFX_MSGMAP@@B
+	InitTestDLL1
+	?Construct@CDummyDoc@@SAXPAX@Z
+	??_7CHelloView@@6B@
+	?GetRuntimeClass@CTextDoc@@UBAPAUCRuntimeClass@@XZ
+	?classCHelloView@CHelloView@@2UCRuntimeClass@@A
+	??1CDummyDoc@@UAA@XZ
+	??1CTextDoc@@UAA@XZ
+	??_7CDummyDoc@@6B@
+	?GetMessageMap@CDummyDoc@@MBAPBUAFX_MSGMAP@@XZ
+	??0CHelloView@@QAA@XZ
+	?GetMessageMap@CTextDoc@@MBAPBUAFX_MSGMAP@@XZ
+	?Serialize@CTextDoc@@MAAXAAVCArchive@@@Z
+	?_GetBaseClass@CDummyDoc@@KAPAUCRuntimeClass@@XZ
+	?_GetBaseClass@CHelloView@@KAPAUCRuntimeClass@@XZ
+	?messageMap@CHelloView@@1UAFX_MSGMAP@@B
+	?OnColor@CHelloView@@IAAXXZ
+	?OnDraw@CHelloView@@MAAXPAVCDC@@@Z
+	?_GetBaseMessageMap@CHelloView@@KAPBUAFX_MSGMAP@@XZ
+	?_GetBaseMessageMap@CTextDoc@@KAPBUAFX_MSGMAP@@XZ
+	?_messageEntries@CHelloView@@0QBUAFX_MSGMAP_ENTRY@@B
+	??0CDummyDoc@@QAA@XZ
+	?GetMessageMap@CHelloView@@MBAPBUAFX_MSGMAP@@XZ
+	?OnUpdateColor@CHelloView@@IAAXPAVCCmdUI@@@Z
+	?messageMap@CDummyDoc@@1UAFX_MSGMAP@@B

@@ -1,0 +1,73 @@
+// licensed.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (licensed.tlb) that will become a resource in
+// licensed.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(973B27A6-F232-101A-B57B-00608CC96AFA), version(1.0),
+  helpstring("Licensed OLE Custom Control module"), control ]
+library LicensedLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CLicensedCtrl
+
+	[ uuid(37446B80-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Licensed Control"), hidden ]
+	dispinterface _DLicensed
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CLicensedCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CLicensedCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CLicensedCtrl
+
+	[ uuid(37446B81-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Licensed Control") ]
+	dispinterface _DLicensedEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CLicensedCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CLicensedCtrl
+
+	[ uuid(973B27A3-F232-101A-B57B-00608CC96AFA), licensed,
+	  helpstring("Licensed Control"), control ]
+	coclass Licensed
+	{
+		[default] dispinterface _DLicensed;
+		[default, source] dispinterface _DLicensedEvents;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

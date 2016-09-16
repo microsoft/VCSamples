@@ -1,0 +1,25 @@
+HKCR
+{
+	ForceRemove COMMap.Chain.1 = s 'Chain Class'
+	{
+		CLSID = s '{4F9A68E8-DD9D-11CF-9462-00AA00BBAD7F}'
+	}
+	ForceRemove COMMap.Chain = s 'Chain Class'
+	{
+		CurVer = s 'COMMap.Chain.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4F9A68E8-DD9D-11CF-9462-00AA00BBAD7F} = s 'Chain Class'
+		{
+			val AppID = s '{4F9A68DE-DD9D-11CF-9462-00AA00BBAD7F}'
+			ProgID = s 'COMMap.Chain.1'
+			VersionIndependentProgID = s 'COMMap.Chain'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
+

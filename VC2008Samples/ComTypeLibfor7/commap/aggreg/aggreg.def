@@ -1,0 +1,10 @@
+; Aggreg.def : Declares the module parameters.
+
+LIBRARY      AGGREG.DLL
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+ 

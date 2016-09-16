@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfcatl", "mfcatl.vcproj", "{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Debug|Itanium = Debug|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+		Release|Itanium = Release|Itanium
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Debug|Win32.Build.0 = Debug|Win32
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Debug|x64.ActiveCfg = Debug|x64
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Debug|x64.Build.0 = Debug|x64
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Debug|Itanium.Build.0 = Debug|Itanium
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Release|Win32.ActiveCfg = Release|Win32
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Release|Win32.Build.0 = Release|Win32
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Release|x64.ActiveCfg = Release|x64
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Release|x64.Build.0 = Release|x64
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Release|Itanium.ActiveCfg = Release|Itanium
+		{6F9CE3B1-706F-4A63-98F5-BB9A90E7FDD0}.Release|Itanium.Build.0 = Release|Itanium
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

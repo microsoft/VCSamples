@@ -1,0 +1,25 @@
+HKCR
+{
+	Aggreg.AggBlind.1 = s 'AggBlind Class'
+	{
+		CLSID = s '{4F9A6816-DD9D-11CF-9462-00AA00BBAD7F}'
+	}
+	Aggreg.AggBlind = s 'AggBlind Class'
+	{
+		CurVer = s 'Aggreg.AggBlind.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4F9A6816-DD9D-11CF-9462-00AA00BBAD7F} = s 'AggBlind Class'
+		{
+			val AppID = s '{4F9A68EC-DD9D-11CF-9462-00AA00BBAD7F}'
+			ProgID = s 'Aggreg.AggBlind.1'
+			VersionIndependentProgID = s 'Aggreg.AggBlind'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
+

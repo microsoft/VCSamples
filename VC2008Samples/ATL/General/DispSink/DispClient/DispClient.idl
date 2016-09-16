@@ -1,0 +1,51 @@
+// This is a part of the Active Template Library. 
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Active Template Library Reference and related
+// electronic documentation provided with the library.
+// See these sources for detailed information regarding the
+// Active Template Library product.
+// DispClient.idl : IDL source for DispClient.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (DispClient.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+	[
+		object,
+		uuid(A6D89F4A-35F4-11D2-9375-00C04FD9757C),
+		dual,
+		helpstring("IDispCtl Interface"),
+		pointer_default(unique)
+	]
+	interface IDispCtl : IDispatch
+	{
+		[id(1), helpstring("method Connect")] HRESULT Connect();
+		[id(2), helpstring("method Disconnect")] HRESULT Disconnect();
+		[id(3), helpstring("method Send")] HRESULT Send(VARIANT data);
+	};
+
+[
+	uuid(A6D89F3B-35F4-11D2-9375-00C04FD9757C),
+	version(1.0),
+	helpstring("DispClient 1.0 Type Library")
+]
+library DISPCLIENTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(A6D89F4B-35F4-11D2-9375-00C04FD9757C),
+		helpstring("DispCtl Class")
+	]
+	coclass DispCtl
+	{
+		[default] interface IDispCtl;
+	};
+};

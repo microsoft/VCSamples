@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'{FEB4F8A5-0105-48bd-AC06-2F94F5020EF5}' = s 'Polygon'
+		'Polygon.DLL'
+		{
+			val AppID = s '{FEB4F8A5-0105-48bd-AC06-2F94F5020EF5}'
+		}
+	}
+}

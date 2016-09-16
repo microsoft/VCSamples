@@ -1,0 +1,67 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scribble", "Scribble.vcproj", "{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CLR-Mixed Debug|Itanium = CLR-Mixed Debug|Itanium
+		CLR-Mixed Debug|Win32 = CLR-Mixed Debug|Win32
+		CLR-Mixed Debug|x64 = CLR-Mixed Debug|x64
+		CLR-Mixed Release|Itanium = CLR-Mixed Release|Itanium
+		CLR-Mixed Release|Win32 = CLR-Mixed Release|Win32
+		CLR-Mixed Release|x64 = CLR-Mixed Release|x64
+		CLR-Pure Debug|Itanium = CLR-Pure Debug|Itanium
+		CLR-Pure Debug|Win32 = CLR-Pure Debug|Win32
+		CLR-Pure Debug|x64 = CLR-Pure Debug|x64
+		CLR-Pure Release|Itanium = CLR-Pure Release|Itanium
+		CLR-Pure Release|Win32 = CLR-Pure Release|Win32
+		CLR-Pure Release|x64 = CLR-Pure Release|x64
+		CLR-Safe Debug|Itanium = CLR-Safe Debug|Itanium
+		CLR-Safe Debug|Win32 = CLR-Safe Debug|Win32
+		CLR-Safe Debug|x64 = CLR-Safe Debug|x64
+		CLR-Safe Release|Itanium = CLR-Safe Release|Itanium
+		CLR-Safe Release|Win32 = CLR-Safe Release|Win32
+		CLR-Safe Release|x64 = CLR-Safe Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Debug|Itanium.ActiveCfg = CLR-Mixed Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Debug|Itanium.Build.0 = CLR-Mixed Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Debug|Win32.ActiveCfg = CLR-Mixed Debug|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Debug|Win32.Build.0 = CLR-Mixed Debug|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Debug|x64.ActiveCfg = CLR-Mixed Debug|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Debug|x64.Build.0 = CLR-Mixed Debug|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Release|Itanium.ActiveCfg = CLR-Mixed Release|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Release|Itanium.Build.0 = CLR-Mixed Release|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Release|Win32.ActiveCfg = CLR-Mixed Release|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Release|Win32.Build.0 = CLR-Mixed Release|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Release|x64.ActiveCfg = CLR-Mixed Release|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Mixed Release|x64.Build.0 = CLR-Mixed Release|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Debug|Itanium.ActiveCfg = CLR-Pure Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Debug|Itanium.Build.0 = CLR-Pure Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Debug|Win32.ActiveCfg = CLR-Pure Debug|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Debug|Win32.Build.0 = CLR-Pure Debug|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Debug|x64.ActiveCfg = CLR-Pure Debug|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Debug|x64.Build.0 = CLR-Pure Debug|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Release|Itanium.ActiveCfg = CLR-Mixed Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Release|Itanium.Build.0 = CLR-Mixed Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Release|Win32.ActiveCfg = CLR-Pure Release|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Release|Win32.Build.0 = CLR-Pure Release|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Release|x64.ActiveCfg = CLR-Pure Release|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Pure Release|x64.Build.0 = CLR-Pure Release|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Debug|Itanium.ActiveCfg = Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Debug|Itanium.Build.0 = Debug|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Debug|Win32.ActiveCfg = Debug|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Debug|Win32.Build.0 = Debug|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Debug|x64.ActiveCfg = Debug|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Debug|x64.Build.0 = Debug|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Release|Itanium.ActiveCfg = Release|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Release|Itanium.Build.0 = Release|Itanium
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Release|Win32.ActiveCfg = Release|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Release|Win32.Build.0 = Release|Win32
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Release|x64.ActiveCfg = Release|x64
+		{83796CF3-FA3C-4BEB-ACB8-E82D9C7F7E96}.CLR-Safe Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

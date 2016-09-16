@@ -1,0 +1,33 @@
+HKCR
+{
+	ForceRemove AtlButton.AtlButton.1 = s 'AtlButton Class'
+	{
+		CLSID = s '{2499388E-3A64-11D0-BFAB-080000185165}'
+	}
+	ForceRemove AtlButton.AtlButton = s 'AtlButton Class'
+	{
+		CurVer = s 'AtlButton.AtlButton.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2499388E-3A64-11D0-BFAB-080000185165} = s 'AtlButton Class'
+		{
+			ProgID = s 'AtlButton.AtlButton.1'
+			VersionIndependentProgID = s 'AtlButton.AtlButton'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			Programmable
+			ToolboxBitmap32 = s '%MODULE%, 1'
+			MiscStatus = s '0'
+			{
+				1 = s '131473'
+			}
+			TypeLib = s '{2499388C-3A64-11D0-BFAB-080000185165}'
+			Version = s '1.0'
+
+			val LocalizedString = s '@%MODULE%,-100'
+		}
+	}
+}

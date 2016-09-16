@@ -1,0 +1,81 @@
+<HTML>
+<BODY ONLOAD="onLoad()" BGCOLOR="LIGHTBLUE">
+
+<OBJECT CLASSID="CLSID:3875AE6F-6B3B-497E-871F-B5FAEE689D30" ID="oArrayMgr"></OBJECT>
+
+<H3>Note: This page calls an ATL component to update items in the listbox. The component uses CComSafeArray to maintain the list.</H3>
+<INPUT TYPE="TEXT" ID="txtInput" STYLE="width:150px">
+<BUTTON ID="btnAdd" onClick="OnAdd()" STYLE="width:75px;margin-left:5">Add</BUTTON>
+<BUTTON ID="btnChange" onClick="OnChange()" STYLE="width:75px;margin-left:5">Change</BUTTON><BR>
+<SELECT ID="selToDo" onpropertychange="OnSelect()" SIZE=8 STYLE="width:150px" ALIGN="TOP"></SELECT>
+<BUTTON ID="btnRemove" onClick="OnRemove()" STYLE="width:75px;margin-left:5">Remove</BUTTON>
+
+<SCRIPT LANGUAGE="JSCRIPT">
+
+function onLoad()
+{
+	// add a few items by default
+	oArrayMgr.Add("Wake up");
+	oArrayMgr.Add("Go to work");
+	oArrayMgr.Add("Go to bed");
+	oArrayMgr.Add("Do it all again");
+
+	UpdateList();
+}
+
+// UpdateList() calls the component's GetArray() to get the updated list.
+function UpdateList()
+{
+	// delete all items in listbox
+	selToDo.length = 0;
+
+	// SAFEARRAYs are of type VBArray in JScript
+	var aryToDo = oArrayMgr.GetArray();
+	for(var nCntr = aryToDo.lbound(1); nCntr <= aryToDo.ubound(1); nCntr++)
+	{
+		var oOption = document.createElement("OPTION");
+		oOption.text = aryToDo.getItem(nCntr);
+		selToDo.add(oOption);
+	}
+}
+
+// Add an item to the list by calling the component's Add() method.
+function OnAdd()
+{
+	if (txtInput.value.length == 0)
+		return;
+	oArrayMgr.Add(txtInput.value);
+	UpdateList();
+}
+
+// Remove an item from the list by calling the component's Remove() method.
+function OnRemove()
+{
+	if (selToDo.selectedIndex == -1)
+		return;
+
+	oArrayMgr.Remove(selToDo.selectedIndex);
+	UpdateList();
+}
+
+// Change the selected item by calling the component's Change() method
+function OnChange()
+{
+	if (selToDo.selectedIndex == -1 ||
+		txtInput.value.length == 0)
+		return;
+	
+	var nIndex = selToDo.selectedIndex;
+	oArrayMgr.Change(selToDo.selectedIndex, txtInput.value);
+	UpdateList();
+}
+
+function OnSelect()
+{
+	if (selToDo.selectedIndex != -1)
+		txtInput.value = selToDo.options[selToDo.selectedIndex].text;
+}
+</SCRIPT>
+
+</BODY>
+</HTML>

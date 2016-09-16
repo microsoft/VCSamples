@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{186F6FA4-7435-11D1-8F0F-000000000000} = s 'MultiRead'
+		'MultiRead.EXE'
+		{
+			val AppID = s {186F6FA4-7435-11D1-8F0F-000000000000}
+		}
+	}
+}

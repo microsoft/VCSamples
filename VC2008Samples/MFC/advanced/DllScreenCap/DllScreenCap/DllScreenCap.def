@@ -1,0 +1,10 @@
+; DllScreenCap.def : Declares the module parameters for the DLL.
+
+LIBRARY      "DllScreenCap"
+
+EXPORTS
+    ; Explicit exports can go here
+	ConfigureCapture	@2
+	CaptureScreen		@3
+	FilterDllMsg		@4
+	ProcessDllIdle		@5

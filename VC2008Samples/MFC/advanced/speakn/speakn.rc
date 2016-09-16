@@ -1,0 +1,122 @@
+//Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+AFX_IDI_STD_FRAME       ICON    DISCARDABLE     "RES\\SPEAKN.ICO"
+IDI_FACE_NEUTRAL        ICON    DISCARDABLE     "RES\\FACE01.ICO"
+IDI_FACE_HAPPY          ICON    DISCARDABLE     "RES\\FACE02.ICO"
+IDI_FACE_HAPPIER        ICON    DISCARDABLE     "RES\\FACE03.ICO"
+IDI_FACE_SAD            ICON    DISCARDABLE     "RES\\FACE04.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PENDIALOG DIALOG PRELOAD DISCARDABLE  90, 9, 144, 188
+STYLE WS_CAPTION | WS_SYSMENU
+CAPTION "Speak 'n Pen - Word Game"
+FONT 10, "MS Sans Serif"
+BEGIN
+	LTEXT           "What is this ?",IDC_PROMPT_TEXT,3,10,99,19
+	CONTROL         "replay",IDC_REPLAY_SOUND,"Button",BS_OWNERDRAW |
+					WS_TABSTOP,117,3,22,13
+	CONTROL         "",IDC_PICTURE,"Button",BS_OWNERDRAW,0,32,144,100
+	CONTROL         "ALC<2>",IDC_INPUT_EDIT,"bedit",WS_TABSTOP | 0x8,0,132,
+					144,23
+	PUSHBUTTON      "GiveUp",IDC_GIVE_UP,4,169,40,14
+	ICON            IDI_FACE_NEUTRAL,IDC_STATUS_FACE,66,166,18,20
+	DEFPUSHBUTTON   "Guess",IDOK,99,169,40,14
+END
+
+IDD_NOPENDIALOG DIALOG PRELOAD DISCARDABLE  90, 9, 144, 188
+STYLE WS_CAPTION | WS_SYSMENU
+CAPTION "Speak 'n Pen - Word Game (keyboard version)"
+FONT 10, "MS Sans Serif"
+BEGIN
+	LTEXT           "What is this ?",IDC_PROMPT_TEXT,3,10,99,19
+	CONTROL         "replay",IDC_REPLAY_SOUND,"Button",BS_OWNERDRAW |
+					WS_TABSTOP,117,3,22,13
+	CONTROL         "",IDC_PICTURE,"Button",BS_OWNERDRAW,0,32,144,100
+	EDITTEXT        IDC_INPUT_EDIT,8,136,125,23,ES_UPPERCASE
+	PUSHBUTTON      "GiveUp",IDC_GIVE_UP,4,169,40,14
+	ICON            IDI_FACE_NEUTRAL,IDC_STATUS_FACE,66,166,18,20
+	DEFPUSHBUTTON   "Next",IDOK,99,169,40,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+REPLAYU                 BITMAP  MOVEABLE PURE   "RES\\REPLAYU.BMP"
+REPLAYD                 BITMAP  MOVEABLE PURE   "RES\\REPLAYD.BMP"
+REPLAYF                 BITMAP  MOVEABLE PURE   "RES\\REPLAYF.BMP"
+INTRO                   BITMAP  MOVEABLE PURE   "RES\\INTRO.DIB"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""afxres.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+	"#include ""res\\sounds.rc2""\r\n"
+	"#include ""res\\lessons.rc2""\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE
+BEGIN
+	IDS_CANNOT_PLAY_SOUND   "Cannot play sound.\nThis demo works much better with a sound card."
+	IDS_FONT_NAME           "Arial"
+	IDS_TRY_AGAIN           "Please try again"
+	IDS_PICTURE_UNAVAILABLE "Picture unavailable"
+	IDS_DONE                "Done"
+END
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\sounds.rc2"
+#include "res\lessons.rc2"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED

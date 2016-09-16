@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{A6D89F30-35F4-11D2-9375-00C04FD9757C} = s 'DispServer'
+		'DispServer.EXE'
+		{
+			val AppID = s {A6D89F30-35F4-11D2-9375-00C04FD9757C}
+		}
+	}
+}

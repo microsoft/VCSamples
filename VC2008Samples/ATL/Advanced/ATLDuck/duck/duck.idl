@@ -1,0 +1,48 @@
+// File: duck.idl
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Classes Reference and related electronic
+// documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft C++ Libraries products.
+
+import  "oaidl.idl";
+// duck.idl : IDL source for duck.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (duck.tlb) and marshalling code.
+
+	[
+	
+		uuid(120B72AE-65BF-11D0-9DDC-00A0C9034892),
+	
+		helpstring("IDuckInt Interface"),
+		pointer_default(unique)
+	]
+	interface IDuckInt : IUnknown
+	{
+		[helpstring("method Quack")] HRESULT Quack(BSTR szWhosCalling);
+		[helpstring("method Flap")] HRESULT Flap(BSTR szWhosCalling);
+		[helpstring("method Paddle")] HRESULT Paddle(BSTR szWhosCalling);
+		[helpstring("method Walk")] HRESULT Walk(BSTR szWhosCalling);
+	};
+[
+	uuid(120B72A2-65BF-11D0-9DDC-00A0C9034892),
+	version(1.0),
+	helpstring("duck 1.0 Type Library")
+]
+library DUCKLib
+{
+	importlib("stdole32.tlb");
+
+	[
+		uuid(120B72AF-65BF-11D0-9DDC-00A0C9034892),
+		helpstring("DuckInt Class")
+	]
+	coclass DuckInt
+	{
+		[default] interface IDuckInt;
+	};
+};

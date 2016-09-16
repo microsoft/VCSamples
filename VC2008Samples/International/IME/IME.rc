@@ -1,0 +1,258 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\IME.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\IME.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About IME"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,16,16
+    LTEXT           "IME Sample Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           L"\251 2005 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_IME_DIALOG DIALOGEX 0, 0, 345, 269
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_SHELLFONT | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IME Sample"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_IME_EDIT,7,9,330,20,ES_MULTILINE | ES_AUTOHSCROLL
+    GROUPBOX        "&Conversion Mode",IDC_STATIC,7,35,160,226
+    CONTROL         "IME_CMODE_ALPHANUMERIC",
+                    IDC_CHECK_IME_CMODE_ALPHANUMERIC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,47,135,10
+    CONTROL         "IME_CMODE_NATIVE IME_CMODE_CHINESE IME_CMODE_HANGUL IME_CMODE_JAPANESE",
+                    IDC_CHECK_IME_CMODE_NATIVE,"Button",BS_AUTOCHECKBOX | 
+                    BS_TOP | BS_MULTILINE | WS_TABSTOP,15,62,100,41
+    CONTROL         "IME_CMODE_KATAKANA",IDC_CHECK_IME_CMODE_KATAKANA,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,103,105,10
+    CONTROL         "IME_CMODE_LANGUAGE",IDC_CHECK_IME_CMODE_LANGUAGE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,117,104,10
+    CONTROL         "IME_CMODE_FULLSHAPE",IDC_CHECK_IME_CMODE_FULLSHAPE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,131,105,10
+    CONTROL         "IME_CMODE_ROMAN",IDC_CHECK_IME_CMODE_ROMAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,145,97,10
+    CONTROL         "IME_CMODE_CHARCODE",IDC_CHECK_IME_CMODE_CHARCODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,159,94,10
+    CONTROL         "IME_CMODE_HANJACONVERT",
+                    IDC_CHECK_IME_CMODE_HANJACONVERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,173,127,10
+    CONTROL         "IME_CMODE_SOFTKBD",IDC_CHECK_IME_CMODE_SOFTKBD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,187,94,10
+    CONTROL         "IME_CMODE_NOCONVERSION",
+                    IDC_CHECK_IME_CMODE_NOCONVERSION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,202,127,10
+    CONTROL         "IME_CMODE_EUDC",IDC_CHECK_IME_CMODE_EUDC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,216,97,10
+    CONTROL         "IME_CMODE_SYMBOL",IDC_CHECK_IME_CMODE_SYMBOL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,230,105,10
+    CONTROL         "IME_CMODE_FIXED",IDC_CHECK_IME_CMODE_FIXED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,244,91,10
+    GROUPBOX        "&Sentence Mode",IDC_STATIC,177,35,160,100
+    CONTROL         "IME_SMODE_NONE",IDC_CHECK_IME_SMODE_NONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,49,97,10
+    CONTROL         "IME_SMODE_PLAURALCLAUSE",
+                    IDC_CHECK_IME_SMODE_PLAURALCLAUSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,64,125,10
+    CONTROL         "IME_SMODE_SINGLECONVERT",
+                    IDC_CHECK_IME_SMODE_SINGLECONVERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,78,123,10
+    CONTROL         "IME_SMODE_AUTOMATIC",IDC_CHECK_IME_SMODE_AUTOMATIC,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,92,110,10
+    CONTROL         "IME_SMODE_PHRASEPREDICT",
+                    IDC_CHECK_IME_SMODE_PHRASEPREDICT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,106,124,10
+    CONTROL         "IME_SMODE_CONVERSATION",
+                    IDC_CHECK_IME_SMODE_CONVERSATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,120,122,10
+    GROUPBOX        "IME &Activation",IDC_STATIC,177,141,160,43
+    CONTROL         "IME Enable",IDC_RADIO_IME_ENABLE,"Button",
+                    BS_AUTORADIOBUTTON,185,155,51,10
+    CONTROL         "IME Disable",IDC_RADIO_IME_DISABLE,"Button",
+                    BS_AUTORADIOBUTTON,185,169,53,10
+    GROUPBOX        "&Font",IDC_STATIC,177,190,160,41
+    COMBOBOX        IDC_COMBO_FONT,186,207,129,52,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "E&xit",IDC_OK,285,247,52,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "IME MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "IME\0"
+            VALUE "LegalCopyright", L"\251 Microsoft Corporation.  All rights reserved."
+            VALUE "OriginalFilename", "IME.EXE\0"
+            VALUE "ProductName", "IME Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_IME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 337
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About IME..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\IME.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

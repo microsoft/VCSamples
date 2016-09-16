@@ -1,0 +1,9 @@
+Steps to convert the CALCDRIV project to compiler native COM support:
+
+1.  Insert ..\mfccalc\mfccalc.odl in project source files.
+
+2.  Change project settings.OLE types for all targets (debug, release, Unicode, etc.) to 
+    place .tlb file in project source directory instead of target specific directory.
+
+3.  Remove calctype.cpp and calctype.h from the project.
+

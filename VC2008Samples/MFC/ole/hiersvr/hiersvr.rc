@@ -1,0 +1,587 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.rc"" // Standard components\r\n"
+    "#include ""afxolesv.rc"" // OLE Server support\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "RES\\HIERSVR.ICO"
+IDR_HIERSVRTYPE         ICON                    "RES\\SVRDOC.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "RES\\TOOLBAR.BMP"
+IDR_HIERSVRTYPE_SRVR_IP BITMAP                  "RES\\ITOOLBAR.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Index",                      ID_HELP_INDEX
+        MENUITEM SEPARATOR
+        MENUITEM "&About Hierarchy Server...",  ID_APP_ABOUT
+    END
+END
+
+IDR_HIERSVRTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\aCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\aCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\aCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\aCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\aCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\aCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\aDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "C&hange Node...",             ID_CHANGE_NAME
+        MENUITEM "&Add Node...",                ID_ADD_NODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Import Text...",             ID_IMPORT_TEXT
+    END
+    POPUP "&Tree"
+    BEGIN
+        MENUITEM "E&xpand One Level\a+",        ID_TREE_EXPANDONELEVEL
+        MENUITEM "Expand &Branch\a*",           ID_TREE_EXPANDBRANCH
+        MENUITEM "Expand &All\aCtrl+*",         ID_TREE_EXPANDALL
+        MENUITEM "&Collapse Branch\a-",         ID_TREE_COLLAPSEBRANCH
+        MENUITEM SEPARATOR
+        MENUITEM "Change &Font...",             ID_OPTIONS_FONT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&1 Zoom 25%",                 ID_VIEW_ZOOM25
+        MENUITEM "&2 Zoom 50%",                 ID_VIEW_ZOOM50
+        MENUITEM "&3 Zoom 75%",                 ID_VIEW_ZOOM75
+        MENUITEM "&4 Zoom 100%",                ID_VIEW_ZOOM100
+        MENUITEM "&6 Zoom 150%",                ID_VIEW_ZOOM150
+        MENUITEM "&8 Zoom 200%",                ID_VIEW_ZOOM200
+        MENUITEM "&0 Zoom 300%",                ID_VIEW_ZOOM300
+        MENUITEM "Zoom &Custom...",             ID_VIEW_ZOOMCUSTOM
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Index",                      ID_HELP_INDEX
+        MENUITEM SEPARATOR
+        MENUITEM "&About Hierarchy Server...",  ID_APP_ABOUT
+    END
+END
+
+IDR_POPUPS MENU 
+BEGIN
+    POPUP "_SimplePopup_"
+    BEGIN
+        MENUITEM "Cut",                         ID_EDIT_CUT
+        MENUITEM "Copy",                        ID_EDIT_COPY
+        MENUITEM "Paste",                       ID_EDIT_PASTE
+        MENUITEM "Delete",                      ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Change Node...",              ID_CHANGE_NAME
+        MENUITEM "Add Node...",                 ID_ADD_NODE
+    END
+END
+
+IDR_HIERSVRTYPE_SRVR_EMB MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\aCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\aCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Update <container>",         ID_FILE_UPDATE
+        MENUITEM "Save Copy &As...",            ID_FILE_SAVE_COPY_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit && Return to <container>", ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\aCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\aCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\aCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\aDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "C&hange Node...",             ID_CHANGE_NAME
+        MENUITEM "&Add Node...",                ID_ADD_NODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Import Text...",             ID_IMPORT_TEXT
+    END
+    POPUP "&Tree"
+    BEGIN
+        MENUITEM "E&xpand One Level\a+",        ID_TREE_EXPANDONELEVEL
+        MENUITEM "Expand &Branch\a*",           ID_TREE_EXPANDBRANCH
+        MENUITEM "Expand &All\aCtrl+*",         ID_TREE_EXPANDALL
+        MENUITEM "&Collapse Branch\a-",         ID_TREE_COLLAPSEBRANCH
+        MENUITEM SEPARATOR
+        MENUITEM "Change &Font...",             ID_OPTIONS_FONT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&1 Zoom 25%",                 ID_VIEW_ZOOM25
+        MENUITEM "&2 Zoom 50%",                 ID_VIEW_ZOOM50
+        MENUITEM "&3 Zoom 75%",                 ID_VIEW_ZOOM75
+        MENUITEM "&4 Zoom 100%",                ID_VIEW_ZOOM100
+        MENUITEM "&6 Zoom 150%",                ID_VIEW_ZOOM150
+        MENUITEM "&8 Zoom 200%",                ID_VIEW_ZOOM200
+        MENUITEM "&0 Zoom 300%",                ID_VIEW_ZOOM300
+        MENUITEM "Zoom &Custom...",             ID_VIEW_ZOOMCUSTOM
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Index",                      ID_HELP_INDEX
+        MENUITEM SEPARATOR
+        MENUITEM "&About Hierarchy Server...",  ID_APP_ABOUT
+    END
+END
+
+IDR_HIERSVRTYPE_SRVR_IP MENU 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Cu&t\aCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\aCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\aCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\aDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "C&hange Node...",             ID_CHANGE_NAME
+        MENUITEM "&Add Node...",                ID_ADD_NODE
+        MENUITEM SEPARATOR
+        MENUITEM "&Import Text...",             ID_IMPORT_TEXT
+    END
+    POPUP "&Tree"
+    BEGIN
+        MENUITEM "E&xpand One Level\a+",        ID_TREE_EXPANDONELEVEL
+        MENUITEM "Expand &Branch\a*",           ID_TREE_EXPANDBRANCH
+        MENUITEM "Expand &All\aCtrl+*",         ID_TREE_EXPANDALL
+        MENUITEM "&Collapse Branch\a-",         ID_TREE_COLLAPSEBRANCH
+        MENUITEM SEPARATOR
+        MENUITEM "Change &Font...",             ID_OPTIONS_FONT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Index",                      ID_HELP_INDEX
+        MENUITEM SEPARATOR
+        MENUITEM "&About Hierarchy Server...",  ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "*",            ID_TREE_EXPANDBRANCH,   ASCII,  NOINVERT
+    "+",            ID_TREE_EXPANDONELEVEL, ASCII,  NOINVERT
+    "-",            ID_TREE_COLLAPSEBRANCH, ASCII,  NOINVERT
+    "8",            ID_TREE_EXPANDALL,      VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_HIERSVRTYPE_SRVR_EMB ACCELERATORS 
+BEGIN
+    "*",            ID_TREE_EXPANDBRANCH,   ASCII,  NOINVERT
+    "+",            ID_TREE_EXPANDONELEVEL, ASCII,  NOINVERT
+    "-",            ID_TREE_COLLAPSEBRANCH, ASCII,  NOINVERT
+    "8",            ID_TREE_EXPANDALL,      VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_HIERSVRTYPE_SRVR_IP ACCELERATORS 
+BEGIN
+    "*",            ID_TREE_EXPANDBRANCH,   ASCII,  NOINVERT
+    "+",            ID_TREE_EXPANDONELEVEL, ASCII,  NOINVERT
+    "-",            ID_TREE_COLLAPSEBRANCH, ASCII,  NOINVERT
+    "8",            ID_TREE_EXPANDALL,      VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_INPLACE,      VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 217, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Hierarchy Server"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "Hierarchy Server Version 4.0",IDC_STATIC,40,10,119,8
+    LTEXT           "© 1992 - 2001 Microsoft Corporation.  All rights reserved.",IDC_STATIC,40,25,121,22
+    DEFPUSHBUTTON   "OK",IDR_MAINFRAME,176,6,32,14,WS_GROUP
+END
+
+IDD_ADD_NODE DIALOG  0, 0, 190, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Node"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Description:",IDC_STATIC,7,14,56,9
+    EDITTEXT        IDC_EDIT1,66,12,58,13,ES_AUTOHSCROLL
+    RTEXT           "Item &Link Key:",IDC_STATIC,7,36,56,9
+    EDITTEXT        IDC_EDIT2,67,35,57,13,ES_AUTOHSCROLL
+    RTEXT           "&Shape:",IDC_STATIC,7,58,56,9
+    COMBOBOX        IDC_COMBO1,67,57,57,38,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,130,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,23,50,14
+END
+
+IDD_CHANGE_NAME DIALOG  0, 0, 190, 78
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Node"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Description:",IDC_STATIC,7,14,56,9
+    EDITTEXT        IDC_EDIT1,66,12,58,13,ES_AUTOHSCROLL
+    RTEXT           "Item &Link Key:",IDC_STATIC,7,36,56,9
+    EDITTEXT        IDC_EDIT2,67,35,57,13,ES_AUTOHSCROLL
+    RTEXT           "&Shape:",IDC_STATIC,7,58,56,9
+    COMBOBOX        IDC_COMBO1,67,57,57,38,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,130,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,23,50,14
+END
+
+IDD_CUSTZOOM DIALOG  0, 0, 185, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Customize Zoom"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "New Zoom Factors",IDC_STATIC,5,4,118,80
+    LTEXT           "&Y-Axis Zoom",IDC_STATIC,12,21,42,8
+    EDITTEXT        IDC_EDIT2,12,31,71,13,ES_AUTOHSCROLL
+    LTEXT           "&X-Axis Zoom",IDC_STATIC,12,54,42,8
+    EDITTEXT        IDC_EDIT1,12,64,71,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,129,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,23,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ADD_NODE DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 10, 0
+0x6552, 0x7463, 0x6e61, 0x6c67, 0x0065, 
+    IDC_COMBO1, 0x403, 11, 0
+0x6f52, 0x6e75, 0x2064, 0x6552, 0x7463, "\000" 
+    IDC_COMBO1, 0x403, 10, 0
+0x764f, 0x6c61, 0x5220, 0x6365, 0x0074, 
+    0
+END
+
+IDD_CHANGE_NAME DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 10, 0
+0x6552, 0x7463, 0x6e61, 0x6c67, 0x0065, 
+    IDC_COMBO1, 0x403, 11, 0
+0x6f52, 0x6e75, 0x2064, 0x6552, 0x7463, "\000" 
+    IDC_COMBO1, 0x403, 10, 0
+0x764f, 0x6c61, 0x5220, 0x6365, 0x0074, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Hierarchy Server"
+    IDR_HIERSVRTYPE         "\nHier\nHierarchy List\nHierarchy Files (*.hie)\n.hie\nHierSvr.Document.4\nMFC 4.0 Hierarchy List\nHIER\nHierarchy Files"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Hierarchy Server"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document"
+    ID_FILE_OPEN            "Open an existing document"
+    ID_FILE_CLOSE           "Close the active document"
+    ID_FILE_SAVE            "Save the active document"
+    ID_FILE_SAVE_AS         "Save the active document with a new name"
+    ID_FILE_UPDATE          "Update the container to show any changes"
+    ID_FILE_SAVE_COPY_AS    "Save a copy of this document to a file"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright"
+    ID_APP_EXIT             "Quit the application; prompts to save documents"
+    ID_HELP_INDEX           "List Help topics"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows"
+    ID_HELP                 "Display help for current task or command"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane"
+    ID_PREV_PANE            "Switch back to the previous window pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles"
+    ID_WINDOW_SPLIT         "Split the active window into panes"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection"
+    ID_EDIT_CLEAR_ALL       "Erase everything"
+    ID_EDIT_COPY            "Copy the selection and puts it on the Clipboard"
+    ID_EDIT_CUT             "Cut the selection and puts it on the Clipboard"
+    ID_EDIT_FIND            "Find the specified text"
+    ID_EDIT_PASTE           "Insert Clipboard contents"
+    ID_EDIT_REPEAT          "Repeat the last action"
+    ID_EDIT_REPLACE         "Replace specific text with different text"
+    ID_EDIT_SELECT_ALL      "Select the entire document"
+    ID_EDIT_UNDO            "Change the name of the current node"
+    ID_EDIT_REDO            "Redo the previously undone action"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CHANGE_NAME          "Change the attributes of a node"
+    ID_ADD_NODE             "Add a new hierarchy node"
+    ID_IMPORT_TEXT          "Import text file with tabs for indentation level"
+    ID_VIEW_ZOOM25          "Set zoom factor to 25%"
+    ID_VIEW_ZOOM50          "Set zoom factor to 50%"
+    ID_VIEW_ZOOM75          "Set zoom factor to 75%"
+    ID_VIEW_ZOOM100         "Set zoom factor to 100%"
+    ID_VIEW_ZOOM125         "Set zoom factor to 125%"
+    ID_VIEW_ZOOM150         "Set zoom factor to 150%"
+    ID_VIEW_ZOOM175         "Set zoom factor to 175%"
+    ID_VIEW_ZOOM200         "Set zoom factor to 200%"
+    ID_VIEW_ZOOM250         "Set zoom factor to 250%"
+    ID_VIEW_ZOOM300         "Set zoom factor to 300%"
+    ID_VIEW_ZOOMCUSTOM      "Set custom zoom factor"
+    ID_TREE_EXPANDONELEVEL  "Displays another level of current item"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TREE_EXPANDBRANCH    "Displays all levels of current item"
+    ID_TREE_EXPANDALL       "Displays all levels of all items"
+    ID_TREE_COLLAPSEBRANCH  "Collapses all levels of current item"
+    ID_OPTIONS_FONT         "Select the font used in this document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDP_AFXOLEINIT_FAILED   "OLE Initialiation Failed"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc" // Standard components
+#include "afxolesv.rc" // OLE Server support
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

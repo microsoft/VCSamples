@@ -1,0 +1,73 @@
+// button.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (button.tlb) that will become a resource in
+// button.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(4A8C9992-7713-101B-A5A1-04021C009402), version(1.0),
+  helpstring("Button OLE Custom Control module"), control ]
+library ButtonLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CButtonCtrl
+
+	[ uuid(4A8C9990-7713-101B-A5A1-04021C009402),
+	  helpstring("Dispatch interface for Button Control"), hidden ]
+	dispinterface _DButton
+	{
+		properties:
+			//{{AFX_ODL_PROP(CButtonCtrl)
+			[id(DISPID_BORDERSTYLE), bindable, requestedit] short BorderStyle;
+			[id(DISPID_CAPTION), bindable, requestedit] BSTR Caption;
+			[id(DISPID_ENABLED), bindable, requestedit] boolean Enabled;
+			[id(DISPID_FONT), bindable] IFontDisp* Font;
+			//}}AFX_ODL_PROP
+
+		methods:
+			//{{AFX_ODL_METHOD(CButtonCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CButtonCtrl
+
+	[ uuid(4A8C9991-7713-101B-A5A1-04021C009402),
+	  helpstring("Event interface for Button Control") ]
+	dispinterface _DButtonEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			//{{AFX_ODL_EVENT(CButtonCtrl)
+			[id(DISPID_CLICK)] void Click();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CButtonCtrl
+
+	[ uuid(4A8C998F-7713-101B-A5A1-04021C009402),
+	  helpstring("Button Control"), control ]
+	coclass Button
+	{
+		[default] dispinterface _DButton;
+		[default, source] dispinterface _DButtonEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

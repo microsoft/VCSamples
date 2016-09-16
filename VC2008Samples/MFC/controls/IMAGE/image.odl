@@ -1,0 +1,70 @@
+// image.odl : type library source for OLE Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (image.tlb) that will become a resource in
+// image.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(346685E0-C383-11CF-A5A4-00AA00A45705), version(1.0),
+  helpstring("image OLE Control module"), control ]
+library IMAGELib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CImageCtrl
+
+	[ uuid(346685E1-C383-11CF-A5A4-00AA00A45705),
+	  helpstring("Dispatch interface for Image Control"), hidden ]
+	dispinterface _DImage
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CImageCtrl)
+			[id(DISPID_READYSTATE), readonly] long ReadyState;
+			[id(1)] boolean AutoSize;
+			[id(2)] BSTR ImagePath;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CImageCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CImageCtrl
+
+	[ uuid(346685E2-C383-11CF-A5A4-00AA00A45705),
+	  helpstring("Event interface for Image Control") ]
+	dispinterface _DImageEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CImageCtrl)
+			[id(DISPID_READYSTATECHANGE)] void ReadyStateChange();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CImageCtrl
+
+	[ uuid(346685E3-C383-11CF-A5A4-00AA00A45705),
+	  helpstring("Image Control"), control ]
+	coclass Image
+	{
+		[default] dispinterface _DImage;
+		[default, source] dispinterface _DImageEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+};

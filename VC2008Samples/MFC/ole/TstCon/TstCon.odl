@@ -1,0 +1,54 @@
+// TestContainer98.odl : type library source for TestContainer98.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (TestContainer98.tlb).
+
+[ uuid(198184FB-B837-11D0-8DF1-00C04FB68D60), version(1.0) ]
+library TestContainer98
+{
+	importlib( "stdole32.tlb" );
+	
+	//  Primary dispatch interface for CTestContainer98Doc
+	
+	[ uuid(198184FC-B837-11D0-8DF1-00C04FB68D60) ]
+	dispinterface ITestContainer98
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CTestContainer98Doc)
+			[id(1)] IDispatch* PrimarySelection;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CTestContainer98Doc)
+			[id(2)] IDispatch* FindControl(BSTR pszName);
+			[id(3)] void Log(BSTR pszMessage);
+			[id(4)] IDispatch* InsertControl(BSTR pszProgID, BSTR pszName);
+			//}}AFX_ODL_METHOD
+
+	};
+
+   [ uuid( CC6568DE-0EAF-11d1-8E2F-00C04FB68D60 ) ]
+   dispinterface ITestContainer98Events
+   {
+   properties:
+
+   methods:
+      [id(1)] void OnNewControl( IDispatch* pControl );
+   };
+
+	//  Class information for CTestContainer98Doc
+	
+	[ uuid(198184FA-B837-11D0-8DF1-00C04FB68D60) ]
+	coclass Document
+	{
+		[default] dispinterface ITestContainer98;
+      [default, source] dispinterface ITestContainer98Events;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

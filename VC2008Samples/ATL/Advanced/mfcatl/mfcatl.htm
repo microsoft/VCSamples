@@ -1,0 +1,37 @@
+<HTML>
+
+<BODY>
+
+<object
+   classid="clsid:F933FD54-6E04-42D4-B82A-10B1820EEE3E"
+   id=objtwo
+>
+</object>
+<PRE>       <INPUT TYPE=BUTTON VALUE="Call Object One" NAME="BtnOne" onclick="One()"> </PRE>
+<PRE>       <INPUT TYPE=BUTTON VALUE="Call Object Two" NAME="BtnTwo" onclick="Two()"> </PRE>
+<PRE>       <INPUT TYPE=BUTTON VALUE="Call Both Objects" NAME="BtnBoth" onclick="Both()"> </PRE>
+</BODY>
+
+<SCRIPT LANGUAGE=JScript>
+
+function One()
+{
+	var obj = new ActiveXObject("MfcAtl.ObjectOne");
+	alert(obj.SayHello());
+}
+function Two()
+{
+	alert(objtwo.SayHello);
+}
+
+function Both()
+{
+	One();
+	Two();
+}
+
+</SCRIPT>
+
+
+
+</HTML>

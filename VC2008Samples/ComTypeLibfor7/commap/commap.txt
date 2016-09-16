@@ -1,0 +1,13 @@
+
+COMMAP
+
+This basic sample shows how different COM interface map entry macros are used.
+
+HOW TO RUN IT:
+Build Aggreg.dll first, then build Commap.dll. 
+CTLCOMM is an MFC wrapped VCCOM controller of the COMMAP ATL server. 
+Commap.htm includes comments about each type of map entry.
+
+
+
+

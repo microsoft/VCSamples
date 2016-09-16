@@ -1,0 +1,77 @@
+// push.odl : type library source for OLE Custom Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (push.tlb) that will become a resource in
+// push.ocx.
+
+// This is a part of the Microsoft Foundation Classes C++ library.
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//
+// This source code is only intended as a supplement to the
+// Microsoft Foundation Classes Reference and the
+// Books Online documentation provided with the library.
+// See these sources for detailed information regarding the
+// Microsoft Foundation Classes product.
+
+#include <olectl.h>
+
+[ uuid(75303866-B925-101A-B57A-0000C0C3ED5F), version(1.0),
+  helpstring("Push OLE Custom Control module"), control ]
+library PushLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CPushCtrl
+
+	[ uuid(37446B86-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Dispatch interface for Push Control"), hidden ]
+	dispinterface _DPush
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CPushCtrl)
+			[id(DISPID_BORDERSTYLE), bindable, requestedit] short BorderStyle;
+			[id(DISPID_CAPTION), bindable, requestedit] BSTR Caption;
+			[id(DISPID_ENABLED), bindable, requestedit] boolean Enabled;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CPushCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CPushCtrl
+
+	[ uuid(37446B87-5870-101B-B57B-00608CC96AFA),
+	  helpstring("Event interface for Push Control") ]
+	dispinterface _DPushEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CPushCtrl)
+			[id(1)] void CustomClick(BSTR lpstrCaption, short cchCaption);
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CPushCtrl
+
+	[ uuid(75303863-B925-101A-B57A-0000C0C3ED5F),
+	  helpstring("Push Control"), control ]
+	coclass Push
+	{
+		[default] dispinterface _DPush;
+		[default, source] dispinterface _DPushEvents;
+	};
+
+	//{{AFX_APPEND_ODL}}
+};

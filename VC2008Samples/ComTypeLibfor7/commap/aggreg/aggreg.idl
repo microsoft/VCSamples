@@ -1,0 +1,105 @@
+// Aggreg.idl : IDL source for Aggreg.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Aggreg.tlb) and marshalling code.
+
+    [
+        object,
+        uuid(4F9A68FD-DD9D-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("IAgg Interface"),
+        pointer_default(unique)
+    ]
+    interface IAgg : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name([out, retval] BSTR* pbstrName);
+    };
+
+    [
+        object,
+        uuid(4F9A6812-DD9D-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("IAggBlind Interface"),
+        pointer_default(unique)
+    ]
+    interface IAggBlind : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name([out, retval] BSTR* pbstrName);
+    };
+
+    [
+        object,
+        uuid(4F9A6817-DD9D-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("IAutoAgg Interface"),
+        pointer_default(unique)
+    ]
+    interface IAutoAgg : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name([out, retval] BSTR* pbstrName);
+    };
+
+    [
+        object,
+        uuid(4F9A681C-DD9D-11CF-9462-00AA00BBAD7F),
+        dual,
+        helpstring("IAutoAggB Interface"),
+        pointer_default(unique)
+    ]
+    interface IAutoAggB : IDispatch
+    {
+        import "oaidl.idl";
+        [propget, id(0)] HRESULT Name([out, retval] BSTR* pbstrName);
+    };
+
+[
+    uuid(4F9A68FB-DD9D-11CF-9462-00AA00BBAD7F),
+    version(1.0),
+    helpstring("VCAggreg 1.0 Type Library")
+]
+library AGGREGLib
+{
+    importlib("stdole32.tlb");
+
+    [
+        uuid(4F9A6811-DD9D-11CF-9462-00AA00BBAD7F),
+        helpstring("Agg Class")
+    ]
+    coclass CAgg
+    {
+        [default] interface IAgg;
+    };
+
+    [
+        uuid(4F9A6816-DD9D-11CF-9462-00AA00BBAD7F),
+        helpstring("AggBlind Class")
+    ]
+    coclass CAggBlind
+    {
+        [default] interface IAggBlind;
+    };
+
+    [
+        uuid(4F9A681B-DD9D-11CF-9462-00AA00BBAD7F),
+        helpstring("AutoAgg Class")
+    ]
+    coclass CAutoAgg
+    {
+        [default] interface IAutoAgg;
+    };
+
+    [
+        uuid(4F9A6910-DD9D-11CF-9462-00AA00BBAD7F),
+        helpstring("AutoAggB Class")
+    ]
+    coclass CAutoAggB
+    {
+        [default] interface IAutoAggB;
+    };
+
+};
+

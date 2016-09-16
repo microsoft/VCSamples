@@ -1,0 +1,332 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "RES\\CTRLBARS.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "RES\\TOOLBAR.BMP"
+IDB_STYLES              BITMAP                  "RES\\STYLES.BMP"
+IDB_PALETTE             BITMAP                  "RES\\PALETTE.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "Sty&le Bar",                  IDW_STYLES
+        MENUITEM "&Palette",                    IDM_VIEWPALETTE
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Dlg Bar Top",                ID_VIEW_DLGBARTOP
+    END
+    POPUP "&Style"
+    BEGIN
+        MENUITEM "&Left",                       ID_STYLE_LEFT
+        MENUITEM "&Centered",                   ID_STYLE_CENTERED
+        MENUITEM "&Right",                      ID_STYLE_RIGHT
+        MENUITEM "&Justified",                  ID_STYLE_JUSTIFIED
+    END
+    POPUP "&Palette"
+    BEGIN
+        MENUITEM "&2 Column",                   IDM_PALETTE_2COLUMN
+        MENUITEM "&3 Column",                   IDM_PALETTE_3COLUMN
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About CTRLBARS...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 217, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About CTRLBARS"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "CTRLBARS Application Version 1.0",IDC_STATIC,40,10,119,
+                    8
+    LTEXT           "© 1992 - 2001 Microsoft Corporation.  All rights reserved.",
+                    IDC_STATIC,40,25,125,21
+    DEFPUSHBUTTON   "OK",IDOK,176,6,32,14,WS_GROUP
+END
+
+IDD_VIEWSELECT DIALOG  0, 0, 47, 107
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Hide/Show",IDC_STATIC,1,1,44,49
+    CONTROL         "Tools",ID_VIEW_TOOLBAR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,14,32,10
+    CONTROL         "Styles",IDW_STYLES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,24,35,10
+    CONTROL         "Palette",IDM_VIEWPALETTE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,34,35,10
+    COMBOBOX        IDC_PALETTE,2,55,42,50,CBS_DROPDOWNLIST | WS_VSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_INSERT,      ID_TOGGLE_INSERT,       VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_VIEWSELECT DLGINIT
+BEGIN
+    IDC_PALETTE, 0x403, 7, 0
+0x7245, 0x7361, 0x7265, "\000" 
+    IDC_PALETTE, 0x403, 4, 0
+0x6550, 0x006e, 
+    IDC_PALETTE, 0x403, 7, 0
+0x6553, 0x656c, 0x7463, "\000" 
+    IDC_PALETTE, 0x403, 6, 0
+0x7242, 0x7375, 0x0068, 
+    IDC_PALETTE, 0x403, 6, 0
+0x7053, 0x6172, 0x0079, 
+    IDC_PALETTE, 0x403, 6, 0
+0x6150, 0x6e69, 0x0074, 
+    IDC_PALETTE, 0x403, 5, 0
+0x694c, 0x656e, "\000" 
+    IDC_PALETTE, 0x403, 8, 0
+0x7945, 0x4465, 0x6f72, 0x0070, 
+    IDC_PALETTE, 0x403, 8, 0
+0x614d, 0x6e67, 0x6669, 0x0079, 
+    IDC_PALETTE, 0x403, 5, 0
+0x6552, 0x7463, "\000" 
+    IDC_PALETTE, 0x403, 6, 0
+0x6f52, 0x6e75, 0x0064, 
+    IDC_PALETTE, 0x403, 5, 0
+0x764f, 0x6c61, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CTRLBARS Application"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_PALETTE             "Select new tool\nChange Tool"
+    IDW_COMBO               "Select new style\nChange Style"
+    IDS_DEFAULT_FONT        "MS Sans Serif"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nContext Help"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_DESKACCESSORY   "Opens the selected item"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle Toolbar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_DLGBARTOP       "Makes the Dialog Bar the topmost (z ordering) window"
+    ID_VIEW_SHORT           "View the short form of the toolbar\nShort"
+    ID_VIEW_LONG            "View the long form of the toolbar\nLong"
+    IDM_PALETTE_2COLUMN     "Make the palette be 2 buttons wide"
+    IDM_PALETTE_3COLUMN     "Make the palette be 3 buttons wide"
+END
+
+STRINGTABLE 
+BEGIN
+    IDW_STYLES              "Show or hide the style bar.\nToggle Stylebar"
+    IDM_VIEWPALETTE         "Show or hide the tool palette\nToggle Palette"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and puts it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and puts it on the Clipboard\nCut"
+    ID_EDIT_PASTE           "Insert clipboard contents\nPaste"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    IDS_LEFT                "Left"
+    IDS_RIGHT               "Right"
+    IDS_CENTERED            "Centered"
+    IDS_JUSTIFIED           "Justified"
+    IDS_SELECTED_PROMPT     "You have selected the %1 tool."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "CTRLBARS Application\nCtrlbars\n"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STYLE_LEFT           "Set the style to Left\nLeft"
+    ID_STYLE_CENTERED       "Set the style to Centered\nCenter"
+    ID_STYLE_RIGHT          "Set the style to Right\nRight"
+    ID_STYLE_JUSTIFIED      "Set the style to Justified\nJustify"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PALETTEERASE         "Select Palette Erase Tool\nEraser"
+    ID_PALETTEPEN           "Select Palette Pen Tool\nPen"
+    ID_PALETTESELECT        "Select Palette Select Tool\nSelect"
+    ID_PALETTEBRUSH         "Select Palette Brush Tool\nBrush"
+    ID_PALETTESPRAY         "Select Palette Spray Tool\nSpray"
+    ID_PALETTEPAINT         "Select Palette Paint Tool\nPaint"
+    ID_PALETTELINE          "Select Palette Line Tool\nLine"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PALETTEEYEDROP       "Select Palette EyeDrop Tool\nEye Drop"
+    ID_PALETTEMAG           "Select Palette Magnify Tool\nMagnify"
+    ID_PALETTERECT          "Select Palette Rectangle Tool\nRectangle"
+    ID_PALETTEROUND         "Select Palette Round Tool\nRound"
+    ID_PALETTEOVAL          "Select Palette Oval Tool\nOval"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
