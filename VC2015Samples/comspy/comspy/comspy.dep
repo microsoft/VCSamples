@@ -1,0 +1,38 @@
+# Microsoft Developer Studio Generated Dependency File, included by ComSpy.mak
+
+.\ComSpy.cpp : \
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	"..\idl\ps_win32\ComSpyCtl_i.c"\
+	".\ComSpy.h"\
+	".\ComSpy_i.c"\
+	".\Resource.h"\
+	".\SpyCon.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"guiddef.h"\
+	
+
+!IF  "$(CFG)" == "ComSpy - Win32 Unicode Release"
+
+!ELSEIF  "$(CFG)" == "ComSpy - Win32 Unicode Debug"
+
+!ENDIF 
+
+.\ComSpy.rc : \
+	".\ComSpy.rgs"\
+	".\ComSpy.tlb"\
+	".\icon1.ico"\
+	".\Resource.h"\
+	".\SpyCon.rgs"\
+	
+
+.\SpyCon.cpp : \
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\ComSpy.h"\
+	".\Resource.h"\
+	".\SpyCon.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

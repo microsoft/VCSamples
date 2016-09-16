@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a4a5b3e8-0c89-4932-b452-ae621734016b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6447496f-0b28-46c7-9efc-e60188a040ed}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{31683c1e-f62d-45fd-8f87-5f40ba2965be}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Adminwrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComSpy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComSpyCtl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ComSpyPropPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crmsub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="evtstoresub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="methodsub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcesub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectEventsDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SysLCESub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="txsub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ComSpyCtl.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Comspy1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ComSpy.rgs" />
+    <None Include="ComSpyPropPage.rgs" />
+    <None Include="ShowEvents.rgs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ComSpyCtl.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="activitysub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Adminwrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AppInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="appsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComSpyPropPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="crmsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="evtstoresub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exceptionsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="identitysub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InstanceSub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lbsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="methodsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objconstsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objpool2sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objpoolsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qcsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcesub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="securitysub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectEventsDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SysLCESub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="threadsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="txsub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usersub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ccomspy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

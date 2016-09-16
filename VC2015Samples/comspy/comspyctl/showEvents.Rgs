@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{C2202E8A-773D-11D0-B167-00AA00BA3258} = s 'ShowEvents'
+		'ShowEvents.EXE'
+		{
+			val AppID = s {C2202E8A-773D-11D0-B167-00AA00BA3258}
+		}
+	}
+}

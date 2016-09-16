@@ -1,0 +1,33 @@
+# Microsoft Developer Studio Generated Dependency File, included by ComSpyAudit.mak
+
+.\ComSpyAudit.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyAudit_i.c"\
+	".\ComSpySqlAudit.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"guiddef.h"\
+	
+
+.\ComSpySqlAudit.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	".\ComSpySqlAudit.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	
+
+.\events.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	".\ComSpySqlAudit.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
+
+.\ComSpyAudit.rc : \
+	".\ComSpySqlAudit.rgs"\
+	".\Resource.h"\
+	

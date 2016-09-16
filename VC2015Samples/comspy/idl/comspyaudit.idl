@@ -1,0 +1,653 @@
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+// PARTICULAR PURPOSE.
+//
+// Copyright (c) Microsoft Corporation. All rights reserved.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+	
+		uuid(AFCF0622-1429-11D1-B1B8-00AA00BA3258),
+	
+		helpstring("IComSpyAudit Interface"),
+		pointer_default(unique)
+	]
+	interface IComSpyAudit : IUnknown
+	{		
+
+		//IComThreadEvents
+		HRESULT OnThreadStart(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,
+					[in] LPCOLESTR pszW2KThreadID,
+					[in] DWORD dwThreadCnt	
+				);
+
+		HRESULT OnThreadTerminate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,
+					[in] LPCOLESTR pszW2KThreadID,
+					[in] DWORD dwThreadCnt 
+				);
+
+	    HRESULT OnThreadBindToApartment(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR pszAptID,	
+					[in] DWORD dwActivityCnt
+				);
+
+		HRESULT OnThreadUnBind(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR pszAptID,	
+					[in] DWORD dwActivityCnt
+				);
+
+		HRESULT OnThreadAssignApartment(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidActivityID,
+					[in] LPCOLESTR pszAptID					 
+				);
+		HRESULT OnThreadUnassignApartment(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,				
+					[in] LPCOLESTR pszAptID					 
+				);
+
+		HRESULT OnThreadWorkEnque(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR MsgWorkID,	
+					[in] DWORD dwQueueLen
+				);
+		HRESULT OnThreadWorkPrivate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR MsgWorkID						
+				);
+		HRESULT OnThreadWorkPublic(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR MsgWorkID,	
+					[in] DWORD dwQueueLen
+				);
+		HRESULT OnThreadWorkRedirect(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR MsgWorkID,	
+					[in] DWORD dwQueueLen,
+					[in] LPCOLESTR pszThreadNum
+				);
+		HRESULT OnThreadWorkReject(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszThreadID,					
+					[in] LPCOLESTR MsgWorkID,	
+					[in] DWORD dwQueueLen				
+				);
+		
+
+		//IComAppEvents
+		HRESULT OnAppActivation(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp					
+				);
+
+		HRESULT OnAppShutdown(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp				
+				);
+
+		//IComInstanceEvents
+		HRESULT OnObjectCreate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidActivityID,
+					[in] LPCOLESTR pszClassID,
+					[in] LPCOLESTR pszTSID,
+					[in] LPCOLESTR pszContextID,
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjectDestroy(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID
+				);
+
+		//IComTransactionEvents
+		HRESULT OnTransactionStart(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidTxID,
+					[in] LPCOLESTR pszGuidTSID,
+					[in] BOOL bRoot
+				);
+
+		HRESULT OnTransactionPrepared(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidTxID,
+					[in] BOOL bVoteYes
+				);
+
+		HRESULT OnTransactionAborted(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidTxID
+				);
+
+		HRESULT OnTransactionCommit(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidTxID
+				);
+
+		//IComMethodEvents
+		HRESULT OnMethodCall(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp, 
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszGuidClassID,
+					[in] LPCOLESTR pszGuidInterfaceID,
+					[in] LPCOLESTR pszMethod
+				);
+
+		HRESULT OnMethodReturn(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp, 
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszGuidClassID,
+					[in] LPCOLESTR pszGuidInterfaceID,
+					[in] LPCOLESTR pszMethod,
+					[in] HRESULT hr,
+					[in] LPCOLESTR pszCallTime
+				);
+
+		HRESULT OnMethodException(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp, 
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszGuidClassID,
+					[in] LPCOLESTR pszGuidInterfaceID,
+					[in] LPCOLESTR pszMethod
+				);
+
+		//IComObjectEvents
+		HRESULT OnObjectActivate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID,
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjectDeactivate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID,
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnDisableCommit(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID
+				);
+
+		HRESULT OnEnableCommit(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID
+				);
+
+		HRESULT OnSetComplete(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID
+				);
+		HRESULT OnSetAbort(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszContextID
+				);
+
+
+	    //IComResourceEvents
+	   HRESULT OnResourceCreate(					
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,					
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszType,
+					[in] LPCOLESTR pszResId,
+					[in] BOOL bEnlisted
+				);
+
+		HRESULT OnResourceAllocate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,					
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszType,
+					[in] LPCOLESTR pszResId,
+					[in] BOOL bEnlisted,
+					[in] LPCOLESTR pszNumRated,
+					[in] LPCOLESTR pszRating
+				);
+
+		HRESULT OnResourceRecycle(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,					
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszType,
+					[in] LPCOLESTR pszResId
+				);
+
+		HRESULT OnResourceDestroy(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,					
+					[in] LPCOLESTR pszObjectID,
+					[in] HRESULT hResult,
+					[in] LPCOLESTR pszType,
+					[in] LPCOLESTR pszResId
+				);
+		HRESULT OnResourceTrack(					
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,					
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszType,
+					[in] LPCOLESTR pszResId,
+					[in] BOOL bEnlisted
+				);
+				
+
+		//SecurityEvents
+		HRESULT OnAuthenticate(
+					 [in] LONGLONG perfCount,
+					 [in] LPCOLESTR pszGuidApp, 
+					 [in] LPCOLESTR pszGuidActivity,
+					 [in] LPCOLESTR pszObjectID,
+					 [in] LPCOLESTR pszGuidIID,
+					 [in] LPCOLESTR pszMethod,
+					 [in] LPCOLESTR pszOriginalUser,
+					 [in] LPCOLESTR pszDirectUser, 
+					 [in] BOOL bCurrentUserInpersonatingInProc
+				);
+
+		HRESULT OnAuthenticateFail(
+					 [in] LONGLONG perfCount,
+					 [in] LPCOLESTR pszGuidApp, 
+					 [in] LPCOLESTR pszGuidActivity,
+					 [in] LPCOLESTR pszObjectID,
+					 [in] LPCOLESTR pszGuidIID,
+					 [in] LPCOLESTR pszMethod,
+					 [in] LPCOLESTR pszOriginalUser,
+					 [in] LPCOLESTR pszDirectUser, 
+					 [in] BOOL bCurrentUserInpersonatingInProc
+				);
+
+        //IComObjectPoolEvents
+		HRESULT OnObjPoolPutObject(
+		             [in] LONGLONG perfCount,
+					 [in] LPCOLESTR pszGuidApp, 
+				     [in] LPCOLESTR pszClassID,
+					 [in] int nReason, 						 
+					 [in] DWORD dwAvailableObjs,
+					 [in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjPoolGetObject(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,  
+					[in] LPCOLESTR pszGuidActivityID, 
+					[in] LPCOLESTR pszClassID, 						 
+					[in] DWORD dwAvailableObjs,
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjPoolRecycleToTx(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,  
+					[in] LPCOLESTR pszGuidActivityID, 
+					[in] LPCOLESTR pszClassID, 	 
+					[in] LPCOLESTR pszGuidTx, 
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjPoolGetFromTx(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,  
+					[in] LPCOLESTR pszGuidActivityID, 
+					[in] LPCOLESTR pszClassID, 	 
+					[in] LPCOLESTR pszGuidTx, 
+					[in] LPCOLESTR pszObjectID
+				);
+
+		//IComObjectPoolEvents2
+		HRESULT OnObjPoolCreateObject(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,  
+					[in] LPCOLESTR pszClassID, 
+					[in] DWORD dwAvailableObjs,
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjPoolDestroyObject(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,  
+					[in] LPCOLESTR pszClassID, 
+					[in] DWORD dwAvailableObjs,
+					[in] LPCOLESTR pszObjectID
+				);
+
+		HRESULT OnObjPoolCreateDecision(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp, 
+					[in] DWORD dwThreadsWaiting, 
+					[in] DWORD dwAvailableObjs, 
+					[in] DWORD dwCreatedObjs, 
+					[in] DWORD dwMin, 
+					[in] DWORD dwMax
+				);
+
+		HRESULT OnObjPoolTimeout(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp, 
+					[in] LPCOLESTR pszClassID, 
+					[in] LPCOLESTR pszGuidActivityID, 
+					[in] DWORD dwTimeout);
+
+		HRESULT OnObjPoolCreatePool(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp, 
+					[in] LPCOLESTR pszClassID,
+					[in] DWORD dwMin, 
+					[in] DWORD dwMax, 
+					[in] DWORD dwTimeout
+				);
+		
+		//IComObjectConstructionEvents 
+		HRESULT OnObjectConstruct(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszClassID, 
+					[in] LPCOLESTR pszConstructString, 
+					[in] LPCOLESTR pszObjectID
+				);
+		
+
+		//IComActivityEvents 
+		HRESULT OnActivityCreate(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidActivityID
+				);
+
+		HRESULT OnActivityDestroy(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidActivityID
+				);
+
+		HRESULT OnActivityEnter(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidCurrentApp,
+					[in] LPCOLESTR pszGuidEnteredApp,
+					[in] LPCOLESTR pszW2KThreadID
+				);
+
+		HRESULT OnActivityTimeout(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidCurrentApp,
+					[in] LPCOLESTR pszGuidEnteredApp,
+					[in] LPCOLESTR pszW2KThreadID,		
+					[in] DWORD dwTimeout
+				);
+
+		HRESULT OnActivityReenter(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidCurrentApp,
+					[in] LPCOLESTR pszW2KThreadID,
+					[in] DWORD dwCallDepth
+				);
+
+		HRESULT OnActivityLeave(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidCurrentApp,
+					[in] LPCOLESTR pszGuidLeftApp
+				);
+
+		HRESULT OnActivityLeaveSame(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidCurrentApp,
+					[in] DWORD dwCallDepth
+				);
+
+		//IComIdentityEvents 
+		HRESULT OnIISRequestInfo(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszClientIP,
+					[in] LPCOLESTR pszServerIP,
+					[in] LPCOLESTR pszURL
+				);
+
+		//IComQCEvents
+		HRESULT OnQCRecord(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszQueueName,
+					[in] LPCOLESTR pszGuidMsgID,
+					[in] LPCOLESTR pszGuidWorkFlowID,
+					[in] HRESULT hr
+				);
+		HRESULT OnQCQueueOpen(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszQueueName,
+					[in] LPCOLESTR pszQueueID,
+					[in] HRESULT hr
+				);
+		HRESULT OnQCReceive(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszQueueID,
+					[in] LPCOLESTR pszGuidMsgID,
+					[in] LPCOLESTR pszGuidWorkFlowID,
+					[in] HRESULT hr
+				);
+		HRESULT OnQCReceiveFail(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszQueueID,
+					[in] HRESULT hr
+				);
+		HRESULT OnQCMoveToReTryQueue(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidMsgID,
+					[in] LPCOLESTR pszGuidWorkFlowID,
+					[in] ULONG RetryIndex
+				);
+		HRESULT OnQCMoveToDeadQueue(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidMsgID,
+					[in] LPCOLESTR pszGuidWorkFlowID
+				);
+		HRESULT OnQCPlayback(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszObjectID,
+					[in] LPCOLESTR pszGuidMsgID,
+					[in] LPCOLESTR pszGuidWorkFlowID,
+					[in] HRESULT hr
+				);
+
+		//IComExceptionEvents 
+		HRESULT OnExceptionUser(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszCode,
+					[in] LPCOLESTR pszAddress,
+					[in] LPCOLESTR pszStackTrace
+				);
+
+		//IComCRMEvents 
+		HRESULT OnCRMRecoveryStart(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp
+				);
+
+		HRESULT OnCRMRecoveryDone(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp
+				);
+
+		HRESULT OnCRMCheckpoint(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp
+				);
+
+		HRESULT OnCRMBegin(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID,
+					[in] LPCOLESTR pszGuidActivityID,
+					[in] LPCOLESTR pszGuidTxUOWID,
+					[in] LPCOLESTR pszProgIdCompensator,
+					[in] LPCOLESTR pszDescription					
+				);				
+
+		HRESULT OnCRMPrepare(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMCommit(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMAbort(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMIndoubt(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMDone(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMRelease(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMAnalyze(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID,				
+					[in] LPCOLESTR pszCrmRecordType,
+					[in] DWORD dwRecordSize
+				);
+
+		HRESULT OnCRMWrite(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID,
+					[in] BOOL bVariants,
+					[in] DWORD dwRecordSize);
+
+		HRESULT OnCRMForget(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMForce(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID
+				);
+
+		HRESULT OnCRMDeliver(
+					[in] LONGLONG perfCount,
+					[in] LPCOLESTR pszGuidApp,
+					[in] LPCOLESTR pszGuidClerkCLSID,
+					[in] BOOL bVariants,
+					[in] DWORD dwRecordSize
+				);
+
+		//ILBEvents 
+        HRESULT TargetUp(
+				[in] LONGLONG perfCount,
+				[in] LPCOLESTR pszServerName, 
+				[in] LPCOLESTR pszClsidEng
+			);
+
+		HRESULT TargetDown(
+				[in] LONGLONG perfCount,
+				[in] LPCOLESTR pszServerName, 
+				[in] LPCOLESTR pszClsidEng
+			);
+    
+        HRESULT  EngineDefined(
+				[in] LONGLONG perfCount,
+				[in] LPCOLESTR pszPropName, 
+				[in] VARIANT *varPropValue, 
+				[in] LPCOLESTR pszClsidEng
+			);
+
+
+	    ////
+		HRESULT Init(LPCOLESTR sDSN, LPCOLESTR sUser, LPCOLESTR sPw);
+	};
+[
+	uuid(AFCF0615-1429-11D1-B1B8-00AA00BA3258),
+	version(1.0),
+	helpstring("ComSpyAudit 1.0 Type Library")
+]
+library COMSPYAUDITLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(AFCF0623-1429-11D1-B1B8-00AA00BA3258),
+		helpstring("ComSpyAudit Class")
+	]
+	coclass ComSpyAudit
+	{
+		[default] interface IComSpyAudit;
+	};
+};

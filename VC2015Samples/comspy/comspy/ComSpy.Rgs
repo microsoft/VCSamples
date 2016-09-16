@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{CBFE2578-B030-11D0-B188-00AA00BA3258} = s 'ComSpy'
+		'ComSpy.EXE'
+		{
+			val AppID = s {CBFE2578-B030-11D0-B188-00AA00BA3258}
+		}
+	}
+}

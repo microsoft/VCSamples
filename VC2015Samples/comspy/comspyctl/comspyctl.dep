@@ -1,0 +1,167 @@
+# Microsoft Developer Studio Generated Dependency File, included by ComSpyCtl.mak
+
+.\Adminwrap.cpp : \
+	".\Adminwrap.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"comadmin.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\AppInfo.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\activitysub.h"\
+	".\AppInfo.h"\
+	".\appsub.h"\
+	".\CComSpy.h"\
+	".\crmsub.h"\
+	".\evtstoresub.h"\
+	".\exceptionsub.h"\
+	".\identitysub.h"\
+	".\InstanceSub.h"\
+	".\lbsub.h"\
+	".\methodsub.h"\
+	".\objconstsub.h"\
+	".\objpool2sub.h"\
+	".\objpoolsub.h"\
+	".\objsub.h"\
+	".\qcsub.h"\
+	".\Resource.h"\
+	".\resourcesub.h"\
+	".\securitysub.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	".\threadsub.h"\
+	".\txsub.h"\
+	".\usersub.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	{$(INCLUDE)}"eventsys.h"\
+	
+
+.\ComSpy.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\AppInfo.h"\
+	".\CComSpy.h"\
+	".\Resource.h"\
+	".\SelectEventsDlg.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\ComSpyCtl.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyAudit_i.c"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	"..\idl\ps_win32\ComSpyCtl_i.c"\
+	".\AppInfo.h"\
+	".\CComSpy.h"\
+	".\ComSpyPropPage.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	{$(INCLUDE)}"guiddef.h"\
+	
+
+.\ComSpyCtl.rc : \
+	".\ComSpy.rgs"\
+	".\Comspy1.bin"\
+	".\ComSpyPropPage.rgs"\
+	".\icon1.ico"\
+	".\Resource.h"\
+	".\ShowEvents.rgs"\
+	
+
+.\ComSpyPropPage.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\AppInfo.h"\
+	".\CComSpy.h"\
+	".\ComSpyPropPage.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\crmsub.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\CComSpy.h"\
+	".\crmsub.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\evtstoresub.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\CComSpy.h"\
+	".\evtstoresub.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	{$(INCLUDE)}"eventsys.h"\
+	
+
+.\methodsub.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\CComSpy.h"\
+	".\methodsub.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\resourcesub.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\CComSpy.h"\
+	".\Resource.h"\
+	".\resourcesub.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\SelectEventsDlg.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\AppInfo.h"\
+	".\CComSpy.h"\
+	".\Resource.h"\
+	".\SelectEventsDlg.h"\
+	".\StdAfx.h"\
+	{$(INCLUDE)}"comadmin.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\SysLCESub.cpp : \
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\Adminwrap.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	{$(INCLUDE)}"comadmin.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	
+
+.\txsub.cpp : \
+	"..\idl\ps_win32\ComSpyAudit.h"\
+	"..\idl\ps_win32\ComSpyCtl.h"\
+	".\CComSpy.h"\
+	".\Resource.h"\
+	".\StdAfx.h"\
+	".\SysLCESub.h"\
+	".\txsub.h"\
+	{$(INCLUDE)}"comsvcs.h"\
+	

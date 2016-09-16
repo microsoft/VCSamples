@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22709.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scribble", "Scribble.vcxproj", "{7885CDC4-D221-488C-9B58-992079831A50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7885CDC4-D221-488C-9B58-992079831A50}.Debug|Itanium.ActiveCfg = Debug|Win32
+		{7885CDC4-D221-488C-9B58-992079831A50}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7885CDC4-D221-488C-9B58-992079831A50}.Debug|Win32.Build.0 = Debug|Win32
+		{7885CDC4-D221-488C-9B58-992079831A50}.Debug|x64.ActiveCfg = Debug|x64
+		{7885CDC4-D221-488C-9B58-992079831A50}.Debug|x64.Build.0 = Debug|x64
+		{7885CDC4-D221-488C-9B58-992079831A50}.Release|Itanium.ActiveCfg = Release|Win32
+		{7885CDC4-D221-488C-9B58-992079831A50}.Release|Win32.ActiveCfg = Release|Win32
+		{7885CDC4-D221-488C-9B58-992079831A50}.Release|Win32.Build.0 = Release|Win32
+		{7885CDC4-D221-488C-9B58-992079831A50}.Release|x64.ActiveCfg = Release|x64
+		{7885CDC4-D221-488C-9B58-992079831A50}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vstfdevdiv:8080/devdiv
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Scribble.vcxproj
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal
