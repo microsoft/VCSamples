@@ -1,0 +1,2 @@
+# VCSamples
+Samples for VC++
