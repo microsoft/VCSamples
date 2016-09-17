@@ -5,7 +5,7 @@ You'll find all the samples like they were in 2008, 2010.
 
 
 ## Code Migration
-We are migrating samples to vc2015 (latest version so far).
+We are migrating samples to VC++ 2015 (latest version so far).
 
 See the [Wiki](https://github.com/Microsoft/VCSamples/wiki) for more information about C++ Migration code.  
 
