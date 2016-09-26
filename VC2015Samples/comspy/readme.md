@@ -32,9 +32,9 @@ spy\COMSpyAudit	An in-proc COM component that shows an auditing mechanism for lo
 
 To use the SQLServer auditing feature, you must do the following before you run COMSpy
 
-1.      Create a SQL Server Database for COMSpy Auditing. 
+1. Create a SQL Server Database for COMSpy Auditing. 
 
-2.      Run ComSpyAudit.sql script under Spy\ComSpyAudit directory to create the following tables in your SQL Server database. 
+2. Run ComSpyAudit.sql script under Spy\ComSpyAudit directory to create the following tables in your SQL Server database. 
 
     | Table Name |	Description |
     |------------|--------------|
@@ -52,40 +52,40 @@ To use the SQLServer auditing feature, you must do the following before you run 
     CRMEvents|	For CRM Event Metrics
     LBEvents|	For Load Balancing Event Metrics
 
-3.      Create an ODBC DSN named "ComSpyAudit" that connects to your SQL Server database. 
+3. Create an ODBC DSN named "ComSpyAudit" that connects to your SQL Server database. 
 
 
 ## Build Notes
 
-1.      Set the [MSSDK]\include, [MSSDK]\lib in the header files and library files paths in your IDE environment. 
+1. Set the [MSSDK]\include, [MSSDK]\lib in the header files and library files paths in your IDE environment. 
 
-2.      Load Spy project workspace by using spy\spy.sln (requires VS 8.0). 
+2. Load Spy project workspace by using spy\spy.sln (requires VS 8.0). 
 
-3.      Build COMSpyFace project first in order to generate the correct header files for the rest of the spy projects. 
+3. Build COMSpyFace project first in order to generate the correct header files for the rest of the spy projects. 
 
-4.      Set the active project to COMSpy and then build all. 
+4. Set the active project to COMSpy and then build all. 
 
-Note:   This sample uses ATL/MFC.  Make sure Visual Studio 8.0 is installed on your machine and the include path has references to the atlmfc headers location.
+Note: This sample uses ATL/MFC.  Make sure Visual Studio 8.0 is installed on your machine and the include path has references to the atlmfc headers location.
 
 
 ## To run Spy
 
-1.      Run COMSpy.exe. 
+1. Run COMSpy.exe. 
 
-2.      If you would like to log events to a file, choose Log to File from the Options menu and specify the name of a log file. 
+2. If you would like to log events to a file, choose Log to File from the Options menu and specify the name of a log file. 
 
-3.      If you would like to log events to a SQL Server database, right click on the spy window to bring up the pop-up menu and choose Audit to db from the Options submenu. 
+3. If you would like to log events to a SQL Server database, right click on the spy window to bring up the pop-up menu and choose Audit to db from the Options submenu. 
 
-4.      Choose Select Events from the COMSpy menu or pop-up menu. 
+4. Choose Select Events from the COMSpy menu or pop-up menu. 
 
-5.      Select an Application or a Process that you would like to monitor from the Select Application or Process list box. 
+5. Select an Application or a Process that you would like to monitor from the Select Application or Process list box. 
 
-6.      Select events from the Select Application or Process Events list box for the Application or Process selected in step 5. 
+6. Select events from the Select Application or Process Events list box for the Application or Process selected in step 5. 
 
-7.      Repeat step 5 and 6 for the Applications or Processes that you would like to monitor. 
+7. Repeat step 5 and 6 for the Applications or Processes that you would like to monitor. 
 
-8.      Select events from the Select System Events list box if you would like to monitor the system events. 
+8. Select events from the Select System Events list box if you would like to monitor the system events. 
 
-9.      Click OK. COMSpy will display events as they are received. 
+9. Click OK. COMSpy will display events as they are received. 
 
 
