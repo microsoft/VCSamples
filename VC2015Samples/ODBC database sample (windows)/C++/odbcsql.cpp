@@ -6,7 +6,7 @@
 /*          ODBCSQL DRIVER={driver name}
 /*
 /*
-/* Copyright(c) Microsoft Corporation.   This is a WDAC sample program and
+/* Copyright(c)  Microsoft Corporation.   This is a WDAC sample program and
 /* is not suitable for use in production environments.   
 /*
 /******************************************************************************/
