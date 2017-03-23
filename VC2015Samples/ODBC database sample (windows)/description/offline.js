@@ -9,7 +9,7 @@
             return (className) ? (elem.className.indexOf(className) > -1) : true;
         };
 
-        return findArrayElem(tagMatch, evaluator);
+        return  findArrayElem(tagMatch, evaluator);
     }
 
     function findArrayElem(array, evaluator) {

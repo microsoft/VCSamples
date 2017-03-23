@@ -1,4 +1,4 @@
-ODBC Sample
+ODBC Sample for windows
 ================================
 This sample demonstrates how to use ODBC APIs to Connect to and access database.
 
