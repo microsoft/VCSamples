@@ -2,6 +2,7 @@
 This repo contains samples for VC++
 
 You'll find all the samples like they were in 2008, 2010, 2012, 2015.
+Sample for UWP availabe [here](https://github.com/Microsoft/Windows-universal-samples)
 
 
 ## Code Migration
