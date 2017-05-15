@@ -5,6 +5,12 @@ You'll find all the samples like they were in 2008, 2010, 2012, 2015.
 
 Sample for UWP availabe [here](https://github.com/Microsoft/Windows-universal-samples)
 
+Sample for DirectX [here](https://github.com/Microsoft/DirectX-Graphics-Samples)
+
+Sample for XBox (ATG: Xbox Advanced Technology Group) (here)[https://github.com/Microsoft/Xbox-ATG-Samples]
+
+Sample for CPP WinRT [here](https://github.com/Microsoft/cppwinrt/tree/master/10.0.14393.0/Samples)
+
 
 ## Code Migration
 We are migrating samples to VC++ 2015 and VC++2017.
