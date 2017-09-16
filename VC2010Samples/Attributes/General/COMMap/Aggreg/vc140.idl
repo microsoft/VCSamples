@@ -1,0 +1,103 @@
+import "docobj.idl";
+
+[
+	object,
+	uuid(C38266AF-50F3-40B1-82D8-4AAF5EDA1BC7),
+	dual,
+	helpstring("IAgg Interface"),
+	pointer_default(unique)
+] 
+#line 19 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+interface IAgg : IDispatch {
+#line 21 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+	[propget,id(0)] HRESULT  Name([out,retval] BSTR *pbstrName);
+};
+
+[
+	object,
+	uuid(0A0DDEDC-C422-4BB3-9869-4FED020B66C5),
+	dual,
+	helpstring("IAggBlind Interface"),
+	pointer_default(unique)
+] 
+#line 31 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+interface IAggBlind : IDispatch {
+#line 33 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+	[propget,id(0)] HRESULT  Name([out,retval] BSTR *pbstrName);
+};
+
+[
+	object,
+	uuid(2D12F117-2C91-4385-A0E4-2E8E690C5EDF),
+	dual,
+	helpstring("IAutoAgg Interface"),
+	pointer_default(unique)
+] 
+#line 43 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+interface IAutoAgg : IDispatch {
+#line 45 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+	[propget,id(0)] HRESULT  Name([out,retval] BSTR *pbstrName);
+};
+
+[
+	object,
+	uuid(5F77FE09-2289-4C0C-B435-9EDEE7FECEC8),
+	dual,
+	helpstring("IAutoAggB Interface"),
+	pointer_default(unique)
+] 
+#line 55 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+interface IAutoAggB : IDispatch {
+#line 57 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggregiface.h"
+	[propget,id(0)] HRESULT  Name([out,retval] BSTR *pbstrName);
+};
+
+
+[ version(1.0), uuid(4F9A68EB-DD9D-11CF-9462-00AA00BBAD7F), helpstring("Aggreg 1.0 Type Library") ]
+library AggregLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(B27F2CE1-D1B9-42B3-9E4C-9E7CA7767043),
+		helpstring("Agg Class"),
+		version(1.0)
+	] 
+#line 29 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\agg.h"
+	coclass CAgg {
+		[default]	interface IAgg;
+	};
+
+	[
+		uuid(A86DF044-ED8E-40AD-B00A-EAE3D6DE49AA),
+		helpstring("AggBlind Class"),
+		version(1.0)
+	] 
+#line 30 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\aggblind.h"
+	coclass CAggBlind {
+		[default]	interface IAggBlind;
+	};
+
+	[
+		uuid(501153E5-FAD9-4E5C-9C3D-8CC815D4F60E),
+		helpstring("AutoAgg Class"),
+		version(1.0)
+	] 
+#line 30 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\autoagg.h"
+	coclass CAutoAgg {
+		[default]	interface IAutoAgg;
+	};
+
+	[
+		uuid(4CA740C4-92B7-4F39-8309-C6DA39D7A255),
+		helpstring("AutoAggB Class"),
+		version(1.0)
+	] 
+#line 29 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\commap\\aggreg\\autoaggb.h"
+	coclass CAutoAggB {
+		[default]	interface IAutoAggB;
+	};
+
+}
+

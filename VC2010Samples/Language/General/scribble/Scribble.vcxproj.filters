@@ -33,6 +33,7 @@
     <None Include="Images\SAVE.BMP">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scribble.h">

@@ -11,14 +11,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="atlduck_i.c">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="atlduck\atlduck_i.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="atlduck_p.c">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="atlduck\atlduck_p.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dlldata.c">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="atlduck\dlldata.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

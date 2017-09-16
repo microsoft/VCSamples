@@ -77,4 +77,7 @@
       <Filter>Source Files</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.htm" />
+  </ItemGroup>
 </Project>

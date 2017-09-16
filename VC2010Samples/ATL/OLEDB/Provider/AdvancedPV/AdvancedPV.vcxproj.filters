@@ -34,6 +34,7 @@
     <None Include="AdvancedPV.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdvancedDS.h">

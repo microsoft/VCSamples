@@ -1,0 +1,20 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+
+
+[ version(1.0), uuid(186F6FA3-7435-11D1-8F0F-000000000000), helpstring("MultiRead 1.0 Type Library") ]
+library MULTIREADLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+}
+

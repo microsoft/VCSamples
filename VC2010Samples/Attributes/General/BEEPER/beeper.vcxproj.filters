@@ -42,5 +42,6 @@
     <None Include="beeper.txt">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
 </Project>

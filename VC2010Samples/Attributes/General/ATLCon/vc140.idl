@@ -1,0 +1,48 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(5AC61281-483A-4E01-B53D-CB3A3B4B0F60),
+	dual,
+	helpstring("IATLConPropertyBrowser Interface"),
+	pointer_default(unique)
+] 
+#line 25 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\atlcon\\propbrowsectl.h"
+interface IATLConPropertyBrowser : IDispatch {
+#line 28 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\atlcon\\propbrowsectl.h"
+	[propput,helpstring("Set the interface to browse")] HRESULT  Dispatch([in] IDispatch *pDispatch);
+#line 30 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\atlcon\\propbrowsectl.h"
+	[propget,helpstring("Get the interface being browsed")] HRESULT  Dispatch([out,retval] IDispatch **ppDispatch);
+	[propget,id(1),helpstring("Enable/Disable the property description")] HRESULT  ShowDescription([out,retval] BOOL *pVal);
+	[propput,id(1),helpstring("Is property description enabled")] HRESULT  ShowDescription([in] BOOL newVal);
+};
+
+
+[ version(1.0), uuid(4210A082-0771-4d35-ADDC-980F404DA174), helpstring("ATLCon Attrib 1.0 Type Library") ]
+library ATLConAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(553C1A15-0BBE-4694-B3CB-6672434C3D2B),
+		helpstring("ATLConPropertyBrowser Class")
+	] 
+#line 204 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\atlcon\\propbrowsectl.h"
+	coclass CPropertyBrowseControl {
+		[default]	interface IATLConPropertyBrowser;
+	};
+
+}
+

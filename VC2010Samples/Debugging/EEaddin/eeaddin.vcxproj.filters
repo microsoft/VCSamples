@@ -26,6 +26,7 @@
     <None Include="eeaddin.def">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="timeaddin.cpp">

@@ -1,0 +1,7 @@
+Animation
+UIAnimationTest		not migrated, missing file AFXTrackMouse.h
+D2D
+MFCDirect2DApp		not migrated
+MFCDirect2DHelloWorld	// OK
+MFCDxgiSample		not migrated
+MFCGdiInteropSample	//OK

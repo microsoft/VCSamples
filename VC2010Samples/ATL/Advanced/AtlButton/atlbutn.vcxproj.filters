@@ -26,35 +26,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="atlbutn.def">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="AtlButton.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Midl Include="atlbutn.idl">
       <Filter>Source Files</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AtlButton.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cpatlbutn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="atlbutn.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="atlbutn.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtlButton.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtlButton.rgs" />
+    <CustomBuild Include="cpatlbutn.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

@@ -1,0 +1,48 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(5C5F5688-8481-46F6-AEC4-B2752E5E4F83),
+	dual,
+	oleautomation,
+	helpstring("IMovieCtl Interface"),
+	pointer_default(unique)
+] 
+#line 31 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\atlmovie\\moviectl.h"
+interface IMovieCtl : IDispatch {
+#line 33 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\atlmovie\\moviectl.h"
+	[id(1),helpstring("method Play")] HRESULT  Play();
+	[propput,id(2),helpstring("property FileName")] HRESULT  FileName([in] BSTR newVal);
+	[id(3),helpstring("method Pause")] HRESULT  Pause();
+	[id(4),helpstring("method Reset")] HRESULT  Reset();
+	[id(5),helpstring("method Stop")] HRESULT  Stop();
+};
+
+
+[ version(1.0), uuid(DB1F3DE4-1936-11D3-ABE4-00C04F797AB7) ]
+library ATLMOVIEATTRIBLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(7F296092-A510-4510-9ABA-1EE1A65A238D)
+	] 
+#line 51 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\atlmovie\\moviectl.h"
+	coclass CMovieCtl {
+		[default]	interface IMovieCtl;
+	};
+
+}
+

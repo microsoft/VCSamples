@@ -51,6 +51,7 @@
     <None Include="PolyProp.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PolyCtl.h">

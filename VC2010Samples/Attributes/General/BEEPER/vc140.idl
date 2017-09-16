@@ -1,0 +1,40 @@
+import "docobj.idl";
+
+[
+	object,
+	uuid(976508A0-849D-4BF0-9A3E-7ABC82A9F5A3),
+	dual,
+	helpstring("IBeeper Interface"),
+	pointer_default(unique)
+] 
+#line 33 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\beeper\\beepobj.h"
+interface IBeeper : IDispatch {
+#line 35 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\beeper\\beepobj.h"
+	[id(1),helpstring("Play the current sound")] HRESULT  Beep();
+#line 37 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\beeper\\beepobj.h"
+	[propget,id(2),helpstring("Returns number of strings in collection.")] HRESULT  Count([out,retval] long *retval);
+#line 39 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\beeper\\beepobj.h"
+	[propget,id(0),helpstring("Given an index, returns a string in the collection")] HRESULT  Item([in] long Index, [out,retval] BSTR *pbstr);
+#line 41 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\beeper\\beepobj.h"
+	[propget,id(-4),restricted] HRESULT  _NewEnum([out,retval] IUnknown **retval);
+};
+
+
+[ version(1.0), uuid(283624D8-1862-11D3-ABE1-00C04F797AB7) ]
+library BeeperAttribLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(91C2292F-ECDF-42BF-BD00-288BC1C185DC),
+		version(1.0),
+		aggregatable
+	] 
+#line 63 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\beeper\\beepobj.h"
+	coclass CBeeper {
+		[default]	interface IBeeper;
+	};
+
+}
+

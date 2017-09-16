@@ -15,21 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AgentCtl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="AgentCtl.rgs">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="AtlAgent.htm" />
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AgentCtl.cpp">
@@ -46,5 +35,17 @@
     <ResourceCompile Include="AtlAgent.rc">
       <Filter>Source Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AgentCtl.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="AtlAgent.htm" />
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

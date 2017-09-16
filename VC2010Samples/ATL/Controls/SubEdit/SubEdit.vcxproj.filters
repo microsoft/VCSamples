@@ -42,6 +42,7 @@
     <None Include="SubEdit.def">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AtlEdit.h">

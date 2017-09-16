@@ -1,3 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="arrays.cpp" />
+    <ClCompile Include="basics.cpp" />
+    <ClCompile Include="boxing.cpp" />
+    <ClCompile Include="casting.cpp" />
+    <ClCompile Include="classes.cpp" />
+    <ClCompile Include="destructors.cpp" />
+    <ClCompile Include="enums.cpp" />
+    <ClCompile Include="properties.cpp" />
+    <ClCompile Include="samples.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="samples.h" />
+  </ItemGroup>
 </Project>

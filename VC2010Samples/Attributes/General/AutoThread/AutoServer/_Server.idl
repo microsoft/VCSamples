@@ -1,0 +1,34 @@
+import "docobj.idl";
+
+[
+	object,
+	uuid(1E2BF8D5-BF3B-4E35-BB79-90949E6A7349),
+	dual,
+	helpstring("IAutoServ Interface"),
+	pointer_default(unique)
+] 
+#line 23 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\autothread\\autoserver\\autoserv.h"
+interface IAutoServ : IDispatch {
+#line 25 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\autothread\\autoserver\\autoserv.h"
+	[id(1),helpstring("method Sleep")] HRESULT  Sleep([in]long delay);
+};
+
+
+[ version(1.0), uuid(A6D89F0F-35F4-11D2-9375-00C04FD9757C), helpstring("AutoServer 1.0 Type Library") ]
+library AutoServerLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(3CD5B892-A27C-445D-AF50-8841D67F371E),
+		helpstring("AutoServ Class"),
+		version(1.0)
+	] 
+#line 42 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\autothread\\autoserver\\autoserv.h"
+	coclass CAutoServ {
+		[default]	interface IAutoServ;
+	};
+
+}
+

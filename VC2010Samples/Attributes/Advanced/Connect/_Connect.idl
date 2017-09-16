@@ -1,0 +1,49 @@
+import "docobj.idl";
+
+[
+	object,
+	uuid(B8903D31-78AD-4AB4-A543-D1405EE5C6BF),
+	dual,
+	helpstring("IRandom Interface"),
+	pointer_default(unique)
+] 
+#line 20 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\connect\\random.h"
+interface IRandom : IDispatch {
+#line 22 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\connect\\random.h"
+	HRESULT  Start([out] long *pnID);
+	HRESULT  Stop([in] long nID);
+	HRESULT  StopAll();
+};
+
+[
+	uuid(6E890B4C-3E95-4728-BED1-6C48FFB1071D),
+	dual,
+	helpstring("IRandomEvent Interface"),
+	pointer_default(unique)
+] 
+#line 32 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\connect\\random.h"
+interface IRandomEvent : IDispatch {
+#line 34 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\connect\\random.h"
+	[id(0)] HRESULT  Fire([in] long nID);
+};
+
+
+[ version(1.0), uuid(C5F6BDDF-FFB8-431e-97AD-57AFD6D3F885), helpstring("Connect Attrib 1.0 Type Library") ]
+library CONNECTAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(0DC9A419-477C-453E-861E-F0DE3EB3E1DE),
+		helpstring("Random Attrib Class")
+	] 
+#line 50 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\connect\\random.h"
+	coclass CRandom {
+		[default]	interface IRandom;
+		[default, source]	interface IRandomEvent;
+	};
+
+}
+

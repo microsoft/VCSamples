@@ -1,0 +1,62 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+#line 27 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\tilepuzzle\\gamehistory\\ihistory.h"
+typedef enum eDirection {
+	eError = 0,
+	eLeft = 1,
+	eRight = 2,
+	eUp = 3,
+	eDown = 4,
+} eDirection;
+
+[
+	uuid(5C4ED402-0272-3008-8692-DA7A7EFC9D03),
+	dual
+] 
+#line 31 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\tilepuzzle\\gamehistory\\ihistory.h"
+interface IHistory : IDispatch {
+	[id(1),helpstring("A test function. Returns the sum of x & y.")] HRESULT  Test([in] int x, [in] int y, [out,retval] int *retval);
+	[id(2),helpstring("InitGame")] HRESULT  InitGame([in] BSTR boardstate, [in] int cols, [in] int rows);
+	[id(3),helpstring("Add a move to the game history")] HRESULT  PushMove([in] eDirection dir);
+	[id(4),helpstring("Undo the last move")] HRESULT  PopMove([out,retval] eDirection *dir);
+	[id(5),helpstring("Redo the last undone move")] HRESULT  RedoMove([out,retval] eDirection *dir);
+	[id(6),helpstring("Is there a move to undo")] HRESULT  CanUndo([out,retval] boolean *yes_no);
+	[id(7),helpstring("Is there a move to redo")] HRESULT  CanRedo([out,retval] boolean *yes_no);
+	[id(8),helpstring("saves a tile game's state")] HRESULT  SaveGame([in] BSTR gamename, [in] BSTR boardstate);
+	[id(9),helpstring("retrieves saved tile game state")] HRESULT  LoadSavedGame([in] BSTR gamename, [out] BSTR *boardstate, [out] int *cols, [out] int *rows);
+#line 42 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\tilepuzzle\\gamehistory\\ihistory.h"
+	[id(10),helpstring("Test without using retval.")] HRESULT  Test2([in] int x, [in] int y, [out] int *retval);
+	[id(11),helpstring("PopMove without using retval.")] HRESULT  PopMove2([out] eDirection *dir);
+	[id(12),helpstring("RedoMove without using retval.")] HRESULT  RedoMove2([out] eDirection *dir);
+	[id(13),helpstring("CanUndo without using retval.")] HRESULT  CanUndo2([out] boolean *yes_no);
+	[id(14),helpstring("CanRedo without using retval.")] HRESULT  CanRedo2([out] boolean *yes_no);
+};
+
+
+[ version(1.0), helpstring("GameHistory 1.0 Type Library"), uuid(4a8e2aff-6ca8-395d-a4bd-390793e43f3e) ]
+library GameHistory
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(89694E8B-8B57-3F94-B4DA-3E933154A9E4),
+		version(1.0)
+	] 
+#line 57 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\tilepuzzle\\gamehistory\\gamehistory.h"
+	coclass CGameHistory {
+		interface IHistory;
+	};
+
+}
+

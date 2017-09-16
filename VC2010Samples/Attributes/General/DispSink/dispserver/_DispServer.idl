@@ -1,0 +1,57 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(B7D047AB-E688-4C9B-A956-31D6CEE5DB51),
+	dual,
+	helpstring("IDispServ Interface"),
+	pointer_default(unique)
+] 
+#line 21 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispserver\\dispserv.h"
+interface IDispServ : IDispatch {
+#line 23 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispserver\\dispserv.h"
+	[id(1),helpstring("method Send")] HRESULT  Send([in]VARIANT data);
+};
+
+
+[ version(1.0), uuid(246056AC-7BBF-4D2F-858F-166E70D699D3), helpstring("DispServer 1.0 Type Library") ]
+library DispServer
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(06B96B46-4F91-4087-A81F-7F20904E9A45),
+		helpstring("_IDispServEvents Interface")
+	] 
+#line 34 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispserver\\dispserv.h"
+	dispinterface _IDispServEvents {
+	properties:
+
+	methods:
+		[id(1),helpstring("method Transfer")] HRESULT  Transfer([in]VARIANT data);
+	};
+
+	[
+		version(1.0),
+		uuid(BD9B1276-EBE9-4E9C-B3F9-07298D8BBF4D),
+		helpstring("DispServ Class")
+	] 
+#line 52 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispserver\\dispserv.h"
+	coclass CDispServ {
+		[default]	interface IDispServ;
+		[default, source]	interface _IDispServEvents;
+	};
+
+}
+

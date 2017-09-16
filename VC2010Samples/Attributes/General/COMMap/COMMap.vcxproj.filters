@@ -49,6 +49,7 @@
     <None Include="Outer.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="COMMap.rc">

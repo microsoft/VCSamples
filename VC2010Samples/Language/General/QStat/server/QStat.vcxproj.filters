@@ -45,5 +45,6 @@
     <None Include="QStat.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.txt" />
   </ItemGroup>
 </Project>

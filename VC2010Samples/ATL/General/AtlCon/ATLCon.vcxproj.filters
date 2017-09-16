@@ -42,6 +42,7 @@
     <None Include="icon1.ico">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AtlCon1.h">

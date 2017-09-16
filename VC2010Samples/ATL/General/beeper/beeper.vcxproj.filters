@@ -42,6 +42,7 @@
     <None Include="beeperExe.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="beeper.txt" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="beeper.rc">

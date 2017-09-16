@@ -34,6 +34,7 @@
     <None Include="DispServer.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DispServ.h">

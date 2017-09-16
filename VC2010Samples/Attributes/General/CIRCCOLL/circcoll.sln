@@ -1,5 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 10
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CircColl", "CircColl.vcxproj", "{63715EB3-7DA0-4818-8CD0-B3C9478E8D97}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CircCollClient", "circcollclient\CircCollClient.vbproj", "{7524FDB3-41D8-41CE-885C-BAA4FBBADDF8}"
@@ -44,5 +46,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D19FBE5-1704-49FD-816E-3F5B3FF787F5}
 	EndGlobalSection
 EndGlobal

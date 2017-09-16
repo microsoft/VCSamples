@@ -41,6 +41,9 @@
     <None Include="res\TraceTool.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm">
+      <Filter>HTML Help Topics</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

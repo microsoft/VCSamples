@@ -35,6 +35,7 @@
     <None Include="res\IME.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IME.h">

@@ -35,4 +35,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.htm" />
+  </ItemGroup>
 </Project>

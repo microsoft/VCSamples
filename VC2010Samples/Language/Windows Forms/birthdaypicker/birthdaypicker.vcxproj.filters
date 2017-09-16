@@ -24,4 +24,7 @@
       <Filter>Source Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.htm" />
+  </ItemGroup>
 </Project>

@@ -31,27 +31,21 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CPIDServ.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DrawObj.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="predraw.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DrawObj.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="DrawServ.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="DrawServ.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CPIDServ.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DrawObj.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DrawObj.rgs" />
+    <CustomBuild Include="DrawServ.rgs" />
+    <CustomBuild Include="predraw.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
