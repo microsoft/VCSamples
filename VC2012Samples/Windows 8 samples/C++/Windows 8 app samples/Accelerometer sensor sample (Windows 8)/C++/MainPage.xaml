@@ -36,7 +36,7 @@
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         
-        <Grid x:Name="ContentRoot" Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="100,20,100,20">
+        <Grid x:Name="ContentRoot" Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Margin="20,20,20,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
