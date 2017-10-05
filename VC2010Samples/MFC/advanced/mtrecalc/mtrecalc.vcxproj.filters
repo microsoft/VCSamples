@@ -82,6 +82,7 @@
     <None Include="RES\TOOLBAR.BMP">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mtrecalc.rc">

@@ -16,6 +16,8 @@
 #include "bounce.h"
 #include "mtbounce.h"
 
+#include <VersionHelpers.h>
+
 #ifdef _DEBUG
 #undef THIS_FILE
 static char BASED_CODE THIS_FILE[] = __FILE__;
@@ -50,7 +52,7 @@ BOOL CMdiApp::InitInstance()
 {
 	// Win32 multi-threading APIs are not available on non-NT versions
 	// of Windows less than Windows version 4.0.
-	if ((::GetVersion() & 0x80000000) && (BYTE(::GetVersion()) < 4))
+	if (!IsWindowsVersionOrGreater(4, 0, 0))
 	{
 		AfxMessageBox(IDS_CANNOT_RUN_ON_16BIT_WINDOWS_LT_4);
 		return FALSE;

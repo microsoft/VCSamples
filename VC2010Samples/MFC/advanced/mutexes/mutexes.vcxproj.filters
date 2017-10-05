@@ -29,30 +29,28 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MUTEXDLG.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MUTEXES.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="STDAFX.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="THREADS.H">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\mutexes.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="res\mutexes.rc2">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="mutexes.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MUTEXDLG.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MUTEXES.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\mutexes.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\mutexes.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="STDAFX.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="THREADS.H">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
