@@ -9,3 +9,5 @@ HOW TO RUN IT:
 
 Build BEEPER (.EXE or .DLL) and make sure it is registered. With the DLL version, you
 can also use BEEPER.HTM (HTML file that uses VBScript) from Internet Explorer.
+
+VBScript is not supported in IE11 or above, unless you set the compatibility view / document mode!

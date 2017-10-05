@@ -133,7 +133,7 @@ namespace VCUE
 		typedef typename MapType::value_type		source_type;
 		
 		typedef MapType					map_type;
-		typedef typename MapType::referent_type	pseudosource_type;
+		typedef typename MapType::mapped_type	pseudosource_type;
 
 		static void init(destination_type* p)
 		{
