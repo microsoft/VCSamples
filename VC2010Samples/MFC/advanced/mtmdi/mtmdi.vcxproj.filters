@@ -64,6 +64,7 @@
     <None Include="MDI.ICO">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mtmdi.rc">

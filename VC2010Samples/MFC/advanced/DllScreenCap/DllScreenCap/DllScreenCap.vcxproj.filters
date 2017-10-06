@@ -57,5 +57,6 @@
     <None Include="res\DllScreenCap.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.txt" />
   </ItemGroup>
 </Project>

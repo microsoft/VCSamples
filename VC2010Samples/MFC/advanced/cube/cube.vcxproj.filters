@@ -61,6 +61,7 @@
     <None Include="Res\Toolbar.bmp">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Cube.rc">
