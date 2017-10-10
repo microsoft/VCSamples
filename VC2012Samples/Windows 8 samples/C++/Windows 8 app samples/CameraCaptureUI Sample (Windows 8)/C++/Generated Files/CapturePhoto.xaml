@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 //*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
@@ -20,12 +20,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="LayoutRoot" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid x:ConnectionId='1' x:Name="LayoutRoot" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="Input" Grid.Row="0">
+        <Grid x:ConnectionId='2' x:Name="Input" Grid.Row="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -35,24 +35,25 @@
             </TextBlock>
 
             <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Grid.Row="1">
-                <Button x:Name="CapturePhotoButton" Content="Capture Photo" Margin="0,0,10,0"  Click="CapturePhoto_Click"/>
-                <Button x:Name="ResetButton" Content="Reset" Margin="0,0,10,0" Click="Reset_Click"/>
+                <Button x:ConnectionId='5' x:Name="CapturePhotoButton" Content="Capture Photo" Margin="0,0,10,0"                            />
+                <Button x:ConnectionId='6' x:Name="ResetButton" Content="Reset" Margin="0,0,10,0"                    />
             </StackPanel>
         </Grid>
 
-        <Grid x:Name="Output" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
-            <Image x:Name="MyCapturedPhoto" AutomationProperties.Name="A placeholder image" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" MaxWidth="392"/>
+        <Grid x:ConnectionId='3' x:Name="Output" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
+            <Image x:ConnectionId='4' x:Name="MyCapturedPhoto" AutomationProperties.Name="A placeholder image" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" MaxWidth="392"/>
         </Grid>
 
         <!-- Add Storyboards to the visual states below as necessary for supporting the various layouts -->
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:Name="FullScreenLandscape"/>
-                <VisualState x:Name="Filled"/>
-                <VisualState x:Name="FullScreenPortrait"/>
-                <VisualState x:Name="Snapped"/>
+                <VisualState x:ConnectionId='7' x:Name="FullScreenLandscape"/>
+                <VisualState x:ConnectionId='8' x:Name="Filled"/>
+                <VisualState x:ConnectionId='9' x:Name="FullScreenPortrait"/>
+                <VisualState x:ConnectionId='10' x:Name="Snapped"/>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </Grid>
 
 </Page>
+

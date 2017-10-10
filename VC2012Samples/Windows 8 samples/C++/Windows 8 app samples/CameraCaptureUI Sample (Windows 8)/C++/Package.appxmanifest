@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+  
   <Identity Name="Microsoft.SDKSamples.CameraCapture.CPP" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="00000000-0000-0000-0000-000000000000" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  
   <Properties>
     <DisplayName>CameraCaptureUI CPP sample</DisplayName>
     <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
     <Logo>Assets\storeLogo-sdk.png</Logo>
   </Properties>
-  <Prerequisites>
-    <OSMinVersion>6.2.1</OSMinVersion>
-    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
-  </Prerequisites>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="CameraCapture.App" Executable="$targetnametoken$.exe" EntryPoint="CameraCapture.App">
-      <VisualElements DisplayName="CameraCaptureUI CPP sample" Logo="Assets\squareTile-sdk.png" SmallLogo="Assets\smallTile-sdk.png" Description="CameraCaptureUI CPP sample" ForegroundText="light" BackgroundColor="#00b2f0">
-        <DefaultTile ShortName="CaptureUI CPP" ShowName="allLogos" />
-        <SplashScreen Image="Assets\splash-sdk.png" BackgroundColor="#00b2f0" />
-      </VisualElements>
+    <Application Id="CameraCapture.App" 
+                 Executable="$targetnametoken$.exe" 
+                 EntryPoint="CameraCapture.App">
+      <uap:VisualElements DisplayName="CameraCaptureUI CPP sample" 
+                          Square150x150Logo="Assets\squareTile-sdk.png" 
+                          Square44x44Logo="Assets\smallTile-sdk.png" 
+                          Description="CameraCaptureUI CPP sample" 
+                          BackgroundColor="#00b2f0">
+        <uap:DefaultTile ShortName="CaptureUI CPP" />
+        <uap:SplashScreen Image="Assets\splash-sdk.png" BackgroundColor="#00b2f0" />
+      </uap:VisualElements>
     </Application>
   </Applications>
+  
   <Capabilities>
     <DeviceCapability Name="microphone" />
     <DeviceCapability Name="webcam" />

@@ -82,7 +82,7 @@ void CaptureVideo::CaptureVideo_Click(Platform::Object^ sender, Windows::UI::Xam
             {
                 concurrency::task<Streams::IRandomAccessStream^> (file->OpenAsync(FileAccessMode::Read)).then([this] (Streams::IRandomAccessStream^ stream)
                 {
-                    CapturedVideo->SetSource(stream, "video/mp4");
+                    MyCapturedVideo->SetSource(stream, "video/mp4");
                     ResetButton->Visibility = Windows::UI::Xaml::Visibility::Visible;
                     rootPage->NotifyUser("", NotifyType::StatusMessage);
                 });
@@ -111,7 +111,7 @@ void CaptureVideo::Reset_Click(Platform::Object^ sender, Windows::UI::Xaml::Rout
 {
     rootPage->NotifyUser("The video will be shown here.", NotifyType::StatusMessage);
     ResetButton->Visibility = Windows::UI::Xaml::Visibility::Collapsed;
-    CapturedVideo->Source = nullptr;
+    MyCapturedVideo->Source = nullptr;
 
     // Remove file from Application Data
     appSettings->Remove("capturedVideo");
@@ -131,7 +131,7 @@ void CaptureVideo::LoadVideo(Platform::String^ filePath)
         try
         {
             auto stream = openTask.get();
-            CapturedVideo->SetSource(stream, "video/mp4");
+            MyCapturedVideo->SetSource(stream, "video/mp4");
             ResetButton->Visibility = Windows::UI::Xaml::Visibility::Visible;
             CaptureVideoButton->IsEnabled = true;
             rootPage->NotifyUser("", NotifyType::StatusMessage);
