@@ -15,8 +15,10 @@
 
 #include "pch.h"
 #include "MainPage.xaml.h"
+#include "Common\SuspensionManager.h"
 
 using namespace SDKSample;
+using namespace SDKSample::Common;
 
 using namespace Concurrency;
 using namespace Platform;
@@ -49,60 +51,49 @@ App::App()
 /// be used when the application is launched to open a specific file, to display search results,
 /// and so forth.
 /// </summary>
-/// <param name="e">Details about the launch request and process.</param>
-void App::OnLaunched(LaunchActivatedEventArgs^ e)
+/// <param name="pArgs">Details about the launch request and process.</param>
+void App::OnLaunched(LaunchActivatedEventArgs^ pArgs)
 {
-	auto rootFrame = dynamic_cast<Frame^>(Window::Current->Content);
+    this->LaunchArgs = pArgs;
 
-	// Do not repeat app initialization when the Window already has content,
-	// just ensure that the window is active
-	if (rootFrame == nullptr)
-	{
-		// Create a Frame to act as the navigation context and associate it with
-		// a SuspensionManager key
-		rootFrame = ref new Frame();
+    // Do not repeat app initialization when already running, just ensure that
+    // the window is active
+    if (pArgs->PreviousExecutionState == ApplicationExecutionState::Running)
+    {
+        Window::Current->Activate();
+        return;
+    }
 
-		rootFrame->NavigationFailed += ref new Windows::UI::Xaml::Navigation::NavigationFailedEventHandler(this, &App::OnNavigationFailed);
+    // Create a Frame to act as the navigation context and associate it with
+    // a SuspensionManager key
+    auto rootFrame = ref new Frame();
+    SuspensionManager::RegisterFrame(rootFrame, "AppFrame");
 
-		if (e->PreviousExecutionState == ApplicationExecutionState::Terminated)
-		{
-			// TODO: Restore the saved session state only when appropriate, scheduling the
-			// final launch steps after the restore is complete
+    auto prerequisite = task<void>([](){});
+    if (pArgs->PreviousExecutionState == ApplicationExecutionState::Terminated)
+    {
+        // Restore the saved session state only when appropriate, scheduling the
+        // final launch steps after the restore is complete
+        prerequisite = SuspensionManager::RestoreAsync();
+    }
+    prerequisite.then([=]()
+    {
+        // When the navigation stack isn't restored navigate to the first page,
+        // configuring the new page by passing required information as a navigation
+        // parameter
+        if (rootFrame->Content == nullptr)
+        {
+            if (!rootFrame->Navigate(TypeName(MainPage::typeid)))
+            {
+                throw ref new FailureException("Failed to create initial page");
+            }
+        }
 
-		}
-
-		if (e->PrelaunchActivated == false)
-		{
-			if (rootFrame->Content == nullptr)
-			{
-				// When the navigation stack isn't restored navigate to the first page,
-				// configuring the new page by passing required information as a navigation
-				// parameter
-				rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
-			}
-			// Place the frame in the current Window
-			Window::Current->Content = rootFrame;
-			// Ensure the current window is active
-			Window::Current->Activate();
-		}
-	}
-	else
-	{
-		if (e->PrelaunchActivated == false)
-		{
-			if (rootFrame->Content == nullptr)
-			{
-				// When the navigation stack isn't restored navigate to the first page,
-				// configuring the new page by passing required information as a navigation
-				// parameter
-				rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
-			}
-			// Ensure the current window is active
-			Window::Current->Activate();
-		}
-	}
+        // Place the frame in the current Window and ensure that it is active
+        Window::Current->Content = rootFrame;
+        Window::Current->Activate();
+    }, task_continuation_context::use_current());
 }
-
 
 /// <summary>
 /// Invoked when application execution is being suspended.  Application state is saved
@@ -113,19 +104,11 @@ void App::OnLaunched(LaunchActivatedEventArgs^ e)
 /// <param name="e">Details about the suspend request.</param>
 void App::OnSuspending(Object^ sender, SuspendingEventArgs^ e)
 {
-	(void)sender;  // Unused parameter
-	(void)e;   // Unused parameter
+    (void) sender;	// Unused parameter
 
-			   //TODO: Save application state and stop any background activity
-}
-
-
-/// <summary>
-/// Invoked when Navigation to a certain page fails
-/// </summary>
-/// <param name="sender">The Frame which failed navigation</param>
-/// <param name="e">Details about the navigation failure</param>
-void App::OnNavigationFailed(Platform::Object ^sender, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs ^e)
-{
-	throw ref new FailureException("Failed to load Page " + e->SourcePageType.Name);
+    auto deferral = e->SuspendingOperation->GetDeferral();
+    SuspensionManager::SaveAsync().then([=]()
+    {
+        deferral->Complete();
+    });
 }

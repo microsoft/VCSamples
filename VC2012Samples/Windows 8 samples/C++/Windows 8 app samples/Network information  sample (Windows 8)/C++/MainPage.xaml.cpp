@@ -60,8 +60,85 @@ MainPage::MainPage()
 /// <param name="e"></param>
 void MainPage::MainPage_SizeChanged(Object^ sender, SizeChangedEventArgs^ e)
 {
+    InvalidateSize();
     MainPageSizeChangedEventArgs^ args = ref new MainPageSizeChangedEventArgs();
+    args->ViewState = ApplicationView::Value;
     MainPageResized(this, args);
+
+}
+
+void MainPage::InvalidateSize()
+{
+    // Get the window width
+    double windowWidth = this->ActualWidth;
+
+    if (windowWidth != 0.0)
+    {
+        // Get the width of the ListBox.
+        double listBoxWidth = Scenarios->ActualWidth;
+
+        // Is the ListBox using any margins that we need to consider?
+        double listBoxMarginLeft = Scenarios->Margin.Left;
+        double listBoxMarginRight = Scenarios->Margin.Right;
+
+        // Figure out how much room is left after considering the list box width
+        double availableWidth = windowWidth - listBoxWidth;
+
+        // Is the top most child using margins?
+        double layoutRootMarginLeft = ContentRoot->Margin.Left;
+        double layoutRootMarginRight = ContentRoot->Margin.Right;
+
+        // We have different widths to use depending on the view state
+        if (ApplicationView::Value != ApplicationViewState::Snapped)
+        {
+            // Make us as big as the the left over space, factoring in the ListBox width, the ListBox margins.
+            // and the LayoutRoot's margins
+            InputSection->Width = ((availableWidth) - 
+                (layoutRootMarginLeft + layoutRootMarginRight + listBoxMarginLeft + listBoxMarginRight));
+        }
+        else
+        {
+            // Make us as big as the left over space, factoring in just the LayoutRoot's margins.
+            if (autoSizeInputSectionWhenSnapped)
+            {
+                InputSection->Width = (windowWidth - (layoutRootMarginLeft + layoutRootMarginRight));
+            }
+        }
+    }
+    InvalidateViewState();
+}
+
+void MainPage::InvalidateViewState()
+{
+    // Are we going to snapped mode?
+    if (ApplicationView::Value == ApplicationViewState::Snapped)
+    {
+        Grid::SetRow(DescriptionText, 3);
+        Grid::SetColumn(DescriptionText, 0);
+
+        Grid::SetRow(InputSection, 4);
+        Grid::SetColumn(InputSection, 0);
+
+        Grid::SetRow(FooterPanel, 2);
+        Grid::SetColumn(FooterPanel, 0);
+    }
+    else
+    {
+        Grid::SetRow(DescriptionText, 1);
+        Grid::SetColumn(DescriptionText, 1);
+
+        Grid::SetRow(InputSection, 2);
+        Grid::SetColumn(InputSection, 1);
+
+        Grid::SetRow(FooterPanel, 1);
+        Grid::SetColumn(FooterPanel, 1);
+    }
+
+    //  Since we don't load the scenario page in the traditional manner (we just pluck out the
+    // input and output sections from the page) we need to ensure that any VSM code used
+    // by the scenario's input and output sections is fired.
+    VisualStateManager::GoToState(InputSection, "Input" + LayoutAwarePage::DetermineVisualState(ApplicationView::Value), false);
+    VisualStateManager::GoToState(OutputSection, "Output" + LayoutAwarePage::DetermineVisualState(ApplicationView::Value), false);
 }
 
 void MainPage::PopulateScenarios()
@@ -157,6 +234,7 @@ void MainPage::Scenarios_SelectionChanged(Object^ sender, SelectionChangedEventA
         NotifyUser("", NotifyType::StatusMessage);
 
         LoadScenario((safe_cast<ListBoxItem^>(Scenarios->SelectedItem))->Name);
+        InvalidateSize();
     }
 }
 
@@ -195,9 +273,43 @@ void MainPage::Footer_Click(Object^ sender, RoutedEventArgs^ e)
 }
 
 
-
-
-void SDKSample::MainPage::Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+/// <summary>
+/// Populates the page with content passed during navigation.  Any saved state is also
+/// provided when recreating a page from a prior session.
+/// </summary>
+/// <param name="navigationParameter">The parameter value passed to
+/// <see cref="Frame::Navigate(Type, Object)"/> when this page was initially requested.
+/// </param>
+/// <param name="pageState">A map of state preserved by this page during an earlier
+/// session.  This will be null the first time a page is visited.</param>
+void MainPage::LoadState(Object^ navigationParameter, IMap<String^, Object^>^ pageState)
 {
-	PopulateScenarios();
+    (void) navigationParameter;	// Unused parameter
+
+    PopulateScenarios();
+
+    // Starting scenario is the first or based upon a previous state.
+    ListBoxItem^ startingScenario = nullptr;
+    int startingScenarioIndex = -1;
+
+    if (pageState != nullptr && pageState->HasKey("SelectedScenarioIndex"))
+    {
+        startingScenarioIndex = safe_cast<int>(pageState->Lookup("SelectedScenarioIndex"));
+    }
+
+    Scenarios->SelectedIndex = startingScenarioIndex != -1 ? startingScenarioIndex : 0;
+
+    InvalidateViewState();
+}
+
+/// <summary>
+/// Preserves state associated with this page in case the application is suspended or the
+/// page is discarded from the navigation cache.  Values must conform to the serialization
+/// requirements of <see cref="SuspensionManager::SessionState"/>.
+/// </summary>
+/// <param name="pageState">An empty map to be populated with serializable state.</param>
+void MainPage::SaveState(IMap<String^, Object^>^ pageState)
+{
+    int selectedListBoxItemIndex = Scenarios->SelectedIndex;
+    pageState->Insert("SelectedScenarioIndex", selectedListBoxItemIndex);
 }
