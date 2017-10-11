@@ -34,9 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
-    <Page Include="Common\StandardStyles.xaml">
-      <Filter>Common</Filter>
-    </Page>
     <Page Include="Sample-Utils\SampleTemplateStyles.xaml">
       <Filter>Sample-Utils</Filter>
     </Page>
@@ -49,35 +46,21 @@
     <ClInclude Include="MainPage.xaml.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
-    <ClInclude Include="Scenario1.xaml.h" />
-    <ClInclude Include="Scenario2.xaml.h" />
-    <ClInclude Include="Scenario3.xaml.h" />
-    <ClInclude Include="Common\SuspensionManager.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\LayoutAwarePage.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="Constants.h" />
     <ClInclude Include="PercentPermilleFormatting.xaml.h" />
     <ClInclude Include="DecimalFormatting.xaml.h" />
+    <ClInclude Include="CurrencyFormatting.xaml.h" />
+    <ClInclude Include="NumberParsing.xaml.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.xaml.cpp" />
-    <ClCompile Include="Scenario1.xaml.cpp" />
-    <ClCompile Include="Scenario2.xaml.cpp" />
-    <ClCompile Include="Scenario3.xaml.cpp" />
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Common\LayoutAwarePage.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\SuspensionManager.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="Constants.cpp" />
     <ClCompile Include="PercentPermilleFormatting.xaml.cpp" />
     <ClCompile Include="DecimalFormatting.xaml.cpp" />
+    <ClCompile Include="CurrencyFormatting.xaml.cpp" />
+    <ClCompile Include="NumberParsing.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Assets">

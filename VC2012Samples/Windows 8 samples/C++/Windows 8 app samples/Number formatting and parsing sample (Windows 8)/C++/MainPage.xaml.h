@@ -17,7 +17,6 @@
 
 #include "pch.h"
 #include "MainPage.g.h"
-#include "Common\LayoutAwarePage.h" // Required by generated header
 #include "Constants.h"
 
 namespace SDKSample
@@ -31,21 +30,7 @@ namespace SDKSample
     public ref class MainPageSizeChangedEventArgs sealed
     {
     public:
-        property Windows::UI::ViewManagement::ApplicationViewState ViewState
-        {
-            Windows::UI::ViewManagement::ApplicationViewState get()
-            {
-                return viewState;
-            }
-
-            void set(Windows::UI::ViewManagement::ApplicationViewState value)
-            {
-                viewState = value;
-            }
-        }
-
     private:
-        Windows::UI::ViewManagement::ApplicationViewState viewState;
     };
 
     public ref class MainPage sealed
@@ -54,9 +39,6 @@ namespace SDKSample
         MainPage();
 
     protected:
-        virtual void LoadState(Platform::Object^ navigationParameter,
-            Windows::Foundation::Collections::IMap<Platform::String^, Platform::Object^>^ pageState) override;
-        virtual void SaveState(Windows::Foundation::Collections::IMap<Platform::String^, Platform::Object^>^ pageState) override;
 
     internal:
         property bool AutoSizeInputSectionWhenSnapped
@@ -87,9 +69,6 @@ namespace SDKSample
 
     private:
         void PopulateScenarios();
-        void InvalidateSize();
-        void InvalidateViewState();
-
         Platform::Collections::Vector<Object^>^ ScenarioList;
         Windows::UI::Xaml::Controls::Frame^ HiddenFrame;
         void Footer_Click(Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
@@ -101,5 +80,7 @@ namespace SDKSample
     internal:
         static MainPage^ Current;
 
-    };
+	private:
+		void Page_Loaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+	};
 }

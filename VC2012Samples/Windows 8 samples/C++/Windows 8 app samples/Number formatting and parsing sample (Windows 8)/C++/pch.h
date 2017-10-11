@@ -17,6 +17,4 @@
 
 #include <collection.h>
 #include <ppltasks.h>
-#include "Common\LayoutAwarePage.h"
-#include "Common\SuspensionManager.h"
 #include "App.xaml.h"
