@@ -63,7 +63,7 @@ void SDKSample::NetworkInformationApi::ProfileLocalUsageData::ProfileLocalUsageD
 		dtStartTime.UniversalTime = dtCurrentTime.UniversalTime - (3600 * 10000000ULL);;
 
 		ConnectionProfile^ internetConnectionProfile = NetworkInformation::GetInternetConnectionProfile();
-
+		
 		if (internetConnectionProfile == nullptr)
 		{
 			rootPage->NotifyUser(L"Not connected to Internet\n", NotifyType::StatusMessage);
@@ -75,26 +75,37 @@ void SDKSample::NetworkInformationApi::ProfileLocalUsageData::ProfileLocalUsageD
 			nus.Roaming = TriStates::DoNotCare;
 			nus.Shared = TriStates::DoNotCare;
 
-			IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::Connectivity::NetworkUsage^>^>^ enumAsyncOp = internetConnectionProfile->GetNetworkUsageAsync(
+			IAsyncOperation<Windows::Foundation::Collections::IVectorView<NetworkUsage^>^>^ enumAsyncOp = internetConnectionProfile->GetNetworkUsageAsync(
 				dtStartTime,
 				dtCurrentTime,
 				DataUsageGranularity::Total,
 				nus);
+
 			auto enumTask = create_task(enumAsyncOp);
 
 			enumTask.then([this] (Windows::Foundation::Collections::IVectorView<Windows::Networking::Connectivity::NetworkUsage^>^ netUsageList)
 			{
 				if (netUsageList != nullptr && netUsageList->Size > 0)
-				{ 
+				{
 					NetworkUsage^ netUsage = netUsageList->GetAt(0);
 
 					String^ localUsageInfo = L"Local Data Usage:\n";
 					localUsageInfo += L" Bytes Sent : " + netUsage->BytesSent.ToString() + "\n";
 					localUsageInfo += L" Bytes Received : " + netUsage->BytesReceived.ToString() + "\n";
-				
+
 					rootPage->NotifyUser(localUsageInfo, NotifyType::StatusMessage);
 				}
-			});
+			}).then([this](Concurrency::task<void> t)
+			{
+				try 
+				{
+					t.get();
+				}
+				catch (Exception^ ex) 
+				{
+					rootPage->NotifyUser("An unexpected exception occured: " + ex->Message, NotifyType::ErrorMessage);
+				}
+			});;
 		}
 	}
 	catch (Exception^ ex)
