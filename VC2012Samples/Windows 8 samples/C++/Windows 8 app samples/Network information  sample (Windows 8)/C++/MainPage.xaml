@@ -46,7 +46,7 @@
             <!-- Header -->
             <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <Image x:Name="WindowsLogo" Stretch="None" Source="Assets/windows-sdk.png" AutomationProperties.Name="Windows Logo" HorizontalAlignment="Left" Grid.Column="0"/>
-                <TextBlock  Text="Windows 8 SDK Samples" VerticalAlignment="Bottom" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Grid.Column="1"/>
+                <TextBlock  Text="Windows 10 SDK Samples" VerticalAlignment="Bottom" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Grid.Column="1"/>
             </StackPanel>
             <ScrollViewer x:Name="MainScrollViewer" Grid.Row="1" ZoomMode="Disabled" IsTabStop="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Padding="0,0,0,20" >
                 <Grid>
