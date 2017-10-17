@@ -10,7 +10,7 @@
 //*********************************************************
 -->
 
-<common:LayoutAwarePage 
+<Page 
     x:Class="SDKSample.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -18,9 +18,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:common="using:SDKSample.Common"
     mc:Ignorable="d"
-    x:Name="RootPage">
+    x:Name="RootPage" Loaded="Page_Loaded">
 
-    <common:LayoutAwarePage.Resources>
+    <Page.Resources>
         <Style x:Key="BaseStatusStyle" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Segoe UI Semilight"/>
             <Setter Property="FontSize" Value="14.667"/>
@@ -32,7 +32,7 @@
         <Style x:Key="ErrorStyle" BasedOn="{StaticResource BaseStatusStyle}" TargetType="TextBlock">
             <Setter Property="Foreground" Value="Blue"/>
         </Style>
-    </common:LayoutAwarePage.Resources>
+    </Page.Resources>
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         
@@ -46,7 +46,7 @@
             <!-- Header -->
             <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <Image x:Name="WindowsLogo" Stretch="None" Source="Assets/windows-sdk.png" AutomationProperties.Name="Windows Logo" HorizontalAlignment="Left" Grid.Column="0"/>
-                <TextBlock  Text="Windows 8 SDK Samples" VerticalAlignment="Bottom" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Grid.Column="1"/>
+                <TextBlock  Text="Windows 10 SDK Samples" VerticalAlignment="Bottom" Style="{StaticResource TitleTextStyle}" TextWrapping="Wrap" Grid.Column="1"/>
             </StackPanel>
             <ScrollViewer x:Name="MainScrollViewer" Grid.Row="1" ZoomMode="Disabled" IsTabStop="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Padding="0,0,0,20" >
                 <Grid>
@@ -124,33 +124,5 @@
             </Grid>
         </Grid>
 
-        <VisualStateManager.VisualStateGroups>
-            <!-- Visual states reflect the application's view state -->
-            <VisualStateGroup>
-                <VisualState x:Name="FullScreenLandscape">
-                    <Storyboard>
-                    </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Filled">
-                    <Storyboard>
-                    </Storyboard>
-                </VisualState>
-                <VisualState x:Name="FullScreenPortrait">
-                    <Storyboard>
-                    </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Snapped">
-                    <Storyboard>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ContentRoot">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>20,20,20,20</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                    </Storyboard>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
     </Grid>
-</common:LayoutAwarePage>
+</Page>

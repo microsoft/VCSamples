@@ -31,7 +31,7 @@ namespace SDKSample
     namespace CameraCapture
     {
         [::Windows::Foundation::Metadata::WebHostHidden]
-        partial ref class CapturePhoto : public ::SDKSample::Common::LayoutAwarePage, 
+        partial ref class CapturePhoto : public ::Windows::UI::Xaml::Controls::Page, 
             public ::Windows::UI::Xaml::Markup::IComponentConnector,
             public ::Windows::UI::Xaml::Markup::IComponentConnector2
         {
@@ -51,7 +51,7 @@ namespace SDKSample
             private: ::Windows::UI::Xaml::Controls::Grid^ LayoutRoot;
             private: ::Windows::UI::Xaml::Controls::Grid^ Input;
             private: ::Windows::UI::Xaml::Controls::Grid^ Output;
-            private: ::Windows::UI::Xaml::Controls::Image^ CapturedPhoto;
+            private: ::Windows::UI::Xaml::Controls::Image^ MyCapturedPhoto;
             private: ::Windows::UI::Xaml::Controls::Button^ CapturePhotoButton;
             private: ::Windows::UI::Xaml::Controls::Button^ ResetButton;
             private: ::Windows::UI::Xaml::VisualState^ FullScreenLandscape;

@@ -26,7 +26,8 @@ namespace SDKSample
     internal:
         App();
         virtual void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ pArgs);
-        Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ LaunchArgs;
+		virtual void OnNavigationFailed(Platform::Object ^sender, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs ^e);
+		Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ LaunchArgs;
     protected:
         virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ pArgs) override;
     private:

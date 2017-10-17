@@ -33,7 +33,7 @@ namespace Windows {
 namespace SDKSample
 {
     [::Windows::Foundation::Metadata::WebHostHidden]
-    partial ref class MainPage : public ::SDKSample::Common::LayoutAwarePage, 
+    partial ref class MainPage : public ::Windows::UI::Xaml::Controls::Page, 
         public ::Windows::UI::Xaml::Markup::IComponentConnector,
         public ::Windows::UI::Xaml::Markup::IComponentConnector2
     {
