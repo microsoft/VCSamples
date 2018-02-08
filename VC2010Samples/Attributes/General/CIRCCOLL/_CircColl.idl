@@ -1,0 +1,95 @@
+import "docobj.idl";
+
+[
+	object,
+	uuid(956ADD2D-4BFB-4CA3-A4B4-C87F204B5A48),
+	dual,
+	helpstring("IMyCircle Interface"),
+	pointer_default(unique)
+] 
+#line 26 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+interface IMyCircle : IDispatch {
+#line 29 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[propget,id(1)] HRESULT  XCenter([out,retval] double *pXCenter);
+	[propput,id(1)] HRESULT  XCenter([in] double xCenter);
+	[propget,id(2)] HRESULT  YCenter([out,retval] double *pYCenter);
+	[propput,id(2)] HRESULT  YCenter([in] double YCenter);
+#line 34 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[propget,id(3)] HRESULT  Radius([out,retval] double *pRadius);
+	[propput,id(3)] HRESULT  Radius([in] double Radius);
+#line 37 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[propget,id(4)] HRESULT  Label([out,retval] BSTR *pbstrLabel);
+	[propput,id(4)] HRESULT  Label([in] BSTR bstrLabel);
+};
+
+[
+	object,
+	uuid(EE86680D-E2CB-4C35-A6A3-3A2C5AD5A7E0),
+	dual,
+	helpstring("IMyCircleCollection Interface"),
+	pointer_default(unique)
+] 
+#line 49 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+interface IMyCircleCollection : IDispatch {
+#line 52 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[propget,helpstring("Returns number of items in collection.")] HRESULT  Count([out,retval] long *retval);
+#line 55 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[propget,id(0),helpstring("Given an index, returns an item in the collection.")] HRESULT  Item([in] long Index, [out,retval] VARIANT *retval);
+#line 59 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[propget,restricted,id(-4),helpstring("returns an enumerator for the collection.")] HRESULT  _NewEnum([out,retval] IUnknown **retval);
+};
+
+[
+	object,
+	uuid(C7FBF950-9080-448E-B5AE-58334E21E4A7),
+	dual,
+	helpstring("IMyCircleCollectionCreator Interface"),
+	pointer_default(unique)
+] 
+#line 70 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+interface IMyCircleCollectionCreator : IDispatch {
+#line 73 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	[id(1),helpstring("Returns a collection of Circles.")] HRESULT  GetCircles([in] short n, [out,retval] VARIANT *retval);
+};
+
+
+[ version(1.0), uuid(913AB928-190F-11D3-ABE2-00C04F797AB7) ]
+library CIRCCOLLATTRIBLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(4C0CF699-6487-4707-8A63-E51DB3643516),
+		noncreatable,
+		aggregatable
+	] 
+#line 88 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	coclass CMyCircle {
+		[default]	interface IMyCircle;
+	};
+
+	[
+		aggregatable,
+		uuid(4CC32AC1-AD28-4255-8533-CE71D7E4FD71),
+		version(1.0)
+	] 
+#line 127 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	coclass CMyCircleCollectionCreator {
+		[default]	interface IMyCircleCollectionCreator;
+	};
+
+	[
+		version(1.0),
+		uuid(5537CB2B-5F39-405F-A2B7-8B55FA8B4D42),
+		noncreatable,
+		aggregatable
+	] 
+#line 148 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\circcoll\\objects.h"
+	coclass CMyCircleCollection {
+		[default]	interface IMyCircleCollection;
+	};
+
+}
+

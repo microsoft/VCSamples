@@ -42,6 +42,7 @@
     <None Include="Random.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="connect.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="preconn.h">

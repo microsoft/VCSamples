@@ -28,7 +28,7 @@ using namespace Windows::Foundation;
 
 CapturePhoto::CapturePhoto()
 {
-    InitializeComponent();
+	InitializeComponent();
     appSettings = ApplicationData::Current->LocalSettings->Values;
     ResetButton->Visibility = Windows::UI::Xaml::Visibility::Collapsed;
 }
@@ -59,7 +59,6 @@ void CapturePhoto::OnNavigatedTo(NavigationEventArgs^ e)
     {
         // Load the placeholder image
         rootPage->NotifyUser("The photo will be shown here.", NotifyType::StatusMessage);
-        CapturedPhoto->Source = ref new BitmapImage(ref new Windows::Foundation::Uri(BaseUri->AbsoluteUri, "Assets/placeholder-sdk.png"));
     }
 }
 
@@ -84,7 +83,7 @@ void CapturePhoto::CapturePhoto_Click(Platform::Object^ sender, Windows::UI::Xam
                 {
                     BitmapImage^ bitmapImage = ref new BitmapImage();
                     bitmapImage->SetSource(stream);		
-                    CapturedPhoto->Source = bitmapImage;	
+					MyCapturedPhoto->Source = bitmapImage;
                     ResetButton->Visibility = Windows::UI::Xaml::Visibility::Visible;
                     rootPage->NotifyUser("", NotifyType::StatusMessage);
                 });
@@ -113,7 +112,7 @@ void CapturePhoto::Reset_Click(Platform::Object^ sender, Windows::UI::Xaml::Rout
 {
     rootPage->NotifyUser("The photo will be shown here.", NotifyType::StatusMessage);
     ResetButton->Visibility = Windows::UI::Xaml::Visibility::Collapsed;
-    CapturedPhoto->Source = ref new BitmapImage(ref new Windows::Foundation::Uri(BaseUri->AbsoluteUri, "Assets/placeholder-sdk.png"));
+	MyCapturedPhoto->Source = nullptr;
 
     // Remove file from Application Data
     appSettings->Remove("capturedPhoto");
@@ -135,7 +134,7 @@ void CapturePhoto::LoadPhoto(Platform::String^ filePath)
             auto stream = openTask.get();
             BitmapImage^ bitmapImage = ref new BitmapImage();
             bitmapImage->SetSource(stream);		
-            CapturedPhoto->Source = bitmapImage;	
+			MyCapturedPhoto->Source = bitmapImage;
             ResetButton->Visibility = Windows::UI::Xaml::Visibility::Visible;
             CapturePhotoButton->IsEnabled = true;
             rootPage->NotifyUser("", NotifyType::StatusMessage);

@@ -15,18 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="CCDInfo.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="CDInfo.def">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="CDInfo.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="ToolBtn.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
+    <None Include="CDInfo.txt" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="CDInfo.idl">
@@ -48,19 +37,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CCDInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CDInfo1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CPCDInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -68,5 +45,29 @@
     <ResourceCompile Include="CDInfo.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CCDInfo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CCDInfo.inl">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CDInfo.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CDInfo.rgs" />
+    <CustomBuild Include="CDInfo1.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CPCDInfo.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ToolBtn.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

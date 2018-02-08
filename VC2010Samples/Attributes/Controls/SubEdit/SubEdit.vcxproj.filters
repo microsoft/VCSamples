@@ -29,6 +29,7 @@
     <None Include="AtlEdit.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AtlEdit.h">

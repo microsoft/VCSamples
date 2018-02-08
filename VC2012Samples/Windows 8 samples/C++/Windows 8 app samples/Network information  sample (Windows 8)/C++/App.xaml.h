@@ -21,15 +21,19 @@
 
 namespace SDKSample
 {
-    ref class App
-    {
-    internal:
-        App();
-        virtual void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ pArgs);
-        Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ LaunchArgs;
-    protected:
-        virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ pArgs) override;
-    private:
-        Windows::UI::Xaml::Controls::Frame^ rootFrame;
-    };
+	/// <summary>
+	/// Provides application-specific behavior to supplement the default Application class.
+	/// </summary>
+	ref class App sealed
+	{
+	protected:
+		virtual void OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ e) override;
+
+	internal:
+		App();
+
+	private:
+		void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ e);
+		void OnNavigationFailed(Platform::Object ^sender, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs ^e);
+	};
 }

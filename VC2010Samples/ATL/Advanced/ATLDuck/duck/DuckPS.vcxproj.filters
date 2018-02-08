@@ -11,14 +11,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dlldata.c">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="duck\dlldata.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="duck_i.c">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="duck\duck_i.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="duck_p.c">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="duck\duck_p.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

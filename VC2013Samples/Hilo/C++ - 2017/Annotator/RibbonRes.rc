@@ -1,0 +1,184 @@
+// ******************************************************************************
+// * This is an automatically generated file containing the ribbon resource for *
+// * your application.                                                          *
+// ******************************************************************************
+
+#include ".\RibbonIds.h"
+
+STRINGTABLE 
+BEGIN
+    IDC_CMD_HOMETAB_LabelTitle_RESID L"Home" /* LabelTitle IDC_CMD_HOMETAB_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_CMD_VIEWTAB_LabelTitle_RESID L"View" /* LabelTitle IDC_CMD_VIEWTAB_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    linkGroup_LabelTitle_RESID L"Link" /* LabelTitle linkGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    zoomGroup_LabelTitle_RESID L"Zoom" /* LabelTitle zoomGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    editGroup_LabelTitle_RESID L"Edit" /* LabelTitle editGroup_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    pencilButton_LabelTitle_RESID L"Pencil" /* LabelTitle pencilButton_LabelTitle_RESID: (null) */
+END
+
+pencilButton_SmallImages_RESID    BITMAP    "res\\pen_16.bmp" /* SmallImages pencilButton_SmallImages_RESID: (null) */
+pencilButton_LargeImages_RESID    BITMAP    "res\\pen_32.bmp" /* LargeImages pencilButton_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    sizeButton_LabelTitle_RESID L"Size" /* LabelTitle sizeButton_LabelTitle_RESID: (null) */
+END
+
+sizeButton_SmallImages_RESID    BITMAP    "res\\size_16.bmp" /* SmallImages sizeButton_SmallImages_RESID: (null) */
+sizeButton_LargeImages_RESID    BITMAP    "res\\size_32.bmp" /* LargeImages sizeButton_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    cropButton_LabelTitle_RESID L"Crop" /* LabelTitle cropButton_LabelTitle_RESID: (null) */
+END
+
+cropButton_SmallImages_RESID    BITMAP    "res\\crop_16.bmp" /* SmallImages cropButton_SmallImages_RESID: (null) */
+cropButton_LargeImages_RESID    BITMAP    "res\\crop_32.bmp" /* LargeImages cropButton_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    rotateButton_LabelTitle_RESID L"Rotate" /* LabelTitle rotateButton_LabelTitle_RESID: (null) */
+END
+
+rotateButton_SmallImages_RESID    BITMAP    "res\\rotate_right90_16.bmp" /* SmallImages rotateButton_SmallImages_RESID: (null) */
+rotateButton_LargeImages_RESID    BITMAP    "res\\rotate_right90_32.bmp" /* LargeImages rotateButton_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    rotate90Clockwise_LabelTitle_RESID L"90\x00b0 CW" /* LabelTitle rotate90Clockwise_LabelTitle_RESID: (null) */
+END
+
+rotate90Clockwise_SmallImages_RESID    BITMAP    "res\\rotate_right90_16.bmp" /* SmallImages rotate90Clockwise_SmallImages_RESID: (null) */
+rotate90Clockwise_LargeImages_RESID    BITMAP    "res\\rotate_right90_32.bmp" /* LargeImages rotate90Clockwise_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    rotate90CounterClockwise_LabelTitle_RESID L"90\x00b0 CCW" /* LabelTitle rotate90CounterClockwise_LabelTitle_RESID: (null) */
+END
+
+rotate90CounterClockwise_SmallImages_RESID    BITMAP    "res\\rotate_left90_16.bmp" /* SmallImages rotate90CounterClockwise_SmallImages_RESID: (null) */
+rotate90CounterClockwise_LargeImages_RESID    BITMAP    "res\\rotate_left90_32.bmp" /* LargeImages rotate90CounterClockwise_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_ZOOM_IN_LabelTitle_RESID L"Zoom In" /* LabelTitle ID_BUTTON_ZOOM_IN_LabelTitle_RESID: (null) */
+END
+
+ID_BUTTON_ZOOM_IN_SmallImages_RESID    BITMAP    "res\\zoomin_16.bmp" /* SmallImages ID_BUTTON_ZOOM_IN_SmallImages_RESID: (null) */
+ID_BUTTON_ZOOM_IN_LargeImages_RESID    BITMAP    "res\\zoomin_32.bmp" /* LargeImages ID_BUTTON_ZOOM_IN_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_ZOOM_OUT_LabelTitle_RESID L"Zoom Out" /* LabelTitle ID_BUTTON_ZOOM_OUT_LabelTitle_RESID: (null) */
+END
+
+ID_BUTTON_ZOOM_OUT_SmallImages_RESID    BITMAP    "res\\zoomout_16.bmp" /* SmallImages ID_BUTTON_ZOOM_OUT_SmallImages_RESID: (null) */
+ID_BUTTON_ZOOM_OUT_LargeImages_RESID    BITMAP    "res\\zoomout_32.bmp" /* LargeImages ID_BUTTON_ZOOM_OUT_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_ZOOM_100_LabelTitle_RESID L"100%" /* LabelTitle ID_BUTTON_ZOOM_100_LabelTitle_RESID: (null) */
+END
+
+ID_BUTTON_ZOOM_100_SmallImages_RESID    BITMAP    "res\\preview_16.bmp" /* SmallImages ID_BUTTON_ZOOM_100_SmallImages_RESID: (null) */
+ID_BUTTON_ZOOM_100_LargeImages_RESID    BITMAP    "res\\preview_32.bmp" /* LargeImages ID_BUTTON_ZOOM_100_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_STANDARD_COLORPICKER_LabelTitle_RESID L"Color" /* LabelTitle ID_STANDARD_COLORPICKER_LabelTitle_RESID: (null) */
+END
+
+ID_STANDARD_COLORPICKER_SmallImages_RESID    BITMAP    "res\\color_16.bmp" /* SmallImages ID_STANDARD_COLORPICKER_SmallImages_RESID: (null) */
+ID_STANDARD_COLORPICKER_LargeImages_RESID    BITMAP    "res\\color_32.bmp" /* LargeImages ID_STANDARD_COLORPICKER_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    flipVertical_LabelTitle_RESID L"Verical" /* LabelTitle flipVertical_LabelTitle_RESID: (null) */
+END
+
+flipVertical_SmallImages_RESID    BITMAP    "res\\vflip_16.bmp" /* SmallImages flipVertical_SmallImages_RESID: (null) */
+flipVertical_LargeImages_RESID    BITMAP    "res\\vflip_32.bmp" /* LargeImages flipVertical_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    flipHorizontal_LabelTitle_RESID L"Horizontal" /* LabelTitle flipHorizontal_LabelTitle_RESID: (null) */
+END
+
+flipHorizontal_SmallImages_RESID    BITMAP    "res\\hflip_16.bmp" /* SmallImages flipHorizontal_SmallImages_RESID: (null) */
+flipHorizontal_LargeImages_RESID    BITMAP    "res\\hflip_32.bmp" /* LargeImages flipHorizontal_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_UNDO_LabelTitle_RESID L"Undo" /* LabelTitle ID_BUTTON_UNDO_LabelTitle_RESID: (null) */
+END
+
+ID_BUTTON_UNDO_SmallImages_RESID    BITMAP    "res\\undo_16.bmp" /* SmallImages ID_BUTTON_UNDO_SmallImages_RESID: (null) */
+ID_BUTTON_UNDO_LargeImages_RESID    BITMAP    "res\\undo_32.bmp" /* LargeImages ID_BUTTON_UNDO_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_BUTTON_REDO_LabelTitle_RESID L"Redo" /* LabelTitle ID_BUTTON_REDO_LabelTitle_RESID: (null) */
+END
+
+ID_BUTTON_REDO_SmallImages_RESID    BITMAP    "res\\redo_16.bmp" /* SmallImages ID_BUTTON_REDO_SmallImages_RESID: (null) */
+ID_BUTTON_REDO_LargeImages_RESID    BITMAP    "res\\redo_32.bmp" /* LargeImages ID_BUTTON_REDO_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_FILE_OPEN_LabelTitle_RESID L"Open" /* LabelTitle ID_FILE_OPEN_LabelTitle_RESID: Open */
+END
+
+ID_FILE_OPEN_SmallImages_RESID    BITMAP    "res\\open_16.bmp" /* SmallImages ID_FILE_OPEN_SmallImages_RESID: Open */
+ID_FILE_OPEN_LargeImages_RESID    BITMAP    "res\\open_32.bmp" /* LargeImages ID_FILE_OPEN_LargeImages_RESID: Open */
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_LabelTitle_RESID L"Save" /* LabelTitle ID_FILE_SAVE_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_Keytip_RESID L"s1" /* Keytip ID_FILE_SAVE_Keytip_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_TooltipTitle_RESID L"Save Command" /* TooltipTitle ID_FILE_SAVE_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_TooltipDescription_RESID L"Save Command." /* TooltipDescription ID_FILE_SAVE_TooltipDescription_RESID: (null) */
+END
+
+ID_FILE_SAVE_SmallImages_RESID    BITMAP    "res\\save_16.bmp" /* SmallImages ID_FILE_SAVE_SmallImages_RESID: (null) */
+ID_FILE_SAVE_LargeImages_RESID    BITMAP    "res\\save_32.bmp" /* LargeImages ID_FILE_SAVE_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_AS_LabelTitle_RESID L"Save A Copy As" /* LabelTitle ID_FILE_SAVE_AS_LabelTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_AS_TooltipTitle_RESID L"Save A Copy As Command" /* TooltipTitle ID_FILE_SAVE_AS_TooltipTitle_RESID: (null) */
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVE_AS_TooltipDescription_RESID L"Save A Copy As Command." /* TooltipDescription ID_FILE_SAVE_AS_TooltipDescription_RESID: (null) */
+END
+
+ID_FILE_SAVE_AS_SmallImages_RESID    BITMAP    "res\\saveas_16.bmp" /* SmallImages ID_FILE_SAVE_AS_SmallImages_RESID: (null) */
+ID_FILE_SAVE_AS_LargeImages_RESID    BITMAP    "res\\saveas_32.bmp" /* LargeImages ID_FILE_SAVE_AS_LargeImages_RESID: (null) */
+STRINGTABLE 
+BEGIN
+    ID_FILE_EXIT_LabelTitle_RESID L"Exit" /* LabelTitle ID_FILE_EXIT_LabelTitle_RESID: Exit */
+END
+
+ID_FILE_EXIT_SmallImages_RESID    BITMAP    "res\\exit_16.bmp" /* SmallImages ID_FILE_EXIT_SmallImages_RESID: Exit */
+ID_FILE_EXIT_LargeImages_RESID    BITMAP    "res\\exit_32.bmp" /* LargeImages ID_FILE_EXIT_LargeImages_RESID: Exit */
+APPLICATION_RIBBON    UIFILE    "ribbonmarkup.bml"

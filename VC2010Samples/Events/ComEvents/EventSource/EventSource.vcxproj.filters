@@ -31,6 +31,7 @@
     <None Include="EventSource.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">

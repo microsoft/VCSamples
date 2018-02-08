@@ -46,6 +46,9 @@
     <None Include="ObjectTwo.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="mfcatl.htm" />
+    <None Include="MfcAtl.txt" />
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MfcAtl.h">

@@ -1,0 +1,15 @@
+win8 need to be retageted to win10
+then retargeted to v120
+and then retageted to v141
+
+Buil fail on several error, like 
+C3946: 'char16_t': typeid cannot be applied to this type (compiling source file Common\SuspensionManager.cpp)
+         c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vccorlib.h(1558): note: while compiling class template member function 'Platform::Box<char16_t>::Box(char16_t)' (compiling source file Common\SuspensionManager.cpp)
+         c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vccorlib.h(1744): note: see reference to function template instantiation 'Platform::Box<char16_t>::Box(char16_t)' being compiled (compiling source file Common\SuspensionManager.cpp)
+         c:\program files (x86)\microsoft visual studio\2017\enterprise\vc\tools\msvc\14.11.25503\include\vccorlib.h(1744): note: see reference to class template instantiation 'Platform::Box<char16_t>' being compiled (compiling source file Common\SuspensionManager.cpp)
+         c:\temp\vcsamples\vc2012samples\windows 8 samples\c++\windows 8 app samples\cameracaptureui sample (windows 8)\c++\common\suspensionmanager.cpp(468): note: see reference to function template instantiation 'Platform::Box<char16_t> ^__abi_create_box<char16_t>(__TArg)' being compiled
+                 with
+                 [
+                     __TArg=char16_t
+                 ]
+

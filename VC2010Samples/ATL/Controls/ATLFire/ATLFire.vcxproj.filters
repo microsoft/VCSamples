@@ -32,15 +32,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ATLFire.def">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="ATLFire.ico">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="FireTabCtrl.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
+    <None Include="FireTabCtrl.htm" />
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="ATLFire.idl">
@@ -48,28 +41,35 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FireTabCtrl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FireWnd.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PropDlg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Size.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="ATLFire.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ATLFire.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ATLFire.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FireTabCtrl.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="FireTabCtrl.rgs" />
+    <CustomBuild Include="FireWnd.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PropDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Size.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

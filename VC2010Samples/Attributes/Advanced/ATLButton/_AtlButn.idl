@@ -1,0 +1,76 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(00886616-BFB4-4697-837C-D75C9916B016),
+	dual,
+	helpstring("IAtlButton Interface"),
+	pointer_default(unique)
+] 
+#line 31 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+interface IAtlButton : IDispatch {
+#line 34 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propputref,id(3)] HRESULT  PictureStatic([in] IPictureDisp *pPicture);
+#line 36 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propput,id(3)] HRESULT  PictureStatic([in] IPictureDisp *pPicture);
+#line 38 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propget,id(3)] HRESULT  PictureStatic([out,retval] IPictureDisp **ppPicture);
+#line 41 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propputref,id(4)] HRESULT  PictureHover([in] IPictureDisp *pPicture);
+#line 43 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propput,id(4)] HRESULT  PictureHover([in] IPictureDisp *pPicture);
+#line 45 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propget,id(4)] HRESULT  PictureHover([out,retval] IPictureDisp **ppPicture);
+#line 48 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propputref,id(5)] HRESULT  PicturePush([in] IPictureDisp *pPicture);
+#line 50 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propput,id(5)] HRESULT  PicturePush([in] IPictureDisp *pPicture);
+#line 52 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	[propget,id(5)] HRESULT  PicturePush([out,retval] IPictureDisp **ppPicture);
+#line 54 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	HRESULT  _OnTimer();
+};
+
+
+[ version(1.0), uuid(ce7f3a6f-6765-4bfd-b989-4dfdddb735a1), helpstring("atlbutn Attrib 1.0 Type Library") ]
+library ATLBUTNAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(20D4CB52-DEC1-4696-A2D8-42ACBC19ECCC),
+		helpstring("Event interface for ATL button control")
+	] 
+#line 17 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+	dispinterface _ATLButton {
+	properties:
+
+	methods:
+#line 19 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutniface.h"
+		[id(1)] void  OnClick();
+	};
+
+	[
+		uuid(5C5955B8-1826-413B-B752-4AB82977B116),
+		helpstring("AtlButton Attrib Class"),
+		version(1.0)
+	] 
+#line 127 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlbutton\\atlbutton.h"
+	coclass CAtlButton {
+		[default]	interface IAtlButton;
+		[default, source]	interface _ATLButton;
+	};
+
+}
+

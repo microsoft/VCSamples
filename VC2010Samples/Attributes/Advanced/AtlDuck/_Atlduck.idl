@@ -1,0 +1,48 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+
+
+[ version(1.0), uuid(89FBD7D7-A6D5-4761-AB0C-DA79191693AA), helpstring("atlduck Attrib 1.0 Type Library") ]
+library ATLDUCKAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(78A7BED6-B940-4B38-8261-4E6B4094F9ED),
+		helpstring("IDuckInt Interface")
+	] 
+#line 23 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlduck\\duckdoer.h"
+	dispinterface IDuckInt {
+	properties:
+
+	methods:
+#line 25 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlduck\\duckdoer.h"
+		[id(0),helpstring("method Quack")] HRESULT  Quack([in]BSTR szWhosCalling);
+		[id(1),helpstring("method Flap")] HRESULT  Flap([in]BSTR szWhosCalling);
+		[id(2),helpstring("method Paddle")] HRESULT  Paddle([in]BSTR szWhosCalling);
+		[id(3),helpstring("method Walk")] HRESULT  Walk([in]BSTR szWhosCalling);
+	};
+
+	[
+		version(1.0),
+		uuid(6D6B20D3-E68A-4691-9D7E-E6B34AD1F29E),
+		helpstring("DuckDoer Attrib Class"),
+		aggregatable
+	] 
+#line 44 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlduck\\duckdoer.h"
+	coclass CDuckDoer {
+		[default]	interface IDispatch;
+		[default, source]	interface IDuckInt;
+	};
+
+}
+

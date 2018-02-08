@@ -29,27 +29,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="atlduck.idl">
-      <Filter>Source Files</Filter>
-    </Midl>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CPduck.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DuckDoer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DuckDoerDlg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="iduckint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -59,14 +39,31 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="atlduck.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="atlduckps.def">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="DuckDoer.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
+    <None Include="ReadMe.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="atlduck.idl">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="atlduck.rgs" />
+    <CustomBuild Include="CPduck.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DuckDoer.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DuckDoer.rgs" />
+    <CustomBuild Include="DuckDoerDlg.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

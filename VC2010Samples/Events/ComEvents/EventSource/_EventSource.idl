@@ -1,0 +1,88 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+#line 12 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+enum E {
+	e = 17,
+};
+
+#line 18 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+typedef struct S_struct {
+#line 17 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+	int i;
+#line 17 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+	int j;
+} S;
+
+[
+	dual,
+	uuid(b6d8ff58-8e84-4b1e-8fb8-68fd6158154e)
+] 
+#line 32 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+interface IJW : IDispatch {
+	HRESULT  event1();
+};
+
+[
+	dual,
+	uuid(59fe2af1-cd5d-4845-9a99-d7b5500e45f5)
+] 
+#line 37 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+interface IBase : IDispatch {
+	HRESULT  doSomething();
+};
+
+
+[ version(1.0), uuid(DFF2CBF1-2ECC-414D-9DB7-8F43A0260CAD), helpstring("EventSource 1.0 Type Library") ]
+library EventSource
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(ae17a339-6571-4302-8a84-6b27196f1e21)
+	] 
+#line 20 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+	dispinterface IEvent {
+	properties:
+
+	methods:
+		[id(34)] void  event1([in] enum E , [in] char *);
+		[id(18)] HRESULT  event2([in] S *a, [in] float b, [in] VARIANT c);
+	};
+
+	[
+		object,
+		custom(8AFCDA7F-33B7-3120-86A8-754D2C0C0578, "library_block"),
+		uuid(8e46b2ec-a8b2-4b37-a75a-069c4336966d)
+	] 
+#line 25 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\ifaces.h"
+	interface IEvent2 : IUnknown {
+		int  event1([in] int );
+		HRESULT  event2([in] int , [in] float );
+		void  __cdecl event3();
+	};
+
+	[
+		uuid(530DF3AD-6936-3214-A83B-27B63C7997C4),
+		version(1.0)
+	] 
+#line 12 "c:\\temp\\vcsamples\\vc2010samples\\events\\comevents\\eventsource\\eventsource.cpp"
+	coclass CSource {
+		interface IBase;
+		[default, source]	interface IEvent;
+		[source]	interface IEvent2;
+		[source]	interface IJW;
+	};
+
+}
+

@@ -42,6 +42,8 @@
     <None Include="AtlSafeArray.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="AtlSafeArray.htm" />
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AtlSafeArray.rc">

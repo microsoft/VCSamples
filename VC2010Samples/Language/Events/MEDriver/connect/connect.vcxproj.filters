@@ -50,5 +50,6 @@
     <None Include="Random.rgs">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="connect.txt" />
   </ItemGroup>
 </Project>

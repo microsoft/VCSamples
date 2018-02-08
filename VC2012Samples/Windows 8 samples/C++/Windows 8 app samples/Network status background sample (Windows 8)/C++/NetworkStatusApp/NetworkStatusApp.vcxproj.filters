@@ -34,9 +34,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="MainPage.xaml" />
-    <Page Include="Common\StandardStyles.xaml">
-      <Filter>Common</Filter>
-    </Page>
     <Page Include="Sample-Utils\SampleTemplateStyles.xaml">
       <Filter>Sample-Utils</Filter>
     </Page>
@@ -46,12 +43,6 @@
     <ClInclude Include="MainPage.xaml.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h" />
-    <ClInclude Include="Common\LayoutAwarePage.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\SuspensionManager.h">
-      <Filter>Common</Filter>
-    </ClInclude>
     <ClInclude Include="Constants.h" />
     <ClInclude Include="NetworkStatusWithInternetPresent.xaml.h" />
   </ItemGroup>
@@ -59,12 +50,6 @@
     <ClCompile Include="App.xaml.cpp" />
     <ClCompile Include="MainPage.xaml.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="Common\LayoutAwarePage.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\SuspensionManager.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
     <ClCompile Include="Constants.cpp" />
     <ClCompile Include="NetworkStatusWithInternetPresent.xaml.cpp" />
   </ItemGroup>

@@ -1,0 +1,41 @@
+<!DOCTYPE html public "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+<title>Search</title>
+<meta http-equiv="DESCRIPTION" content="This page allows users to do a random search against the book database based on search criteria they enter.  The search that is performed will automatically do a 'like' search with a wildcard at the end of the submitted criteria.">
+</head>
+
+<body background="graphics/cream.gif">
+<p align="CENTER"><img src="graphics/search.gif" WIDTH="155" HEIGHT="85"></p><br>
+
+<form method="post" action="results.aspx"><br>
+	<table cellspacing="10" align="CENTER" cellpadding="3" border="0">
+		<tr>
+			<td align="RIGHT"><font size="5">Author:</font>
+			</td>
+			<td>
+				<input type="text" name="txtAuthor" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td align="RIGHT"><font size="5">Title:</font>
+			</td>
+			<td>
+				<input type="text" name="txtTitle" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td align="RIGHT"><font size="5">Subject:</font>
+			</td>
+			<td>
+				<input type="text" name="txtSubject" size="20">
+			</td>
+		</tr>
+	</table>
+	<p align="CENTER">
+	<input type="submit" id="cmdSearchNow" value="Search Now">
+	<input type="reset" id="cmdClear" value="Clear"><br></p>
+</form>
+</body>
+</html>

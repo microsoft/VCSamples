@@ -1,0 +1,61 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(D61AF69C-AAF7-4FBB-823A-F55CCB2857A2),
+	dual,
+	helpstring("IFireTabCtrl Interface"),
+	pointer_default(unique)
+] 
+#line 28 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\atlfire\\firetabctrl.h"
+interface IFireTabCtrl : IDispatch {
+#line 30 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\atlfire\\firetabctrl.h"
+	[propget,id(1),helpstring("property Decay")] HRESULT  Decay([out,retval] long *pVal);
+	[propput,id(1),helpstring("property Decay")] HRESULT  Decay([in] long newVal);
+	[propget,id(2),helpstring("property Flammability")] HRESULT  Flammability([out,retval] long *pVal);
+	[propput,id(2),helpstring("property Flammability")] HRESULT  Flammability([in] long newVal);
+	[propget,id(3),helpstring("property MaxHeat")] HRESULT  MaxHeat([out,retval] long *pVal);
+	[propput,id(3),helpstring("property MaxHeat")] HRESULT  MaxHeat([in] long newVal);
+	[propget,id(4),helpstring("property SpreadRate")] HRESULT  SpreadRate([out,retval] long *pVal);
+	[propput,id(4),helpstring("property SpreadRate")] HRESULT  SpreadRate([in] long newVal);
+	[propget,id(5),helpstring("property Size")] HRESULT  Size([out,retval] long *pVal);
+	[propput,id(5),helpstring("property Size")] HRESULT  Size([in] long newVal);
+	[propget,id(6),helpstring("property Smoothness")] HRESULT  Smoothness([out,retval] long *pVal);
+	[propput,id(6),helpstring("property Smoothness")] HRESULT  Smoothness([in] long newVal);
+	[propget,id(7),helpstring("property Distribution")] HRESULT  Distribution([out,retval] long *pVal);
+	[propput,id(7),helpstring("property Distribution")] HRESULT  Distribution([in] long newVal);
+	[propget,id(8),helpstring("property Chaos")] HRESULT  Chaos([out,retval] long *pVal);
+	[propput,id(8),helpstring("property Chaos")] HRESULT  Chaos([in] long newVal);
+	[propget,id(9),helpstring("property StartTab")] HRESULT  StartTab([out,retval] long *pVal);
+	[propput,id(9),helpstring("property StartTab")] HRESULT  StartTab([in] long newVal);
+	[id(-552),helpstring("method AboutBox")] HRESULT  AboutBox();
+};
+
+
+[ version(1.0), uuid(D96DDFD0-1924-11D3-ABE2-00C04F797AB7) ]
+library ATLFIREATTRLib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(64D01C7F-810D-446E-A07E-16C764235644),
+		version(1.0)
+	] 
+#line 66 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\atlfire\\firetabctrl.h"
+	coclass CFireTabCtrl {
+		[default]	interface IFireTabCtrl;
+	};
+
+}
+

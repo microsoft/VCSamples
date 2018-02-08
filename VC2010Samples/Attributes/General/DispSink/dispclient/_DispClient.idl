@@ -1,0 +1,79 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+#line 14 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\debug\\dispserver.tlh"
+interface IDispServ;
+[
+	uuid(b7d047ab-e688-4c9b-a956-31d6cee5db51),
+	dual
+] 
+#line 45 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\debug\\dispserver.tlh"
+interface IDispServ : IDispatch {
+#line 51 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\debug\\dispserver.tlh"
+	[id(1)] HRESULT  Send([in] VARIANT data);
+};
+
+[
+	object,
+	uuid(0F4098BD-0318-4F89-A505-A954211198CE),
+	dual,
+	helpstring("IDispCtl Interface"),
+	pointer_default(unique)
+] 
+#line 33 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\dispctl.h"
+interface IDispCtl : IDispatch {
+#line 35 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\dispctl.h"
+	[id(1),helpstring("method Connect")] HRESULT  Connect();
+	[id(2),helpstring("method Disconnect")] HRESULT  Disconnect();
+	[id(3),helpstring("method Send")] HRESULT  Send([in]VARIANT data);
+};
+
+
+[ version(1.0), uuid(8FFCEA5E-4959-41C4-9CE2-B572DBBD7A0E), helpstring("DispClient 1.0 Type Library") ]
+library DispClient
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(06b96b46-4f91-4087-a81f-7f20904e9a45)
+	] 
+#line 28 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\debug\\dispserver.tlh"
+	dispinterface _IDispServEvents {
+	properties:
+
+	methods:
+#line 35 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\debug\\dispserver.tlh"
+		[id(1)] HRESULT  Transfer([in] VARIANT data);
+	};
+
+	[
+		version(1.0),
+		uuid(A40B4D20-27B8-4387-A494-5D7F0D0A81C3),
+		helpstring("DispCtl Class")
+	] 
+#line 54 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\dispsink\\dispclient\\dispctl.h"
+	coclass CDispCtl {
+		[default]	interface IDispCtl;
+	};
+
+	[
+		uuid(E3993B51-4AED-38D5-8050-045614FED827),
+		version(1.0),
+		noncreatable
+	] 
+	coclass __Impl__IDispServEvents {
+		[default] interface IUnknown;
+	};
+
+}
+

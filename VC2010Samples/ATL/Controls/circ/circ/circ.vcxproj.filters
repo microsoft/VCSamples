@@ -15,18 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bmp1.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="circ.def">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="CircCtl.rgs">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="ico10.ico">
-      <Filter>Resource Files</Filter>
-    </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="circ.idl">
@@ -45,19 +34,29 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CircCtl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CPEvent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="circ.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="bmp1.bmp">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="circ.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CircCtl.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="CircCtl.rgs" />
+    <CustomBuild Include="CPEvent.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ico10.ico">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

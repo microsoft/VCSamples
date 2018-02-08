@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Login</title>
+<meta http-equiv="DESCRIPTION" content="This is main logon page from which users can either log into the system with a valid user id and password or be allowed to create a new user on the 'New User' page.">
+</head>
+
+<body bgcolor="999966" background="graphics/cream.gif">
+<br><br>
+<center>
+<table cellpadding="0" cellspacing="0" border="0" background="graphics/dkolive.gif">
+	<tr>
+		<td><img src="graphics/logo.gif" WIDTH="120" HEIGHT="80">
+		</td>
+	</tr>
+	<tr>
+		<td width="300" bgcolor="999966">
+			<form method="get" action="Login.aspx">Logon<br><br>
+				User Name:
+				<input type="text" name="UserNameField" maxlength="25" size="25"><br><br>
+				Password:
+				<input type="password" name="PasswordField" maxlength="25" size="25"><br><br>
+				<div align="right">
+					<input 	type="submit" name="LogonButton" value="Logon">
+					<input 	type="reset" name="CancelButton" value="Cancel">&nbsp;
+				</div>
+			</form>
+		</td>
+	</tr>
+</table></center>
+<p align="CENTER"><a href="Account.aspx">Create New User Account</a></p>
+</body>
+</html>
+

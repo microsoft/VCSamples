@@ -389,7 +389,7 @@ STDMETHODIMP CScript::XActiveScriptSite::GetItemInfo( LPCOLESTR pszName,
    }
 
    COLE2CT pszNameT( pszName );
-   TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );
+   //TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );
 
    if( dwReturnMask&SCRIPTINFO_IUNKNOWN )
    {
@@ -463,7 +463,7 @@ STDMETHODIMP CScript::XActiveScriptSite::OnScriptError(
    hResult = pError->GetSourceLineText( &bstrSourceLineText );
    if( SUCCEEDED( hResult ) )
    {
-	  TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );
+	  //TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );
 	  SysFreeString( bstrSourceLineText );
 	  bstrSourceLineText = NULL;
    }

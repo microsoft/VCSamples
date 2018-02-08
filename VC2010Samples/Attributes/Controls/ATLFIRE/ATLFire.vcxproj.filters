@@ -21,6 +21,7 @@
     <None Include="FireTabCtrl.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ATLFire.h">

@@ -1,0 +1,78 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(0806E754-1256-45DE-A026-EFF47B37304E),
+	dual,
+	helpstring("ICircCtl Interface"),
+	pointer_default(unique)
+] 
+#line 42 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+interface ICircCtl : IDispatch {
+#line 45 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propput,id(-518)] HRESULT  Caption([in] BSTR pCaption);
+#line 47 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propget,id(-518)] HRESULT  Caption([out,retval] BSTR *ppCaption);
+#line 49 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propput,id(-514)] HRESULT  Enabled([in] VARIANT_BOOL vbool);
+#line 51 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propget,id(-514)] HRESULT  Enabled([out,retval] VARIANT_BOOL *pbool);
+#line 53 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propput,id(-501)] HRESULT  BackColor([in] OLE_COLOR clr);
+#line 55 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propget,id(-501)] HRESULT  BackColor([out,retval] OLE_COLOR *pclr);
+#line 57 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propput,id(-513)] HRESULT  ForeColor([in] OLE_COLOR clr);
+#line 59 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propget,id(-513)] HRESULT  ForeColor([out,retval] OLE_COLOR *pclr);
+#line 61 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propput,id(-512)] HRESULT  Font([in] IFontDisp *pFont);
+#line 63 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propputref,id(-512)] HRESULT  Font([in] IFontDisp *pFont);
+#line 65 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	[propget,id(-512)] HRESULT  Font([out,retval] IFontDisp **ppFont);
+};
+
+
+[ version(1.0), uuid(08F9C743-9BCC-4e6e-BC0C-AF558B56FF30), helpstring("circ Attrib 1.0 Type Library") ]
+library CIRCAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(544B15ED-AB2F-479E-8AC7-1344CD4FC30E),
+		helpstring("Event interface for Circ Control")
+	] 
+#line 30 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	dispinterface _CircEvents {
+	properties:
+
+	methods:
+		[id(1)] void  Click();
+		[id(2)] void  KeyPress([in]short KeyAscii);
+	};
+
+	[
+		version(1.0),
+		uuid(BDB53AB2-6073-48DF-9974-0C0D8047A54F),
+		helpstring("CircCtl Attrib Control")
+	] 
+#line 78 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\circ\\circ\\circctl.h"
+	coclass CCircCtl {
+		[default]	interface ICircCtl;
+		[default, source]	interface _CircEvents;
+	};
+
+}
+

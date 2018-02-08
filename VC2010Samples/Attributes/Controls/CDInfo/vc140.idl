@@ -1,0 +1,65 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(CD73CB20-85C3-4B0B-A1D4-EBB911AF3E68),
+	dual,
+	helpstring("ICDInfo Interface"),
+	pointer_default(unique)
+] 
+#line 19 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\cdinfo\\cdinfoiface.h"
+interface ICDInfo : IDispatch {
+#line 22 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\cdinfo\\cdinfoiface.h"
+	[propget,id(0)] HRESULT  Tracks([out,retval] short *pTracks);
+	[propput,id(0)] HRESULT  Tracks([in] short Tracks);
+	[propget,id(1)] HRESULT  Length([in] short Track, [out,retval] short *pLength);
+	[propput,id(1)] HRESULT  Length([in] short Track, [in] short nLength);
+	[propget,id(2)] HRESULT  TotalLength([out,retval] short *pLength);
+	HRESULT  Read([out,retval] short *pTracks);
+	HRESULT  Redraw();
+	HRESULT  Play([in] short Track);
+};
+
+
+[ version(1.0), uuid(A924CAB2-C2C6-42f0-9869-0D2DC30CAE3D), helpstring("CDInfo Attributed 1.0 Type Library") ]
+library CDINFOAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(7A4C656C-EDC3-45FE-84CE-0D7C96C45B85),
+		helpstring("Event interface for CDInfo Control")
+	] 
+#line 36 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\cdinfo\\cdinfoiface.h"
+	dispinterface CDEvents {
+	properties:
+
+	methods:
+#line 38 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\cdinfo\\cdinfoiface.h"
+		[id(1)] void  Click([in] short nTrack);
+	};
+
+	[
+		uuid(B091C2B4-ED17-491E-BFED-903EB209B26D),
+		helpstring("CDInfo Attrib Class"),
+		version(1.0)
+	] 
+#line 39 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\cdinfo\\cdinfo1.h"
+	coclass CCDInfo {
+		[default]	interface ICDInfo;
+		[default, source]	interface CDEvents;
+	};
+
+}
+

@@ -42,6 +42,9 @@
     <None Include="ATLAsync.rgs">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="debug\async.bsc" />
+    <None Include="ReadMe.htm" />
+    <None Include="ATLAsync.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ATLAsync.h">

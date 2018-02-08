@@ -1,0 +1,42 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(380E9187-5C4C-4C9D-9EC8-C70181F13DFF),
+	dual,
+	helpstring("IAtlEdit Interface"),
+	pointer_default(unique)
+] 
+#line 27 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\subedit\\atledit.h"
+interface IAtlEdit : IDispatch {
+};
+
+
+[ version(1.0), uuid(0720EB03-0A81-4b02-8187-AB8D96BE45DA), helpstring("control 1.0 Type Library") ]
+library CONTROL
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(AF1F3D15-D053-4072-8943-4E3997D48C5D),
+		helpstring("AtlEdit Class")
+	] 
+#line 46 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\subedit\\atledit.h"
+	coclass CAtlEdit {
+		[default]	interface IAtlEdit;
+	};
+
+}
+

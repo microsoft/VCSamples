@@ -1,0 +1,66 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\wtypes.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\wincrypt.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\objidl.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\unknwn.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\propidlbase.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\oaidl.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\urlmon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\oleidl.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\servprov.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\msxml.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\propidl.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ocidl.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\comcat.idl";
+import "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.11.25503\atlmfc\include\atliface.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\oleacc.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\shtypes.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(9AD3BE25-ABF9-4D0B-BC56-4219FC79BBF8),
+	dual,
+	helpstring("IMeanCalc Interface"),
+	pointer_default(unique)
+] 
+#line 17 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\qstat\\server\\meancalc.h"
+interface IMeanCalc : IDispatch {
+#line 19 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\qstat\\server\\meancalc.h"
+	[id(1),helpstring("method Initialize")] HRESULT  Initialize([in] short nMaxEntries);
+	[id(2),helpstring("method Clear")] HRESULT  Clear();
+	[id(3),helpstring("method AddDataPoint")] HRESULT  AddDataPoint([in] short i);
+	[id(4),helpstring("method ArithmeticMean")] HRESULT  ArithmeticMean([out,retval] double *pArithmeticMean);
+	[id(5),helpstring("method GeometricMean")] HRESULT  GeometricMean([out,retval] double *pGeometricMean);
+	[id(6),helpstring("method HarmonicMean")] HRESULT  HarmonicMean([out,retval] double *pHarmonicMean);
+	[id(7),helpstring("method QuadraticMean")] HRESULT  QuadraticMean([out,retval] double *pQuadraticMean);
+};
+
+
+[ version(1.0), uuid(B6083577-2AF6-411A-A762-EFF37B6D8152), helpstring("QStat 1.0 Type Library") ]
+library QStat
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(5B8E7812-8AF8-4EC3-A559-5C5011597C6B),
+		helpstring("MeanCalc Class")
+	] 
+#line 42 "c:\\temp\\vcsamples\\vc2010samples\\language\\general\\qstat\\server\\meancalc.h"
+	coclass CMeanCalc {
+		[default]	interface IMeanCalc;
+	};
+
+}
+

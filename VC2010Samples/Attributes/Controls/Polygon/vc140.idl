@@ -1,0 +1,73 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ObjSafe.idl";
+
+[
+	object,
+	uuid(38CA75B5-7047-4E70-93F8-6597FD98C535),
+	dual,
+	helpstring("IPolyCtl Interface"),
+	pointer_default(unique)
+] 
+#line 18 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polygoniface.h"
+interface IPolyCtl : IDispatch {
+#line 21 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polygoniface.h"
+	[propput,id(-510)] HRESULT  FillColor([in] OLE_COLOR clr);
+#line 23 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polygoniface.h"
+	[propget,id(-510)] HRESULT  FillColor([out,retval] OLE_COLOR *pclr);
+	[propget,id(1),helpstring("property Sides")] HRESULT  Sides([out,retval] short *pVal);
+	[propput,id(1),helpstring("property Sides")] HRESULT  Sides([in] short newVal);
+};
+
+
+[ version(1.0), uuid(42831E19-6CF3-4063-8498-39A781862A41), helpstring("POLYGON 1.0 Type Library") ]
+library POLYGONAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(5284604A-3160-4FAE-A564-6E6A3372CA1A),
+		helpstring("_IPolyCtlEvents Interface")
+	] 
+#line 33 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polygoniface.h"
+	dispinterface _IPolyCtlEvents {
+	properties:
+
+	methods:
+#line 35 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polygoniface.h"
+		[id(1),helpstring("method ClickIn")] void  ClickIn([in] long x, [in] long y);
+		[id(2),helpstring("method ClickOut")] void  ClickOut([in] long x, [in] long y);
+	};
+
+	[
+		uuid(E4AB4412-3A8B-4302-B395-EF041BBCCEA1),
+		helpstring("PolyProp Class"),
+		version(1.0)
+	] 
+#line 30 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polyprop.h"
+	coclass CPolyProp {
+		[default]	interface IPolyCtl;
+	};
+
+	[
+		uuid(44487B6B-DDC8-4A13-9B20-A8A892629026),
+		helpstring("PolyCtl Class"),
+		version(1.0)
+	] 
+#line 36 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\controls\\polygon\\polyctl.h"
+	coclass CPolyCtl {
+		[default]	interface IPolyCtl;
+		[default, source]	interface _IPolyCtlEvents;
+	};
+
+}
+

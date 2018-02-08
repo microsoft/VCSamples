@@ -29,6 +29,7 @@
     <None Include="unires.ico">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="unires.rc">

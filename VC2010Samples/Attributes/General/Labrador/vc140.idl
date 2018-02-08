@@ -1,0 +1,48 @@
+import "docobj.idl";
+
+#line 22 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\labrador\\labobj.h"
+typedef [string] WCHAR MY_BSTR[32];
+
+[
+	object,
+	uuid(8CC00B42-2860-4D28-88D9-DD3A6F92896E),
+	helpstring("IMammal Interface")
+] 
+#line 31 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\labrador\\labobj.h"
+interface IMammal : IUnknown {
+	[helpstring("method GetSpeciesName")] HRESULT  GetSpeciesName([out,string] MY_BSTR p);
+	[helpstring("method IsAlive")] HRESULT  IsAlive([out] BOOL *pBool);
+};
+
+[
+	object,
+	uuid(B9688DC3-9B57-4C37-A7D7-078BECD52FA6),
+	helpstring("IDog Interface")
+] 
+#line 42 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\labrador\\labobj.h"
+interface IDog : IUnknown {
+	[helpstring("method GetPetName")] HRESULT  GetPetName([out,string] MY_BSTR p);
+	[helpstring("method SetPetName")] HRESULT  SetPetName([in,string] MY_BSTR p);
+	[helpstring("method IsBarking")] HRESULT  IsBarking([out] BOOL *pBool);
+};
+
+
+[ version(1.0), uuid(62A33E74-932A-11CF-B056-00A0C90348FA), helpstring("Labrador 1.0 Type Library") ]
+library Labrador
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		aggregatable,
+		version(1.0),
+		uuid(CE8E837C-7A09-4C98-82D3-844D9BBF4AAD)
+	] 
+#line 62 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\general\\labrador\\labobj.h"
+	coclass CLabrador {
+		[default]	interface IMammal;
+		interface IDog;
+	};
+
+}
+

@@ -15,9 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="sieve.asm">
-      <Filter>Source Files</Filter>
-    </None>
+    <None Include="ReadMe.htm" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sieve.h">
@@ -28,5 +26,10 @@
     <ClCompile Include="PrimesStep3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="sieve.asm">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

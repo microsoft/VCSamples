@@ -1,0 +1,47 @@
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\um\ExDisp.idl";
+
+
+[ version(1.0), uuid(92F978DC-97F2-4559-A2EE-92E7C43316A3), helpstring("duck Attrib 1.0 Type Library") ]
+library DUCKAttrib
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(78A7BED6-B940-4B38-8261-4E6B4094F9ED),
+		helpstring("IDuckInt Interface")
+	] 
+#line 21 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlduck\\duck\\duckint.h"
+	dispinterface IDuckInt {
+	properties:
+
+	methods:
+#line 23 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlduck\\duck\\duckint.h"
+		[id(0),helpstring("method Quack")] HRESULT  Quack([in]BSTR szWhosCalling);
+		[id(1),helpstring("method Flap")] HRESULT  Flap([in]BSTR szWhosCalling);
+		[id(2),helpstring("method Paddle")] HRESULT  Paddle([in]BSTR szWhosCalling);
+		[id(3),helpstring("method Walk")] HRESULT  Walk([in]BSTR szWhosCalling);
+	};
+
+	[
+		version(1.0),
+		uuid(B4D60C36-95A0-4EEA-8481-626E8A60AF18),
+		helpstring("DuckInt Attrib Class"),
+		aggregatable
+	] 
+#line 40 "c:\\temp\\vcsamples\\vc2010samples\\attributes\\advanced\\atlduck\\duck\\duckint.h"
+	coclass CDuckInt {
+		[default]	dispinterface IDuckInt;
+	};
+
+}
+
