@@ -125,7 +125,11 @@ namespace VCUE
 
 	}; // class GenericCopy<BSTR, VARIANT>
 
+#if  _MSC_VER >= 1700
+	template <class MapType, class DestinationType = typename MapType::mapped_type>
+#else
 	template <class MapType, class DestinationType = MapType::referent_type>
+#endif
 	class MapCopy
 	{
 	public :
@@ -133,7 +137,11 @@ namespace VCUE
 		typedef typename MapType::value_type		source_type;
 		
 		typedef MapType					map_type;
+#if  _MSC_VER >= 1700
+		typedef typename MapType::mapped_type	pseudosource_type;
+#else
 		typedef typename MapType::referent_type	pseudosource_type;
+#endif
 
 		static void init(destination_type* p)
 		{
