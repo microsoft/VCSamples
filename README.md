@@ -20,7 +20,7 @@ See the [Wiki](https://github.com/Microsoft/VCSamples/wiki) for more information
 See the [Porting and Upgrading Guide on MSDN](https://docs.microsoft.com/en-us/cpp/porting/visual-cpp-porting-and-upgrading-guide) 
 
 ## Contributing
-We accept contribution on these samples (migrating them to a newer version, modernize the source codeor adding new samples)
+We accept contribution on these samples (migrating them to a newer version, modernize the source code or adding new samples)
 
 Use Issue and PR to submit new migration cases, fixes or suggestions.
 
