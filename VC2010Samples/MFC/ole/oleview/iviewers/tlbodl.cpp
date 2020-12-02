@@ -1374,12 +1374,19 @@ HRESULT CTypeLibODLView::DeCompileCoClass( IStream* pstm, ITypeInfo* pti, UINT u
 				WRITE(_T("] "));
 			}
 
-			if (pattrImpl->typekind == TKIND_INTERFACE)
+			if (pattrImpl->typekind == TKIND_INTERFACE || (pattrImpl->wTypeFlags & TYPEFLAG_FDUAL))
+			{
 				WRITE(_T("interface ")) ;
-
-			if (pattrImpl->typekind == TKIND_DISPATCH)
+			}
+			else if (pattrImpl->typekind == TKIND_DISPATCH)
+			{
 				WRITE(_T("dispinterface ")) ;
-
+			}
+			else
+			{
+				WRITE(_T("<unknown>")) ;
+			}
+			
 			WRITE( bstrName ) ;
 
 			WRITECR(_T(";")) ;
